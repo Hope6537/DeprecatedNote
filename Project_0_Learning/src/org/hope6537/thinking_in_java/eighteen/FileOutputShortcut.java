@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 
 public class FileOutputShortcut {
-	static String file = "C:\\Users\\Zhaopeng-Rabook\\Desktop\\Google Download\\º∆◊È‘”ŒÔ\\FileOutputShortcut.out";
+	static String file = "D:\\FileOutputShortcut.out";
 	static String path = "E:\\(WorkSpace04)GitHub\\Project_00_Learning\\Project_0_Learning\\src\\org\\hope6537\\thinking_in_java\\eighteen\\FileOutputShortcut.java";
 
 	public static void main(String[] args) throws IOException {
