@@ -27,6 +27,7 @@ public class GZIPcompress {
 		Pcompress(new String[] { "G:\\Article.txt" });
 	}
 
+	@SuppressWarnings("resource")
 	public static void Pcompress(String[] args) throws IOException {
 
 		File file = new File("G:\\Test.gz");

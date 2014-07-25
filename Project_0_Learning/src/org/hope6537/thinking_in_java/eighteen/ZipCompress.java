@@ -34,6 +34,7 @@ public class ZipCompress {
 		}
 	}
 
+	@SuppressWarnings("resource")
 	public static void Compress(String[] args) throws IOException {
 		File file = new File("G:\\ZipCompress.zip");
 		FileOutputStream f = new FileOutputStream(file);
@@ -84,6 +85,7 @@ public class ZipCompress {
 		bis.close();
 		// 另外一种解压缩方法
 		ZipFile zf = new ZipFile(file);
+		@SuppressWarnings("rawtypes")
 		Enumeration e = zf.entries();
 		while (e.hasMoreElements()) {
 			ZipEntry ze2 = (ZipEntry) e.nextElement();

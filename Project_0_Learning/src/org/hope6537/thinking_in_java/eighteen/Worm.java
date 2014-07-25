@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.util.Random;
 
 class Data implements Serializable {
+	private static final long serialVersionUID = 4470902163791019135L;
 	private int n;
 
 	public Data(int n) {
@@ -25,7 +26,16 @@ class Data implements Serializable {
 
 }
 
+/**
+ * @describe 序列化对象的读写实验
+ * @author Hope6537(赵鹏)
+ * @signdate 2014年7月25日下午4:04:43
+ * @version 0.9
+ * @company Changchun University&SHXT
+ */
 public class Worm implements Serializable {
+
+	private static final long serialVersionUID = -3295485275133643264L;
 
 	private static Random rand = new Random(47);
 
@@ -74,11 +84,12 @@ public class Worm implements Serializable {
 		out.writeObject(w);
 		out.flush();
 		out.close();
+		@SuppressWarnings("resource")
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
 		String s = (String) in.readObject();
 		Worm w2 = (Worm) in.readObject();
 		System.out.println(s + "w2 = " + w2);
-		//第二种方法 读写字符数组
+		// 第二种方法 读写字符数组
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		ObjectOutputStream out2 = new ObjectOutputStream(bout);
 		out2.writeObject("Worm storage\n");
