@@ -1,9 +1,9 @@
 package org.hope6537.datastructs.Heap;
 
 /**
- * @Describe ¶şÏî¶ÓÁĞ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-5ÏÂÎç08:12:18
+ * @Describe äºŒé¡¹é˜Ÿåˆ—
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-5ä¸‹åˆ08:12:18
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <AnyType>
@@ -11,9 +11,9 @@ package org.hope6537.datastructs.Heap;
 public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
 	public static class Node<AnyType> {
-		AnyType element; // ½ÚµãÔªËØ
-		Node<AnyType> leftChild; // ½Úµã×ó×ÓÊ÷
-		Node<AnyType> nextSibling; // ½ÚµãÓÒĞÖµÜ
+		AnyType element; // èŠ‚ç‚¹å…ƒç´ 
+		Node<AnyType> leftChild; // èŠ‚ç‚¹å·¦å­æ ‘
+		Node<AnyType> nextSibling; // èŠ‚ç‚¹å³å…„å¼Ÿ
 
 		Node(AnyType x, Node<AnyType> l, Node<AnyType> r) {
 			element = x;
@@ -27,7 +27,7 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Describe Ä¬ÈÏ¶şÏî¶ÓÁĞÖĞÊ÷µÄÊıÁ¿
+	 * @Describe é»˜è®¤äºŒé¡¹é˜Ÿåˆ—ä¸­æ ‘çš„æ•°é‡
 	 */
 	private static final int DEFAULT_TREES = 1;
 
@@ -36,8 +36,8 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	private Node<AnyType>[] theTrees;
 
 	/**
-	 * @Describe Ä¬ÈÏ¹¹Ôì·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe é»˜è®¤æ„é€ æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @param
 	 */
 	@SuppressWarnings("unchecked")
@@ -47,10 +47,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe ·µ»ØÊÇ·ñÎª¿Õ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›æ˜¯å¦ä¸ºç©º
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç08:22:49
+	 * @SignDate 2014-4-5ä¸‹åˆ08:22:49
 	 * @Version 0.9
 	 * @return
 	 */
@@ -59,10 +59,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe Çå¿Õ¶şÏî¶ÓÁĞÖĞµÄÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºäºŒé¡¹é˜Ÿåˆ—ä¸­çš„å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params
-	 * @SignDate 2014-4-5ÏÂÎç08:22:55
+	 * @SignDate 2014-4-5ä¸‹åˆ08:22:55
 	 * @Version 0.9
 	 */
 	public void makeEmpty() {
@@ -73,8 +73,8 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Describe Ä¬ÈÏ¹¹Ôì·½·¨ ´øÊ÷¸ù
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe é»˜è®¤æ„é€ æ–¹æ³• å¸¦æ ‘æ ¹
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param item
 	 */
 	@SuppressWarnings("unchecked")
@@ -85,10 +85,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe ·µ»ØÊ÷ÖĞµÄÊ÷µÄÉî¶È£¿
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›æ ‘ä¸­çš„æ ‘çš„æ·±åº¦ï¼Ÿ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç08:20:37
+	 * @SignDate 2014-4-5ä¸‹åˆ08:20:37
 	 * @Version 0.9
 	 * @return
 	 */
@@ -97,10 +97,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
     /**
-     * @Descirbe ÕÒµ½×îĞ¡Ïî
-     * @Author Hope6537(ÕÔÅô)
+     * @Descirbe æ‰¾åˆ°æœ€å°é¡¹
+     * @Author Hope6537(èµµé¹)
      * @Params @return
-     * @SignDate 2014-4-6ÉÏÎç12:13:26
+     * @SignDate 2014-4-6ä¸Šåˆ12:13:26
      * @Version 0.9
      * @return
      */
@@ -115,10 +115,10 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 
 	
 	/**
-	 * @Descirbe ·µ»Ø¶şÏî¶ÓÁĞÖĞ×îĞ¡µÄÊ÷µÄË÷Òı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›äºŒé¡¹é˜Ÿåˆ—ä¸­æœ€å°çš„æ ‘çš„ç´¢å¼•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç08:19:40
+	 * @SignDate 2014-4-5ä¸‹åˆ08:19:40
 	 * @Version 0.9
 	 * @return
 	 */
@@ -139,12 +139,12 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe ºÏ²¢Á½¿ÅÍ¬Ñù´óĞ¡µÄ¶şÏîÊ÷µÄÀı³Ì
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åˆå¹¶ä¸¤é¢—åŒæ ·å¤§å°çš„äºŒé¡¹æ ‘çš„ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t1
 	 * @Params @param t2
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç08:27:20
+	 * @SignDate 2014-4-5ä¸‹åˆ08:27:20
 	 * @Version 0.9
 	 * @param t1
 	 * @param t2
@@ -152,178 +152,178 @@ public class BinomialQueue<AnyType extends Comparable<? super AnyType>> {
 	 */
 	private Node<AnyType> combineTrees(Node<AnyType> t1, Node<AnyType> t2) {
 		/*
-		 * ×Ü¶øÑÔÖ® ÊÇ½«½Ï´óµÄÊ÷µÄ¸ùÏÂ½µÒ»²ã ×÷Îª½ÏĞ¡µÄÊ÷µÄ×ó¶ù×Ó Èç¹ût1±Èt2Òª´ó Ôò·­×ª»ØÀ´
+		 * æ€»è€Œè¨€ä¹‹ æ˜¯å°†è¾ƒå¤§çš„æ ‘çš„æ ¹ä¸‹é™ä¸€å±‚ ä½œä¸ºè¾ƒå°çš„æ ‘çš„å·¦å„¿å­ å¦‚æœt1æ¯”t2è¦å¤§ åˆ™ç¿»è½¬å›æ¥
 		 */
 		if (t1.element.compareTo(t2.element) > 0) {
 			return combineTrees(t2, t1);
 		}
-		// ½«½ÏĞ¡ÏîµÄ×ó×ÓÊé²åÈëµ½½Ï´óÏîµÄÓÒ×ÓÊ÷ÉÏ
+		// å°†è¾ƒå°é¡¹çš„å·¦å­ä¹¦æ’å…¥åˆ°è¾ƒå¤§é¡¹çš„å³å­æ ‘ä¸Š
 		t2.nextSibling = t1.leftChild;
-		// ¶øÍ¬Ê±½«½Ï´óÏî£¨°üÀ¨Ô­±¾µÄt1×ó×ÓÊéºÍt2±¾Éí£©²åÈëµ½t1µÄ×ó²à ×÷Îªt1µÄ×ó¶ù×Ó´æÔÚ
+		// è€ŒåŒæ—¶å°†è¾ƒå¤§é¡¹ï¼ˆåŒ…æ‹¬åŸæœ¬çš„t1å·¦å­ä¹¦å’Œt2æœ¬èº«ï¼‰æ’å…¥åˆ°t1çš„å·¦ä¾§ ä½œä¸ºt1çš„å·¦å„¿å­å­˜åœ¨
 		t1.leftChild = t2;
-		// ½«ĞÂÉú³ÉµÄ¸ù t1·µ»Ø
+		// å°†æ–°ç”Ÿæˆçš„æ ¹ t1è¿”å›
 		return t1;
 	}
 
 	/**
-	 * @Descirbe ºÏ²¢Á½¸ö¶şÏî¶ÓÁĞµÄÀı³Ì
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Params @param rhs ²ÎÊıÊÇ×÷ÎªºÏ²¢ÏîµÄÁíÒ»¸ö¶şÏî¶ÓÁĞ
-	 * @SignDate 2014-4-5ÏÂÎç08:51:28
+	 * @Descirbe åˆå¹¶ä¸¤ä¸ªäºŒé¡¹é˜Ÿåˆ—çš„ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
+	 * @Params @param rhs å‚æ•°æ˜¯ä½œä¸ºåˆå¹¶é¡¹çš„å¦ä¸€ä¸ªäºŒé¡¹é˜Ÿåˆ—
+	 * @SignDate 2014-4-5ä¸‹åˆ08:51:28
 	 * @Version 0.9
 	 * @param rhs
 	 */
 	public void merge(BinomialQueue<AnyType> rhs) {
-		// Èç¹ûÁ½¸ö¶ÓÁĞÏàµÈ Ö±½Ó·µ»Ø
+		// å¦‚æœä¸¤ä¸ªé˜Ÿåˆ—ç›¸ç­‰ ç›´æ¥è¿”å›
 		if (this == rhs) {
 			return;
 		}
-		// ·ñÔòÈç¹û²»ÏàµÈ
-		// ÄÇÃ´½«±¾ÌåµÄsizeºÍºÏ²¢µÄÏà¼Ó
+		// å¦åˆ™å¦‚æœä¸ç›¸ç­‰
+		// é‚£ä¹ˆå°†æœ¬ä½“çš„sizeå’Œåˆå¹¶çš„ç›¸åŠ 
 		currentSize += rhs.currentSize;
 		if (currentSize > capacity()) {
-			// Èç¹û±¾ÌåµÄÊ÷ÈİÆ÷ÈİÄÉ²»ÏÂ ÄÇÃ´ÖØĞÂ¹¹³ÉĞÂµÄ¶şÏî¶ÓÁĞ
+			// å¦‚æœæœ¬ä½“çš„æ ‘å®¹å™¨å®¹çº³ä¸ä¸‹ é‚£ä¹ˆé‡æ–°æ„æˆæ–°çš„äºŒé¡¹é˜Ÿåˆ—
 			int maxLength = Math.max(theTrees.length, rhs.theTrees.length)+1;
-			// ´´½¨ĞÂµÄÊ÷´æ´¢ĞòÁĞ
+			// åˆ›å»ºæ–°çš„æ ‘å­˜å‚¨åºåˆ—
 			expandTheTrees(maxLength);
 		}
-		// ÕâÊÇÉÏÒ»´Î²Î¼ÓºÏ²¢ËùÒÅÁôÏÂÀ´µÄ ÖÈÎªi+1µÄÊ÷
+		// è¿™æ˜¯ä¸Šä¸€æ¬¡å‚åŠ åˆå¹¶æ‰€é—ç•™ä¸‹æ¥çš„ ç§©ä¸ºi+1çš„æ ‘
 		Node<AnyType> carry = null;
 		/*
-		 * ÖÈ´Ó0¿ªÊ¼ ¶øj¼´½ÚµãµÄÊıÁ¿´Ó1¿ªÊ¼ Ò»µ©jµÄÊıÁ¿³¬¹ıÁËÓ¦ÓĞÊıÁ¿ Ìø³ö Í¬Ê±ÖÈiµÄÔö³¤ÊÇ++ ¶øj¼´Ê÷µÄ¸öÊıÔö³¤ÊÇj*2µÄ·½Ê½Ôö¼Ó
-		 * ¹ØÓÚjµÄÑĞ¾¿·½Ê½ ÊÇ°´ÕÕB0 B1 B2 .. BiµÄ½ÚµãµÄÊıÁ¿²úÉúµÄ ÓÉÓÚ¶şÏî¶ÓÁĞµÄÌØÊâĞÔ ËùÒÔb0 Îª½öÓĞÒ»¸ö½ÚµãµÄµ¥ÌåÊ÷ ¶øb1 =
-		 * 2 b2 = 4 b3 = 8 ¸ö½Úµã ËùÒÔi´ú±íµ±Ç°µÄÊ÷µÄ½×Êı ¶øj´ú±í¸Ã½×ÓĞ¼¸¸ö½Úµã µ±µ½´ïµ×²ãÊ± Í£Ö¹Ñ­»·
+		 * ç§©ä»0å¼€å§‹ è€Œjå³èŠ‚ç‚¹çš„æ•°é‡ä»1å¼€å§‹ ä¸€æ—¦jçš„æ•°é‡è¶…è¿‡äº†åº”æœ‰æ•°é‡ è·³å‡º åŒæ—¶ç§©içš„å¢é•¿æ˜¯++ è€Œjå³æ ‘çš„ä¸ªæ•°å¢é•¿æ˜¯j*2çš„æ–¹å¼å¢åŠ 
+		 * å…³äºjçš„ç ”ç©¶æ–¹å¼ æ˜¯æŒ‰ç…§B0 B1 B2 .. Biçš„èŠ‚ç‚¹çš„æ•°é‡äº§ç”Ÿçš„ ç”±äºäºŒé¡¹é˜Ÿåˆ—çš„ç‰¹æ®Šæ€§ æ‰€ä»¥b0 ä¸ºä»…æœ‰ä¸€ä¸ªèŠ‚ç‚¹çš„å•ä½“æ ‘ è€Œb1 =
+		 * 2 b2 = 4 b3 = 8 ä¸ªèŠ‚ç‚¹ æ‰€ä»¥iä»£è¡¨å½“å‰çš„æ ‘çš„é˜¶æ•° è€Œjä»£è¡¨è¯¥é˜¶æœ‰å‡ ä¸ªèŠ‚ç‚¹ å½“åˆ°è¾¾åº•å±‚æ—¶ åœæ­¢å¾ªç¯
 		 */
 		for (int i = 0, j = 1; j < currentSize; i++, j = j * 2) {
-			// »ñÈ¡½×ÎªiµÄÁ½¸ö¶şÏî¶ÓÁĞÖĞµÄ×ÓÊ÷
+			// è·å–é˜¶ä¸ºiçš„ä¸¤ä¸ªäºŒé¡¹é˜Ÿåˆ—ä¸­çš„å­æ ‘
 			Node<AnyType> t1 = theTrees[i];
-			// ÓĞ¸öÎŞÁÄµÄĞ£Ñé
+			// æœ‰ä¸ªæ— èŠçš„æ ¡éªŒ
 			Node<AnyType> t2 = i < rhs.theTrees.length ? rhs.theTrees[i] : null;
-			// Èç¹û±¾Ê÷²»Îª¿Õ ±äÁ¿+1
+			// å¦‚æœæœ¬æ ‘ä¸ä¸ºç©º å˜é‡+1
 			int whichCase = t1 == null ? 0 : 1;
-			// ºÏ²¢Ê÷²»Îª¿Õ ÄÇÃ´±äÁ¿+2
+			// åˆå¹¶æ ‘ä¸ä¸ºç©º é‚£ä¹ˆå˜é‡+2
 			whichCase += t2 == null ? 0 : 2;
-			// ÖÈÎªi+1µÄÊ÷²»Îª¿Õ ÄÇÃ´±äÁ¿+4
+			// ç§©ä¸ºi+1çš„æ ‘ä¸ä¸ºç©º é‚£ä¹ˆå˜é‡+4
 			whichCase += carry == null ? 0 : 4;
-			// ¿ªÊ¼½øÈëÑ¡Ôñ
+			// å¼€å§‹è¿›å…¥é€‰æ‹©
 			switch (whichCase) {
 			case 0:
 			case 1:
-				// Èç¹ûÃ»ÓĞÊ÷»òÕß½öÓĞ±¾Ìå ±¾½×½áÊø
+				// å¦‚æœæ²¡æœ‰æ ‘æˆ–è€…ä»…æœ‰æœ¬ä½“ æœ¬é˜¶ç»“æŸ
 				break;
 			case 2:
-				// Èç¹û½öÓĞÌí¼ÓÊ÷
+				// å¦‚æœä»…æœ‰æ·»åŠ æ ‘
 				theTrees[i] = t2;
-				// ÄÇÃ´½«Ìí¼ÓÊ÷·ÅÈëµ±Ç°½×µÄ¶ÓÁĞÖĞ Í¬Ê±Ïû³ıÌí¼ÓÊ÷µÄ¸Ã ĞĞÊı¾İ
+				// é‚£ä¹ˆå°†æ·»åŠ æ ‘æ”¾å…¥å½“å‰é˜¶çš„é˜Ÿåˆ—ä¸­ åŒæ—¶æ¶ˆé™¤æ·»åŠ æ ‘çš„è¯¥ è¡Œæ•°æ®
 				rhs.theTrees[i] = null;
 				break;
 			case 4:
-				// Èç¹û½öÓĞÒÅÁôµÄÖÈÎªi+1µÄÊ÷ ÄÇÃ´Ìí¼Ó¼´¿É
+				// å¦‚æœä»…æœ‰é—ç•™çš„ç§©ä¸ºi+1çš„æ ‘ é‚£ä¹ˆæ·»åŠ å³å¯
 				theTrees[i] = carry;
 				carry = null;
 				break;
 			case 3:
-				// Èç¹ûÔÚ±¾ÖÈÖĞ ¾ßÓĞt1 ºÍ t2Á½¿ÅÍ¬Ñù´óĞ¡µÄ¶şÏîÊ÷
+				// å¦‚æœåœ¨æœ¬ç§©ä¸­ å…·æœ‰t1 å’Œ t2ä¸¤é¢—åŒæ ·å¤§å°çš„äºŒé¡¹æ ‘
 				carry = combineTrees(t1, t2);
-				// ÄÇÃ´ºÏ²¢Ö®ºó Ëæ×ÅÖÈµÄÌá¸ß ½«ÆäÑÓ³Ù´¦Àí ½»¸øÏÂÒ»´ÎµÄÑ­»· ²¢½«ºÏ²¢Ô´Êı¾İ¹éÁã
+				// é‚£ä¹ˆåˆå¹¶ä¹‹å éšç€ç§©çš„æé«˜ å°†å…¶å»¶è¿Ÿå¤„ç† äº¤ç»™ä¸‹ä¸€æ¬¡çš„å¾ªç¯ å¹¶å°†åˆå¹¶æºæ•°æ®å½’é›¶
 				theTrees[i] = rhs.theTrees[i] = null;
 				break;
 			case 5:
-				// Í¬case3 Èç¹û±¾ÖÈÖĞ±¾ÌåÊ÷ºÍÑÓ³ÙÊ÷µÄÖÈÏàÍ¬
+				// åŒcase3 å¦‚æœæœ¬ç§©ä¸­æœ¬ä½“æ ‘å’Œå»¶è¿Ÿæ ‘çš„ç§©ç›¸åŒ
 				carry = combineTrees(t1, carry);
-				// ÔòÔÙ´ÎºÏ²¢ Í¬Ê±ĞÂÉú³ÉµÄÊ÷µÄÖÈÓÖ±ä´ó ËùÒÔÑÓ³Ù´¦Àí ²¢½«ºÏ²¢Ô´Êı¾İ¹éÁã
+				// åˆ™å†æ¬¡åˆå¹¶ åŒæ—¶æ–°ç”Ÿæˆçš„æ ‘çš„ç§©åˆå˜å¤§ æ‰€ä»¥å»¶è¿Ÿå¤„ç† å¹¶å°†åˆå¹¶æºæ•°æ®å½’é›¶
 				theTrees[i] = null;
 				break;
 			case 6:
-				// Í¬case 5
+				// åŒcase 5
 				carry = combineTrees(t2, carry);
 				rhs.theTrees[i] = null;
 				break;
 			case 7:
 				/*
-				 * ÕâÊÇ×îÈÈÄÖµÄÁË t1 t2 ºÍ ÑÓ³ÙÊ÷¶¼´¦ÔÚÍ¬Ò»¸öÖÈÉÏ ÄÇÃ´Ê×ÏÈ½«ÑÓ³ÙÊ÷¸¶¸øµ±Ç°ÖÈ¡£ÒòÎªÕâÑù×öÊÇºÏ·¨µÄ
+				 * è¿™æ˜¯æœ€çƒ­é—¹çš„äº† t1 t2 å’Œ å»¶è¿Ÿæ ‘éƒ½å¤„åœ¨åŒä¸€ä¸ªç§©ä¸Š é‚£ä¹ˆé¦–å…ˆå°†å»¶è¿Ÿæ ‘ä»˜ç»™å½“å‰ç§©ã€‚å› ä¸ºè¿™æ ·åšæ˜¯åˆæ³•çš„
 				 */
 				theTrees[i] = carry;
-				// ÒòÎªt1 ºÍ t2 ºÏ²¢ºó ÖÈ»á±ä´ó ËùÒÔÑÓ³ÙÊ÷Ö±½Ó¸³¸øµ±Ç°¶şÏî¶ÓÁĞÃ»ÓĞÎÊÌâ
+				// å› ä¸ºt1 å’Œ t2 åˆå¹¶å ç§©ä¼šå˜å¤§ æ‰€ä»¥å»¶è¿Ÿæ ‘ç›´æ¥èµ‹ç»™å½“å‰äºŒé¡¹é˜Ÿåˆ—æ²¡æœ‰é—®é¢˜
 				carry = combineTrees(t1, t2);
-				// È»ºóĞÂÉú³ÉµÄÑÓ³ÙÊ÷½Ó×ÅÑ­»·ÏÂÈ¥ ²¢½«ºÏ²¢Ô´Êı¾İ¹éÁã
+				// ç„¶åæ–°ç”Ÿæˆçš„å»¶è¿Ÿæ ‘æ¥ç€å¾ªç¯ä¸‹å» å¹¶å°†åˆå¹¶æºæ•°æ®å½’é›¶
 				rhs.theTrees[i] = null;
 				break;
 			}
 		}
-		// È»ºóÉ¾³ıÍâ²¿µÄ¶şÏî¶ÓÁĞ
+		// ç„¶ååˆ é™¤å¤–éƒ¨çš„äºŒé¡¹é˜Ÿåˆ—
 		for (int k = 0; k < rhs.theTrees.length; k++) {
 			rhs.theTrees[k] = null;
 		}
 		rhs.currentSize = 0;
-		// ÖÁ´Ë ºÏ²¢ÈÎÎñÍê³É
+		// è‡³æ­¤ åˆå¹¶ä»»åŠ¡å®Œæˆ
 	}
 
 	/**
-	 * @Descirbe ½«¶şÏî¶ÓÁĞ¸ù¾İ²ÎÊı½øĞĞÖØ¹¹ºÍÀ©Èİ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†äºŒé¡¹é˜Ÿåˆ—æ ¹æ®å‚æ•°è¿›è¡Œé‡æ„å’Œæ‰©å®¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param newNumTrees
-	 * @SignDate 2014-4-5ÏÂÎç08:40:40
+	 * @SignDate 2014-4-5ä¸‹åˆ08:40:40
 	 * @Version 0.9
 	 * @param newNumTrees
 	 */
 	@SuppressWarnings("unchecked")
 	private void expandTheTrees(int newNumTrees) {
-		// µÃµ½¸÷¸öÊ÷µÄ¸ù½ÚµãµÄ¼¯ºÏ
+		// å¾—åˆ°å„ä¸ªæ ‘çš„æ ¹èŠ‚ç‚¹çš„é›†åˆ
 		Node<AnyType>[] old = theTrees;
-		// ¼ÆËã×ÜÌåÊ÷µÄÊıÁ¿
+		// è®¡ç®—æ€»ä½“æ ‘çš„æ•°é‡
 		int oldNumTrees = theTrees.length;
-		// ÉùÃ÷ĞÂÊ÷µÄ´óĞ¡
+		// å£°æ˜æ–°æ ‘çš„å¤§å°
 		theTrees = new Node[newNumTrees];
-		// È»ºó´Ó0¿ªÊ¼±éÀú µ½ÀÏÊ÷µÄ³¤¶ÈÒÀ´Î½«Ô­Öµ¸³»Ø
+		// ç„¶åä»0å¼€å§‹éå† åˆ°è€æ ‘çš„é•¿åº¦ä¾æ¬¡å°†åŸå€¼èµ‹å›
 		for (int i = 0; i < oldNumTrees; i++) {
 			theTrees[i] = old[i];
 		}
-		// ´ÓÀÏÊ÷Ä©Î²¿ªÊ¼µ½ĞÂÀ©µÄµØ·½ ÒÀ´Î
+		// ä»è€æ ‘æœ«å°¾å¼€å§‹åˆ°æ–°æ‰©çš„åœ°æ–¹ ä¾æ¬¡
 		for (int i = oldNumTrees; i < newNumTrees; i++) {
 			theTrees[i] = null;
 		}
 	}
 
 	/**
-	 * @Descirbe ½«¶şÏî¶ÓÁĞÖĞµÄ×îĞ¡½ÚµãµÄÏî·µ»Ø
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†äºŒé¡¹é˜Ÿåˆ—ä¸­çš„æœ€å°èŠ‚ç‚¹çš„é¡¹è¿”å›
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç09:46:54
+	 * @SignDate 2014-4-5ä¸‹åˆ09:46:54
 	 * @Version 0.9
 	 * @return
 	 */
 	public AnyType deleteMin() {
 		if (isEmpty()) {
-			//Èç¹û¶ÓÁĞÊÇ¿ÕµÄ ÄÇÃ´Ö±½Ó·µ»Ønull
+			//å¦‚æœé˜Ÿåˆ—æ˜¯ç©ºçš„ é‚£ä¹ˆç›´æ¥è¿”å›null
 			return null;
 		}
-		//·ñÔò ÕÒµ½¶şÏî¶ÓÁĞÖĞ¾ßÓĞ×îĞ¡ÏîµÄÊ÷µÄË÷Òı
+		//å¦åˆ™ æ‰¾åˆ°äºŒé¡¹é˜Ÿåˆ—ä¸­å…·æœ‰æœ€å°é¡¹çš„æ ‘çš„ç´¢å¼•
 		int minIndex = findMinIndex();
-		//ÕÒµ½Ë÷Òıºó Ö±½Ó»ñÈ¡¸ùµÄÔªËØ¾Í¿ÉÒÔÁË ÒòÎªÃ¿¿ÃÊ÷¶¼·ûºÏ¶ÑĞòĞÔÖÊ
+		//æ‰¾åˆ°ç´¢å¼•å ç›´æ¥è·å–æ ¹çš„å…ƒç´ å°±å¯ä»¥äº† å› ä¸ºæ¯æ£µæ ‘éƒ½ç¬¦åˆå †åºæ€§è´¨
 		AnyType min = theTrees[minIndex].element;
-		//È»ºó»ñÈ¡µ½µ±Ç°±»ÕªµôµÄ¸ùµÄ×ó×ÓÊ÷
+		//ç„¶åè·å–åˆ°å½“å‰è¢«æ‘˜æ‰çš„æ ¹çš„å·¦å­æ ‘
 		Node<AnyType> deletedTree = theTrees[minIndex].leftChild;
-		//ÉùÃ÷ĞÂµÄ¶şÏî¶ÓÁĞ
+		//å£°æ˜æ–°çš„äºŒé¡¹é˜Ÿåˆ—
 		BinomialQueue<AnyType> deletedQueue = new BinomialQueue<AnyType>();
-		//½«ĞÂÉùÃ÷µÄ¶şÏî¶ÓÁĞ´óĞ¡¸ü¸Ä³É(¾ßÓĞ×îĞ¡ÏîµÄÊ÷)µÄË÷Òı+1 ¼´ºóÒÆÒ»Î»
+		//å°†æ–°å£°æ˜çš„äºŒé¡¹é˜Ÿåˆ—å¤§å°æ›´æ”¹æˆ(å…·æœ‰æœ€å°é¡¹çš„æ ‘)çš„ç´¢å¼•+1 å³åç§»ä¸€ä½
 		deletedQueue.expandTheTrees(minIndex + 1);
-		//È»ºóĞŞ¸ÄĞÂµÄ¶şÏî¶ÓÁĞµÄ´óĞ¡ 
+		//ç„¶åä¿®æ”¹æ–°çš„äºŒé¡¹é˜Ÿåˆ—çš„å¤§å° 
 		deletedQueue.currentSize = (1 << minIndex) - 1;
-		//½«¸ÃÊ÷¸ù½ÚµãÈ¥µôºó ½«É¢¿ªµÄÊ÷×é³ÉµÄĞÂ¶şÏî¶ÓÁĞ
+		//å°†è¯¥æ ‘æ ¹èŠ‚ç‚¹å»æ‰å å°†æ•£å¼€çš„æ ‘ç»„æˆçš„æ–°äºŒé¡¹é˜Ÿåˆ—
 		 for( int j = minIndex - 1; j >= 0; j-- )
 	        {
 	            deletedQueue.theTrees[ j ] = deletedTree;
 	            deletedTree = deletedTree.nextSibling;
 	            deletedQueue.theTrees[ j ].nextSibling = null;
 	        }
-		//ÕâÊÇ½«°üº¬×îĞ¡ÏîÊ÷È¥µôºóµÄÔ­¶şÏî¶ÓÁĞËù´æÔÚµÄÈ¨Öµ ½«Õâ¸öÈ¨ÖµËù´ú±íµÄÊ÷¸³NULL
+		//è¿™æ˜¯å°†åŒ…å«æœ€å°é¡¹æ ‘å»æ‰åçš„åŸäºŒé¡¹é˜Ÿåˆ—æ‰€å­˜åœ¨çš„æƒå€¼ å°†è¿™ä¸ªæƒå€¼æ‰€ä»£è¡¨çš„æ ‘èµ‹NULL
 		theTrees[minIndex] = null;
-		//È»ºó½«¶şÏî¶ÓÁĞÖĞÊ÷µÄÊıÁ¿ĞŞ¸Ä
+		//ç„¶åå°†äºŒé¡¹é˜Ÿåˆ—ä¸­æ ‘çš„æ•°é‡ä¿®æ”¹
 		currentSize = currentSize - (deletedQueue.currentSize + 1);
-		//½«´ó¶ÓÁĞºÍÈ¥µô¸ù½ÚµãºóËùÉ¢¿ª×ÓÊ÷×é³ÉµÄĞ¡¶ÓÁĞºÏ²¢
+		//å°†å¤§é˜Ÿåˆ—å’Œå»æ‰æ ¹èŠ‚ç‚¹åæ‰€æ•£å¼€å­æ ‘ç»„æˆçš„å°é˜Ÿåˆ—åˆå¹¶
 		merge(deletedQueue);
-		//·µ»Ø×îĞ¡Öµ
+		//è¿”å›æœ€å°å€¼
 		return min;
 
 	}

@@ -3,7 +3,7 @@ package org.hope6537.datastructs.march;
 import java.io.Serializable;
 import java.util.LinkedList;
 
-public class Äæ×ªÁ´±í {
+public class é€†è½¬é“¾è¡¨ {
 	
 	LinkedList<Integer> l = new LinkedList<Integer>();
 	

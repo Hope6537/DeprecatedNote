@@ -10,9 +10,9 @@ public class HDOJ1114 {
 
 	/**
 	 * @Descirbe 
-	 * @Author Hope6537(赵鹏)
+	 * @Author Hope6537(璧甸箯)
 	 * @Params @param args
-	 * @SignDate 2014-5-18下午04:26:41
+	 * @SignDate 2014-5-18涓嬪崍04:26:41
 	 * @Version 0.9
 	 */
 	public static void main(String[] args) {
@@ -37,10 +37,10 @@ public class HDOJ1114 {
 				}
 				dp[0] = 0;
 				//input done
-				//套用完全背包公式
+				//濂楃敤瀹屽叏鑳屽寘鍏紡
 				/*
 				 * dp[k] = max(dp[k],f[k-volume[i]]+value[i]);
-				 * 只不过将max改成了min
+				 * 鍙笉杩囧皢max鏀规垚浜唌in
 				 */
 				for(int i = 0 ; i < type ; i++){
 					for(int j = weights[i] ; j <= weight ; j++ ){

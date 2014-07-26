@@ -30,23 +30,23 @@ public class HDOJ1045 {
 			if (n <= 0 || n > 4) {
 				break;
 			}
-			char[][] city = new char[5][5];// ÎªÁË·ÀÖ¹ÃÉ±Æ£¬²»´Ó0¿ªÊ¼
+			char[][] city = new char[5][5];// ä¸ºäº†é˜²æ­¢è’™é€¼ï¼Œä¸ä»0å¼€å§‹
 			for (int i = 1; i <= n; i++) {
 				String str = s.next();
 				for (int j = 1; j <= str.length(); j++) {
 					city[i][j] = str.charAt(j - 1);
 				}
 			}
-			// input ÊäÈëÍê±Ï£¬¸ù¾İÌ°ĞÄËã·¨Ñ°ÕÒ³ö²»»á³öÏÖ»ğÁ¦½»´íµÄÅÅĞòµã
+			// input è¾“å…¥å®Œæ¯•ï¼Œæ ¹æ®è´ªå¿ƒç®—æ³•å¯»æ‰¾å‡ºä¸ä¼šå‡ºç°ç«åŠ›äº¤é”™çš„æ’åºç‚¹
 			int maxNum = 0;
-			// ÏÈÑ°ÕÒÕâ¸öµãÃæ¶ÔÓĞ¼¸¸öÇ½
+			// å…ˆå¯»æ‰¾è¿™ä¸ªç‚¹é¢å¯¹æœ‰å‡ ä¸ªå¢™
 			Count[] counts = new Count[16];
 			int num = 0;
 			for (int i = 1; i <= n; i++) {
 				for (int j = 1; j <= n; j++) {
 					counts[num] = new Count(i, j);
 					if (city[i][j] == '.') {
-						// ÊÇÓĞĞ§Â·¾¶ ¿ªÊ¼Ñ°ÕÒÇ½µÄ¸öÊı
+						// æ˜¯æœ‰æ•ˆè·¯å¾„ å¼€å§‹å¯»æ‰¾å¢™çš„ä¸ªæ•°
 						for (int i1 = 1, j1 = 1;;) {
 							if (i1 <= n) {
 								if (city[i1][j] == 'X') {
@@ -68,7 +68,7 @@ public class HDOJ1045 {
 					num++;
 				}
 			}
-			// È»ºóÄæĞòÅÅÁĞ
+			// ç„¶åé€†åºæ’åˆ—
 			for (int i = 0; i < n * n; i++) {
 				for (int j = 0; j < n * n; j++) {
 					if (counts[i].walls > counts[j].walls) {
@@ -80,36 +80,36 @@ public class HDOJ1045 {
 			}
 
 			for (int k = 0; k < n * n; k++) {
-				Count c = counts[k];// È¡³öÃæ¶ÔÇ½×î¶àµÄÄÇ¸ö
+				Count c = counts[k];// å–å‡ºé¢å¯¹å¢™æœ€å¤šçš„é‚£ä¸ª
 				int i = c.i;
 				int j = c.j;
 				if (city[i][j] == '.') {
 					maxNum++;
-					for (int i1 = i; i1 <= n; i1++) { // ÓÒÒÆ
+					for (int i1 = i; i1 <= n; i1++) { // å³ç§»
 						if (city[i1][j] == '.') {
 							city[i1][j] = '!';
-						} else if (city[i1][j] == 'X') {// Åöµ½Ç½Í£ÏÂÀ´
+						} else if (city[i1][j] == 'X') {// ç¢°åˆ°å¢™åœä¸‹æ¥
 							break;
 						}
 					}
-					for (int i1 = i; i1 >= 0; i1--) { // ×óÒÆ
+					for (int i1 = i; i1 >= 0; i1--) { // å·¦ç§»
 						if (city[i1][j] == '.') {
 							city[i1][j] = '!';
-						} else if (city[i1][j] == 'X') {// Åöµ½Ç½Í£ÏÂÀ´
+						} else if (city[i1][j] == 'X') {// ç¢°åˆ°å¢™åœä¸‹æ¥
 							break;
 						}
 					}
-					for (int j1 = j; j1 <= n; j1++) { // ÏÂÒÆ
+					for (int j1 = j; j1 <= n; j1++) { // ä¸‹ç§»
 						if (city[i][j1] == '.') {
 							city[i][j1] = '!';
-						} else if (city[i][j1] == 'X') {// Åöµ½Ç½Í£ÏÂÀ´
+						} else if (city[i][j1] == 'X') {// ç¢°åˆ°å¢™åœä¸‹æ¥
 							break;
 						}
 					}
-					for (int j1 = j; j1 >= 0; j1--) { // ÉÏÒÆ
+					for (int j1 = j; j1 >= 0; j1--) { // ä¸Šç§»
 						if (city[i][j1] == '.') {
 							city[i][j1] = '!';
-						} else if (city[i][j1] == 'X') {// Åöµ½Ç½Í£ÏÂÀ´
+						} else if (city[i][j1] == 'X') {// ç¢°åˆ°å¢™åœä¸‹æ¥
 							break;
 						}
 					}

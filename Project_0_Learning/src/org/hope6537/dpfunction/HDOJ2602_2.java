@@ -12,11 +12,11 @@ public class HDOJ2602_2 {
 
 		int T = s.nextInt();
 		while (T-- != 0) {
-			int N = s.nextInt(); // ¹ÇÍ·µÄ¸öÊı
-			int V = s.nextInt(); // ±³°üµÄÈİÁ¿
+			int N = s.nextInt(); // éª¨å¤´çš„ä¸ªæ•°
+			int V = s.nextInt(); // èƒŒåŒ…çš„å®¹é‡
 			int[] values = new int[MAX];
 			int[] volumes = new int[MAX];
-			// ¶ÔÓÚdp[i]À´Ëµ£¬¾ÍÊÇµ±±³°üÄÚÎïÆ·ÎªiÁ¢·½Ã×Ê±µÄ¼ÛÖµ
+			// å¯¹äºdp[i]æ¥è¯´ï¼Œå°±æ˜¯å½“èƒŒåŒ…å†…ç‰©å“ä¸ºiç«‹æ–¹ç±³æ—¶çš„ä»·å€¼
 			int[] dp = new int[MAX];
 			for (int i = 0; i < N; i++) {
 				int value = s.nextInt();

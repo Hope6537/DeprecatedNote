@@ -46,8 +46,8 @@ public class HDOJ1050 {
                         }
                         routes[i] = new Route(start, end);
                     }
-                    // ¿Ï¶¨ÐèÒªÅÅÐò Ì°ÐÄ·¨²»¶ÔÊý¾Ý½øÐÐÅÅÐò¼òÖ±×÷ËÀ
-                    // ÏÈ¸ù¾ÝÖÕµãÀ´ÅÅÐò°É
+                    // è‚¯å®šéœ€è¦æŽ’åº è´ªå¿ƒæ³•ä¸å¯¹æ•°æ®è¿›è¡ŒæŽ’åºç®€ç›´ä½œæ­»
+                    // å…ˆæ ¹æ®ç»ˆç‚¹æ¥æŽ’åºå§
                     for (int i = 0; i < n; i++) {
                         for (int j = 0; j < n; j++) {
                             if (routes[i].start < routes[j].start) {
@@ -63,7 +63,7 @@ public class HDOJ1050 {
                     int nums = 0;
                     Route r = routes[0];
 
-                    // ½«ÒÆ¶¯¾àÀë¶ÌµÄ·ÅÔÚÇ°Ãæ À´ÏÈÒÆ¶¯
+                    // å°†ç§»åŠ¨è·ç¦»çŸ­çš„æ”¾åœ¨å‰é¢ æ¥å…ˆç§»åŠ¨
                     while (nums < n) {
                         if (r.visit == false) {
                             r.visit = true;

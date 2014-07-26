@@ -9,9 +9,9 @@ import java.io.StreamTokenizer;
 
 
 /**
- * @Describe ±äĞÎ¼Ç Éî¶ÈÓÅÏÈËÑË÷
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-6-2ÏÂÎç12:14:57
+ * @Describe å˜å½¢è®° æ·±åº¦ä¼˜å…ˆæœç´¢
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-6-2ä¸‹åˆ12:14:57
  * @version 0.9
  * @company Changchun University&SHXT
  */

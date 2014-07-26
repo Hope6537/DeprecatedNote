@@ -2,9 +2,9 @@ package org.hope6537.datastructs.Heap;
 
 
 /**
- * @Describe ×óÊ½¶Ñ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-5ÏÂÎç04:24:19
+ * @Describe å·¦å¼å †
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-5ä¸‹åˆ04:24:19
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <AnyType>
@@ -12,9 +12,9 @@ package org.hope6537.datastructs.Heap;
 public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
 	
 	/**
-	 * @Describe ×óÊ½¶Ñ½Úµã
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-4-5ÏÂÎç04:25:18
+	 * @Describe å·¦å¼å †èŠ‚ç‚¹
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-4-5ä¸‹åˆ04:25:18
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 * @param <AnyType>
@@ -24,7 +24,7 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
 		Node<AnyType> left;
 		Node<AnyType> right;
 		/**
-		 * @Describe ÁãÂ·¾¶³¤ 
+		 * @Describe é›¶è·¯å¾„é•¿ 
 		 */
 		int npl;
 		
@@ -40,15 +40,15 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Describe ¸ù½Úµã
+	 * @Describe æ ¹èŠ‚ç‚¹
 	 */
 	private Node<AnyType> root;
 	
 	/**
-	 * @Descirbe ¼ì²éÊÇ·ñÎª¿Õ  
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥æ˜¯å¦ä¸ºç©º  
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç04:44:57
+	 * @SignDate 2014-4-5ä¸‹åˆ04:44:57
 	 * @Version 0.9
 	 * @return
 	 */
@@ -57,10 +57,10 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe Çå¿Õ×óÊ½¶Ñ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºå·¦å¼å †
+	 * @Author Hope6537(èµµé¹)
 	 * @Params 
-	 * @SignDate 2014-4-5ÏÂÎç04:45:07
+	 * @SignDate 2014-4-5ä¸‹åˆ04:45:07
 	 * @Version 0.9
 	 */
 	public void makeEmpty(){
@@ -68,96 +68,96 @@ public class LeftistHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe ºÏ²¢Àı³ÌµÚÒ»²½
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Params @param rhs ÁíÍâµÄÊ÷
-	 * @SignDate 2014-4-5ÏÂÎç04:53:55
+	 * @Descirbe åˆå¹¶ä¾‹ç¨‹ç¬¬ä¸€æ­¥
+	 * @Author Hope6537(èµµé¹)
+	 * @Params @param rhs å¦å¤–çš„æ ‘
+	 * @SignDate 2014-4-5ä¸‹åˆ04:53:55
 	 * @Version 0.9
 	 * @param rhs
 	 */
 	public void merge(LeftistHeap<AnyType> rhs){
-		//Èç¹û±¾Ê÷ºÍÒªºÏ²¢µÄÊ÷ÏàÍ¬ 
+		//å¦‚æœæœ¬æ ‘å’Œè¦åˆå¹¶çš„æ ‘ç›¸åŒ 
 		if(this == rhs){
-			//ÔòÖ±½ÓÌø×ª
+			//åˆ™ç›´æ¥è·³è½¬
 			return;
 		}
-		//»ñÈ¡ºÏ²¢ºóµÄÊ÷¸ù ÓÃÓÚµ±±¾¶ÔÏóµÄĞÂÊ÷¸ù
+		//è·å–åˆå¹¶åçš„æ ‘æ ¹ ç”¨äºå½“æœ¬å¯¹è±¡çš„æ–°æ ‘æ ¹
 		root = merge(root,rhs.root);
-		//Ïû³ı¾ÉÊ÷
+		//æ¶ˆé™¤æ—§æ ‘
 		rhs.root = null;
 	}
 
 	/**
-	 * @Descirbe ºÏ²¢Àú³ÌµÚ¶ş²½ Ê÷¸ù½Úµã²Ù×÷ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åˆå¹¶å†ç¨‹ç¬¬äºŒæ­¥ æ ‘æ ¹èŠ‚ç‚¹æ“ä½œ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param h1
 	 * @Params @param h2
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç04:53:51
+	 * @SignDate 2014-4-5ä¸‹åˆ04:53:51
 	 * @Version 0.9
 	 * @param h1
 	 * @param h2
 	 * @return
 	 */
 	private Node<AnyType> merge(Node<AnyType> h1, Node<AnyType> h2) {
-		//Èç¹ûÁ½¿ÃÊ÷ÖĞÓĞÒ»¿ÅÎª¿Õ ÄÇÃ´ÁíÒ»¿Å¾ÍÊÇºÏ²¢½á¹û
+		//å¦‚æœä¸¤æ£µæ ‘ä¸­æœ‰ä¸€é¢—ä¸ºç©º é‚£ä¹ˆå¦ä¸€é¢—å°±æ˜¯åˆå¹¶ç»“æœ
 		if(h1 == null){
 			return h2;
 		}
 		if(h2 == null){
 			return h1;
 		}
-		//Èç¹û¶¼²»Îª¿Õ
+		//å¦‚æœéƒ½ä¸ä¸ºç©º
 		if(h1.element.compareTo(h2.element)<0){
-			//Í¬Ê±±¾Ê÷µÄÊ÷¸ùĞ¡ÓÚºÏ²¢Ê÷ ÔòÖ±½Ó´«Öµ
+			//åŒæ—¶æœ¬æ ‘çš„æ ‘æ ¹å°äºåˆå¹¶æ ‘ åˆ™ç›´æ¥ä¼ å€¼
 			return merge2(h1,h2);
-			//·µ»ØµÄÊÇÁ½Ê÷ºÏ²¢ºóĞÂµÄÊ÷¸ù 
+			//è¿”å›çš„æ˜¯ä¸¤æ ‘åˆå¹¶åæ–°çš„æ ‘æ ¹ 
 		}
 		else{
-			//·´Õı ÔòÓÉĞ¡µÄÄÇÒ»²¿·Ö×÷ÎªĞÂÊ÷ Ê÷¸ù
+			//åæ­£ åˆ™ç”±å°çš„é‚£ä¸€éƒ¨åˆ†ä½œä¸ºæ–°æ ‘ æ ‘æ ¹
 			return merge(h2, h1);
 		}
 		
 	}
 
 	/**
-	 * @Descirbe ºÏ²¢Àú³ÌµÚÈı²½ 
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Params @param h1 ²ÎÊıÎªÊıÖµĞ¡µÄÊ÷¸ù
-	 * @Params @param h2 ²ÎÊıÎªÊı×Ö´óµÄÊ÷¸ù
+	 * @Descirbe åˆå¹¶å†ç¨‹ç¬¬ä¸‰æ­¥ 
+	 * @Author Hope6537(èµµé¹)
+	 * @Params @param h1 å‚æ•°ä¸ºæ•°å€¼å°çš„æ ‘æ ¹
+	 * @Params @param h2 å‚æ•°ä¸ºæ•°å­—å¤§çš„æ ‘æ ¹
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç04:57:04
+	 * @SignDate 2014-4-5ä¸‹åˆ04:57:04
 	 * @Version 0.9
 	 * @param h1
 	 * @param h2
 	 * @return
 	 */
 	private Node<AnyType> merge2(Node<AnyType> h1, Node<AnyType> h2) {
-		//Èç¹û h1µÄ×ó½ÚµãÎª¿Õ  ¼´h1ÊÇ¸öµ¥¶ù×Ó»òÕßÎŞ¶ù×Ó½Úµã
+		//å¦‚æœ h1çš„å·¦èŠ‚ç‚¹ä¸ºç©º  å³h1æ˜¯ä¸ªå•å„¿å­æˆ–è€…æ— å„¿å­èŠ‚ç‚¹
 		if(h1.left == null){
-			//ÄÇÃ´h2Á¬Í¬×ÓÊ÷Ö±½Ó²åÈëµ½h1µÄ×ó²à
+			//é‚£ä¹ˆh2è¿åŒå­æ ‘ç›´æ¥æ’å…¥åˆ°h1çš„å·¦ä¾§
 			h1.left = h2;
 		}
 		else{
 			/*
-			 * Èç¹ûh1²»ÊÇÒ»¸öµ¥½Úµã Ôò½«h1½ÏĞ¡Ê÷µÄÓÒ×ÓÊ÷ºÍh2½øĞĞ±È½Ï¹é²¢±È½Ï
-			 * ×îºóÔÚµİ¹éÖĞ ÓĞÒ»¿Å×ÓÊ÷»á±éÀúµØ½öÊ£ÏÂµ¥½Úµã ÕâÊ±µİ¹é»ØÀ´Ê± ×ßµÄÊÇÉÏÃæif
-			 * ÕâÑù ¾Í½²Á½¸öÉ¢Ê÷²åÈëºÏ²¢³ÉÒ»¸öÊ÷ÁË¡£
-			 * ÔÚÔ­ÓĞH1 H2Ê÷ÉÏĞÎ³ÉÁËĞÂµÄ½á¹¹
-			 * ÓÉÓÚµİ¹éµÄĞÔÖÊ »áÔÙ½øĞĞ±È½Ï Ö±µ½±ä³ÉÄ³¸ö¸ù½ÚµãÃ»ÓĞÓÒ¶ù×Ó
-			 * ÕâÑù ½«H2'ºÏ²¢µÄĞÂÊ÷²åÈë½øH1µÄÓÒ¶ù×ÓÀï ÕâÑùºÏ²¢Íê³É 
+			 * å¦‚æœh1ä¸æ˜¯ä¸€ä¸ªå•èŠ‚ç‚¹ åˆ™å°†h1è¾ƒå°æ ‘çš„å³å­æ ‘å’Œh2è¿›è¡Œæ¯”è¾ƒå½’å¹¶æ¯”è¾ƒ
+			 * æœ€ååœ¨é€’å½’ä¸­ æœ‰ä¸€é¢—å­æ ‘ä¼šéå†åœ°ä»…å‰©ä¸‹å•èŠ‚ç‚¹ è¿™æ—¶é€’å½’å›æ¥æ—¶ èµ°çš„æ˜¯ä¸Šé¢if
+			 * è¿™æ · å°±è®²ä¸¤ä¸ªæ•£æ ‘æ’å…¥åˆå¹¶æˆä¸€ä¸ªæ ‘äº†ã€‚
+			 * åœ¨åŸæœ‰H1 H2æ ‘ä¸Šå½¢æˆäº†æ–°çš„ç»“æ„
+			 * ç”±äºé€’å½’çš„æ€§è´¨ ä¼šå†è¿›è¡Œæ¯”è¾ƒ ç›´åˆ°å˜æˆæŸä¸ªæ ¹èŠ‚ç‚¹æ²¡æœ‰å³å„¿å­
+			 * è¿™æ · å°†H2'åˆå¹¶çš„æ–°æ ‘æ’å…¥è¿›H1çš„å³å„¿å­é‡Œ è¿™æ ·åˆå¹¶å®Œæˆ 
 			 */
 			h1.right = merge(h1.right,h2);
 			
 			if(h1.left.npl<h1.right.npl){
 				/*
-				 * ÔÚºÏ²¢µÄ¹ı³ÌÖĞ Èç¹û×ó½ÚµãµÄÁã²îĞ¡ÓÚÓÒ½ÚµãµÄÁã²î
-				 * ÄÇÃ´¸Ã½Úµã×óÓÒ×ÓÊ÷½»»»
+				 * åœ¨åˆå¹¶çš„è¿‡ç¨‹ä¸­ å¦‚æœå·¦èŠ‚ç‚¹çš„é›¶å·®å°äºå³èŠ‚ç‚¹çš„é›¶å·®
+				 * é‚£ä¹ˆè¯¥èŠ‚ç‚¹å·¦å³å­æ ‘äº¤æ¢
 				 */
 				swapChildren(h1);
 			}
 			/*
-			 * ÔÚºÏ²¢³É¹¦µÄÀı³ÌÀï ½«ºÏ²¢µÄÁã²î¸ù¾İÓÒ×ÓÊ÷²åÈëµÄÇé¿ö+1
+			 * åœ¨åˆå¹¶æˆåŠŸçš„ä¾‹ç¨‹é‡Œ å°†åˆå¹¶çš„é›¶å·®æ ¹æ®å³å­æ ‘æ’å…¥çš„æƒ…å†µ+1
 			 */
 			h1.npl = h1.right.npl+1;
 		}

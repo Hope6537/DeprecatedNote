@@ -15,8 +15,8 @@ public class HDOJ1058 {
 	}
 
 	/*
-	 * Èç¹ûÒ»¸öÊıÊÇHumble Number,ÄÇÃ´ËüµÄ2±¶,3±¶,5±¶,7±¶ÈÔÈ»ÊÇHumble Number ¶¨ÒåF[i]ÎªµÚi¸öHumble
-	 * Number F[n]=min(2*f[i],3*f[j],5*f[k],7*f[L]), i,j,k,LÔÚ±»Ñ¡ÔñºóÏà»¥ÒÆ¶¯
+	 * å¦‚æœä¸€ä¸ªæ•°æ˜¯Humble Number,é‚£ä¹ˆå®ƒçš„2å€,3å€,5å€,7å€ä»ç„¶æ˜¯Humble Number å®šä¹‰F[i]ä¸ºç¬¬iä¸ªHumble
+	 * Number F[n]=min(2*f[i],3*f[j],5*f[k],7*f[L]), i,j,k,Låœ¨è¢«é€‰æ‹©åç›¸äº’ç§»åŠ¨
 	 */
 	public static void main(String[] args) {
 		long[] dp = new long[6000];

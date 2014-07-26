@@ -1,9 +1,9 @@
 package org.hope6537.datastructs.Hash;
 
 /**
- * @Describe Æ½·½Ì½²âÉ¢ÁĞ±í
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-5ÏÂÎç12:07:37
+ * @Describe å¹³æ–¹æ¢æµ‹æ•£åˆ—è¡¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-5ä¸‹åˆ12:07:37
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <AnyType>
@@ -11,20 +11,20 @@ package org.hope6537.datastructs.Hash;
 public class QuadraticProbingHashTable<AnyType> {
 
 	/**
-	 * @Describe É¢ÁĞ±íµÄ½ÚµãÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-4-5ÏÂÎç12:44:09
+	 * @Describe æ•£åˆ—è¡¨çš„èŠ‚ç‚¹å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-4-5ä¸‹åˆ12:44:09
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 * @param <AnyType>
 	 */
 	private static class HashEntry<AnyType> {
-		// Êı¾İ
+		// æ•°æ®
 		public AnyType element;
-		// ÊÇ·ñ¿ÉÓÃ
+		// æ˜¯å¦å¯ç”¨
 		public boolean isActive;
 
-		// ¹¹Ôì·½·¨
+		// æ„é€ æ–¹æ³•
 		public HashEntry(AnyType x) {
 			this(x, true);
 		}
@@ -36,23 +36,23 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Describe Ä¬ÈÏ³¤¶È
+	 * @Describe é»˜è®¤é•¿åº¦
 	 */
 	private static final int DEFAULT_TABLE_SIZE = 11;
 
 	/**
-	 * @Describe ×°ÔØ½ÚµãµÄÈİÆ÷¼¯ºÏ
+	 * @Describe è£…è½½èŠ‚ç‚¹çš„å®¹å™¨é›†åˆ
 	 */
 	private HashEntry<AnyType>[] array;
 
 	/**
-	 * @Describe µ±Ç°½ÚµãµÄÊıÁ¿
+	 * @Describe å½“å‰èŠ‚ç‚¹çš„æ•°é‡
 	 */
 	private int currentSize;
 
 	/**
-	 * @Describe Ä¬ÈÏ¹¹Ôì·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe é»˜è®¤æ„é€ æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @param
 	 */
 	public QuadraticProbingHashTable() {
@@ -60,22 +60,22 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Describe ÓĞÊı×é´óĞ¡²ÎÊıµÄ¹¹Ôì·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe æœ‰æ•°ç»„å¤§å°å‚æ•°çš„æ„é€ æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param size
 	 */
 	public QuadraticProbingHashTable(int size) {
-		// ´´½¨HashEntry½ÚµãÊı×é²¢ÒÀ´Î³õÊ¼»¯
+		// åˆ›å»ºHashEntryèŠ‚ç‚¹æ•°ç»„å¹¶ä¾æ¬¡åˆå§‹åŒ–
 		alocateArray(size);
-		// Í¬Ê±Çå¿ÕÊı¾İ
+		// åŒæ—¶æ¸…ç©ºæ•°æ®
 		makeEmpty();
 	}
 
 	/**
-	 * @Descirbe Çå¿ÕÉ¢ÁĞ±íµÄÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºæ•£åˆ—è¡¨çš„æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params
-	 * @SignDate 2014-4-5ÏÂÎç12:45:57
+	 * @SignDate 2014-4-5ä¸‹åˆ12:45:57
 	 * @Version 0.9
 	 */
 	public void makeEmpty() {
@@ -86,10 +86,10 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe ³õÊ¼»¯ÈİÆ÷Êı×é
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åˆå§‹åŒ–å®¹å™¨æ•°ç»„
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param arraySize
-	 * @SignDate 2014-4-5ÏÂÎç12:46:09
+	 * @SignDate 2014-4-5ä¸‹åˆ12:46:09
 	 * @Version 0.9
 	 * @param arraySize
 	 */
@@ -99,51 +99,51 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe ·µ»Øµ±Ç°posË÷ÒıÏÂÔªËØµÄ¿ÉÓÃĞÔ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›å½“å‰posç´¢å¼•ä¸‹å…ƒç´ çš„å¯ç”¨æ€§
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param pos
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç12:46:19
+	 * @SignDate 2014-4-5ä¸‹åˆ12:46:19
 	 * @Version 0.9
 	 * @param pos
 	 * @return
 	 */
 	private boolean isActive(int pos) {
-		// ²»Îª¿ÕÍ¬Ê±ÊôĞÔÖµÎªtrue ËµÃ÷¿ÉÓÃ
+		// ä¸ä¸ºç©ºåŒæ—¶å±æ€§å€¼ä¸ºtrue è¯´æ˜å¯ç”¨
 		return array[pos] != null && array[pos].isActive;
 
 	}
 
 	/**
-	 * @Descirbe ÕÒµ½xÔªËØËùÆ½·½Ì½²â·¨·ÖÅäµÄÎ»ÖÃ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰¾åˆ°xå…ƒç´ æ‰€å¹³æ–¹æ¢æµ‹æ³•åˆ†é…çš„ä½ç½®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç12:46:49
+	 * @SignDate 2014-4-5ä¸‹åˆ12:46:49
 	 * @Version 0.9
 	 * @param x
 	 * @return
 	 */
 	private int findPos(AnyType x) {
-		int offset = 1; // Ä¬ÈÏ³õÊ¼Î»ÖÃ
-		int pos = myHash(x); // Ê×ÏÈ½øĞĞÉ¢ÁĞ»¯
-		while (array[pos] != null && !array[pos].element.equals(x)) {// Èç¹ûµ±Ç°posË÷Òı´æÔÚ¿ÉÓÃÔªËØ
-																		// Í¬Ê±ÊıÖµºÍx²»Í¬
-			pos = pos + offset; // ÄÇÃ´ÒÀ´Î½«posºóÒÆ
-			offset += 2; // Í¬Ê±½«²ÎÊıÖğ½¥+2 ÒÔÏà¼Ó Ö±µ½Ñ°ÕÒµ½¿ÕµãÔÙÌø³öÑ­»·
-			if (pos >= array.length) {// Èç¹ûÔ½½ç ÄÇÃ´×öMODÔËËã
+		int offset = 1; // é»˜è®¤åˆå§‹ä½ç½®
+		int pos = myHash(x); // é¦–å…ˆè¿›è¡Œæ•£åˆ—åŒ–
+		while (array[pos] != null && !array[pos].element.equals(x)) {// å¦‚æœå½“å‰posç´¢å¼•å­˜åœ¨å¯ç”¨å…ƒç´ 
+																		// åŒæ—¶æ•°å€¼å’Œxä¸åŒ
+			pos = pos + offset; // é‚£ä¹ˆä¾æ¬¡å°†posåç§»
+			offset += 2; // åŒæ—¶å°†å‚æ•°é€æ¸+2 ä»¥ç›¸åŠ  ç›´åˆ°å¯»æ‰¾åˆ°ç©ºç‚¹å†è·³å‡ºå¾ªç¯
+			if (pos >= array.length) {// å¦‚æœè¶Šç•Œ é‚£ä¹ˆåšMODè¿ç®—
 				pos -= array.length;
 			}
 		}
-		return pos;// ·µ»Ø×îÖÕÉ¢ÁĞÎ»ÖÃ
+		return pos;// è¿”å›æœ€ç»ˆæ•£åˆ—ä½ç½®
 	}
 
 	/**
-	 * @Descirbe Hashº¯Êı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe Hashå‡½æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç12:47:13
+	 * @SignDate 2014-4-5ä¸‹åˆ12:47:13
 	 * @Version 0.9
 	 * @param x
 	 * @return
@@ -159,11 +159,11 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe Ñ°ÕÒxÔªËØÊÇ·ñÔÚÉ¢ÁĞ±íÖĞ´æÔÚ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¯»æ‰¾xå…ƒç´ æ˜¯å¦åœ¨æ•£åˆ—è¡¨ä¸­å­˜åœ¨
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç12:47:22
+	 * @SignDate 2014-4-5ä¸‹åˆ12:47:22
 	 * @Version 0.9
 	 * @param x
 	 * @return
@@ -174,29 +174,29 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe ²åÈëÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ’å…¥å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-4-5ÏÂÎç12:54:13
+	 * @SignDate 2014-4-5ä¸‹åˆ12:54:13
 	 * @Version 0.9
 	 * @param x
 	 */
 	public void insert(AnyType x) {
-		int pos = findPos(x); // ÕÒµ½Ë÷ÒıposÎ»ÖÃ
-		if (isActive(pos)) {// Èç¹û´æÔÚÏàÍ¬ÔªËØ Ö±½ÓÌø×ª
+		int pos = findPos(x); // æ‰¾åˆ°ç´¢å¼•posä½ç½®
+		if (isActive(pos)) {// å¦‚æœå­˜åœ¨ç›¸åŒå…ƒç´  ç›´æ¥è·³è½¬
 			return;
 		}
-		array[pos] = new HashEntry<AnyType>(x); // ²åÈë
-		if (++currentSize > array.length / 2) {// Èç¹û ¦Ë>0.5 ÔòÖØÅÅ
+		array[pos] = new HashEntry<AnyType>(x); // æ’å…¥
+		if (++currentSize > array.length / 2) {// å¦‚æœ Î»>0.5 åˆ™é‡æ’
 			rehash();
 		}
 	}
 
 	/**
-	 * @Descirbe ÔÚÌí¼ÓÒò×ÓÏµÊı´óÓÚ0.5Ê± ÖØÅÅ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åœ¨æ·»åŠ å› å­ç³»æ•°å¤§äº0.5æ—¶ é‡æ’
+	 * @Author Hope6537(èµµé¹)
 	 * @Params
-	 * @SignDate 2014-4-5ÏÂÎç12:59:13
+	 * @SignDate 2014-4-5ä¸‹åˆ12:59:13
 	 * @Version 0.9
 	 */
 	private void rehash() {
@@ -211,33 +211,33 @@ public class QuadraticProbingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe µÃµ½nÖ®ºóµÄÏÂÒ»¸öËØÊı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¾—åˆ°nä¹‹åçš„ä¸‹ä¸€ä¸ªç´ æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param n
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:42:07
+	 * @SignDate 2014-4-3ä¸‹åˆ07:42:07
 	 * @Version 0.9
 	 * @param n
 	 * @return
 	 */
 	private static int nextPrime(int n) {
-		if (n % 2 == 0) {// Ê×ÏÈ¼ì²âÊÇ·ñÄÜ±»2Õû³ı£¬Èç¹ûÊÇµÄ»°¾ÍÖ±½Ó¸É+1
+		if (n % 2 == 0) {// é¦–å…ˆæ£€æµ‹æ˜¯å¦èƒ½è¢«2æ•´é™¤ï¼Œå¦‚æœæ˜¯çš„è¯å°±ç›´æ¥å¹²+1
 			n++;
 		}
 
 		for (; !isPrime(n); n += 2)
-			// È»ºóÎŞÏŞÑ­»·µ½ ²»ÊÇËØÊı ·ñÔòµÄ»°¾Ín+2µİÔö
+			// ç„¶åæ— é™å¾ªç¯åˆ° ä¸æ˜¯ç´ æ•° å¦åˆ™çš„è¯å°±n+2é€’å¢
 			;
 
 		return n;
 	}
 
 	/**
-	 * @Descirbe ¼ì²éÊÇ·ñÊÇËØÊı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥æ˜¯å¦æ˜¯ç´ æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param n
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:42:18
+	 * @SignDate 2014-4-3ä¸‹åˆ07:42:18
 	 * @Version 0.9
 	 * @param n
 	 * @return
@@ -249,10 +249,10 @@ public class QuadraticProbingHashTable<AnyType> {
 		if (n == 1 || n % 2 == 0) {
 			return false;
 		}
-		// ÉÏÁ½ĞĞÌ«ÈõÖÇ
+		// ä¸Šä¸¤è¡Œå¤ªå¼±æ™º
 
-		for (int i = 3; i * i <= n; i += 2) {// ÕÛ°ëÑ­»·²éÕÒ,¼´ÔÚ¹«Òò×ÓÔÚsqrt n
-												// Ö®Ç°Èç¹û´æÔÚµÄ»°£¬¾Í¿ÉÒÔ½ÚÊ¡Ò»°ëÊ±¼ä
+		for (int i = 3; i * i <= n; i += 2) {// æŠ˜åŠå¾ªç¯æŸ¥æ‰¾,å³åœ¨å…¬å› å­åœ¨sqrt n
+												// ä¹‹å‰å¦‚æœå­˜åœ¨çš„è¯ï¼Œå°±å¯ä»¥èŠ‚çœä¸€åŠæ—¶é—´
 			if (n % i == 0) {
 				return false;
 			}

@@ -1,6 +1,6 @@
 package org.hope6537.datastructs.march;
 
-public class 欧几里得算法 {
+public class 娆у嚑閲屽緱绠楁硶 {
 
 	public static long gcd(long m, long n) {
 		while (n != 0) {

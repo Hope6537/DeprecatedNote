@@ -28,7 +28,7 @@ public class HDOJ4502 {
 			QuickSort.quickSort(ns);
 
 			/*
-			 * ¶¯Ì¬¹æ»®·½·¨2 dp[j] ´ú±íµÚjÌìµÄÊÕÈë dp[j] = max{dp[j],dp[ns[i].s-1] +
+			 * åŠ¨æ€è§„åˆ’æ–¹æ³•2 dp[j] ä»£è¡¨ç¬¬jå¤©çš„æ”¶å…¥ dp[j] = max{dp[j],dp[ns[i].s-1] +
 			 * ns[i].value}
 			 */
 
@@ -42,10 +42,10 @@ public class HDOJ4502 {
 			System.out.println(dp[m]);
 
 			/*
-			 * ¶¯Ì¬¹æ»®·½·¨ dp[i] ´ú±íÇ°i¸ö¹¤×÷ÄÜÕõµÄ×î¶àÇ®Êı dp[i]
+			 * åŠ¨æ€è§„åˆ’æ–¹æ³• dp[i] ä»£è¡¨å‰iä¸ªå·¥ä½œèƒ½æŒ£çš„æœ€å¤šé’±æ•° dp[i]
 			 * =max{(max{dp[ns[1].end],dp[ns[1].start-1] +
 			 * ns[1].value}),...,(max{dp[ns[i].end],dp[ns[i].start-1] +
-			 * ns[i].value})} ³¬Ê±
+			 * ns[i].value})} è¶…æ—¶
 			 */
 			/*
 			 * for (int i = 1; i <= n; i++) { dp[ns[i].e] = max(dp[ns[i].e],
@@ -55,7 +55,7 @@ public class HDOJ4502 {
 			 */
 
 			/*
-			 * Ì°ĞÄËã·¨³¬Ê±
+			 * è´ªå¿ƒç®—æ³•è¶…æ—¶
 			 * 
 			 * } } int max = 0; for (int i = 0; i < n; i++) { Node temp = ns[i];
 			 * if (temp.e <= m) { int value = temp.v; for (int j = i + 1; j < n;
@@ -98,14 +98,14 @@ public class HDOJ4502 {
 class QuickSort {
 
 	/**
-	 * @Descirbe Ñ¡ÔñÊàÅ¦Ôª
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é€‰æ‹©æ¢çº½å…ƒ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @Params @param left ×ó²àµÄË÷ÒıÓÎ±ê
-	 * @Params @param right ÓÒ²àµÄË÷ÒıÓÎ±ê
+	 * @Params @param left å·¦ä¾§çš„ç´¢å¼•æ¸¸æ ‡
+	 * @Params @param right å³ä¾§çš„ç´¢å¼•æ¸¸æ ‡
 	 * @Params @return
-	 * @SignDate 2014-4-6ÏÂÎç04:04:12
+	 * @SignDate 2014-4-6ä¸‹åˆ04:04:12
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -115,24 +115,24 @@ class QuickSort {
 	 */
 	private static <AnyType extends Comparable<? super AnyType>> AnyType median3(
 			AnyType[] a, int left, int right) {
-		// ÕÒ³öÖĞÖµµã
+		// æ‰¾å‡ºä¸­å€¼ç‚¹
 		int center = (left + right) / 2;
-		// Èç¹ûÖĞĞÄĞ¡ÓÚ×ó¶¨µã Ôò»¥»»
+		// å¦‚æœä¸­å¿ƒå°äºå·¦å®šç‚¹ åˆ™äº’æ¢
 		if (a[center].compareTo(a[left]) < 0) {
 			swapReferences(a, left, center);
 		}
-		// Èç¹ûÓÒ²àĞ¡ÓÚ×ó²à Ôò»¥»»
+		// å¦‚æœå³ä¾§å°äºå·¦ä¾§ åˆ™äº’æ¢
 		if (a[right].compareTo(a[left]) < 0) {
 			swapReferences(a, left, right);
 		}
-		// Èç¹ûÓÒ²àĞ¡ÓÚÖĞĞÄ Ôò»¥»»
+		// å¦‚æœå³ä¾§å°äºä¸­å¿ƒ åˆ™äº’æ¢
 		if (a[right].compareTo(a[center]) < 0) {
 			swapReferences(a, center, right);
 		}
-		// ÕâÑù×îºó´ÓĞ¡µ½´óÔòÊÇ left center right½øĞĞÅÅÁĞ
+		// è¿™æ ·æœ€åä»å°åˆ°å¤§åˆ™æ˜¯ left center rightè¿›è¡Œæ’åˆ—
 		/*
-		 * ½«ÖĞĞÄµÄÊı¾İ ¼´ÊàÅ¦ÔªºÍÓÒ²à-1Î»ÖÃµÄÓÎ±ê½øĞĞ½»»» ÒòÎªleft center rightÊÇ·ûºÏÅÅĞòĞòÁĞµÄ
-		 * ËùÒÔÅÅĞòµÄÖ÷ÌåÊÇ´Óleft+1µ½right-2µÄ
+		 * å°†ä¸­å¿ƒçš„æ•°æ® å³æ¢çº½å…ƒå’Œå³ä¾§-1ä½ç½®çš„æ¸¸æ ‡è¿›è¡Œäº¤æ¢ å› ä¸ºleft center rightæ˜¯ç¬¦åˆæ’åºåºåˆ—çš„
+		 * æ‰€ä»¥æ’åºçš„ä¸»ä½“æ˜¯ä»left+1åˆ°right-2çš„
 		 */
 
 		swapReferences(a, center, right - 1);
@@ -145,48 +145,48 @@ class QuickSort {
 	private static <AnyType extends Comparable<? super AnyType>> void quickSort(
 			AnyType[] a, int left, int right) {
 		if (left + CUTOFF <= right) {
-			// Èç¹û×óÓÎ±êµ½ÓÒÓÎ±êÓĞÈı¸öÔªËØ
-			// ÄÇÃ´ËµÃ÷ÊàÅ¦Ôª¿ÉÓÃ
+			// å¦‚æœå·¦æ¸¸æ ‡åˆ°å³æ¸¸æ ‡æœ‰ä¸‰ä¸ªå…ƒç´ 
+			// é‚£ä¹ˆè¯´æ˜æ¢çº½å…ƒå¯ç”¨
 			AnyType pivot = median3(a, left, right);
-			// ½«´Ó×óÓÒ±ß½ç¿ªÊ¼½øĞĞ±éÀú
+			// å°†ä»å·¦å³è¾¹ç•Œå¼€å§‹è¿›è¡Œéå†
 			int i = left;
 			int j = right - 1;
 			for (;;) {
-				// ½øÈëÑ­»·
+				// è¿›å…¥å¾ªç¯
 				while (a[++i].compareTo(pivot) < 0) {
-					// Èç¹û´Ó×ó¿ªÊ¼Óöµ½µÄ±éÀúµÄÊı±ÈÊàÅ¦ÔªµÄĞ¡ Ôò½Ó×Å±éÀú Ö±µ½Óöµ½´óÓÚÊàÅ¦ÔªµÄÍ£Ö¹
+					// å¦‚æœä»å·¦å¼€å§‹é‡åˆ°çš„éå†çš„æ•°æ¯”æ¢çº½å…ƒçš„å° åˆ™æ¥ç€éå† ç›´åˆ°é‡åˆ°å¤§äºæ¢çº½å…ƒçš„åœæ­¢
 				}
 				while (a[--j].compareTo(pivot) > 0) {
-					// Èç¹û´ÓÓÒ¿ªÊ¼Óïµ÷µÄ±éÀúµÄÊı±ÈÊàÅ¦ÔªµÄ´ó Ôò½Ó×Å±éÀú Ö±µ½Óöµ½Ğ¡ÓÚÊàÅ¦ÔªµÄÍ£Ö¹
+					// å¦‚æœä»å³å¼€å§‹è¯­è°ƒçš„éå†çš„æ•°æ¯”æ¢çº½å…ƒçš„å¤§ åˆ™æ¥ç€éå† ç›´åˆ°é‡åˆ°å°äºæ¢çº½å…ƒçš„åœæ­¢
 				}
 				if (i < j) {
-					// Èç¹ûi jµÄ±ß½çºÏ·¨ Ôò»¥»»
+					// å¦‚æœi jçš„è¾¹ç•Œåˆæ³• åˆ™äº’æ¢
 					swapReferences(a, i, j);
 				} else {
-					// Èç¹û±ß½ç²»ºÏ·¨ ÔòËµÃ÷¸ÃÊı×éÒÑ¾­ÅÅĞòÍê³É Ìø³ö
+					// å¦‚æœè¾¹ç•Œä¸åˆæ³• åˆ™è¯´æ˜è¯¥æ•°ç»„å·²ç»æ’åºå®Œæˆ è·³å‡º
 					break;
 				}
 			}
-			// ½«ÊàÅ¦Ôª»»»ØÀ´
+			// å°†æ¢çº½å…ƒæ¢å›æ¥
 			swapReferences(a, i, right - 1);
-			// Í¬Ê±ÔÙ½«Á½²àµÄS1 S2Êı¾İÈº½øĞĞ·Ö¸îÅÅĞò
+			// åŒæ—¶å†å°†ä¸¤ä¾§çš„S1 S2æ•°æ®ç¾¤è¿›è¡Œåˆ†å‰²æ’åº
 			quickSort(a, left, i - 1);
 			quickSort(a, i, right);
 
 		} else {
-			// ×îºó·Ö¸î³É½öÓĞ3¸öÔªËØÊ± ÄÇÃ´²åÈëÅÅĞò×ßÄã,ÅÅºÃµÄÍ¬Ê±µİ¹é·µ»Ø
+			// æœ€ååˆ†å‰²æˆä»…æœ‰3ä¸ªå…ƒç´ æ—¶ é‚£ä¹ˆæ’å…¥æ’åºèµ°ä½ ,æ’å¥½çš„åŒæ—¶é€’å½’è¿”å›
 			insertionSort(a, left, right);
 		}
 	}
 
 	/**
-	 * @Descirbe ´ø±ß½çµÄ²åÈëÅÅĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¸¦è¾¹ç•Œçš„æ’å…¥æ’åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param left
 	 * @Params @param right
-	 * @SignDate 2014-4-6ÏÂÎç04:18:28
+	 * @SignDate 2014-4-6ä¸‹åˆ04:18:28
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -206,13 +206,13 @@ class QuickSort {
 	}
 
 	/**
-	 * @Descirbe ½»»»ÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe äº¤æ¢å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param index1
 	 * @Params @param index2
-	 * @SignDate 2014-4-6ÏÂÎç01:42:56
+	 * @SignDate 2014-4-6ä¸‹åˆ01:42:56
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a

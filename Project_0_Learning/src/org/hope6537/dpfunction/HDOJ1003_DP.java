@@ -3,9 +3,9 @@ package org.hope6537.dpfunction;
 import java.util.Scanner;
 
 /**
- * @Describe ×´Ì¬·½³Ì½â·¨
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-19ÉÏÎç09:43:19
+ * @Describe çŠ¶æ€æ–¹ç¨‹è§£æ³•
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-19ä¸Šåˆ09:43:19
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -26,9 +26,9 @@ public class HDOJ1003_DP {
 				}
 				dp[0] = nums[0];
 				// input done
-				// ×´Ì¬·½³Ì Éèdp[J]±íÊ¾µÚJ´¦£¬ÒÔnums[J] ½áÎ²µÄ×ÓĞòÁĞµÄ×î´óºÍ¡£
-				// Ôòdp[J] = max(nums[J] + dp[J-1] , nums[J]) £¬
-				// ¶øÎÒÃÇµÄËùÇóµÄ´ğ°¸£¬¾ÍÊÇ´Ó1- N¶ÔBÊı×éÇó×î´óÖµ¡£
+				// çŠ¶æ€æ–¹ç¨‹ è®¾dp[J]è¡¨ç¤ºç¬¬Jå¤„ï¼Œä»¥nums[J] ç»“å°¾çš„å­åºåˆ—çš„æœ€å¤§å’Œã€‚
+				// åˆ™dp[J] = max(nums[J] + dp[J-1] , nums[J]) ï¼Œ
+				// è€Œæˆ‘ä»¬çš„æ‰€æ±‚çš„ç­”æ¡ˆï¼Œå°±æ˜¯ä»1- Nå¯¹Bæ•°ç»„æ±‚æœ€å¤§å€¼ã€‚
 				// d[i] = max{d[i - 1] + data[i], data[i]}
 				int start = 1;
 				int end = 0;

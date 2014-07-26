@@ -3,11 +3,11 @@ package org.hope6537.datastructs.Sort;
 public class Sort {
 	
 	/**
-	 * @Descirbe ²åÈëÅÅĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ’å…¥æ’åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @SignDate 2014-4-6ÏÂÎç12:45:25
+	 * @SignDate 2014-4-6ä¸‹åˆ12:45:25
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -15,41 +15,41 @@ public class Sort {
 	public static <AnyType extends Comparable<? super AnyType>> void insertionSort(AnyType [] a){
 		int j = 0;
 		for(int p = 1 ; p < a.length ; p++ ){
-			//´ÓµÚ¶ş¸öÔªËØ¿ªÊ¼µ½Î²²¿
-			AnyType tmp = a[p]; //È»ºó»ñÈ¡µÚp¸öÔªËØ
+			//ä»ç¬¬äºŒä¸ªå…ƒç´ å¼€å§‹åˆ°å°¾éƒ¨
+			AnyType tmp = a[p]; //ç„¶åè·å–ç¬¬pä¸ªå…ƒç´ 
 			for(j = p ; j > 0 && tmp.compareTo(a[j-1])<0 ; j--){
-				//½øĞĞÑ­»·  jµÄË÷Òı´Óp¿ªÊ¼ µ½j-1ÔªËØ´óÓÚjÔªËØÊ±  ½»»»
+				//è¿›è¡Œå¾ªç¯  jçš„ç´¢å¼•ä»på¼€å§‹ åˆ°j-1å…ƒç´ å¤§äºjå…ƒç´ æ—¶  äº¤æ¢
 				a[j] = a[j-1];
 			}
-			//×îºó±äÁ¿½»»»Íê±Ï
+			//æœ€åå˜é‡äº¤æ¢å®Œæ¯•
 			a[j] = tmp;
 		}
 	}
 	
 	/**
-	 * @Descirbe Ï£¶ûÅÅĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¸Œå°”æ’åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @SignDate 2014-4-6ÏÂÎç12:57:15
+	 * @SignDate 2014-4-6ä¸‹åˆ12:57:15
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
 	 */
 	public static <AnyType extends Comparable<? super AnyType>> void shellsort(AnyType [] a){
-		int j = 0; //×÷ÎªÒ»¸öÁÙÊ±ÏÂ±ê
-		//´Ó×Ü³¤µÄÒ»°ë¿ªÊ¼ µ±gap>0Ê± ½«±äÁ¿ÕÛ°ëÉèÖÃ gap×÷ÎªÒ»¸öÌøÔ¾Ë÷Òı 
+		int j = 0; //ä½œä¸ºä¸€ä¸ªä¸´æ—¶ä¸‹æ ‡
+		//ä»æ€»é•¿çš„ä¸€åŠå¼€å§‹ å½“gap>0æ—¶ å°†å˜é‡æŠ˜åŠè®¾ç½® gapä½œä¸ºä¸€ä¸ªè·³è·ƒç´¢å¼• 
 		for(int gap = a.length/2 ;  gap>0 ; gap /= 2  ){
-			//´ÓÖ®Ç°µÄÕÛ°ë±äÁ¿¿ªÊ¼µ½Êı×éÄ©Î²
+			//ä»ä¹‹å‰çš„æŠ˜åŠå˜é‡å¼€å§‹åˆ°æ•°ç»„æœ«å°¾
 			for(int i = gap ; i < a.length ; i++){
-				//ÒÀ´ÎÑ°ÕÒ²¢ÉèÖÃ±äÁ¿ ²¢½«Æä±£´æ
+				//ä¾æ¬¡å¯»æ‰¾å¹¶è®¾ç½®å˜é‡ å¹¶å°†å…¶ä¿å­˜
 				AnyType tmp = a[i];
-				//½«iµÄÖµ¸³¸øj Èç¹ûj´óÓÚgapË÷Òı Í¬Ê±jË÷ÒıµÄÔªËØĞ¡ÓÚ j-gap £¨¼´ÔÚ±¾ÌøÔ¾·½Ê½ÖĞĞòÁĞ²»Í¬£© Ôò»¥»»
+				//å°†içš„å€¼èµ‹ç»™j å¦‚æœjå¤§äºgapç´¢å¼• åŒæ—¶jç´¢å¼•çš„å…ƒç´ å°äº j-gap ï¼ˆå³åœ¨æœ¬è·³è·ƒæ–¹å¼ä¸­åºåˆ—ä¸åŒï¼‰ åˆ™äº’æ¢
 				for(j = i ; j>=gap && tmp.compareTo(a[j-gap]) < 0 ; j-= gap){
-					//ÔªËØ»¥»»
+					//å…ƒç´ äº’æ¢
 					a[j] = a[j-gap];
 				}
-				//×îºó±äÁ¿½»»»Íê±Ï
+				//æœ€åå˜é‡äº¤æ¢å®Œæ¯•
 				a[j] = tmp;
 			}
 		}

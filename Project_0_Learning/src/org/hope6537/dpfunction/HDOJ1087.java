@@ -6,40 +6,40 @@ public class HDOJ1087 {
 
 	static Scanner s = new Scanner(System.in);
 
-	// ¿Ï¶¨ĞèÒªĞ´×´Ì¬·½³Ì,ËùÒÔ±ØĞëÒªÓĞ×´Ì¬Àà
+	// è‚¯å®šéœ€è¦å†™çŠ¶æ€æ–¹ç¨‹,æ‰€ä»¥å¿…é¡»è¦æœ‰çŠ¶æ€ç±»
 	/**
-	 * @Describe ±ØĞëÒªÓĞ×´Ì¬Àà
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-5-18ÉÏÎç10:17:38
+	 * @Describe å¿…é¡»è¦æœ‰çŠ¶æ€ç±»
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-5-18ä¸Šåˆ10:17:38
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	public static class Status {
 		/**
-		 * @Describe ´ú±íÀÛºÍ
+		 * @Describe ä»£è¡¨ç´¯å’Œ
 		 */
 		long totalSum;
 		/**
-		 * @Describe ´ú±íµ±Ç°µÄÊıÖµ
+		 * @Describe ä»£è¡¨å½“å‰çš„æ•°å€¼
 		 */
 		long userNum;
 		/**
-		 * @Describe ´ú±íÇ°ÇıµÄ×´Ì¬
+		 * @Describe ä»£è¡¨å‰é©±çš„çŠ¶æ€
 		 */
 		int preStatus;
 
 		@Override
 		public String toString() {
-			return "Status [Ç°ÇıµÄ×´Ì¬=" + Integer.toBinaryString(preStatus)
-					+ ",ÀÛºÍ =" + totalSum + ", ÓÃ»§µ±Ç°ÊıÖµ=" + userNum + "]";
+			return "Status [å‰é©±çš„çŠ¶æ€=" + Integer.toBinaryString(preStatus)
+					+ ",ç´¯å’Œ =" + totalSum + ", ç”¨æˆ·å½“å‰æ•°å€¼=" + userNum + "]";
 		}
 
 		/**
 		 * @Describe
-		 * @Author Hope6537(ÕÔÅô)
-		 * @param ÀÛºÍ
-		 * @param ÓÃ»§µ±Ç°ÊıÖµ
-		 * @param Ç°ÇıµÄ×´Ì¬
+		 * @Author Hope6537(èµµé¹)
+		 * @param ç´¯å’Œ
+		 * @param ç”¨æˆ·å½“å‰æ•°å€¼
+		 * @param å‰é©±çš„çŠ¶æ€
 		 */
 		public Status(long totalSum, long userNum, int preStatus) {
 			super();
@@ -67,13 +67,13 @@ public class HDOJ1087 {
 			}
 			{
 
-				// ¶¨ÒåÆäµÄ×´Ì¬ÊıÁ¿ Îª11111
+				// å®šä¹‰å…¶çš„çŠ¶æ€æ•°é‡ ä¸º11111
 				int nums = (1 << (n));
 				nums ++;
 				int preStatus = 0;
 				long totalSum = 0;
 				status = new Status[nums];
-				// È»ºó¿ªÊ¼´ÓµÚÒ»¸ö×´Ì¬¿ªÊ¼
+				// ç„¶åå¼€å§‹ä»ç¬¬ä¸€ä¸ªçŠ¶æ€å¼€å§‹
 				status[0] = new Status(0, 0, 0);
 				for (int i = 1; i < nums; i++) {
 					if (status[i] == null) {
@@ -86,7 +86,7 @@ public class HDOJ1087 {
 						String binaryTemp = Integer.toBinaryString(temp);
 						
 						if ((i & temp) != 0) {
-							// Èç¹ûÊÇºóĞø×´Ì¬
+							// å¦‚æœæ˜¯åç»­çŠ¶æ€
 							preStatus = i - temp;
 							String binaryPreStatus = Integer.toBinaryString(preStatus);
 							if (status[preStatus].userNum < arr[j]) {

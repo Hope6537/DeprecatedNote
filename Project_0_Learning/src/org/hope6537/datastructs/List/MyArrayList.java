@@ -5,41 +5,41 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @Describe ×Ô¼ºµÄArrayListÀà
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-3-3ÏÂÎç09:09:08
+ * @Describe è‡ªå·±çš„ArrayListç±»
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-3-3ä¸‹åˆ09:09:08
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class MyArrayList implements Iterable<Serializable> {
 
 	
-	private static final int DEFAULT_CAPACITY = 10; //Ä¬ÈÏÈİÁ¿Îª10
+	private static final int DEFAULT_CAPACITY = 10; //é»˜è®¤å®¹é‡ä¸º10
 	
-	private int theSize; // ÏÖÔÚµÄ´óĞ¡
+	private int theSize; // ç°åœ¨çš„å¤§å°
 	
-	private Serializable [] theItems; // Êı¾İ ¼´ data
+	private Serializable [] theItems; // æ•°æ® å³ data
 	
 	public MyArrayList() {
-		clear();	//¹¹Ôì·½·¨Ö±½ÓÇå¿Õµ±Ç°±»µ÷ÓÃ¶ÔÏó,·µ»Ø³öÀ´µÄÊ±ºòÊÇÊ¹ÓÃµÄÎŞÔªËØÌå
+		clear();	//æ„é€ æ–¹æ³•ç›´æ¥æ¸…ç©ºå½“å‰è¢«è°ƒç”¨å¯¹è±¡,è¿”å›å‡ºæ¥çš„æ—¶å€™æ˜¯ä½¿ç”¨çš„æ— å…ƒç´ ä½“
 	}
 	
 	
 	public void clear(){
-		theSize = 0; //ÏÖÔÚµÄ´óĞ¡ÊıÖµÇåÁã
-		ensureCapacity(DEFAULT_CAPACITY);//ÒòÎªÑ­»·ÊÇ´Ó0Ñ­»·µ½0 ËùÒÔ²»´æÔÚÊı¾İÁË
+		theSize = 0; //ç°åœ¨çš„å¤§å°æ•°å€¼æ¸…é›¶
+		ensureCapacity(DEFAULT_CAPACITY);//å› ä¸ºå¾ªç¯æ˜¯ä»0å¾ªç¯åˆ°0 æ‰€ä»¥ä¸å­˜åœ¨æ•°æ®äº†
 	}
 	
 	public int size(){
-		return theSize; //·µ»ØÏÖÔÚµÄ´óĞ¡µÄÊıÖµ
+		return theSize; //è¿”å›ç°åœ¨çš„å¤§å°çš„æ•°å€¼
 	}
 	
 	public boolean isEmpty(){
-		return size() == 0;//ÏÖÔÚµÄ´óĞ¡µÄÊıÖµÊÇ·ñÎªÁã
+		return size() == 0;//ç°åœ¨çš„å¤§å°çš„æ•°å€¼æ˜¯å¦ä¸ºé›¶
 	}
 	
 	public void trimToSize(){
-		//½«Êı¾İ½á¹¹¸ñÊ½»¯µ½²ÎÊı´óĞ¡
+		//å°†æ•°æ®ç»“æ„æ ¼å¼åŒ–åˆ°å‚æ•°å¤§å°
 		ensureCapacity(size());
 	}
 
@@ -51,7 +51,7 @@ public class MyArrayList implements Iterable<Serializable> {
 		return theItems[index];
 	}
 	
-	public Serializable set(int index , Serializable newValue){//Ìæ»»¸ÄÏÂ±êÏÂµÄÊı¾İdata
+	public Serializable set(int index , Serializable newValue){//æ›¿æ¢æ”¹ä¸‹æ ‡ä¸‹çš„æ•°æ®data
 		if(index<0 || index>= size()){
 			throw new ArrayIndexOutOfBoundsException();
 		}
@@ -60,71 +60,71 @@ public class MyArrayList implements Iterable<Serializable> {
 		return old;
 	} 
 	
-	public void ensureCapacity(int newCapacity){ //ÕâÊÇµ÷Õû´óĞ¡²¢¸´ÖÆMyArrayListµÄÄÚÈİ
+	public void ensureCapacity(int newCapacity){ //è¿™æ˜¯è°ƒæ•´å¤§å°å¹¶å¤åˆ¶MyArrayListçš„å†…å®¹
 		if(newCapacity < theSize){
-			return; //Èç¹ûÏÖÔÚµÄÊı¾İ´óĞ¡´óÓÚ²ÎÊı¸øµÄÔ¤±¸ÊıÖµ ÄÇÃ´ÎÒÃÇ¾Í²»ÊÜÀí
+			return; //å¦‚æœç°åœ¨çš„æ•°æ®å¤§å°å¤§äºå‚æ•°ç»™çš„é¢„å¤‡æ•°å€¼ é‚£ä¹ˆæˆ‘ä»¬å°±ä¸å—ç†
 		}
-		Serializable [] old = theItems; //½«Ô­À´µÄÊı¾İ±¸·İ
-		theItems = (Serializable [])new Object[newCapacity]; //ÉúÃüÊı×é
+		Serializable [] old = theItems; //å°†åŸæ¥çš„æ•°æ®å¤‡ä»½
+		theItems = (Serializable [])new Object[newCapacity]; //ç”Ÿå‘½æ•°ç»„
 		for(int i = 0 ; i<size();i++){
-			//È»ºóÑ­»·µü´úÕâÀïÃæµÄÊı¾İdata
+			//ç„¶åå¾ªç¯è¿­ä»£è¿™é‡Œé¢çš„æ•°æ®data
 			theItems[i] = old[i];
 		}
 	}
 	
-	public void add(int index , Serializable x){// ´ÓË÷ÒıÏÂ±í´¦²åÈëÒ»¸öÔªËØx
+	public void add(int index , Serializable x){// ä»ç´¢å¼•ä¸‹è¡¨å¤„æ’å…¥ä¸€ä¸ªå…ƒç´ x
 		if(theItems.length == size()){
-			//Èç¹ûÊı×éµÄ³¤¶ÈÒÑ¾­µÈÓÚsize´óĞ¡ ÄÇ¾ÍÊÇËµ²»¹»ÓÃÁË
+			//å¦‚æœæ•°ç»„çš„é•¿åº¦å·²ç»ç­‰äºsizeå¤§å° é‚£å°±æ˜¯è¯´ä¸å¤Ÿç”¨äº†
 			ensureCapacity(size()*2+1);
-			//ËùÒÔÎÒÃÇÒªµ÷ÓÃÉÏÃæµÄ·½·¨À´À©Èİ
-			//×¢Òâ ÎÒÃÇÀ©´óµÄ´óĞ¡ÊÇÊı×éµÄ´óĞ¡£¬²»ÊÇÊı¾İ½á¹¹µÄ¡£
+			//æ‰€ä»¥æˆ‘ä»¬è¦è°ƒç”¨ä¸Šé¢çš„æ–¹æ³•æ¥æ‰©å®¹
+			//æ³¨æ„ æˆ‘ä»¬æ‰©å¤§çš„å¤§å°æ˜¯æ•°ç»„çš„å¤§å°ï¼Œä¸æ˜¯æ•°æ®ç»“æ„çš„ã€‚
 		}
 		
 		for(int i = theSize ; i> index ; i--){
-		//½ÓÏÂÀ´¾ÍÊÇ½²´ÓË÷Òı´¦µ½×îºóµÄÔªËØÒÀ´Îºó´®Ò»Î»£¬ÓÃÀ´×°ĞÂÊı¾İ
+		//æ¥ä¸‹æ¥å°±æ˜¯è®²ä»ç´¢å¼•å¤„åˆ°æœ€åçš„å…ƒç´ ä¾æ¬¡åä¸²ä¸€ä½ï¼Œç”¨æ¥è£…æ–°æ•°æ®
 			theItems[i] = theItems[i-1];
 		}
-		//ĞÂÊı¾İ×°Èë
+		//æ–°æ•°æ®è£…å…¥
 		theItems[index] = x;
-		//Í¬Ê±sizeµÄ³¤¶È+1
+		//åŒæ—¶sizeçš„é•¿åº¦+1
 		theSize++;
 	}
 	
-	public boolean add(Serializable x){//Ö±½ÓÔÚ¶ÓÎ²²åÈë¡£
+	public boolean add(Serializable x){//ç›´æ¥åœ¨é˜Ÿå°¾æ’å…¥ã€‚
 		add(size(),x);
 		return true;
 	}
 	
 	public Serializable remove(int index){
-		//É¾³ıË÷ÒıÖ¸¶¨ÏÂ±êµÄÔªËØ
+		//åˆ é™¤ç´¢å¼•æŒ‡å®šä¸‹æ ‡çš„å…ƒç´ 
 		Serializable removedItem = theItems[index];
 		for(int i = index ; i < size() -1 ; i++){
-			//½«ÔªËØÇ°ÒÆÌí²¹¿Õ°×
+			//å°†å…ƒç´ å‰ç§»æ·»è¡¥ç©ºç™½
 			theItems[i] = theItems[i+1];
 		}
 		theSize--;
 		return removedItem;
 	}
 	
-	public Iterator<Serializable> iterator(){//»ñÈ¡×Ô¼ºµÄµü´úÆ÷
+	public Iterator<Serializable> iterator(){//è·å–è‡ªå·±çš„è¿­ä»£å™¨
 		return new ArrayListIterator(this);
 	}
 	
-	public Iterator<Serializable> iterator_finish(){//»ñÈ¡×Ô¼ºµÄµü´úÆ÷2
+	public Iterator<Serializable> iterator_finish(){//è·å–è‡ªå·±çš„è¿­ä»£å™¨2
 		return new ArrayListIterator_Finish();
 	}
 	
 	/**
-	 * @Describe µü´úÆ÷Ç¶Ì×Àà ÓĞstatic µÚÈıĞŞ¸Ä°æ
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-3-3ÏÂÎç10:24:38
+	 * @Describe è¿­ä»£å™¨åµŒå¥—ç±» æœ‰static ç¬¬ä¸‰ä¿®æ”¹ç‰ˆ
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-3-3ä¸‹åˆ10:24:38
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	private static class ArrayListIterator implements Iterator<Serializable>{
-		//×Ô±àµü´úÆ÷ÄÚ²¿Àà
+		//è‡ªç¼–è¿­ä»£å™¨å†…éƒ¨ç±»
 		
-		private int current = 0;//µü´úÆ÷µ±Ç°Ë÷Òı
+		private int current = 0;//è¿­ä»£å™¨å½“å‰ç´¢å¼•
 		
 		private MyArrayList theList;
 		
@@ -132,12 +132,12 @@ public class MyArrayList implements Iterable<Serializable> {
 			theList = list;
 		}
 		
-		public boolean hasNext(){//ÊÇ·ñÓĞÏÂÒ»¸ö Í¨¹ıµ±Ç°Ë÷ÒıºÍsizeµÄ´óĞ¡½øĞĞ±È½ÏÅĞ¶Ï
+		public boolean hasNext(){//æ˜¯å¦æœ‰ä¸‹ä¸€ä¸ª é€šè¿‡å½“å‰ç´¢å¼•å’Œsizeçš„å¤§å°è¿›è¡Œæ¯”è¾ƒåˆ¤æ–­
 			return current<theList.size();
 		}
 		@Override
 		public Serializable next() {
-			//Êä³öÏÂÒ»¸ö 
+			//è¾“å‡ºä¸‹ä¸€ä¸ª 
 			if(!hasNext()){
 				throw new NoSuchElementException();
 			}
@@ -145,7 +145,7 @@ public class MyArrayList implements Iterable<Serializable> {
 		}
 		@Override
 		public void remove() {
-			//½«ArrayListµÄremove·½·¨µ÷ÓÃ,¼ÓÉÏthisÊÇÎªÁËÈ·±£Ê¹ÓÃµÄÊÇµ±Ç°¶ÔÏó
+			//å°†ArrayListçš„removeæ–¹æ³•è°ƒç”¨,åŠ ä¸Šthisæ˜¯ä¸ºäº†ç¡®ä¿ä½¿ç”¨çš„æ˜¯å½“å‰å¯¹è±¡
 			theList.remove(--current);
 		}
 		
@@ -153,24 +153,24 @@ public class MyArrayList implements Iterable<Serializable> {
 	}
 	
 	/**
-	 * @Describe ½«Ëü¸ü¸ÄÎªÒ»¸öÒşÊ½µÄ·ºĞÍÀà£¬ËûÏÖÔÚÒÀÀµÓÚÍâ²¿Àà£¬¶øÍâ²¿ÀàÊÇ·ºĞÍµÄ¡£
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-3-3ÏÂÎç10:31:06
+	 * @Describe å°†å®ƒæ›´æ”¹ä¸ºä¸€ä¸ªéšå¼çš„æ³›å‹ç±»ï¼Œä»–ç°åœ¨ä¾èµ–äºå¤–éƒ¨ç±»ï¼Œè€Œå¤–éƒ¨ç±»æ˜¯æ³›å‹çš„ã€‚
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-3-3ä¸‹åˆ10:31:06
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	private class ArrayListIterator_Finish implements Iterator<Serializable>{
 		
 		
-		private int current = 0;//µü´úÆ÷µ±Ç°Ë÷Òı
+		private int current = 0;//è¿­ä»£å™¨å½“å‰ç´¢å¼•
 		
 		
-		public boolean hasNext(){//ÊÇ·ñÓĞÏÂÒ»¸ö Í¨¹ıµ±Ç°Ë÷ÒıºÍsizeµÄ´óĞ¡½øĞĞ±È½ÏÅĞ¶Ï
+		public boolean hasNext(){//æ˜¯å¦æœ‰ä¸‹ä¸€ä¸ª é€šè¿‡å½“å‰ç´¢å¼•å’Œsizeçš„å¤§å°è¿›è¡Œæ¯”è¾ƒåˆ¤æ–­
 			return current<size();
 		}
 		@Override
 		public Serializable next() {
-			//Êä³öÏÂÒ»¸ö 
+			//è¾“å‡ºä¸‹ä¸€ä¸ª 
 			if(!hasNext()){
 				throw new NoSuchElementException();
 			}
@@ -178,7 +178,7 @@ public class MyArrayList implements Iterable<Serializable> {
 		}
 		@Override
 		public void remove() {
-			//½«ArrayListµÄremove·½·¨µ÷ÓÃ,¼ÓÉÏthisÊÇÎªÁËÈ·±£Ê¹ÓÃµÄÊÇµ±Ç°¶ÔÏó
+			//å°†ArrayListçš„removeæ–¹æ³•è°ƒç”¨,åŠ ä¸Šthisæ˜¯ä¸ºäº†ç¡®ä¿ä½¿ç”¨çš„æ˜¯å½“å‰å¯¹è±¡
 			MyArrayList.this.remove(--current);
 		}
 		

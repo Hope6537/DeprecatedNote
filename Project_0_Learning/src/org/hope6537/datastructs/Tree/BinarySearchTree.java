@@ -3,9 +3,9 @@ package org.hope6537.datastructs.Tree;
 import java.lang.reflect.UndeclaredThrowableException;
 
 /**
- * @Describe ¶ş²æËÑË÷Ê÷
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-3-6ÏÂÎç07:55:36
+ * @Describe äºŒå‰æœç´¢æ ‘
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-3-6ä¸‹åˆ07:55:36
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -13,9 +13,9 @@ import java.lang.reflect.UndeclaredThrowableException;
 public class BinarySearchTree<T extends Comparable<? super T>>{
 
 	/**
-	 * @Describe Ê÷µÄ½ÚµãµÄÇ¶ÈëÀà
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2014-3-6ÏÂÎç07:55:50
+	 * @Describe æ ‘çš„èŠ‚ç‚¹çš„åµŒå…¥ç±»
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2014-3-6ä¸‹åˆ07:55:50
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 * @param <T>
@@ -39,14 +39,14 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Describe ¸ù½Úµã
+	 * @Describe æ ¹èŠ‚ç‚¹
 	 */
 	private BinaryNode<T> root;
 	
 	
 	/**
-	 * @Describe ¹¹Ôì·½·¨ ĞÎ³ÉÒ»¸ö¿ÕµÄÊ÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe æ„é€ æ–¹æ³• å½¢æˆä¸€ä¸ªç©ºçš„æ ‘
+	 * @Author Hope6537(èµµé¹)
 	 * @param 
 	 */
 	public BinarySearchTree() {
@@ -54,10 +54,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Descirbe Çå¿ÕÕû¸öÊ÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºæ•´ä¸ªæ ‘
+	 * @Author Hope6537(èµµé¹)
 	 * @Params 
-	 * @SignDate 2014-3-6ÏÂÎç07:56:32
+	 * @SignDate 2014-3-6ä¸‹åˆ07:56:32
 	 * @Version 0.9
 	 */
 	public void makeEmpty(){
@@ -65,10 +65,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Descirbe ¼ì²éÊéÊÇ·ñÎª¿Õ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥ä¹¦æ˜¯å¦ä¸ºç©º
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç07:56:59
+	 * @SignDate 2014-3-6ä¸‹åˆ07:56:59
 	 * @Version 0.9
 	 * @return
 	 */
@@ -77,38 +77,38 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Descirbe ¼ì²é×ÔtºóÊ÷ÖĞÊÇ·ñ´æÔÚxÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥è‡ªtåæ ‘ä¸­æ˜¯å¦å­˜åœ¨xå…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç07:59:28
+	 * @SignDate 2014-3-6ä¸‹åˆ07:59:28
 	 * @Version 0.9
 	 * @param x
 	 * @param t
 	 * @return
 	 */
 	private boolean contain(T x , BinaryNode<T> t){
-		if(t==null){//Èç¹ûÊ÷ÊÇ¿ÕµÄ£¬»òÕß¸ÃÊ÷ÊÇÊ÷Ò¶
-			return false;//²»Æ¥Åä ÕÒ²»µ½
+		if(t==null){//å¦‚æœæ ‘æ˜¯ç©ºçš„ï¼Œæˆ–è€…è¯¥æ ‘æ˜¯æ ‘å¶
+			return false;//ä¸åŒ¹é… æ‰¾ä¸åˆ°
 		}
-		int compareResult = x.compareTo(t.element);//ÕâÊÇxºÍ¸ÃÊ÷ÔªËØ×Öµä¶Ô±ÈµÄ½á¹û
-		if(compareResult<0){//Èç¹ûxÔÚtµÄ×ó±ß ±È½Ï´óĞ¡Ğ¡ÓÚÁã
-			return contain(x, t.left);//µİ¹é²éÕÒ´ÓtÊ÷µÄ×ó¶ù×Ó
-		}else if(compareResult>0){//·´Ö®´ÓÓÒ
+		int compareResult = x.compareTo(t.element);//è¿™æ˜¯xå’Œè¯¥æ ‘å…ƒç´ å­—å…¸å¯¹æ¯”çš„ç»“æœ
+		if(compareResult<0){//å¦‚æœxåœ¨tçš„å·¦è¾¹ æ¯”è¾ƒå¤§å°å°äºé›¶
+			return contain(x, t.left);//é€’å½’æŸ¥æ‰¾ä»tæ ‘çš„å·¦å„¿å­
+		}else if(compareResult>0){//åä¹‹ä»å³
 			return contain(x, t.right);
 		}
-		else{//Èç¹ûÏàµÈ Êä³ötrue ÕâÊÇÕÒµ½ÁË
+		else{//å¦‚æœç›¸ç­‰ è¾“å‡ºtrue è¿™æ˜¯æ‰¾åˆ°äº†
 			return true;
 		}
 	}
 	
 	/**
-	 * @Descirbe ÕÒµ½×ÔtÏÂ×îĞ¡µÄÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰¾åˆ°è‡ªtä¸‹æœ€å°çš„å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:41:32
+	 * @SignDate 2014-3-6ä¸‹åˆ08:41:32
 	 * @Version 0.9
 	 * @param t
 	 * @return
@@ -117,18 +117,18 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 		if(t==null){
 			return null;
 		}
-		else if(t.left==null){//Èç¹ûËüÃ»ÓĞ×ó¶ù×ÓÁË ÄÇÃ´¸ù¾İ½á¹¹ ËûÊÇ×îĞ¡µÄ
+		else if(t.left==null){//å¦‚æœå®ƒæ²¡æœ‰å·¦å„¿å­äº† é‚£ä¹ˆæ ¹æ®ç»“æ„ ä»–æ˜¯æœ€å°çš„
 			return t;
 		}
-		return findMin(t.left);//·ñÔòµİ¹é
+		return findMin(t.left);//å¦åˆ™é€’å½’
 	}
 	
 	/**
-	 * @Descirbe ÕÒµ½×ÔtÏÂ×î´óµÄÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰¾åˆ°è‡ªtä¸‹æœ€å¤§çš„å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:42:23
+	 * @SignDate 2014-3-6ä¸‹åˆ08:42:23
 	 * @Version 0.9
 	 * @param t
 	 * @return
@@ -136,19 +136,19 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	private BinaryNode<T> findMax(BinaryNode<T> t){
 		if(t!=null){
 			while(t.right!=null){
-				t = t.right;//Ñ­»·ÕÒµ½Ã»ÓĞÓÒ¶ù×ÓµÄÄÇ¸ö
+				t = t.right;//å¾ªç¯æ‰¾åˆ°æ²¡æœ‰å³å„¿å­çš„é‚£ä¸ª
 			}
 		}
 		return t;
 	}
 	
 	/**
-	 * @Descirbe ÔÚ¸ÃtÊ÷ÏÂÌí¼ÓĞÂ½Úµã 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åœ¨è¯¥tæ ‘ä¸‹æ·»åŠ æ–°èŠ‚ç‚¹ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:42:55
+	 * @SignDate 2014-3-6ä¸‹åˆ08:42:55
 	 * @Version 0.9
 	 * @param x
 	 * @param t
@@ -156,29 +156,29 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	 */
 	private BinaryNode<T> insert (T x , BinaryNode<T> t){
 		
-		if(t == null){ // Èç¹ûÊ÷ÊÇ¿ÕµÄ ÄÇÃ´Õâ¸ö¾ÍÊÇ¸ù
+		if(t == null){ // å¦‚æœæ ‘æ˜¯ç©ºçš„ é‚£ä¹ˆè¿™ä¸ªå°±æ˜¯æ ¹
 			return new BinaryNode<T>(x);
 		}
 		int compareResult = x.compareTo(t.element);
 		
 		if(compareResult<0){
-			t.left = insert(x, t.left);//ÒòÎª±ÈtµÄÊı¾İĞ¡ ËùÒÔÔÚ×ó±ß
+			t.left = insert(x, t.left);//å› ä¸ºæ¯”tçš„æ•°æ®å° æ‰€ä»¥åœ¨å·¦è¾¹
 		}else if(compareResult>0){
-			t.right = insert(x, t.right);//·´Õı ´ó ÔÚÓÒ±ß
+			t.right = insert(x, t.right);//åæ­£ å¤§ åœ¨å³è¾¹
 		}
 		else{
-			;//Á½ÕßÖØ¸´ Ê÷ÖĞÒÑ¾­ÓĞÏàÍ¬Êı¾İ
+			;//ä¸¤è€…é‡å¤ æ ‘ä¸­å·²ç»æœ‰ç›¸åŒæ•°æ®
 		}
 		return t;
 		
 	}
 	/**
-	 * @Descirbe ´ÓtÊ÷ÖĞÉ¾³ıxÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»tæ ‘ä¸­åˆ é™¤xå…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:44:20
+	 * @SignDate 2014-3-6ä¸‹åˆ08:44:20
 	 * @Version 0.9
 	 * @param x
 	 * @param t
@@ -186,38 +186,38 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	 */
 	private BinaryNode<T> remove(T x , BinaryNode<T> t){
 		if( t == null){
-			//Èç¹ûÊ÷ÊÇ¿ÕµÄ ÄÇÃ´Ö±½Ó»ØÈ¥
+			//å¦‚æœæ ‘æ˜¯ç©ºçš„ é‚£ä¹ˆç›´æ¥å›å»
 			return t;
 		}
 		int compareResult = x.compareTo(t.element);
 		
 		if(compareResult<0){
-			t.left = remove(x, t.left);//ËµÃ÷ÒªÉ¾³ıµÄÔÚtµÄ×ó¶ù×ÓÀï
+			t.left = remove(x, t.left);//è¯´æ˜è¦åˆ é™¤çš„åœ¨tçš„å·¦å„¿å­é‡Œ
 		}else if(compareResult>0){
-			t.right = remove(x, t.right);//ÔÚÓÒ¶ù×ÓÀï
+			t.right = remove(x, t.right);//åœ¨å³å„¿å­é‡Œ
 		}else if(t.left!=null && t.right != null){
-			//ÕâÀïÊÇ×î¸´ÔÓµÄÇé¿ö Èç¹ûËüÓĞ×ó¶ù×Ó ÓÖÓĞÓÒ¶ù×Ó
-			//ÄÇÃ´ ÎÒÃÇĞèÒªÕÒ³ötµÄÓÒ¶ù×ÓµÄ×îĞ¡µÄÄÄÒ»¸öÓÃÓÚ´úÌæµ±Ç°±»É¾³ıµÄ½ÚµãÀ´µ£µ±Ô­À´µÄtµÄº¢×ÓÃÇµÄ¸¸Ç×
-			//ÒòÎªËûÊÇ½ö½ö´óÓÚtµÄÊı¾İµÄ ËùÒÔËû±ÈtµÄÆäËûÓÒ¶ù×Ó¶¼Ğ¡
-			//±ÈÆäËû×ó¶ù×ÓÃÇ¶¼´ó ËùÒÔÏÈ´ÓtµÄÓÒ²àÑ°ÕÒ
+			//è¿™é‡Œæ˜¯æœ€å¤æ‚çš„æƒ…å†µ å¦‚æœå®ƒæœ‰å·¦å„¿å­ åˆæœ‰å³å„¿å­
+			//é‚£ä¹ˆ æˆ‘ä»¬éœ€è¦æ‰¾å‡ºtçš„å³å„¿å­çš„æœ€å°çš„å“ªä¸€ä¸ªç”¨äºä»£æ›¿å½“å‰è¢«åˆ é™¤çš„èŠ‚ç‚¹æ¥æ‹…å½“åŸæ¥çš„tçš„å­©å­ä»¬çš„çˆ¶äº²
+			//å› ä¸ºä»–æ˜¯ä»…ä»…å¤§äºtçš„æ•°æ®çš„ æ‰€ä»¥ä»–æ¯”tçš„å…¶ä»–å³å„¿å­éƒ½å°
+			//æ¯”å…¶ä»–å·¦å„¿å­ä»¬éƒ½å¤§ æ‰€ä»¥å…ˆä»tçš„å³ä¾§å¯»æ‰¾
 			t.element = findMin(t.right).element;
-			//ÕÒµ½ºó ½«ÏÂÒ»ÈÎ¸¸Ç×µÄÖµ´øÈë½øÈ¥ Ñ°ÕÒËûµÄÔ­Ö·²¢É¾³ı ×îÖÕÎÒÃÇ»á×ßµ½×îºóÒ»¸öelse
-			//Í¬Ê±tµÄÓÒ²à»áÈÆ¹ıĞÂÈÎ¸¸Ç×Ô­À´µÄÎ»ÖÃ ¶øÖ±½ÓÕÒÏòtµÄ¸¸Ç×µÄµ¥×Ó½Úµã
-			//ÒòÎªĞÂÈÎ¸¸Ç×µÄ×î¶àÖ»»áÓĞÒ»¸öÓÒ½Úµã ËùÒÔÎÒÃÇ¾ÍÏñÊÇÁ´±íÒ»ÑùÈÆ¹ıĞÂÈÎ¸¸Ç×µÄÔ­Ö·¾ÍºÃÁË¡£
+			//æ‰¾åˆ°å å°†ä¸‹ä¸€ä»»çˆ¶äº²çš„å€¼å¸¦å…¥è¿›å» å¯»æ‰¾ä»–çš„åŸå€å¹¶åˆ é™¤ æœ€ç»ˆæˆ‘ä»¬ä¼šèµ°åˆ°æœ€åä¸€ä¸ªelse
+			//åŒæ—¶tçš„å³ä¾§ä¼šç»•è¿‡æ–°ä»»çˆ¶äº²åŸæ¥çš„ä½ç½® è€Œç›´æ¥æ‰¾å‘tçš„çˆ¶äº²çš„å•å­èŠ‚ç‚¹
+			//å› ä¸ºæ–°ä»»çˆ¶äº²çš„æœ€å¤šåªä¼šæœ‰ä¸€ä¸ªå³èŠ‚ç‚¹ æ‰€ä»¥æˆ‘ä»¬å°±åƒæ˜¯é“¾è¡¨ä¸€æ ·ç»•è¿‡æ–°ä»»çˆ¶äº²çš„åŸå€å°±å¥½äº†ã€‚
 			t.right = remove(t.element, t.right);
 		}
 		else{
-			//ÔÚÕâÀïÊÇ¼òµ¥×´¿ö Èç¹ûtÓĞ×ó¶ù×Ó ÄÇÃ´t = tµÄ×ó¶ù×Ó  Èç¹ûÃ»ÓĞ t = tµÄÓÒ¶ù×Ó
-			t = t.left!=null ? t.left : t.right;//ÖØ¸´
+			//åœ¨è¿™é‡Œæ˜¯ç®€å•çŠ¶å†µ å¦‚æœtæœ‰å·¦å„¿å­ é‚£ä¹ˆt = tçš„å·¦å„¿å­  å¦‚æœæ²¡æœ‰ t = tçš„å³å„¿å­
+			t = t.left!=null ? t.left : t.right;//é‡å¤
 		}
 		return t;
 	}
 	
 	/**
-	 * @Descirbe ´òÓ¡¶ş²æËÑË÷Ê÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰“å°äºŒå‰æœç´¢æ ‘
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t
-	 * @SignDate 2014-3-6ÏÂÎç08:53:15
+	 * @SignDate 2014-3-6ä¸‹åˆ08:53:15
 	 * @Version 0.9
 	 * @param t
 	 */
@@ -230,11 +230,11 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Descirbe ÔÙtÊ÷ÏÂ²åÈëÒ»¸öĞÂµÄ½Úµã
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å†tæ ‘ä¸‹æ’å…¥ä¸€ä¸ªæ–°çš„èŠ‚ç‚¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:54:21
+	 * @SignDate 2014-3-6ä¸‹åˆ08:54:21
 	 * @Version 0.9
 	 * @param x
 	 * @return
@@ -244,10 +244,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 
 	/**
-	 * @Descirbe ÕÒµ½¶ş²æÊ÷ÖĞµÄ×îĞ¡Ïî
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰¾åˆ°äºŒå‰æ ‘ä¸­çš„æœ€å°é¡¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:56:52
+	 * @SignDate 2014-3-6ä¸‹åˆ08:56:52
 	 * @Version 0.9
 	 * @return
 	 */
@@ -258,10 +258,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 		return findMin(root).element;
 	}
 	/**
-	 * @Descirbe ÕÒµ½¶ş²æÊ÷ÖĞµÄ×î´óÏî
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰¾åˆ°äºŒå‰æ ‘ä¸­çš„æœ€å¤§é¡¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-3-6ÏÂÎç08:56:51
+	 * @SignDate 2014-3-6ä¸‹åˆ08:56:51
 	 * @Version 0.9
 	 * @return
 	 */
@@ -273,10 +273,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	}
 	
 	/**
-	 * @Descirbe ´ÓÊ÷¸ùÌí¼ÓÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»æ ‘æ ¹æ·»åŠ æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-3-6ÏÂÎç08:58:47
+	 * @SignDate 2014-3-6ä¸‹åˆ08:58:47
 	 * @Version 0.9
 	 * @param x
 	 */
@@ -284,10 +284,10 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 		root = insert(x, root);
 	}
 	/**
-	 * @Descirbe ´ÓÊ÷¸ùÉ¾³ıÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»æ ‘æ ¹åˆ é™¤æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-3-6ÏÂÎç08:58:46
+	 * @SignDate 2014-3-6ä¸‹åˆ08:58:46
 	 * @Version 0.9
 	 * @param x
 	 */
@@ -297,7 +297,7 @@ public class BinarySearchTree<T extends Comparable<? super T>>{
 	
 	public void printTree(){
 		if(isEmpty()){
-			System.out.println("This Tree is Empty : ÕâÊÇ¸ö¿ÕÊ÷ ÎŞÊı¾İ ");
+			System.out.println("This Tree is Empty : è¿™æ˜¯ä¸ªç©ºæ ‘ æ— æ•°æ® ");
 		}
 		else{
 			printTree(root);

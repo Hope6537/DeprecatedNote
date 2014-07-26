@@ -8,13 +8,13 @@ public class HDOJ1203 {
 	static int MAX = 10002;
 	public static void main(String[] args) {
 		while (s.hasNext()) {
-			int n = s.nextInt();// Ç® === ÈİÁ¿
-			int m = s.nextInt();// ¸öÊı
+			int n = s.nextInt();// é’± === å®¹é‡
+			int m = s.nextInt();// ä¸ªæ•°
 			if (n + m == 0) {
 				break;
 			}
-			int[] c = new int[MAX]; // ÈİÁ¿ == Ç®
-			double[] w = new double[MAX]; // ¼ÛÖµ == ¸ÅÂÊ
+			int[] c = new int[MAX]; // å®¹é‡ == é’±
+			double[] w = new double[MAX]; // ä»·å€¼ == æ¦‚ç‡
 			for (int i = 0; i < m; i++) {
 				c[i] = s.nextInt();
 				w[i] = s.nextDouble();

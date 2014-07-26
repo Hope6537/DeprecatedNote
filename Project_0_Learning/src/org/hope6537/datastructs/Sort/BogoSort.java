@@ -3,9 +3,9 @@ package org.hope6537.datastructs.Sort;
 import java.util.Random;
 
 /**
- * @Describe ºï×ÓÅÅĞò Ê±¼ä¸´ÔÓ¶È ×î»µÇé¿öÏÂ ÎŞÇî £¨Á¿×ÓÊ±´ú×î¿ìËã·¨£©
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-3-14ÏÂÎç09:42:50
+ * @Describe çŒ´å­æ’åº æ—¶é—´å¤æ‚åº¦ æœ€åæƒ…å†µä¸‹ æ— ç©· ï¼ˆé‡å­æ—¶ä»£æœ€å¿«ç®—æ³•ï¼‰
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-3-14ä¸‹åˆ09:42:50
  * @version 0.9
  * @company Changchun University&SHXT
  */

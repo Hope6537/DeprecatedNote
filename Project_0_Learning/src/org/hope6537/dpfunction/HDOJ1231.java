@@ -3,9 +3,9 @@ package org.hope6537.dpfunction;
 import java.util.Scanner;
 
 /**
- * @Describe ºÍHDOJ1003Ò»Ä£Ò»Ñù
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-19ÏÂÎç02:24:37
+ * @Describe å’ŒHDOJ1003ä¸€æ¨¡ä¸€æ ·
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-19ä¸‹åˆ02:24:37
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -16,7 +16,7 @@ public class HDOJ1231 {
 
 	public static void main(String[] args) {
 		while (s.hasNext()) {
-			// ×´Ì¬·½³Ìd[i] = max{d[i - 1] + data[i], data[i]}
+			// çŠ¶æ€æ–¹ç¨‹d[i] = max{d[i - 1] + data[i], data[i]}
 			int n = s.nextInt();
 			if (n == 0) {
 				break;
@@ -41,20 +41,20 @@ public class HDOJ1231 {
 				int end = d[0];
 
 				for (int i = 1; i < n; i++) {
-					// ÆğµãÅĞ¶Ï±ØĞëÔÚÕâ ÖØÒª
+					// èµ·ç‚¹åˆ¤æ–­å¿…é¡»åœ¨è¿™ é‡è¦
 					if (sum < 0) {
 						temp = data[i];
 						sum = 0;
 					}
-					int d_i_1 = d[i - 1];// DebugÓÃÁÙÊ±±äÁ¿
-					int dataValue = data[i];// DebugÓÃÁÙÊ±±äÁ¿
+					int d_i_1 = d[i - 1];// Debugç”¨ä¸´æ—¶å˜é‡
+					int dataValue = data[i];// Debugç”¨ä¸´æ—¶å˜é‡
 					if (d_i_1 + dataValue > dataValue) {
 						d[i] = d_i_1 + dataValue;
 
 					} else {
 						d[i] = dataValue;
 					}
-					sum = d[i];//DebugÓÃÁÙÊ±±äÁ¿
+					sum = d[i];//Debugç”¨ä¸´æ—¶å˜é‡
 					if (sum > max) {
 						max = sum;
 						end = dataValue;

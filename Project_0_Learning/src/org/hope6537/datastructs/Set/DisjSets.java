@@ -1,22 +1,22 @@
 package org.hope6537.datastructs.Set;
 
 /**
- * @Describe ²»Ïà½»¼¯ºÏÀà
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-7ÏÂÎç08:09:49
+ * @Describe ä¸ç›¸äº¤é›†åˆç±»
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-7ä¸‹åˆ08:09:49
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class DisjSets {
 
 	/**
-	 * @Describe ÕâÊÇ·ÇÏÔÊ¾±íÊ¾Êı¾İµÄÊı×é »òÕßËµÊÇÔªËØµÄ¸¸¼¯ºÏ ÏÂ±êÊÇÔªËØµÄË÷Òı ¶øÊı×éµÄÊı¾İÊÇÊ÷µÄ¸ß¶ÈµÄÏà·´Êı
+	 * @Describe è¿™æ˜¯éæ˜¾ç¤ºè¡¨ç¤ºæ•°æ®çš„æ•°ç»„ æˆ–è€…è¯´æ˜¯å…ƒç´ çš„çˆ¶é›†åˆ ä¸‹æ ‡æ˜¯å…ƒç´ çš„ç´¢å¼• è€Œæ•°ç»„çš„æ•°æ®æ˜¯æ ‘çš„é«˜åº¦çš„ç›¸åæ•°
 	 */
 	private int[] s;
 
 	/**
-	 * @Describe ¸ø¶¨ÔªËØÊıÁ¿µÄ¹¹Ôì·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe ç»™å®šå…ƒç´ æ•°é‡çš„æ„é€ æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param numElements
 	 */
 	public DisjSets(int numElements) {
@@ -27,42 +27,42 @@ public class DisjSets {
 	}
 
 	/**
-	 * @Descirbe ÁéÇÉÇó²¢·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe çµå·§æ±‚å¹¶æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param root1
 	 * @Params @param root2
-	 * @SignDate 2014-4-7ÏÂÎç08:15:30
+	 * @SignDate 2014-4-7ä¸‹åˆ08:15:30
 	 * @Version 0.9
 	 * @param root1
-	 *            Êı¾İÔÚsÉÏµÄË÷Òı
+	 *            æ•°æ®åœ¨sä¸Šçš„ç´¢å¼•
 	 * @param root2
-	 *            Êı¾İÔÚsÉÏµÄË÷Òı
+	 *            æ•°æ®åœ¨sä¸Šçš„ç´¢å¼•
 	 */
 	public void union(int root1, int root2) {
 		/*
-		 * Èç¹ûroot2µÄËùÔÚÎ»ÖÃ¸üÉî
+		 * å¦‚æœroot2çš„æ‰€åœ¨ä½ç½®æ›´æ·±
 		 */
 		if (s[root2] < s[root1]) {
-			// ÄÇÃ´½«root1²åÈë½øroot2µÄÊ÷ÖĞ µ±×ö×ÓÊ÷À´´æÔÚ
+			// é‚£ä¹ˆå°†root1æ’å…¥è¿›root2çš„æ ‘ä¸­ å½“åšå­æ ‘æ¥å­˜åœ¨
 			s[root1] = root2;
 		} else {
-			// Èç¹ûÁ½Õß¸ß¶ÈÏàÍ¬»òÕßroot1¸üÉî
+			// å¦‚æœä¸¤è€…é«˜åº¦ç›¸åŒæˆ–è€…root1æ›´æ·±
 			if (s[root1] == s[root2]) {
-				// Èç¹ûÏàÍ¬ Éî¶È+1 ½öÓĞÊı¾İÏàÍ¬µÄÇé¿öÏÂ
+				// å¦‚æœç›¸åŒ æ·±åº¦+1 ä»…æœ‰æ•°æ®ç›¸åŒçš„æƒ…å†µä¸‹
 				s[root1]--;
 
 			}
-			// È»ºó½«root2·ÅÈëroot1µÄÊ÷ÏÂµ±×ö×ÓÊ÷À´´æÔÚ
+			// ç„¶åå°†root2æ”¾å…¥root1çš„æ ‘ä¸‹å½“åšå­æ ‘æ¥å­˜åœ¨
 			s[root2] = root1;
 		}
 	}
 
 	/**
-	 * @Descirbe ¼ì²éxË÷ÒıµÄÔªËØÔÚÄÄ¸ö¼¯ºÏÀï ¼´ËüµÄ¸ù½Úµã
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥xç´¢å¼•çš„å…ƒç´ åœ¨å“ªä¸ªé›†åˆé‡Œ å³å®ƒçš„æ ¹èŠ‚ç‚¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-7ÏÂÎç08:27:41
+	 * @SignDate 2014-4-7ä¸‹åˆ08:27:41
 	 * @Version 0.9
 	 * @param x
 	 * @return

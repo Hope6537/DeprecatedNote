@@ -32,21 +32,21 @@ public class HDOJ1709 {
 				int index = s.nextInt();
 				value[n1] = index;
 				n1++;
-				c1[fuI(index)] = 1;// ¸ø¸ºÏî¸³Öµ
-				c1[zhI(index)] = 1;// ¸øÕıÏî¸³Öµ
+				c1[fuI(index)] = 1;// ç»™è´Ÿé¡¹èµ‹å€¼
+				c1[zhI(index)] = 1;// ç»™æ­£é¡¹èµ‹å€¼
 			}
 			c1[HALF] = 1;
 			Arrays.sort(value);
 			// input done
-			int maxlength = zhI(value[0]);// ×î³õµÄÀÛºÍÏîÉÏ½ç
-			int minlength = fuI(value[0]);// ×î³õµÄÀÛºÍÏîÏÂ½ç
+			int maxlength = zhI(value[0]);// æœ€åˆçš„ç´¯å’Œé¡¹ä¸Šç•Œ
+			int minlength = fuI(value[0]);// æœ€åˆçš„ç´¯å’Œé¡¹ä¸‹ç•Œ
 			for (int m = 1; m < n1; m++) {
-				int i = value[m];// ÕâÊÇ»ñµÃµÚm+1¸ö±í´ïÊ½Ëù´ú±íµÄÈ¨Öµ
-				int location = fuI(i);// ÕâÊÇ¸ÄÈ¨ÖµÔÚµ±Ç°Êı×éÖĞµÄµÍÎ»
-				int high = zhI(i);// ÕâÊÇ¸ÄÈ¨ÖµÔÚµ±Ç°Êı×éÖĞµÄ¸ßÎ»
+				int i = value[m];// è¿™æ˜¯è·å¾—ç¬¬m+1ä¸ªè¡¨è¾¾å¼æ‰€ä»£è¡¨çš„æƒå€¼
+				int location = fuI(i);// è¿™æ˜¯æ”¹æƒå€¼åœ¨å½“å‰æ•°ç»„ä¸­çš„ä½ä½
+				int high = zhI(i);// è¿™æ˜¯æ”¹æƒå€¼åœ¨å½“å‰æ•°ç»„ä¸­çš„é«˜ä½
 				for (int j = minlength; j <= maxlength; j++) {
 					for (int k = location; k <= high; k += i) {
-						// ×Ü¹²¾­Àú3Ïî£¬µÍÎ» 0 ¸ßÎ»
+						// æ€»å…±ç»å†3é¡¹ï¼Œä½ä½ 0 é«˜ä½
 						int j_K = j + k;
 						if (j_K > 10) {
 							j_K = j_K - HALF;

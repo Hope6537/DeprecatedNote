@@ -6,13 +6,13 @@ public class HDOJ4507 {
 
 	static int mod = 1000000000 + 7;
 	static int MAX = 50;
-	static long p[];// p[i]±íÊ¾10^i
+	static long p[];// p[i]è¡¨ç¤º10^i
 	static long digit[];
-	static node[][][] dp;// //dp[i][j][k]±íÊ¾iµÄÇ°²¿·ÖÃ¿Î»ºÍÄ£7Óàj,ºó²¿·ÖÄ£7Óàk
+	static node[][][] dp;// //dp[i][j][k]è¡¨ç¤ºiçš„å‰éƒ¨åˆ†æ¯ä½å’Œæ¨¡7ä½™j,åéƒ¨åˆ†æ¨¡7ä½™k
 	static class node {
-		long n;// ´ú±íºó×ºµÄ¸öÊı
-		long rear;// ´ú±íºó×ººÍ
-		long rearpow;// ´ú±íºó×ºÆ½·½ºÍ
+		long n;// ä»£è¡¨åç¼€çš„ä¸ªæ•°
+		long rear;// ä»£è¡¨åç¼€å’Œ
+		long rearpow;// ä»£è¡¨åç¼€å¹³æ–¹å’Œ
 
 		@Override
 		public String toString() {
@@ -43,36 +43,36 @@ public class HDOJ4507 {
 		}
 	}
 
-	// ÒÀ¾İĞÔÖÊ£º(a+b1)^2+(a+b2)^2+...(a+bn)^2 = n*a^2+2*a*(b1+b2+...bn)+b1^2+b2^2+...bn^2
+	// ä¾æ®æ€§è´¨ï¼š(a+b1)^2+(a+b2)^2+...(a+bn)^2 = n*a^2+2*a*(b1+b2+...bn)+b1^2+b2^2+...bn^2
 	/**
-	 * @Descirbe µİÍÆÀı³Ì
-	 * @Author Hope6537(ÕÔÅô)
-	 * @param size ºó×º³¤¶È
+	 * @Descirbe é€’æ¨ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
+	 * @param size åç¼€é•¿åº¦
 	 * @param j
 	 * @param k
-	 * 			Ç°ºó¶ÎÊÇ·ñºÏ·¨
+	 * 			å‰åæ®µæ˜¯å¦åˆæ³•
 	 * @param b 
 	 * @return
-	 * @SignDate 2014-6-6ÏÂÎç8:11:46
+	 * @SignDate 2014-6-6ä¸‹åˆ8:11:46
 	 * @Version 0.9
 	 */
 	static node dfs(int size, int j, int k, boolean b) {
 		node sum = new node(), num = new node();
 		if (size == 0) {
-			// ºó×ºÊı³¤¶ÈÎª0
+			// åç¼€æ•°é•¿åº¦ä¸º0
 			sum.n = (j != 0 && k != 0) ? 1 : 0;
-			// ±íÊ¾ÔÚsizeÇ°²¿·ÖµÄÊıÊÇ·ñ·ûºÏÌõ¼ş(Õû¸öÊı¾ÍÊÇÇ°²¿·Ö)
+			// è¡¨ç¤ºåœ¨sizeå‰éƒ¨åˆ†çš„æ•°æ˜¯å¦ç¬¦åˆæ¡ä»¶(æ•´ä¸ªæ•°å°±æ˜¯å‰éƒ¨åˆ†)
 			return sum;
 		}
 		if (b && dp[size][j][k].n != -1) {
-			return dp[size][j][k];//b == true ±íÊ¾sizeºó²¿·ÖµÄÊı¿ÉÒÔËæÒâÈ¡,dp[][][].n != -1±íÊ¾ÒÑ¾­Ñ°ÕÒ¹ı  
+			return dp[size][j][k];//b == true è¡¨ç¤ºsizeåéƒ¨åˆ†çš„æ•°å¯ä»¥éšæ„å–,dp[][][].n != -1è¡¨ç¤ºå·²ç»å¯»æ‰¾è¿‡  
 		}
 		long m = b ? 9 : digit[size];
 		for (int i = 0; i <= m; ++i) {
 			if (i == 7) {
 				continue;
 			}
-			num = dfs(size - 1, (j + i) % 7, (k * 10 + i) % 7, b || i < m);//È¡Ä£Ê§Îóµ¼ÖÂWA1´Î
+			num = dfs(size - 1, (j + i) % 7, (k * 10 + i) % 7, b || i < m);//å–æ¨¡å¤±è¯¯å¯¼è‡´WA1æ¬¡
 			sum.n += num.n;
 			sum.n %= mod;
 			// i*10^i+x1+i*10^i+x2+.....=i*10^i*n+(x1+x2+...xn)
@@ -106,7 +106,7 @@ public class HDOJ4507 {
 		}
 		p[0] = 1;
 		for (int i = 1; i < MAX; i++) {
-			p[i] = (p[i - 1] * 10) % mod;// È¡Ä££¡£¡£¡ WAÁË2´Î
+			p[i] = (p[i - 1] * 10) % mod;// å–æ¨¡ï¼ï¼ï¼ WAäº†2æ¬¡
 		}
 		int t = s.nextInt();
 		while (t-- != 0) {

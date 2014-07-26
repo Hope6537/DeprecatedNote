@@ -3,9 +3,9 @@ package org.hope6537.dpfunction;
 import java.util.Scanner;
 
 /**
- * @Describe Bone Collecter , 01±³°üÎÊÌâ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-18ÏÂÎç01:00:12
+ * @Describe Bone Collecter , 01èƒŒåŒ…é—®é¢˜
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-18ä¸‹åˆ01:00:12
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -19,15 +19,15 @@ public class HDOJ2602 {
 		while (s.hasNext()) {
 			int T = s.nextInt();
 			while (T-- != 0) {
-				int N = s.nextInt(); // ¹ÇÍ·µÄ¸öÊı
-				int V = s.nextInt(); // ±³°üµÄÈİÁ¿
+				int N = s.nextInt(); // éª¨å¤´çš„ä¸ªæ•°
+				int V = s.nextInt(); // èƒŒåŒ…çš„å®¹é‡
 				int[] values = new int[MAX];
 				int[] volumes = new int[MAX];
 
 				int[] values_2 = new int[MAX];
 				int[] volumes_2 = new int[MAX];
 				int[][] dp1 = new int[1010][1010];
-				// ¶ÔÓÚdp[i]À´Ëµ£¬¾ÍÊÇµ±±³°üÄÚÎïÆ·ÎªiÁ¢·½Ã×Ê±µÄ¼ÛÖµ
+				// å¯¹äºdp[i]æ¥è¯´ï¼Œå°±æ˜¯å½“èƒŒåŒ…å†…ç‰©å“ä¸ºiç«‹æ–¹ç±³æ—¶çš„ä»·å€¼
 				int[] dp = new int[MAX];
 
 				for (int i = 0; i < N; i++) {
@@ -46,16 +46,16 @@ public class HDOJ2602 {
 				}
 				// input done
 				/*
-				 * 01±³°üµÄ×´Ì¬·½³Ì dp[i][v] = max{dp[i-1][v],dp[i-1][v-volumes[i]]
-				 * +values[i]}; ÒâÒåÏê½â£ºdp[i][v]±íÊ¾Ç°i¼şÎïÆ·Ç¡·ÅÈëÒ»¸öÈİÁ¿ÎªvµÄ±³°ü¿ÉÒÔ»ñµÃµÄ×î´ó¼ÛÖµ
-				 * ¶ÔÓÚµÚi¼şÎïÆ· ËûÓĞÁ½ÖÖÇé¿ö 
-				 * ¼´²»·ÅÈëµÚi¼şÊ±µÄ¼ÛÖµºÍ·ÅÈëµÚi¼şÊ±µÄ¼ÛÖµ£¬ÕıÊÇmaxº¯ÊıÀïµÄÇ°ÕßºÍºóÕß
-				 * È»ºóÈ¡Á½ÕßÖ®¼äµÄ×î´óÖµ£¬×÷Îª×îÓÅ½â ÒÔÏÂÊÇ¶şÎ¬Êı×é½â·¨
+				 * 01èƒŒåŒ…çš„çŠ¶æ€æ–¹ç¨‹ dp[i][v] = max{dp[i-1][v],dp[i-1][v-volumes[i]]
+				 * +values[i]}; æ„ä¹‰è¯¦è§£ï¼šdp[i][v]è¡¨ç¤ºå‰iä»¶ç‰©å“æ°æ”¾å…¥ä¸€ä¸ªå®¹é‡ä¸ºvçš„èƒŒåŒ…å¯ä»¥è·å¾—çš„æœ€å¤§ä»·å€¼
+				 * å¯¹äºç¬¬iä»¶ç‰©å“ ä»–æœ‰ä¸¤ç§æƒ…å†µ 
+				 * å³ä¸æ”¾å…¥ç¬¬iä»¶æ—¶çš„ä»·å€¼å’Œæ”¾å…¥ç¬¬iä»¶æ—¶çš„ä»·å€¼ï¼Œæ­£æ˜¯maxå‡½æ•°é‡Œçš„å‰è€…å’Œåè€…
+				 * ç„¶åå–ä¸¤è€…ä¹‹é—´çš„æœ€å¤§å€¼ï¼Œä½œä¸ºæœ€ä¼˜è§£ ä»¥ä¸‹æ˜¯äºŒç»´æ•°ç»„è§£æ³•
 				 */
 
 				for (int i = 1; i <= N; i++) {
 					for (int v = 0; v <= V; v++) {
-						// ·ÀÖ¹¼õÈëÌå»ı¿Õ¼äµÄ¸ºÖµ¡£
+						// é˜²æ­¢å‡å…¥ä½“ç§¯ç©ºé—´çš„è´Ÿå€¼ã€‚
 						if (volumes_2[i] <= v) {
 							int tempValues = values_2[i];
 							int tempDp1 = dp1[i - 1][v - volumes_2[i]];
@@ -70,8 +70,8 @@ public class HDOJ2602 {
 					}
 				}
 				/*
-				 * Ò»Î¬Êı×éµÄ½â·¨ ²»ÖªµÀÕ¦µÄ ·´ÕıiºÍÒÔÇ°Ò»Ñù È»ºój = V---->0 È»ºóÇó³ödp[j] µÄ×î´óÖµ 
-				 * ¼´´Ódp[j] ºÍ dp[v-volumes[i]] + values[i] ÕÒ
+				 * ä¸€ç»´æ•°ç»„çš„è§£æ³• ä¸çŸ¥é“å’‹çš„ åæ­£iå’Œä»¥å‰ä¸€æ · ç„¶åj = V---->0 ç„¶åæ±‚å‡ºdp[j] çš„æœ€å¤§å€¼ 
+				 * å³ä»dp[j] å’Œ dp[v-volumes[i]] + values[i] æ‰¾
 				 */
 				for (int i = 0; i < N; i++) {
 					for (int j = V; j >= volumes[i]; j--) {

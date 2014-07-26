@@ -1,23 +1,23 @@
 package org.hope6537.datastructs.Sort;
 
 /**
- * @Describe ¿ìËÙÅÅĞò
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-6ÏÂÎç04:00:12
+ * @Describe å¿«é€Ÿæ’åº
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-6ä¸‹åˆ04:00:12
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class QuickSort {
 
 	/**
-	 * @Descirbe Ñ¡ÔñÊàÅ¦Ôª
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é€‰æ‹©æ¢çº½å…ƒ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @Params @param left ×ó²àµÄË÷ÒıÓÎ±ê
-	 * @Params @param right ÓÒ²àµÄË÷ÒıÓÎ±ê
+	 * @Params @param left å·¦ä¾§çš„ç´¢å¼•æ¸¸æ ‡
+	 * @Params @param right å³ä¾§çš„ç´¢å¼•æ¸¸æ ‡
 	 * @Params @return
-	 * @SignDate 2014-4-6ÏÂÎç04:04:12
+	 * @SignDate 2014-4-6ä¸‹åˆ04:04:12
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -27,24 +27,24 @@ public class QuickSort {
 	 */
 	private static <AnyType extends Comparable<? super AnyType>> AnyType median3(
 			AnyType[] a, int left, int right) {
-		// ÕÒ³öÖĞÖµµã
+		// æ‰¾å‡ºä¸­å€¼ç‚¹
 		int center = (left + right) / 2;
-		// Èç¹ûÖĞĞÄĞ¡ÓÚ×ó¶¨µã Ôò»¥»»
+		// å¦‚æœä¸­å¿ƒå°äºå·¦å®šç‚¹ åˆ™äº’æ¢
 		if (a[center].compareTo(a[left]) < 0) {
 			swapReferences(a, left, center);
 		}
-		// Èç¹ûÓÒ²àĞ¡ÓÚ×ó²à Ôò»¥»»
+		// å¦‚æœå³ä¾§å°äºå·¦ä¾§ åˆ™äº’æ¢
 		if (a[right].compareTo(a[left]) < 0) {
 			swapReferences(a, left, right);
 		}
-		// Èç¹ûÓÒ²àĞ¡ÓÚÖĞĞÄ Ôò»¥»»
+		// å¦‚æœå³ä¾§å°äºä¸­å¿ƒ åˆ™äº’æ¢
 		if (a[right].compareTo(a[center]) < 0) {
 			swapReferences(a, center, right);
 		}
-		// ÕâÑù×îºó´ÓĞ¡µ½´óÔòÊÇ left center right½øĞĞÅÅÁĞ
+		// è¿™æ ·æœ€åä»å°åˆ°å¤§åˆ™æ˜¯ left center rightè¿›è¡Œæ’åˆ—
 		/*
-		 * ½«ÖĞĞÄµÄÊı¾İ ¼´ÊàÅ¦ÔªºÍÓÒ²à-1Î»ÖÃµÄÓÎ±ê½øĞĞ½»»» ÒòÎªleft center rightÊÇ·ûºÏÅÅĞòĞòÁĞµÄ
-		 * ËùÒÔÅÅĞòµÄÖ÷ÌåÊÇ´Óleft+1µ½right-2µÄ
+		 * å°†ä¸­å¿ƒçš„æ•°æ® å³æ¢çº½å…ƒå’Œå³ä¾§-1ä½ç½®çš„æ¸¸æ ‡è¿›è¡Œäº¤æ¢ å› ä¸ºleft center rightæ˜¯ç¬¦åˆæ’åºåºåˆ—çš„
+		 * æ‰€ä»¥æ’åºçš„ä¸»ä½“æ˜¯ä»left+1åˆ°right-2çš„
 		 */
 
 		swapReferences(a, center, right - 1);
@@ -57,48 +57,48 @@ public class QuickSort {
 	private static <AnyType extends Comparable<? super AnyType>> void quickSort(
 			AnyType[] a, int left, int right) {
 		if (left + CUTOFF <= right) {
-			// Èç¹û×óÓÎ±êµ½ÓÒÓÎ±êÓĞÈı¸öÔªËØ
-			// ÄÇÃ´ËµÃ÷ÊàÅ¦Ôª¿ÉÓÃ
+			// å¦‚æœå·¦æ¸¸æ ‡åˆ°å³æ¸¸æ ‡æœ‰ä¸‰ä¸ªå…ƒç´ 
+			// é‚£ä¹ˆè¯´æ˜æ¢çº½å…ƒå¯ç”¨
 			AnyType pivot = median3(a, left, right);
-			//½«´Ó×óÓÒ±ß½ç¿ªÊ¼½øĞĞ±éÀú
+			//å°†ä»å·¦å³è¾¹ç•Œå¼€å§‹è¿›è¡Œéå†
 			int i = left;
 			int j = right - 1; 
 			for (;;) {
-				//½øÈëÑ­»· 
+				//è¿›å…¥å¾ªç¯ 
 				while (a[++i].compareTo(pivot) < 0) {
-					//Èç¹û´Ó×ó¿ªÊ¼Óöµ½µÄ±éÀúµÄÊı±ÈÊàÅ¦ÔªµÄĞ¡ Ôò½Ó×Å±éÀú Ö±µ½Óöµ½´óÓÚÊàÅ¦ÔªµÄÍ£Ö¹
+					//å¦‚æœä»å·¦å¼€å§‹é‡åˆ°çš„éå†çš„æ•°æ¯”æ¢çº½å…ƒçš„å° åˆ™æ¥ç€éå† ç›´åˆ°é‡åˆ°å¤§äºæ¢çº½å…ƒçš„åœæ­¢
 				}
 				while (a[--j].compareTo(pivot) > 0) {
-					//Èç¹û´ÓÓÒ¿ªÊ¼Óïµ÷µÄ±éÀúµÄÊı±ÈÊàÅ¦ÔªµÄ´ó Ôò½Ó×Å±éÀú Ö±µ½Óöµ½Ğ¡ÓÚÊàÅ¦ÔªµÄÍ£Ö¹
+					//å¦‚æœä»å³å¼€å§‹è¯­è°ƒçš„éå†çš„æ•°æ¯”æ¢çº½å…ƒçš„å¤§ åˆ™æ¥ç€éå† ç›´åˆ°é‡åˆ°å°äºæ¢çº½å…ƒçš„åœæ­¢
 				}
 				if (i < j) {
-					//Èç¹ûi jµÄ±ß½çºÏ·¨ Ôò»¥»»
+					//å¦‚æœi jçš„è¾¹ç•Œåˆæ³• åˆ™äº’æ¢
 					swapReferences(a, i, j);
 				} else {
-					//Èç¹û±ß½ç²»ºÏ·¨ ÔòËµÃ÷¸ÃÊı×éÒÑ¾­ÅÅĞòÍê³É Ìø³ö
+					//å¦‚æœè¾¹ç•Œä¸åˆæ³• åˆ™è¯´æ˜è¯¥æ•°ç»„å·²ç»æ’åºå®Œæˆ è·³å‡º
 					break;
 				}
 			}
-			//½«ÊàÅ¦Ôª»»»ØÀ´
+			//å°†æ¢çº½å…ƒæ¢å›æ¥
 			swapReferences(a, i, right - 1);
-			//Í¬Ê±ÔÙ½«Á½²àµÄS1 S2Êı¾İÈº½øĞĞ·Ö¸îÅÅĞò 
+			//åŒæ—¶å†å°†ä¸¤ä¾§çš„S1 S2æ•°æ®ç¾¤è¿›è¡Œåˆ†å‰²æ’åº 
 			quickSort(a, left, i - 1);
 			quickSort(a, i, right);
 
 		} else {
-			//×îºó·Ö¸î³É½öÓĞ3¸öÔªËØÊ± ÄÇÃ´²åÈëÅÅĞò×ßÄã,ÅÅºÃµÄÍ¬Ê±µİ¹é·µ»Ø
+			//æœ€ååˆ†å‰²æˆä»…æœ‰3ä¸ªå…ƒç´ æ—¶ é‚£ä¹ˆæ’å…¥æ’åºèµ°ä½ ,æ’å¥½çš„åŒæ—¶é€’å½’è¿”å›
 			insertionSort(a, left, right);
 		}
 	}
 
 	/**
-	 * @Descirbe ´ø±ß½çµÄ²åÈëÅÅĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¸¦è¾¹ç•Œçš„æ’å…¥æ’åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param left
 	 * @Params @param right
-	 * @SignDate 2014-4-6ÏÂÎç04:18:28
+	 * @SignDate 2014-4-6ä¸‹åˆ04:18:28
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -118,13 +118,13 @@ public class QuickSort {
 	}
 
 	/**
-	 * @Descirbe ½»»»ÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe äº¤æ¢å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param index1
 	 * @Params @param index2
-	 * @SignDate 2014-4-6ÏÂÎç01:42:56
+	 * @SignDate 2014-4-6ä¸‹åˆ01:42:56
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a

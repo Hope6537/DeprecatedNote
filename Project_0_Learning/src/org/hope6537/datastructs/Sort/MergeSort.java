@@ -1,53 +1,53 @@
 package org.hope6537.datastructs.Sort;
 
 /**
- * @Describe ¹é²¢ÅÅĞò
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-6ÏÂÎç02:23:41
+ * @Describe å½’å¹¶æ’åº
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-6ä¸‹åˆ02:23:41
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class MergeSort {
 
 	/**
-	 * @Descirbe ¹é²¢ÅÅĞòÇı¶¯·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å½’å¹¶æ’åºé©±åŠ¨æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param tmpArray
 	 * @Params @param left
 	 * @Params @param right
-	 * @SignDate 2014-4-6ÏÂÎç02:23:49
+	 * @SignDate 2014-4-6ä¸‹åˆ02:23:49
 	 * @Version 0.9
 	 * @param <AnyType>
-	 * @param a ±¾ÌåÊı×é
-	 * @param tmpArray »º´æÊı×é
-	 * @param left ±¾ÌåÊı×é ÓĞĞ§ÓòµÄ×ó¶¨µã
-	 * @param right ±¾ÌåÊı×éÓĞĞ§ÓòµÄÓÒ¶¨µã
+	 * @param a æœ¬ä½“æ•°ç»„
+	 * @param tmpArray ç¼“å­˜æ•°ç»„
+	 * @param left æœ¬ä½“æ•°ç»„ æœ‰æ•ˆåŸŸçš„å·¦å®šç‚¹
+	 * @param right æœ¬ä½“æ•°ç»„æœ‰æ•ˆåŸŸçš„å³å®šç‚¹
 	 */
 	private static <AnyType extends Comparable<? super AnyType>> void mergeSort(AnyType [] a , AnyType [] tmpArray , int left , int right){
 		if(left<right){
-			//Ê×ÏÈË÷ÒıºÏ·¨ ÕÒ³öÖĞÖµ
+			//é¦–å…ˆç´¢å¼•åˆæ³• æ‰¾å‡ºä¸­å€¼
 			int center = (left+right)/2;
-			//È»ºóµİ¹é·Ö¸î ×ó²àË÷Òıµ½ÖĞ¼ä
+			//ç„¶åé€’å½’åˆ†å‰² å·¦ä¾§ç´¢å¼•åˆ°ä¸­é—´
 			mergeSort(a, tmpArray, left, center);
-			//µİ¹é·Ö¸îµÚ¶ş²½ ÖĞ¼äË÷Òıµ½ÓÒ²à
+			//é€’å½’åˆ†å‰²ç¬¬äºŒæ­¥ ä¸­é—´ç´¢å¼•åˆ°å³ä¾§
 			mergeSort(a, tmpArray, center+1, right);
-			//6·İ
+			//6ä»½
 			merge(a,tmpArray,left,center+1,right);
 		}
 	}
 	
 	/**
-	 * @Descirbe ¹é²¢ÅÅĞòÖ÷Àı³Ì
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å½’å¹¶æ’åºä¸»ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param tmpArray
-	 * @Params @param leftPos ×óÓÎ±êµÄÎ»ÖÃ
-	 * @Params @param rightPos ÓÒÓÎ±êµÄÎ»ÖÃ
-	 * @Params @param rightEnd ÓÒÓÎ±êµÄ¼«ÏŞ
-	 * @SignDate 2014-4-6ÏÂÎç03:52:03
+	 * @Params @param leftPos å·¦æ¸¸æ ‡çš„ä½ç½®
+	 * @Params @param rightPos å³æ¸¸æ ‡çš„ä½ç½®
+	 * @Params @param rightEnd å³æ¸¸æ ‡çš„æé™
+	 * @SignDate 2014-4-6ä¸‹åˆ03:52:03
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -57,39 +57,39 @@ public class MergeSort {
 	 * @param rightEnd
 	 */
 	private static <AnyType extends Comparable<? super AnyType>> void merge(AnyType [] a , AnyType [] tmpArray , int leftPos, int rightPos , int rightEnd){
-		int leftEnd = rightPos - 1; //ÕâÊÇ×óÓÎ±êµÄ¼«ÏŞ ¼´center-1
-		int tmpPos = leftPos;//´Ó0¿ªÊ¼ 
-		int numElement = rightEnd - leftPos + 1;//»ñµÃµÄÊÇÊı¾İµÄ×Ü¸öÊı
+		int leftEnd = rightPos - 1; //è¿™æ˜¯å·¦æ¸¸æ ‡çš„æé™ å³center-1
+		int tmpPos = leftPos;//ä»0å¼€å§‹ 
+		int numElement = rightEnd - leftPos + 1;//è·å¾—çš„æ˜¯æ•°æ®çš„æ€»ä¸ªæ•°
 		while(leftPos <= leftEnd && rightPos <= rightEnd){
-			//Èç¹û×óÓÒÓÎ±ê·Ö±ğ·ûºÏ·¶Î§²¢ºÏ·¨
+			//å¦‚æœå·¦å³æ¸¸æ ‡åˆ†åˆ«ç¬¦åˆèŒƒå›´å¹¶åˆæ³•
 			if(a[leftPos].compareTo(a[rightPos])<=0){
-				//ÄÇÃ´¿ªÊ¼±È½Ï Èç¹û×óÓÎ±ê±ÈÓÒÓÎ±êµÄÊı¾İĞ¡
+				//é‚£ä¹ˆå¼€å§‹æ¯”è¾ƒ å¦‚æœå·¦æ¸¸æ ‡æ¯”å³æ¸¸æ ‡çš„æ•°æ®å°
 				tmpArray[tmpPos++] = a[leftPos++];
-				//ÄÇÃ´½«¸Ã×óÓÎ±êÊı¾İ¸³¸øÁÙÊ±Êı×éµÄµ±Ç°Î»ÖÃ £¬²¢½« tmpPosºóÒÆ
+				//é‚£ä¹ˆå°†è¯¥å·¦æ¸¸æ ‡æ•°æ®èµ‹ç»™ä¸´æ—¶æ•°ç»„çš„å½“å‰ä½ç½® ï¼Œå¹¶å°† tmpPosåç§»
 			}
 			else{
-				//·´Ö®ÓÒÓÎ±êµÄÊı¾İĞ¡µÄ»° ½«ÓÒÓÎ±êµÄÊı¾İ¸³¸øÁÙÊ±Êı×éµÄµ±Ç°Î»ÖÃ ²¢½«Á½¸öÓÎ±êÓÒÒÆ
+				//åä¹‹å³æ¸¸æ ‡çš„æ•°æ®å°çš„è¯ å°†å³æ¸¸æ ‡çš„æ•°æ®èµ‹ç»™ä¸´æ—¶æ•°ç»„çš„å½“å‰ä½ç½® å¹¶å°†ä¸¤ä¸ªæ¸¸æ ‡å³ç§»
 				tmpArray[tmpPos++] = a[rightPos++];
 			}
 		}
-		//Èç¹û·Ö¿ªµÄÊı×éÖĞ ÄÄ¸öµÄÖµÊ£ÏÂÁË ÄÇÃ´Ö±½Ó°´ÕÕË³ĞòÌí¼Ó
+		//å¦‚æœåˆ†å¼€çš„æ•°ç»„ä¸­ å“ªä¸ªçš„å€¼å‰©ä¸‹äº† é‚£ä¹ˆç›´æ¥æŒ‰ç…§é¡ºåºæ·»åŠ 
 		while(leftPos<=leftEnd){
 			tmpArray[tmpPos++] = a[leftPos++];
 		}
 		while(rightPos<=rightEnd){
 			tmpArray[tmpPos++] = a[rightPos++];
 		}
-		//×îºó½«ÁÙÊ±Êı×éµÄÊı¾İ¸²¸Ç»Øa
+		//æœ€åå°†ä¸´æ—¶æ•°ç»„çš„æ•°æ®è¦†ç›–å›a
 		for(int i = 0; i<numElement ; i++,rightEnd--){
 			a[rightEnd] = tmpArray[rightEnd];
 		} 
 	}
 	/**
-	 * @Descirbe ¹é²¢ÅÅĞòµÄÖ÷³ÌĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å½’å¹¶æ’åºçš„ä¸»ç¨‹åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @SignDate 2014-4-6ÏÂÎç03:59:25
+	 * @SignDate 2014-4-6ä¸‹åˆ03:59:25
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a

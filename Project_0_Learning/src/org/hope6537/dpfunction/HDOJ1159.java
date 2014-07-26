@@ -3,9 +3,9 @@ package org.hope6537.dpfunction;
 import java.util.Scanner;
 
 /**
- * @Describe ×î³¤¹«¹²×ÓĞòÁĞÎÊÌâ (LCS)
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-19ÉÏÎç07:59:46
+ * @Describe æœ€é•¿å…¬å…±å­åºåˆ—é—®é¢˜ (LCS)
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-19ä¸Šåˆ07:59:46
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -55,9 +55,9 @@ public class HDOJ1159 {
 					}
 				}
 			}
-			// c[m][n]Îª×î´ó¹«¹²×ÓĞòÁĞ³¤¶È
+			// c[m][n]ä¸ºæœ€å¤§å…¬å…±å­åºåˆ—é•¿åº¦
 			System.out.println(c[m][n]);
-			// ½ÓÏÂÀ´ÊÇ¹¹ÔìLCS ²»ÔÚ±¾Ìâ·¶Î§ÄÚ£¬ËùÒÔÉùÃ÷º¯Êı
+			// æ¥ä¸‹æ¥æ˜¯æ„é€ LCS ä¸åœ¨æœ¬é¢˜èŒƒå›´å†…ï¼Œæ‰€ä»¥å£°æ˜å‡½æ•°
 			//printLCS(b, s1, m, n);
 		}
 	}

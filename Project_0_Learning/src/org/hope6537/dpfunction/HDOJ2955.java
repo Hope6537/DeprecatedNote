@@ -28,11 +28,11 @@ public class HDOJ2955 {
 					p[i] = (1 - p[i]);
 				}
 				// input done
-				// ×°Ì¬×ªÒÆ·½³Ì
+				// è£…æ€è½¬ç§»æ–¹ç¨‹
 				/*
-				 * ½«Æä×ª»¯Îª±³°üÎÊÌâ dp[j] = max{dp[j] , dp[j - m[i]] * p[i]}
-				 * ÓÃ³É¹¦ÌÓ×ßµÄ¸ÅÂÊµ±×ö¼ÛÖµ£¬ËûËùÄÜÄÃµ½µÄÒøÐÐµÄ×ÜÇ®Êýµ±×ö¼ÛÖµ
-				 * ËùÒÔÐèÒª½«¸ÅÂÊ 1 - P
+				 * å°†å…¶è½¬åŒ–ä¸ºèƒŒåŒ…é—®é¢˜ dp[j] = max{dp[j] , dp[j - m[i]] * p[i]}
+				 * ç”¨æˆåŠŸé€ƒèµ°çš„æ¦‚çŽ‡å½“åšä»·å€¼ï¼Œä»–æ‰€èƒ½æ‹¿åˆ°çš„é“¶è¡Œçš„æ€»é’±æ•°å½“åšä»·å€¼
+				 * æ‰€ä»¥éœ€è¦å°†æ¦‚çŽ‡ 1 - P
 				 */
 				double dp[] = new double[MAXMONEY + 1];
 				for (int i = 0; i <= MAXMONEY; i++) {
@@ -46,7 +46,7 @@ public class HDOJ2955 {
 				}
 				int maxIndex = -1;
 				for (int i = MAXMONEY; i >= 0; i--) {
-					//µÚÒ»´ÎÍü¼ÇÒ»·ÖÇ®²»ÇÀµÄ¸ÅÂÊÁË
+					//ç¬¬ä¸€æ¬¡å¿˜è®°ä¸€åˆ†é’±ä¸æŠ¢çš„æ¦‚çŽ‡äº†
 					if(dp[i] > P){
 						maxIndex = i;
 						break;

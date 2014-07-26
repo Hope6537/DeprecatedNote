@@ -3,9 +3,9 @@ package org.hope6537.graphs;
 import java.util.Scanner;
 
 /**
- * @Describe ³©Í¨¹¤³Ì Í¼µÄÉî¶ÈÓÅÏÈ±éÀú 1140MS
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-25ÏÂÎç09:02:51
+ * @Describe ç•…é€šå·¥ç¨‹ å›¾çš„æ·±åº¦ä¼˜å…ˆéå† 1140MS
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-25ä¸‹åˆ09:02:51
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -13,15 +13,15 @@ public class HDOJ1232 {
 
 	static Scanner s = new Scanner(System.in);
 
-	static int map[][];//Ê¹ÓÃÁÚ½Ó¾ØÕó
+	static int map[][];//ä½¿ç”¨é‚»æ¥çŸ©é˜µ
 	static int visited[];
 	static int n;
 
 	/**
-	 * @Descirbe Éî¶ÈÓÅÏÈËÑË÷£¨±ê¼Ç·¨£©
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ·±åº¦ä¼˜å…ˆæœç´¢ï¼ˆæ ‡è®°æ³•ï¼‰
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param i
-	 * @SignDate 2014-5-25ÏÂÎç09:03:14
+	 * @SignDate 2014-5-25ä¸‹åˆ09:03:14
 	 * @Version 0.9
 	 */
 	static void dfs(int i) {

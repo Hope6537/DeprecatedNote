@@ -16,7 +16,7 @@ public class HDOJ4508 {
 				volume[i] = s.nextInt();
 			}
 			int m = s.nextInt();
-			// ÍêÈ«±³°ü×´Ì¬·½³Ì
+			// å®Œå…¨èƒŒåŒ…çŠ¶æ€æ–¹ç¨‹
 			// dp[j] = max{dp[j],dp[j-volume[i]]+values[i]}
 			int[] dp = new int[m+2];
 

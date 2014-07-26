@@ -3,7 +3,7 @@ package org.hope6537.datastructs.march;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class ¸ßĞ§ÂÊµÄÃİÔËËã {
+public class é«˜æ•ˆç‡çš„å¹‚è¿ç®— {
 	
 	public static long pow (long x ,int n){
 		if(n==0){

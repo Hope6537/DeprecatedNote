@@ -3,12 +3,12 @@ package org.hope6537.datastructs.Hash;
 public class HashFunction {
 
 	/**
-	 * @Descirbe 一种好的Hash生成方式
-	 * @Author Hope6537(赵鹏)
+	 * @Descirbe 涓�绉嶅ソ鐨凥ash鐢熸垚鏂瑰紡
+	 * @Author Hope6537(璧甸箯)
 	 * @Params @param key
 	 * @Params @param tableSize
 	 * @Params @return
-	 * @SignDate 2014-4-3下午07:28:14
+	 * @SignDate 2014-4-3涓嬪崍07:28:14
 	 * @Version 0.9
 	 * @param key
 	 * @param tableSize

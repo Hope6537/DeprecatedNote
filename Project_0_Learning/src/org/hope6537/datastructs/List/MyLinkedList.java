@@ -5,9 +5,9 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @Describe ×Ô±àLinkedList
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2013-10-27ÏÂÎç07:26:32
+ * @Describe è‡ªç¼–LinkedList
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2013-10-27ä¸‹åˆ07:26:32
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -19,19 +19,19 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	private int modCount = 0;
 	
 	/**
-	 * @Describe Í·½áµã ÓÃÓÚÊ¶±ğ²¢´ÓÍ·¼ìË÷
+	 * @Describe å¤´ç»“ç‚¹ ç”¨äºè¯†åˆ«å¹¶ä»å¤´æ£€ç´¢
 	 */
 	private Node<Object> beginMarker;
 	
 	/**
-	 * @Describe Î²½áµã ÓÃÓÚÊ¶±ğ²¢´ÓÎ²¼ìË÷
+	 * @Describe å°¾ç»“ç‚¹ ç”¨äºè¯†åˆ«å¹¶ä»å°¾æ£€ç´¢
 	 */
 	private Node<Object> endMarker;
 	
 	/**
-	 * @Describe ÄÚ²¿ÀàNode ½ÚµãµÄ½á¹¹
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Signdate 2013-10-27ÏÂÎç07:26:42
+	 * @Describe å†…éƒ¨ç±»Node èŠ‚ç‚¹çš„ç»“æ„
+	 * @Author Hope6537(èµµé¹)
+	 * @Signdate 2013-10-27ä¸‹åˆ07:26:42
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 * @param <Object>
@@ -39,11 +39,11 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	private static class Node<Object>{
 		
 		/**
-		 * @Describe ¹¹Ôì·½·¨ ·Ö±ğ·ÖÎªÈı²¿·Ö
-		 * @Author Hope6537(ÕÔÅô)
-		 * @param @param d Êı¾İ
-		 * @param @param p Ç°Ö¸Õë
-		 * @param @param n ºóÖ¸Õë
+		 * @Describe æ„é€ æ–¹æ³• åˆ†åˆ«åˆ†ä¸ºä¸‰éƒ¨åˆ†
+		 * @Author Hope6537(èµµé¹)
+		 * @param @param d æ•°æ®
+		 * @param @param p å‰æŒ‡é’ˆ
+		 * @param @param n åæŒ‡é’ˆ
 		 */
 		public Node (Object d , Node<Object> p , Node<Object> n) {
 			data = d;
@@ -60,10 +60,10 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	}
 	
 	/**
-	 * @Descirbe Çå¿ÕÁ´±í
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºé“¾è¡¨
+	 * @Author Hope6537(èµµé¹)
 	 * @Params 
-	 * @SignDate 2013-10-27ÏÂÎç07:27:18
+	 * @SignDate 2013-10-27ä¸‹åˆ07:27:18
 	 * @Version 0.9
 	 */
 	public void clear(){
@@ -76,10 +76,10 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	}
 	
 	/**
-	 * @Descirbe ·µ»ØÊıÁ¿ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›æ•°é‡ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:27:30
+	 * @SignDate 2013-10-27ä¸‹åˆ07:27:30
 	 * @Version 0.9
 	 * @return
 	 */
@@ -87,10 +87,10 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		return theSize;		
 	}
 	/**
-	 * @Descirbe ¸ù¾İÊıÁ¿ÅĞ¶ÏÊÇ·ñÎª¿Õ  
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ ¹æ®æ•°é‡åˆ¤æ–­æ˜¯å¦ä¸ºç©º  
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:27:39
+	 * @SignDate 2013-10-27ä¸‹åˆ07:27:39
 	 * @Version 0.9
 	 * @return
 	 */
@@ -98,11 +98,11 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		return size()==0;
 	}
 	/**
-	 * @Descirbe Ö±½Ó´ÓÆ¨¹ÉºóÃæÌí¼Ó 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ç›´æ¥ä»å±è‚¡åé¢æ·»åŠ  
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:27:58
+	 * @SignDate 2013-10-27ä¸‹åˆ07:27:58
 	 * @Version 0.9
 	 * @param x
 	 * @return
@@ -112,11 +112,11 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		return true;
 	}
 	/**
-	 * @Descirbe ´ÓË÷ÒıÎ»ÖÃ½«Ô­½ÚµãÍËÒ»¸ñ£¬È»ºóÌí¼ÓĞÂÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»ç´¢å¼•ä½ç½®å°†åŸèŠ‚ç‚¹é€€ä¸€æ ¼ï¼Œç„¶åæ·»åŠ æ–°æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param index
 	 * @Params @param x
-	 * @SignDate 2013-10-27ÏÂÎç07:28:12
+	 * @SignDate 2013-10-27ä¸‹åˆ07:28:12
 	 * @Version 0.9
 	 * @param index
 	 * @param x
@@ -126,52 +126,52 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	}
 	
 	/**
-	 * @Descirbe Ìí¼ÓĞÂÊı¾İ ´Ó¸Ã½ÚµãµÄÇ°·½ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ·»åŠ æ–°æ•°æ® ä»è¯¥èŠ‚ç‚¹çš„å‰æ–¹ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param p
 	 * @Params @param x
-	 * @SignDate 2013-10-27ÏÂÎç07:28:41
+	 * @SignDate 2013-10-27ä¸‹åˆ07:28:41
 	 * @Version 0.9
 	 * @param p
 	 * @param x
 	 */
 	private void addBefore(Node<Object> p , Object x){
-		//ÔÚÄ¿±êÖ®Ç°²åÈëĞÂµÄÊı¾İÏîÄ¿
+		//åœ¨ç›®æ ‡ä¹‹å‰æ’å…¥æ–°çš„æ•°æ®é¡¹ç›®
 		Node<Object> newNode = new Node<Object>(x, p.prev, p);
-		//Ê×ÏÈ´´½¨Ò»¸öĞÂµÄ½Úµã pÊÇÒª²åÈëµÄµØ·½µÄ¾É½Úµã£¬Î»ÓÚĞÂ½ÚµãÖ®ºó£¬ËùÒÔÊı¾İÊÇx£¬Ç°½ÚµãpµÄÔ­À´µÄÇ°½Úµã£¬ºó½ÚµãÊÇp
+		//é¦–å…ˆåˆ›å»ºä¸€ä¸ªæ–°çš„èŠ‚ç‚¹ pæ˜¯è¦æ’å…¥çš„åœ°æ–¹çš„æ—§èŠ‚ç‚¹ï¼Œä½äºæ–°èŠ‚ç‚¹ä¹‹åï¼Œæ‰€ä»¥æ•°æ®æ˜¯xï¼Œå‰èŠ‚ç‚¹pçš„åŸæ¥çš„å‰èŠ‚ç‚¹ï¼ŒåèŠ‚ç‚¹æ˜¯p
 		newNode.prev.next = newNode;
-		//È»ºóĞÂ½ÚµãµÄÇ°½ÚµãÒ²¾ÍÊÇÔ­À´pµÄÇ°½ÚµãµÄºóÖ¸ÕëÖ¸ÏòĞÂ½Úµã¡£
+		//ç„¶åæ–°èŠ‚ç‚¹çš„å‰èŠ‚ç‚¹ä¹Ÿå°±æ˜¯åŸæ¥pçš„å‰èŠ‚ç‚¹çš„åæŒ‡é’ˆæŒ‡å‘æ–°èŠ‚ç‚¹ã€‚
 		p.prev = newNode;
-		//È»ºóp½ÚµãµÄÇ°Ö¸ÕëÖ¸Ïòºó½Úµã¡£
-		theSize++;//´óĞ¡+1
-		modCount++;//±ä¸ü´ÎÊı+1
+		//ç„¶åpèŠ‚ç‚¹çš„å‰æŒ‡é’ˆæŒ‡å‘åèŠ‚ç‚¹ã€‚
+		theSize++;//å¤§å°+1
+		modCount++;//å˜æ›´æ¬¡æ•°+1
 	}
 	/**
-	 * @Descirbe Í¨¹ıË÷ÒıµÃµ½½ÚµãµÄ·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é€šè¿‡ç´¢å¼•å¾—åˆ°èŠ‚ç‚¹çš„æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param index
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:29:00
+	 * @SignDate 2013-10-27ä¸‹åˆ07:29:00
 	 * @Version 0.9
 	 * @param index
 	 * @return
 	 */
 	private Node<Object> getNode(int index){
-		//ÕâÊÇÄÚ²¿µÄË½ÓĞµÄµÃµ½½ÚµãµÄ·½·¨
+		//è¿™æ˜¯å†…éƒ¨çš„ç§æœ‰çš„å¾—åˆ°èŠ‚ç‚¹çš„æ–¹æ³•
 		Node<Object> p;
 		if(index<0||index>size()){
-			//Èç¹ûÊı×éÔ½½ç
+			//å¦‚æœæ•°ç»„è¶Šç•Œ
 			throw new IndexOutOfBoundsException();
 		}
 		if(index < size()/2 ){
-			//Èç¹ûË÷ÒıÔÚÇ°°ë²¿·Ö,¾Í´ÓÍ·¿ªÊ¼²éÕÒ
+			//å¦‚æœç´¢å¼•åœ¨å‰åŠéƒ¨åˆ†,å°±ä»å¤´å¼€å§‹æŸ¥æ‰¾
 			p = beginMarker.next;
 			for(int i = 0 ; i < index ; i++){
 				p = p.next;
 			}
 		}
 		else{
-			//Èç¹ûË÷Òı´Óºó°ë²¿·Ö£¬¾Í´ÓÎ²²¿¿ªÊ¼²éÕÒ
+			//å¦‚æœç´¢å¼•ä»ååŠéƒ¨åˆ†ï¼Œå°±ä»å°¾éƒ¨å¼€å§‹æŸ¥æ‰¾
 			p = endMarker;
 			for(int i = size() ; i> index ; i--){
 				p = p.prev;
@@ -181,19 +181,19 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	}
 	
 	/**
-	 * @Descirbe ½«½Úµãp´ÓÁ´±íÖĞÒÆ³ı,²¢·µ»Ø¸ÃÏîµÄÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†èŠ‚ç‚¹pä»é“¾è¡¨ä¸­ç§»é™¤,å¹¶è¿”å›è¯¥é¡¹çš„æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param p
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:29:57
+	 * @SignDate 2013-10-27ä¸‹åˆ07:29:57
 	 * @Version 0.9 
 	 * @param p
 	 * @return
 	 */
 	private Object remove(Node<Object> p){
-		//pµÄºó½ÚµãµÄÇ°Ö¸ÕëÖ¸ÏòpµÄÇ°Ò»Ïî
+		//pçš„åèŠ‚ç‚¹çš„å‰æŒ‡é’ˆæŒ‡å‘pçš„å‰ä¸€é¡¹
 		p.next.prev = p.prev;
-		//pµÄÇ°½ÚµãµÄºóÖ¸ÕëÖ¸ÏòpµÄºóÒ»Ïî
+		//pçš„å‰èŠ‚ç‚¹çš„åæŒ‡é’ˆæŒ‡å‘pçš„åä¸€é¡¹
 		p.prev.next = p.next;
 		theSize--;
 		modCount--;
@@ -203,11 +203,11 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	
 	
 	/**
-	 * @Descirbe Í¨¹ıË÷Òı·µ»ØÊı¾İ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é€šè¿‡ç´¢å¼•è¿”å›æ•°æ®
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param index
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:32:30
+	 * @SignDate 2013-10-27ä¸‹åˆ07:32:30
 	 * @Version 0.9
 	 * @param index
 	 * @return
@@ -217,12 +217,12 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 	}
 	
 	/**
-	 * @Descirbe Í¨¹ıË÷ÒıÖµÀ´¸ü¸Äµ±Ç°½ÚµãµÄÊı¾İ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é€šè¿‡ç´¢å¼•å€¼æ¥æ›´æ”¹å½“å‰èŠ‚ç‚¹çš„æ•°æ® 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param index
 	 * @Params @param newValue
 	 * @Params @return
-	 * @SignDate 2013-10-27ÏÂÎç07:33:39
+	 * @SignDate 2013-10-27ä¸‹åˆ07:33:39
 	 * @Version 0.9
 	 * @param index
 	 * @param newValue
@@ -255,7 +255,7 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		
 		@Override
 		public boolean hasNext() {
-			//Èç¹ûË÷ÒıÖ¸ÕëÖ¸ÏòÁË×îºóµÄÎ²½áµã¡£ÄÇÃ´ÊÇ·µ»ØÃ»ÓĞÏÂÒ»ÏîÁË
+			//å¦‚æœç´¢å¼•æŒ‡é’ˆæŒ‡å‘äº†æœ€åçš„å°¾ç»“ç‚¹ã€‚é‚£ä¹ˆæ˜¯è¿”å›æ²¡æœ‰ä¸‹ä¸€é¡¹äº†
 			return current != endMarker;
 			
 		}
@@ -263,20 +263,20 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		@Override
 		public Object next() {
 			if(modCount != expectedModCount){
-				//Èç¹ûÁ´±íµÄ¸ü¸Ä´ÎÊıºÍµ±Ç°µü´úÆ÷ÄÚ¼ÇÂ¼µÄ²»·ûºÏ£¬ÄÇÃ´ËµÃ÷µü´úÆ÷ÎŞĞ§
+				//å¦‚æœé“¾è¡¨çš„æ›´æ”¹æ¬¡æ•°å’Œå½“å‰è¿­ä»£å™¨å†…è®°å½•çš„ä¸ç¬¦åˆï¼Œé‚£ä¹ˆè¯´æ˜è¿­ä»£å™¨æ— æ•ˆ
 				throw new ConcurrentModificationException();
 			}
 			if(!hasNext()){
-				//Èç¹ûÃ»ÓĞÏÂÒ»ÏîÁË
+				//å¦‚æœæ²¡æœ‰ä¸‹ä¸€é¡¹äº†
 				throw new NoSuchElementException();
 			}
-			//»ñÈ¡µ±Ç°µÄË÷ÒıÖ¸ÕëµÄÖ¸ÏòµÄ½áµãµÄÊı¾İ
+			//è·å–å½“å‰çš„ç´¢å¼•æŒ‡é’ˆçš„æŒ‡å‘çš„ç»“ç‚¹çš„æ•°æ®
 			Object nextItem = current.data;
-			//Í¬Ê±Ë÷ÒıºóÒÆ
+			//åŒæ—¶ç´¢å¼•åç§»
 			current = current.next;
-			//Í¬Ê±´ú±íÕâ¸öË÷ÒıÒÑ¾­±»ÒÆ¶¯µ½Í·½áµãÖ®ÍâÁË£¬¿ÉÒÔ±»ÒÆ³ı
+			//åŒæ—¶ä»£è¡¨è¿™ä¸ªç´¢å¼•å·²ç»è¢«ç§»åŠ¨åˆ°å¤´ç»“ç‚¹ä¹‹å¤–äº†ï¼Œå¯ä»¥è¢«ç§»é™¤
 			okToRemove = true;
-			//·µ»ØÊı¾İ
+			//è¿”å›æ•°æ®
 			return nextItem;
 			
 		}
@@ -285,13 +285,13 @@ public class MyLinkedList<Object> implements Iterable<Object> {
 		public void remove() {	
 			
 			if(modCount != expectedModCount){
-				//Èç¹ûÁ´±íµÄ¸ü¸Ä´ÎÊıºÍµ±Ç°µü´úÆ÷ÄÚ¼ÇÂ¼µÄ²»·ûºÏ£¬ÄÇÃ´ËµÃ÷µü´úÆ÷ÎŞĞ§
+				//å¦‚æœé“¾è¡¨çš„æ›´æ”¹æ¬¡æ•°å’Œå½“å‰è¿­ä»£å™¨å†…è®°å½•çš„ä¸ç¬¦åˆï¼Œé‚£ä¹ˆè¯´æ˜è¿­ä»£å™¨æ— æ•ˆ
 				throw new ConcurrentModificationException();
 			}
 			if(!okToRemove){
 				throw new IllegalStateException();
 			}
-			//×¢ÒâÕâÀïÎªºÎ²»ÊÇcurrent±¾ÉíµÄÔ­Òò£¬ÒòÎª´ËÊ±Ë÷ÒıÖ¸ÕëÒÑ¾­ÒòÎªnext¶øºóÒÆÁË£¬¶øÎÒÃÇ¿´µ½µÄÊı¾İÊÇÖ¸ÕëÇ°ÒÆÖ®Ç°µÄÊı¾İ£¬ËùÒÔÒªprev 
+			//æ³¨æ„è¿™é‡Œä¸ºä½•ä¸æ˜¯currentæœ¬èº«çš„åŸå› ï¼Œå› ä¸ºæ­¤æ—¶ç´¢å¼•æŒ‡é’ˆå·²ç»å› ä¸ºnextè€Œåç§»äº†ï¼Œè€Œæˆ‘ä»¬çœ‹åˆ°çš„æ•°æ®æ˜¯æŒ‡é’ˆå‰ç§»ä¹‹å‰çš„æ•°æ®ï¼Œæ‰€ä»¥è¦prev 
 			MyLinkedList.this.remove(current.prev);
 			okToRemove=false;
 			expectedModCount++;

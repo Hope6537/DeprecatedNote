@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * @Describe ×î´ó±¨Ïú¶îÎÊÌâ
- * @Author Hope6537(ÕÔÅô) Ô­±¾½ğ¶îµÄÊıÄ¿Ó¦¸ÃÊÇdouble µ«ÊÇÕâÀïÓ¦¸Ã¸Ä³Éint ÒÔÊÊÓ¦ÏÂ±êÎªÕûÊıµÄĞèÒª
+ * @Describe æœ€å¤§æŠ¥é”€é¢é—®é¢˜
+ * @Author Hope6537(èµµé¹) åŸæœ¬é‡‘é¢çš„æ•°ç›®åº”è¯¥æ˜¯double ä½†æ˜¯è¿™é‡Œåº”è¯¥æ”¹æˆint ä»¥é€‚åº”ä¸‹æ ‡ä¸ºæ•´æ•°çš„éœ€è¦
  * 
  */
 public class HDOJ1864 {

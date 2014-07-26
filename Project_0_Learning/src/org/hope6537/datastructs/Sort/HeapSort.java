@@ -3,33 +3,33 @@ package org.hope6537.datastructs.Sort;
 public class HeapSort {
 	
 	/**
-	 * @Descirbe »ñÈ¡¶ÑÖĞµÄ×ó¶ù×ÓË÷ÒıµÄ·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è·å–å †ä¸­çš„å·¦å„¿å­ç´¢å¼•çš„æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-6ÏÂÎç01:18:12
+	 * @SignDate 2014-4-6ä¸‹åˆ01:18:12
 	 * @Version 0.9
 	 * @param x
 	 * @return
 	 */
 	private static int leftChild(int x){
 		/*
-		 * ÕâÀï¶Ñ²»Í¬µÄÊÇ  ¶ÑÖĞÔªËØµÄ×ó¶ù×ÓË÷ÒıÖµÊÇ 2 * i
-		 * µ«ÊÇ¶ÑµÄ¸ù²¿ÔªËØÊÇ´ÓË÷Òı1¿ªÊ¼µÄ
-		 * ¶øÔÚ¶ÑÅÅĞòÖĞ Ë÷Òı¸ù²¿ÔªËØÊÇ´ÓË÷Òı0¿ªÊ¼µÄ ËùÒÔÒª+1
+		 * è¿™é‡Œå †ä¸åŒçš„æ˜¯  å †ä¸­å…ƒç´ çš„å·¦å„¿å­ç´¢å¼•å€¼æ˜¯ 2 * i
+		 * ä½†æ˜¯å †çš„æ ¹éƒ¨å…ƒç´ æ˜¯ä»ç´¢å¼•1å¼€å§‹çš„
+		 * è€Œåœ¨å †æ’åºä¸­ ç´¢å¼•æ ¹éƒ¨å…ƒç´ æ˜¯ä»ç´¢å¼•0å¼€å§‹çš„ æ‰€ä»¥è¦+1
 		 */
 	
 		return 2* x + 1;
 	}
 	
 	/**
-	 * @Descirbe ¶ÑÅÅĞò ½¨Á¢max¶Ñ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å †æ’åº å»ºç«‹maxå † 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @Params @param i ÏÂ±ê
-	 * @Params @param n Êı¾İ¸öÊı
-	 * @SignDate 2014-4-6ÏÂÎç02:01:14
+	 * @Params @param i ä¸‹æ ‡
+	 * @Params @param n æ•°æ®ä¸ªæ•°
+	 * @SignDate 2014-4-6ä¸‹åˆ02:01:14
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -37,43 +37,43 @@ public class HeapSort {
 	 * @param n
 	 */
 	private static <AnyType extends Comparable<? super AnyType>> void percDown(AnyType [] a ,int i , int n){
-		int child = 0 ;  //×Ó½ÚµãµÄÏÂ±í 
-		AnyType tmp; //¸¸½ÚµãµÄÊı¾İ 
+		int child = 0 ;  //å­èŠ‚ç‚¹çš„ä¸‹è¡¨ 
+		AnyType tmp; //çˆ¶èŠ‚ç‚¹çš„æ•°æ® 
 		for(tmp = a[i] ; leftChild(i) < n ; i = child){
 			/*System.out.println("a[i]="+a[i]);*/
-			//´Ó¸¸½Úµã¿ªÊ¼Ñ­»· Ò»Ö±µ½×îºóÒ»¸ö¾ßÓĞ×Ó½ÚµãµÄ½ÚµãÎªÖ¹
+			//ä»çˆ¶èŠ‚ç‚¹å¼€å§‹å¾ªç¯ ä¸€ç›´åˆ°æœ€åä¸€ä¸ªå…·æœ‰å­èŠ‚ç‚¹çš„èŠ‚ç‚¹ä¸ºæ­¢
 			child = leftChild(i);
-			//½«child¸³Öµ ÊÇiµÄ×ó¶ù×Ó 
+			//å°†childèµ‹å€¼ æ˜¯içš„å·¦å„¿å­ 
 			if(child != n-1 && a[child].compareTo(a[child+1])<0){
-				//Èç¹û ×ó¶ù×ÓÓĞĞÖµÜ ¼´ÓÒ¶ù×Ó Í¬Ê±×ó¶ù×ÓĞ¡ÓÚÓÒ¶ù×Ó
+				//å¦‚æœ å·¦å„¿å­æœ‰å…„å¼Ÿ å³å³å„¿å­ åŒæ—¶å·¦å„¿å­å°äºå³å„¿å­
 				child++;
-				//Ôò½«Ë÷ÒıÒÆµ½ÓÒ¶ù×ÓÉíÉÏ
+				//åˆ™å°†ç´¢å¼•ç§»åˆ°å³å„¿å­èº«ä¸Š
 			}
 			if(tmp.compareTo(a[child])<0){
-				//ÆäÖĞ×î´óµÄ×Ó½ÚµãÈç¹û´óÓÚ¸ù 
+				//å…¶ä¸­æœ€å¤§çš„å­èŠ‚ç‚¹å¦‚æœå¤§äºæ ¹ 
 				/*System.out.println("a[child]="+a[child]);*/
 				a[i] = a[child];
-				//ÄÇÃ´¸¸×Ó»¥»»  ĞÎ³ÉµİÔöĞòÁĞ 
+				//é‚£ä¹ˆçˆ¶å­äº’æ¢  å½¢æˆé€’å¢åºåˆ— 
 			}
 			else{
 				break;
 			}
 		}
 		/*
-		 * Ñ­»·Íê³É ½«È¡³öÀ´µÄ½ÚµãÔªËØÖµ·ÅÔÚÊı×éµÄ×îºó ¼´É¾³ıµôµÄ¶Ñ´æ´¢¿Õ¼ä À´·ÅÖÃ
+		 * å¾ªç¯å®Œæˆ å°†å–å‡ºæ¥çš„èŠ‚ç‚¹å…ƒç´ å€¼æ”¾åœ¨æ•°ç»„çš„æœ€å å³åˆ é™¤æ‰çš„å †å­˜å‚¨ç©ºé—´ æ¥æ”¾ç½®
 		 */
 		a[i] = tmp;
 	}
 	
 	
 	 /**
-	 * @Descirbe ½»»»ÔªËØ 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe äº¤æ¢å…ƒç´  
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
 	 * @Params @param index1
 	 * @Params @param index2
-	 * @SignDate 2014-4-6ÏÂÎç01:42:56
+	 * @SignDate 2014-4-6ä¸‹åˆ01:42:56
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
@@ -88,22 +88,22 @@ public class HeapSort {
 	    }
 	
 	/**
-	 * @Descirbe ¶ÑÅÅĞòÍâ²¿½Ó¿Ú Ö÷Ìå
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å †æ’åºå¤–éƒ¨æ¥å£ ä¸»ä½“
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <AnyType>
 	 * @Params @param a
-	 * @SignDate 2014-4-6ÏÂÎç01:59:26
+	 * @SignDate 2014-4-6ä¸‹åˆ01:59:26
 	 * @Version 0.9
 	 * @param <AnyType>
 	 * @param a
 	 */
 	public static <AnyType extends Comparable<? super AnyType>> void heapSort(AnyType [] a){
 		for(int i = a.length/2 ; i>=0 ; i--){
-			percDown(a, i, a.length); //½¨Á¢max¶Ñ
+			percDown(a, i, a.length); //å»ºç«‹maxå †
 		}
 		for(int i = a.length - 1 ; i>0;i--){
-			swapReferences(a,0,i); //½«ÔªËØdeleteMaxµô ½«maxÔªËØ·ÅÔÚi´¦ ¼´×îºó·½
-			percDown(a, 0, i);//È»ºóÔÙ½øĞĞ¶ÑĞò½¨Á¢ ÕÒµ½ÁíÍâµÄmax
+			swapReferences(a,0,i); //å°†å…ƒç´ deleteMaxæ‰ å°†maxå…ƒç´ æ”¾åœ¨iå¤„ å³æœ€åæ–¹
+			percDown(a, 0, i);//ç„¶åå†è¿›è¡Œå †åºå»ºç«‹ æ‰¾åˆ°å¦å¤–çš„max
 		}
 	}
 

@@ -3,9 +3,9 @@ package org.hope6537.tencent;
 import java.util.Scanner;
 
 /**
- * @Describe ÎÔ²İÎÒÒ²²»ÖªµÀÔõÃ´×ö
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-6-6ÏÂÎç4:20:28
+ * @Describe å§è‰æˆ‘ä¹Ÿä¸çŸ¥é“æ€ä¹ˆåš
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-6-6ä¸‹åˆ4:20:28
  * @version 0.9
  * @company Changchun University&SHXT
  */

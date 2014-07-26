@@ -10,8 +10,8 @@ public class HDOJ1175 {
 	static class Node {
 		int x;
 		int y;
-		int t; //¸Ãµã±»±éÀúµÄ´ÎÊı
-		int d; //¸ÄµãµÄÇ°Çı
+		int t; //è¯¥ç‚¹è¢«éå†çš„æ¬¡æ•°
+		int d; //æ”¹ç‚¹çš„å‰é©±
 		@Override
 		public String toString() {
 			return "Node [d=" + d + ", t=" + t + ", x=" + x + ", y=" + y + "]";
@@ -34,7 +34,7 @@ public class HDOJ1175 {
 
 	static int[][] move = { { 0, 1 }, { 1, 0 }, { -1, 0 }, { 0, -1 } };
 
-	static int N, M; // ĞĞÊıºÍÁĞÊı ·Ö±ğ¶ÔÓ¦y,x;
+	static int N, M; // è¡Œæ•°å’Œåˆ—æ•° åˆ†åˆ«å¯¹åº”y,x;
 
 	static Node start, temp, next;
 

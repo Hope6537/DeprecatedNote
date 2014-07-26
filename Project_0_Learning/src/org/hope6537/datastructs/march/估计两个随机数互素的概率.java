@@ -1,6 +1,6 @@
 package org.hope6537.datastructs.march;
 
-public class 估计两个随机数互素的概率 {
+public class 浼拌涓や釜闅忔満鏁颁簰绱犵殑姒傜巼 {
 	
 	public static double probRelPrim(int n){
 		int rel = 0;
@@ -9,7 +9,7 @@ public class 估计两个随机数互素的概率 {
 		for(int i = 1 ; i<= n ;i++){
 			for(int j = i+1 ; j<= n;j++){
 				tot++;
-				if(欧几里得算法.gcd(i,j)==1){
+				if(娆у嚑閲屽緱绠楁硶.gcd(i,j)==1){
 					rel++;
 				}
 			}

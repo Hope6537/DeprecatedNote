@@ -4,33 +4,33 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Describe ·ÖÀëÁ´½Ó·¨É¢ÁĞ±í
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-3ÏÂÎç07:29:27
+ * @Describe åˆ†ç¦»é“¾æ¥æ³•æ•£åˆ—è¡¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-3ä¸‹åˆ07:29:27
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class SeparateChainingHashTable<AnyType> {
 	/**
-	 * @Describe ±íµÄ³õÊ¼³¤¶È
+	 * @Describe è¡¨çš„åˆå§‹é•¿åº¦
 	 */
 	private static final int DEFAULT_TABLE_SIZE = 100;
 
 	/**
-	 * @Describe É¢ÁĞ±íÊÇ×÷ÎªÔªËØ´æÔÚµÄÁ´±íµÄÊı×é¼¯ºÏ
+	 * @Describe æ•£åˆ—è¡¨æ˜¯ä½œä¸ºå…ƒç´ å­˜åœ¨çš„é“¾è¡¨çš„æ•°ç»„é›†åˆ
 	 */
 	private List<AnyType>[] theLists;
 
 	/**
-	 * @Describe µ±Ç°É¢ÁĞ±íÄÚÔªËØµÄ¸öÊı
+	 * @Describe å½“å‰æ•£åˆ—è¡¨å†…å…ƒç´ çš„ä¸ªæ•°
 	 */
 	private int currentSize;
 
 	/**
-	 * @Descirbe Éú³É¸Ãµ¥ÔªÔªËØµÄHashÖµ£¬ÓÃÓÚ´æ´¢
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ç”Ÿæˆè¯¥å•å…ƒå…ƒç´ çš„Hashå€¼ï¼Œç”¨äºå­˜å‚¨
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:31:59
+	 * @SignDate 2014-4-3ä¸‹åˆ07:31:59
 	 * @Version 0.9
 	 * @return
 	 */
@@ -44,10 +44,10 @@ public class SeparateChainingHashTable<AnyType> {
 	}
 
 	/**
-	 * @Descirbe Çå¿Õ¸ÃÉ¢ÁĞ±íµÄËã·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¸…ç©ºè¯¥æ•£åˆ—è¡¨çš„ç®—æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params
-	 * @SignDate 2014-4-3ÏÂÎç07:35:41
+	 * @SignDate 2014-4-3ä¸‹åˆ07:35:41
 	 * @Version 0.9
 	 */
 	public void makeEmpty() {
@@ -63,41 +63,41 @@ public class SeparateChainingHashTable<AnyType> {
 
 	@SuppressWarnings("unchecked")
 	public SeparateChainingHashTable(int size) {
-		theLists = new LinkedList[nextPrime(size)];//Éú³ÉÒ»¸öÁ´±íÊı×é
+		theLists = new LinkedList[nextPrime(size)];//ç”Ÿæˆä¸€ä¸ªé“¾è¡¨æ•°ç»„
 		for (int i = 0; i < theLists.length; i++) {
-			theLists[i] = new LinkedList<AnyType>();//¶ÔÃ¿¸öÁ´±í½øĞĞ³õÊ¼»¯ 
+			theLists[i] = new LinkedList<AnyType>();//å¯¹æ¯ä¸ªé“¾è¡¨è¿›è¡Œåˆå§‹åŒ– 
 		}
 	}
 	
 	
 
 	/**
-	 * @Descirbe µÃµ½nÖ®ºóµÄÏÂÒ»¸öËØÊı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¾—åˆ°nä¹‹åçš„ä¸‹ä¸€ä¸ªç´ æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param n
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:42:07
+	 * @SignDate 2014-4-3ä¸‹åˆ07:42:07
 	 * @Version 0.9
 	 * @param n
 	 * @return
 	 */
 	private static int nextPrime(int n) {
-		if (n % 2 == 0) {//Ê×ÏÈ¼ì²âÊÇ·ñÄÜ±»2Õû³ı£¬Èç¹ûÊÇµÄ»°¾ÍÖ±½Ó¸É+1
+		if (n % 2 == 0) {//é¦–å…ˆæ£€æµ‹æ˜¯å¦èƒ½è¢«2æ•´é™¤ï¼Œå¦‚æœæ˜¯çš„è¯å°±ç›´æ¥å¹²+1
 			n++;
 		}
 
-		for (; !isPrime(n); n += 2)//È»ºóÎŞÏŞÑ­»·µ½ ²»ÊÇËØÊı ·ñÔòµÄ»°¾Ín+2µİÔö
+		for (; !isPrime(n); n += 2)//ç„¶åæ— é™å¾ªç¯åˆ° ä¸æ˜¯ç´ æ•° å¦åˆ™çš„è¯å°±n+2é€’å¢
 			;
 
 		return n;
 	}
 	
 	/**
-	 * @Descirbe ¼ì²éÊÇ·ñÊÇËØÊı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥æ˜¯å¦æ˜¯ç´ æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param n
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:42:18
+	 * @SignDate 2014-4-3ä¸‹åˆ07:42:18
 	 * @Version 0.9
 	 * @param n
 	 * @return
@@ -109,9 +109,9 @@ public class SeparateChainingHashTable<AnyType> {
 		if (n == 1 || n % 2 == 0){
 			return false;
 		}
-		//ÉÏÁ½ĞĞÌ«ÈõÖÇ
+		//ä¸Šä¸¤è¡Œå¤ªå¼±æ™º
 
-		for (int i = 3; i * i <= n; i += 2){//ÕÛ°ëÑ­»·²éÕÒ,¼´ÔÚ¹«Òò×ÓÔÚsqrt n Ö®Ç°Èç¹û´æÔÚµÄ»°£¬¾Í¿ÉÒÔ½ÚÊ¡Ò»°ëÊ±¼ä
+		for (int i = 3; i * i <= n; i += 2){//æŠ˜åŠå¾ªç¯æŸ¥æ‰¾,å³åœ¨å…¬å› å­åœ¨sqrt n ä¹‹å‰å¦‚æœå­˜åœ¨çš„è¯ï¼Œå°±å¯ä»¥èŠ‚çœä¸€åŠæ—¶é—´
 			if (n % i == 0){
 				return false;
 			}	
@@ -121,11 +121,11 @@ public class SeparateChainingHashTable<AnyType> {
 	}
 	
 	/**
-	 * @Descirbe ¼ì²é¸ÃxÔªËØÔÚÉ¢ÁĞ±íÖĞÊÇ·ñ´æÔÚ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ£€æŸ¥è¯¥xå…ƒç´ åœ¨æ•£åˆ—è¡¨ä¸­æ˜¯å¦å­˜åœ¨
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
 	 * @Params @return
-	 * @SignDate 2014-4-3ÏÂÎç07:46:29
+	 * @SignDate 2014-4-3ä¸‹åˆ07:46:29
 	 * @Version 0.9
 	 * @param x
 	 * @return
@@ -135,10 +135,10 @@ public class SeparateChainingHashTable<AnyType> {
 		return whichList.contains(x);
 	}
 	/**
-	 * @Descirbe ½«xÌí¼Ó½øÉ¢ÁĞ±í
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†xæ·»åŠ è¿›æ•£åˆ—è¡¨
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-4-3ÏÂÎç07:48:48
+	 * @SignDate 2014-4-3ä¸‹åˆ07:48:48
 	 * @Version 0.9
 	 * @param x
 	 */
@@ -154,10 +154,10 @@ public class SeparateChainingHashTable<AnyType> {
 	}
 	
 	/**
-	 * @Descirbe É¢ÁĞ±íÔÚ¿Õ¼ä²»¹»Ê±ÖØĞÂ¹¹Ôì²¢hash»¯
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ•£åˆ—è¡¨åœ¨ç©ºé—´ä¸å¤Ÿæ—¶é‡æ–°æ„é€ å¹¶hashåŒ–
+	 * @Author Hope6537(èµµé¹)
 	 * @Params 
-	 * @SignDate 2014-4-3ÏÂÎç07:50:55
+	 * @SignDate 2014-4-3ä¸‹åˆ07:50:55
 	 * @Version 0.9
 	 */
 	@SuppressWarnings("unchecked")
@@ -177,10 +177,10 @@ public class SeparateChainingHashTable<AnyType> {
 	}
 	
 	/**
-	 * @Descirbe ÔÚÉ¢ÁĞ±íÖĞÉ¾³ıµôx
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åœ¨æ•£åˆ—è¡¨ä¸­åˆ é™¤æ‰x
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-4-3ÏÂÎç07:51:41
+	 * @SignDate 2014-4-3ä¸‹åˆ07:51:41
 	 * @Version 0.9
 	 * @param x
 	 */

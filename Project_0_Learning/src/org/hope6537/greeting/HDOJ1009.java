@@ -45,15 +45,15 @@ public class HDOJ1009 {
 
 				}
 			}
-			// ÅÅĞòÍê±Ï
-			double jSum = 0; // ÕâÊÇËûµÃµ½µÄ
-			double fSum = m; // ÕâÊÇËûÔ­ÓĞµÄ
+			// æ’åºå®Œæ¯•
+			double jSum = 0; // è¿™æ˜¯ä»–å¾—åˆ°çš„
+			double fSum = m; // è¿™æ˜¯ä»–åŸæœ‰çš„
 			for (int i = 0; i < n; i++) {
 				if (fSum <= 0) {
 					break;
 				}
 				Trade t = trades[i];
-				if (fSum > t.f) {// Èç¹ûÍêÈ«¸¶µÃÆğ
+				if (fSum > t.f) {// å¦‚æœå®Œå…¨ä»˜å¾—èµ·
 					fSum -= t.f;
 					jSum += t.j;
 				} else {

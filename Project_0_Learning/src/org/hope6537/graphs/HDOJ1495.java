@@ -11,13 +11,13 @@ public class HDOJ1495 {
 		return a < b ? a : b;
 	}
 
-	static int sum, n, m; // ·Ö±ð´ú±í¿ÉÀÖÆ¿µÄÈÝÁ¿£¬µÚÒ»¸öÆ¿×ÓµÄÈÝÁ¿£¬µÚ¶þ¸öÆ¿×ÓµÄÈÝÁ¿
+	static int sum, n, m; // åˆ†åˆ«ä»£è¡¨å¯ä¹ç“¶çš„å®¹é‡ï¼Œç¬¬ä¸€ä¸ªç“¶å­çš„å®¹é‡ï¼Œç¬¬äºŒä¸ªç“¶å­çš„å®¹é‡
 	static int MAX = 150;
 
-	static boolean mark[][];// ±íÊ¾±­×Óa,bÓÐË®i,jµÄ×´Ì¬ÊÇ·ñµ½´ï¹ý
+	static boolean mark[][];// è¡¨ç¤ºæ¯å­a,bæœ‰æ°´i,jçš„çŠ¶æ€æ˜¯å¦åˆ°è¾¾è¿‡
 
 	static class Node {
-		int a, b, c, time;// ´ú±í±­×Óa,b,cÀïµÄË®Á¿ºÍµ¹Ë®µÄ´ÎÊý
+		int a, b, c, time;// ä»£è¡¨æ¯å­a,b,cé‡Œçš„æ°´é‡å’Œå€’æ°´çš„æ¬¡æ•°
 
 		public Node() {
 			// TODO Auto-generated constructor stub
@@ -52,10 +52,10 @@ public class HDOJ1495 {
 			int x = 2 * sum - oq.a;
 			int y = n - oq.b;
 			int z = m - oq.c;
-			if (x != 0) {// Èç¹û¿ÉÒÔÏòaÀïÃæµ¹Ë®
+			if (x != 0) {// å¦‚æžœå¯ä»¥å‘aé‡Œé¢å€’æ°´
 				if (oq.b != 0) {
 					next = new Node(oq.a + min(x, oq.b), oq.b - min(x, oq.b),
-							oq.c, oq.time + 1);// bÏòaµ¹Ë®
+							oq.c, oq.time + 1);// bå‘aå€’æ°´
 				}
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;
@@ -67,7 +67,7 @@ public class HDOJ1495 {
 				}
 				if (oq.c != 0)
 					next = new Node(oq.a + min(x, oq.c), oq.b, oq.c
-							- min(x, oq.c), oq.time + 1);// cÏòaµ¹Ë®
+							- min(x, oq.c), oq.time + 1);// cå‘aå€’æ°´
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;
 					if (next.a == sum && next.b == sum
@@ -77,10 +77,10 @@ public class HDOJ1495 {
 					q.addLast(next);
 				}
 			}
-			if (y != 0) {// ÏòbÀïÃæµ¹Ë®
+			if (y != 0) {// å‘bé‡Œé¢å€’æ°´
 				if (oq.a != 0)
 					next = new Node(oq.a - min(oq.a, y), oq.b + min(oq.a, y),
-							oq.c, oq.time + 1);// aÏòbµ¹Ë®
+							oq.c, oq.time + 1);// aå‘bå€’æ°´
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;
 					if (next.a == sum && next.b == sum
@@ -91,7 +91,7 @@ public class HDOJ1495 {
 				}
 				if (oq.c != 0) {
 					next = new Node(oq.a, oq.b + min(y, oq.c), oq.c
-							- min(y, oq.c), oq.time + 1);// cÏòbµ¹Ë®
+							- min(y, oq.c), oq.time + 1);// cå‘bå€’æ°´
 				}
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;
@@ -102,10 +102,10 @@ public class HDOJ1495 {
 					q.addLast(next);
 				}
 			}
-			if (z != 0) {// Ïòcµ¹Ë®
+			if (z != 0) {// å‘cå€’æ°´
 				if (oq.a != 0) {
 					next = new Node(oq.a - min(oq.a, z), oq.b, oq.c
-							+ min(oq.a, z), oq.time + 1);// aÏòcµ¹Ë®
+							+ min(oq.a, z), oq.time + 1);// aå‘cå€’æ°´
 				}
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;
@@ -117,7 +117,7 @@ public class HDOJ1495 {
 				}
 				if (oq.b != 0) {
 					next = new Node(oq.a, oq.b - min(oq.b, z), oq.c
-							+ min(oq.b, z), oq.time + 1);// bÏòcµ¹Ë®
+							+ min(oq.b, z), oq.time + 1);// bå‘cå€’æ°´
 				}
 				if (!mark[next.a][next.b]) {
 					mark[next.a][next.b] = true;

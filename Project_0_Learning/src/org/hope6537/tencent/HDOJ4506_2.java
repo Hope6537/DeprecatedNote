@@ -8,12 +8,12 @@ public class HDOJ4506_2 {
 	static long arr[];
 
 	/**
-	 * @Descirbe 快速取余幂
-	 * @Author Hope6537(赵鹏)
+	 * @Descirbe 蹇�熷彇浣欏箓
+	 * @Author Hope6537(璧甸箯)
 	 * @param a
 	 * @param b
 	 * @return
-	 * @SignDate 2014-6-6下午5:29:21
+	 * @SignDate 2014-6-6涓嬪崍5:29:21
 	 * @Version 0.9
 	 */
 	static long quickMod(long a, long b) {

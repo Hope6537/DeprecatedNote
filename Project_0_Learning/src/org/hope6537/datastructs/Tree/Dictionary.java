@@ -3,19 +3,19 @@ package org.hope6537.datastructs.Tree;
 import java.util.*;
 
 /**
- * @Describe Ê¹ÓÃJava×Ô´øµÄSet ºÍ MapÀà½øĞĞ×ÖµäÄ£Äâ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-3-27ÉÏÎç08:41:52
+ * @Describe ä½¿ç”¨Javaè‡ªå¸¦çš„Set å’Œ Mapç±»è¿›è¡Œå­—å…¸æ¨¡æ‹Ÿ
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-3-27ä¸Šåˆ08:41:52
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class Dictionary {
 	/**
-	 * @Descirbe ´òÓ¡³öÕû¸ö×ÖµäĞòºÍÖµ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰“å°å‡ºæ•´ä¸ªå­—å…¸åºå’Œå€¼
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param adjWords
 	 * @Params @param minWords
-	 * @SignDate 2014-3-27ÉÏÎç08:52:13
+	 * @SignDate 2014-3-27ä¸Šåˆ08:52:13
 	 * @Version 0.9
 	 * @param adjWords
 	 * @param minWords
@@ -36,41 +36,41 @@ public class Dictionary {
 	}
 
 	/**
-	 * @Descirbe ±È½ÏÁ½¸öµ¥´ÊÊÇ·ñÖ»ÓĞÒ»¸ö×ÖÄ¸²»Í¬
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ¯”è¾ƒä¸¤ä¸ªå•è¯æ˜¯å¦åªæœ‰ä¸€ä¸ªå­—æ¯ä¸åŒ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param word1
 	 * @Params @param word2
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç08:55:17
+	 * @SignDate 2014-3-27ä¸Šåˆ08:55:17
 	 * @Version 0.9
 	 * @param word1
 	 * @param word2
 	 * @return
 	 */
 	private static boolean oneCharOff(String word1, String word2) {
-		if (word1.length() != word2.length()) {// ³¤¶È²»µÈ Ö±½ÓËÀ
+		if (word1.length() != word2.length()) {// é•¿åº¦ä¸ç­‰ ç›´æ¥æ­»
 			return false;
 		}
-		int diff = 0;// ²»Í¬µÄÊıÁ¿
-		for (int i = 0; i < word1.length(); i++) {// ¿ªÊ¼°¤¸ö×ÖÄ¸²éÕÒ
+		int diff = 0;// ä¸åŒçš„æ•°é‡
+		for (int i = 0; i < word1.length(); i++) {// å¼€å§‹æŒ¨ä¸ªå­—æ¯æŸ¥æ‰¾
 			if (word1.charAt(i) != word2.charAt(i)) {
 				if (++diff > 1) {
-					;// Èç¹û³öÏÖ²»µÈÓÚ µÚÒ»´Î»Ødiff+1 diff=1 ²»»áÌø³ö Èç¹û½ÓÏÂÀ´µÄÑ­»·ÀïÓÖ³öÏÖ²»Í¬
-					return false;// diff=2 > 1 ÓÖËÀÁË
+					;// å¦‚æœå‡ºç°ä¸ç­‰äº ç¬¬ä¸€æ¬¡å›diff+1 diff=1 ä¸ä¼šè·³å‡º å¦‚æœæ¥ä¸‹æ¥çš„å¾ªç¯é‡Œåˆå‡ºç°ä¸åŒ
+					return false;// diff=2 > 1 åˆæ­»äº†
 				}
 			}
 		}
-		return diff == 1;// ×îºó·µ»ØÊÇ·ñÓĞÒ»¸ö²»Í¬ £¨ÒòÎªÓĞ¿ÉÄÜ¶¼ÏàÍ¬ Ã»ÓĞ¾­¹ıÉÏÃæµÄÌø×ª£©
+		return diff == 1;// æœ€åè¿”å›æ˜¯å¦æœ‰ä¸€ä¸ªä¸åŒ ï¼ˆå› ä¸ºæœ‰å¯èƒ½éƒ½ç›¸åŒ æ²¡æœ‰ç»è¿‡ä¸Šé¢çš„è·³è½¬ï¼‰
 	}
 
 	/**
-	 * @Descirbe ½«×Ö·ûÏà²îÒ»¸öµÄµ¥´ÊÌí¼Ó½øMap¼¯ºÏµÄ·½·¨£¬ ÒÔÒ»¸öµ¥´ÊÎª¹Ø¼ü×Ö£¬ËùÒÔºÍËûÒ»¸ö×ÖÄ¸ÏàÒì×é³ÉÒ»¸ö±í×÷ÎªÖµ
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Params @param <KeyType> ¹Ø¼ü×ÖµÄ±íÊ¾·½Ê½
-	 * @Params @param m Map¼¯ºÏ ¼´×Öµä
-	 * @Params @param key Ê×µ¥´Ê
-	 * @Params @param value ÏàÒìµÄµ¥´Ê
-	 * @SignDate 2014-3-27ÉÏÎç09:06:43
+	 * @Descirbe å°†å­—ç¬¦ç›¸å·®ä¸€ä¸ªçš„å•è¯æ·»åŠ è¿›Mapé›†åˆçš„æ–¹æ³•ï¼Œ ä»¥ä¸€ä¸ªå•è¯ä¸ºå…³é”®å­—ï¼Œæ‰€ä»¥å’Œä»–ä¸€ä¸ªå­—æ¯ç›¸å¼‚ç»„æˆä¸€ä¸ªè¡¨ä½œä¸ºå€¼
+	 * @Author Hope6537(èµµé¹)
+	 * @Params @param <KeyType> å…³é”®å­—çš„è¡¨ç¤ºæ–¹å¼
+	 * @Params @param m Mapé›†åˆ å³å­—å…¸
+	 * @Params @param key é¦–å•è¯
+	 * @Params @param value ç›¸å¼‚çš„å•è¯
+	 * @SignDate 2014-3-27ä¸Šåˆ09:06:43
 	 * @Version 0.9
 	 * @param <KeyType>
 	 * @param m
@@ -89,25 +89,25 @@ public class Dictionary {
 	}
 
 	/**
-	 * @Descirbe ÂùÁ¦Ìí¼Ó ÔËĞĞ 89000 ¸öµ¥´Ê ĞèÒª96Ãë
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è›®åŠ›æ·»åŠ  è¿è¡Œ 89000 ä¸ªå•è¯ éœ€è¦96ç§’
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param theWords
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç09:09:49
+	 * @SignDate 2014-3-27ä¸Šåˆ09:09:49
 	 * @Version 0.9
 	 * @param theWords
 	 * @return 
 	 */
 	public static Map<String, List<String>> computeAdjacentWords(
 			List<String> theWords) {
-		Map<String, List<String>> adjWords = new TreeMap<String, List<String>>();// ÕâÊÇÅÅĞò¼¯ºÏ
-		String[] words = new String[theWords.size()];// ½«±í»¯ÎªÊı×é
+		Map<String, List<String>> adjWords = new TreeMap<String, List<String>>();// è¿™æ˜¯æ’åºé›†åˆ
+		String[] words = new String[theWords.size()];// å°†è¡¨åŒ–ä¸ºæ•°ç»„
 		theWords.toArray(words);
 		for (int i = 0; i < words.length; i++) {
 			for (int j = i + 1; j < words.length; j++) {
-				// ´ÓÍ·¿ªÊ¼ Á½¸öÁ½¸ö±È¶Ô
+				// ä»å¤´å¼€å§‹ ä¸¤ä¸ªä¸¤ä¸ªæ¯”å¯¹
 				if (oneCharOff(words[i], words[j])) {
-					// ·ûºÏĞÔÖÊÌí¼Ó ±©Á¦Ìí¼Ó
+					// ç¬¦åˆæ€§è´¨æ·»åŠ  æš´åŠ›æ·»åŠ 
 					update(adjWords, words[i], words[j]);
 					update(adjWords, words[j], words[i]);
 				}
@@ -117,11 +117,11 @@ public class Dictionary {
 	}
 
 	/**
-	 * @Descirbe ÒÔÏàÍ¬ĞòÁĞ³¤¶ÈÎª¹Ø¼ü×ÖµÄ×ÖµäÌí¼ÓĞò ÔËĞĞ89000µ¥´Ê 51Ãë
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»¥ç›¸åŒåºåˆ—é•¿åº¦ä¸ºå…³é”®å­—çš„å­—å…¸æ·»åŠ åº è¿è¡Œ89000å•è¯ 51ç§’
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param theWords
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç09:11:24
+	 * @SignDate 2014-3-27ä¸Šåˆ09:11:24
 	 * @Version 0.9
 	 * @param theWords
 	 * @return
@@ -132,20 +132,20 @@ public class Dictionary {
 
 		Map<Integer, List<String>> wordsByLength = new TreeMap<Integer, List<String>>();
 
-		for (String w : theWords) {// ½«µ¥´ÊµÄ³¤¶È½øĞĞÒ»Ò»±È½ÏÅÅĞò,È»ºóĞÎ³ÉË÷Òı
+		for (String w : theWords) {// å°†å•è¯çš„é•¿åº¦è¿›è¡Œä¸€ä¸€æ¯”è¾ƒæ’åº,ç„¶åå½¢æˆç´¢å¼•
 			update(wordsByLength, w.length(), w);
 		}
 
-		for (List<String> groupsWords : wordsByLength.values()) {// ÕâÊÇÄÚº¬¸ÃÒ»¸öµ¥´Ê³¤¶ÈµÄËùÓĞ¸Ã³¤¶Èµ¥´ÊµÄ¼¯ºÏ
-			// Í¨¹ıµ¥´ÊµÄ³¤¶È ´Ó2¿ªÊ¼½øĞĞÑ­»· Ã¿´Î¶¼½«¸Ã³¤¶ÈµÄµ¥´Ê½øĞĞÊı×é»¯
+		for (List<String> groupsWords : wordsByLength.values()) {// è¿™æ˜¯å†…å«è¯¥ä¸€ä¸ªå•è¯é•¿åº¦çš„æ‰€æœ‰è¯¥é•¿åº¦å•è¯çš„é›†åˆ
+			// é€šè¿‡å•è¯çš„é•¿åº¦ ä»2å¼€å§‹è¿›è¡Œå¾ªç¯ æ¯æ¬¡éƒ½å°†è¯¥é•¿åº¦çš„å•è¯è¿›è¡Œæ•°ç»„åŒ–
 			String[] words = new String[groupsWords.size()];
 			groupsWords.toArray(words);
-			// È»ºó±©Á¦±È¶Ô
+			// ç„¶åæš´åŠ›æ¯”å¯¹
 			for (int i = 0; i < words.length; i++) {
 				for (int j = i + 1; j < words.length; j++) {
-					// ´ÓÍ·¿ªÊ¼ Á½¸öÁ½¸ö±È¶Ô
+					// ä»å¤´å¼€å§‹ ä¸¤ä¸ªä¸¤ä¸ªæ¯”å¯¹
 					if (oneCharOff(words[i], words[j])) {
-						// ·ûºÏĞÔÖÊÌí¼Ó ±©Á¦Ìí¼Ó
+						// ç¬¦åˆæ€§è´¨æ·»åŠ  æš´åŠ›æ·»åŠ 
 						update(adjWords, words[i], words[j]);
 						update(adjWords, words[j], words[i]);
 					}
@@ -156,11 +156,11 @@ public class Dictionary {
 	}
 
 	/**
-	 * @Descirbe ÒÔµ¥´Ê×÷Îª¹Ø¼ü×ÖµÄ×ÖµäÌí¼ÓĞò ÔËĞĞ160000¸öµ¥´Ê 4791ºÁÃë
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä»¥å•è¯ä½œä¸ºå…³é”®å­—çš„å­—å…¸æ·»åŠ åº è¿è¡Œ160000ä¸ªå•è¯ 4791æ¯«ç§’
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param theWords
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç09:19:39
+	 * @SignDate 2014-3-27ä¸Šåˆ09:19:39
 	 * @Version 0.9
 	 * @param theWords
 	 * @return
@@ -174,31 +174,31 @@ public class Dictionary {
 		for (String w : theWords) {
 			update(wordsByLength, w.length(), w);
 		}
-		// Ö®Ç°µÄºÍÉÏÃæcomputeAdjacentWords_lengthÒ»Ñù
+		// ä¹‹å‰çš„å’Œä¸Šé¢computeAdjacentWords_lengthä¸€æ ·
 		for (Map.Entry<Integer, List<String>> entry : wordsByLength.entrySet()) {
-			//½«ÉÏÃæµÄÒÔ³¤¶ÈÎª¹Ø¼ü×ÖµÄµ¥´Ê¼¯ºÏ°¤¸öÑ­»· µÚÒ»´ÎÊÇÒÔÁ½¸öµ¥´ÊÎª³¤¶ÈµÄ×Ö·û´®£¨µ¥´Ê£©
-			List<String> groupWords = entry.getValue();// ÕâÊÇµ¥´Ê¼¯
-			int groupNum = entry.getKey();// ÕâÊÇÕâ¸öµ¥´Ê¼¯µÄµ¥´Ê³¤¶È
+			//å°†ä¸Šé¢çš„ä»¥é•¿åº¦ä¸ºå…³é”®å­—çš„å•è¯é›†åˆæŒ¨ä¸ªå¾ªç¯ ç¬¬ä¸€æ¬¡æ˜¯ä»¥ä¸¤ä¸ªå•è¯ä¸ºé•¿åº¦çš„å­—ç¬¦ä¸²ï¼ˆå•è¯ï¼‰
+			List<String> groupWords = entry.getValue();// è¿™æ˜¯å•è¯é›†
+			int groupNum = entry.getKey();// è¿™æ˜¯è¿™ä¸ªå•è¯é›†çš„å•è¯é•¿åº¦
 			
 			for (int i = 0; i < groupNum; i++) {
-				//´ÓÏÂ±ê0¿ªÊ¼ µ½ÕâÒ»´ÎÑ­»·µÄset¼¯ºÏµÄµ¥´Ê³¤¶È £¬ Íâ²¿Ñ­»·Ã¿´Î¸ü»»ĞÂset groupNumÒ²ËæÖ®±ä»¯
+				//ä»ä¸‹æ ‡0å¼€å§‹ åˆ°è¿™ä¸€æ¬¡å¾ªç¯çš„seté›†åˆçš„å•è¯é•¿åº¦ ï¼Œ å¤–éƒ¨å¾ªç¯æ¯æ¬¡æ›´æ¢æ–°set groupNumä¹Ÿéšä¹‹å˜åŒ–
 				Map<String, List<String>> repToWord = new TreeMap<String, List<String>>();
-				//Éú³ÉÒÔµ¥´ÊÎª¹Ø¼ü×Ö ÏàÒìµ¥´Ê±íÎªÖµµÄÓ³Éä
+				//ç”Ÿæˆä»¥å•è¯ä¸ºå…³é”®å­— ç›¸å¼‚å•è¯è¡¨ä¸ºå€¼çš„æ˜ å°„
 				for (String str : groupWords) {
-					//´ÓÕâ×éµÄµ¥´Ê¼¯¿ªÊ¼±éÀúËùÓĞµÄStringµ¥´Ê 
+					//ä»è¿™ç»„çš„å•è¯é›†å¼€å§‹éå†æ‰€æœ‰çš„Stringå•è¯ 
 					String rep = str.substring(0, i) + str.substring(i + 1);
-					//½«ËùÓĞµÄµ¥´ÊÒÀ´Î½Ø´® È»ºóÔÙ²åÈërepToWordÓ³ÉäÀï ÒÔiµã±»½ØÏÂµÄÊ£Óàµ¥´Ê×÷Îª¹Ø¼ü×Ö µ¥´Ê×÷Îª¼¯ºÏ
-					//ÀıÈç inat inbt inct indt
-					//Èç¹û i=3 Ê± °ÑµÚÈı¸ö×Ö·û½Øµô  Ôò±¾´ÎÑ­»·Íê±Ïºó repToWordµÄÊı¾İÎª <int,inat>,<int,inbt>.... 
+					//å°†æ‰€æœ‰çš„å•è¯ä¾æ¬¡æˆªä¸² ç„¶åå†æ’å…¥repToWordæ˜ å°„é‡Œ ä»¥iç‚¹è¢«æˆªä¸‹çš„å‰©ä½™å•è¯ä½œä¸ºå…³é”®å­— å•è¯ä½œä¸ºé›†åˆ
+					//ä¾‹å¦‚ inat inbt inct indt
+					//å¦‚æœ i=3 æ—¶ æŠŠç¬¬ä¸‰ä¸ªå­—ç¬¦æˆªæ‰  åˆ™æœ¬æ¬¡å¾ªç¯å®Œæ¯•å repToWordçš„æ•°æ®ä¸º <int,inat>,<int,inbt>.... 
 					update(repToWord, rep, str);
 				}
 				for (List<String> wordClique : repToWord.values()) {
-					//½«Ò»¸öµ¥´ÊÆ¬¶ÎÀï°üº¬µÄµ¥´ÊÒÀ´ÎÑ­»·
+					//å°†ä¸€ä¸ªå•è¯ç‰‡æ®µé‡ŒåŒ…å«çš„å•è¯ä¾æ¬¡å¾ªç¯
 					if (wordClique.size() >= 2) {
-						//Èç¹ûÕâ¸öÆ¬¶ÎµÄµ¥´Ê´óÓÚ2
+						//å¦‚æœè¿™ä¸ªç‰‡æ®µçš„å•è¯å¤§äº2
 						for (String s1 : wordClique) {
 							for (String s2 : wordClique) {
-								//s1£¬s2 ²»ÏàÍ¬ ÔòÒÔs1Îª¹Ø¼ü×Ö ²åÈë½øadjWords×ÖµäĞòÀï
+								//s1ï¼Œs2 ä¸ç›¸åŒ åˆ™ä»¥s1ä¸ºå…³é”®å­— æ’å…¥è¿›adjWordså­—å…¸åºé‡Œ
 								if (s1 != s2) {
 									update(adjWords, s1, s2);
 								}

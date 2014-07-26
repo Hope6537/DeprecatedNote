@@ -7,9 +7,9 @@ public class HDOJ2059 {
 	static Scanner s = new Scanner(System.in);
 
 	/*
-	 * ��һ����һ������L�����ܵ����ܳ��� �ڶ��а�����������N��C��T���ֱ��ʾ���վ�ĸ������綯���������Ժ�����ʻ�ľ����Լ�ÿ�γ������Ҫ��ʱ��
-	 * ������Ҳ����������VR��VT1��VT2���ֱ��ʾ�����ܲ����ٶȣ��ڹ꿪�綯�����ٶȣ��ڹ�ŵŵ綯�����ٶ�
-	 * �����а�����N(N<=100)������p1,p2...pn,�ֱ��ʾ�������վ���ܵ����ľ��룬����0<p1<p2<...<pn<L
+	 * 第一行是一个整数L代表跑道的总长度 第二行包含三个整数N，C，T，分别表示充电站的个数，电动车冲满电以后能行驶的距离以及每次充电所需要的时间
+	 * 第三行也是三个整数VR，VT1，VT2，分别表示兔子跑步的速度，乌龟开电动车的速度，乌龟脚蹬电动车的速度
+	 * 第四行包含了N(N<=100)个整数p1,p2...pn,分别表示各个充电站离跑道起点的距离，其中0<p1<p2<...<pn<L
 	 */
 	public static double max(double a, double b) {
 		return a > b ? a : b;
@@ -31,9 +31,9 @@ public class HDOJ2059 {
 			P[N + 1] = L;
 			double rabbitTime = 1.0 * L / VR;
 			// input done
-			// ��״̬���̰�ͬѧ .....��
-			// ��ô����վ�������0 ��һ������վ�±���1---->N
-			// dp[i]�����ڹ꾭��Ҫ�ӵ�i������վ׼������ʱ��ʱ��
+			// 列状态方程啊同学 .....草
+			// 那么加油站在起点是0 第一个加油站下标是1---->N
+			// dp[i]代表乌龟经过要从第i个加油站准备出发时的时间
 			// dp[i] = dp[i-1]+Max{T + len - C > 0 ? C/VT1 + len-C / VT2 :
 			// len/VT1 , (C-tempC)/VT1 + (len - (C - tempC) > 0?len - (C -
 			// tempC) : 0 )/VT2}
@@ -49,22 +49,22 @@ public class HDOJ2059 {
 					len = P[i] - P[i - 1];
 					sit1 += T;
 				}
-				// ��һ����� ���Ǽ����ٳ�
+				// 第一种情况 就是加油再冲
 
-				// �Ѿ��ӹ����� ����ȫ����
+				// 已经加过油了 可以全速跑
 				tempTempC1 = 0;
 				if (len - (C - tempTempC1) > 0) {
-					// ʣ�µ���̲����� C-tempC ���������ܿ����������
+					// 剩下的里程不够跑 C-tempC 才是现在能开车的里程数
 					sit1 += (C - tempTempC1) / VT1 + (len - (C - tempTempC1))
 							/ VT2;
 					tempTempC1 = C;
 				} else {
-					// ʣ�µ���̹���
+					// 剩下的里程够跑
 					sit1 += len / VT1;
 					tempTempC1 += len;
 				}
 
-				// �ڶ������ ����ֱ�ӳ�
+				// 第二种情况 就是直接冲
 				double sit2 = 0;
 				if (C - tempC > len) {
 					sit2 += len / VT1;

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 
-public class Á´±íºÍÏßĞÔ±íµÄµü´úÆ÷É¾³ıÊ±¼ä¶Ô±È {
+public class é“¾è¡¨å’Œçº¿æ€§è¡¨çš„è¿­ä»£å™¨åˆ é™¤æ—¶é—´å¯¹æ¯” {
 
 	public static long returnTime(){
 		return System.currentTimeMillis();
@@ -24,7 +24,7 @@ public class Á´±íºÍÏßĞÔ±íµÄµü´úÆ÷É¾³ıÊ±¼ä¶Ô±È {
 			list1.add(i);
 			list2.add(i);
 		}
-		//³õÊ¼»¯Íê³É
+		//åˆå§‹åŒ–å®Œæˆ
 		
 		ThreadDemo t = new ThreadDemo();
 		t.run();
@@ -35,7 +35,7 @@ public class Á´±íºÍÏßĞÔ±íµÄµü´úÆ÷É¾³ıÊ±¼ä¶Ô±È {
 		
 		while(itr.hasNext()){
 			if(itr.next()%2 == 0){
-				itr.remove();//ÔÚµü´úÆ÷ÄÚÒÆ³ıÔªËØ±ØĞëÊ¹ÓÃµü´úÆ÷·½·¨£¬²»È»»áÒì³£
+				itr.remove();//åœ¨è¿­ä»£å™¨å†…ç§»é™¤å…ƒç´ å¿…é¡»ä½¿ç”¨è¿­ä»£å™¨æ–¹æ³•ï¼Œä¸ç„¶ä¼šå¼‚å¸¸
 			}
 		}
 		//end

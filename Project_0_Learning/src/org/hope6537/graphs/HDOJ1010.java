@@ -4,9 +4,9 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 /**
- * @Describe ×ßÃÔ¹¬Ö®Éî¶ÈÓÅÏÈËÑË÷
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-6-2ÉÏÎç11:32:45
+ * @Describe èµ°è¿·å®«ä¹‹æ·±åº¦ä¼˜å…ˆæœç´¢
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-6-2ä¸Šåˆ11:32:45
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -18,15 +18,15 @@ public class HDOJ1010 {
 
 	static Scanner s = new Scanner(new BufferedInputStream(System.in));
 
-	static int sx, sy, ex, ey, n, m;// ·Ö±ğ´ú±í¿ªÊ¼x£¬y×ø±êºÍ½áÊøµãx£¬yµÄ×ø±ê,ºÍnĞĞmÁĞÃÔ¹¬
+	static int sx, sy, ex, ey, n, m;// åˆ†åˆ«ä»£è¡¨å¼€å§‹xï¼Œyåæ ‡å’Œç»“æŸç‚¹xï¼Œyçš„åæ ‡,å’Œnè¡Œmåˆ—è¿·å®«
 
 	static char map[][];
 
-	static int flag, step;// ±ê¼ÇºÍ²½Êı
+	static int flag, step;// æ ‡è®°å’Œæ­¥æ•°
 
-	static int d[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // ĞĞ×ß·½Ê½±í
+	static int d[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // è¡Œèµ°æ–¹å¼è¡¨
 
-	// ¼´ÉÏ£¬ÓÒ£¬ÏÂ£¬×ó
+	// å³ä¸Šï¼Œå³ï¼Œä¸‹ï¼Œå·¦
 
 	static void dfs(int x, int y, int t) {
 		if (flag == 1) {
@@ -34,13 +34,13 @@ public class HDOJ1010 {
 		}
 		if (t < abs(ex - x) + abs(ey - y)
 				|| (t - abs(ex - x) + abs(ey - y)) % 2 != 0) {
-			// ÕâÊÇÒ»¸ö¼ôÖ¦Àı³Ì¡£ÈôÊ£ÓàÊ±¼ä-µ±Ç°µãµ½ÖÕµãµÄºá×İ×ø±êÖ®ºÍÎªÅ¼Êı£¬Ôò¸ÃÂ·×îÖÕµ½´ïÖÕµãÊ±ÕıºÃ·ûºÏÊ±¼äµÄ
-			// Èç¹ûÎª0ÔòÊÇÎŞÕÏ°­µÀ
-			// Èç¹ûÓĞÕÏ°­ÔòÈÆµÀ¡£¼´²îÖµÎª-1+£¨nX2+3£©ÎªÅ¼Êı nÊÇÕÏ°­Êı
+			// è¿™æ˜¯ä¸€ä¸ªå‰ªæä¾‹ç¨‹ã€‚è‹¥å‰©ä½™æ—¶é—´-å½“å‰ç‚¹åˆ°ç»ˆç‚¹çš„æ¨ªçºµåæ ‡ä¹‹å’Œä¸ºå¶æ•°ï¼Œåˆ™è¯¥è·¯æœ€ç»ˆåˆ°è¾¾ç»ˆç‚¹æ—¶æ­£å¥½ç¬¦åˆæ—¶é—´çš„
+			// å¦‚æœä¸º0åˆ™æ˜¯æ— éšœç¢é“
+			// å¦‚æœæœ‰éšœç¢åˆ™ç»•é“ã€‚å³å·®å€¼ä¸º-1+ï¼ˆnX2+3ï¼‰ä¸ºå¶æ•° næ˜¯éšœç¢æ•°
 			return;
-		} else if (t == 0) {// Èç¹ût==0Ê±
+		} else if (t == 0) {// å¦‚æœt==0æ—¶
 			if (ex == x && ey == y) {
-				// ·ûºÏÌõ¼ş£¬µ½´ïÖÕµã
+				// ç¬¦åˆæ¡ä»¶ï¼Œåˆ°è¾¾ç»ˆç‚¹
 				flag = 1;
 				return;
 			} else {
@@ -54,8 +54,8 @@ public class HDOJ1010 {
 						&& (map[nx][ny] == '.' || map[nx][ny] == 'D');
 				if (isOK) {
 					map[nx][ny] = 'X';
-					dfs(nx, ny, t - 1);// Ê±¼ä-1
-					map[nx][ny] = '.';// »ØËİ
+					dfs(nx, ny, t - 1);// æ—¶é—´-1
+					map[nx][ny] = '.';// å›æº¯
 				}
 			}
 		}

@@ -26,7 +26,7 @@ public class TimeDemo {
 		 * i; }
 		 */
 		/*
-		 * //³õÊ¼»¯Íê³É Dictionary d = new Dictionary(); List<String> list = new
+		 * //åˆå§‹åŒ–å®Œæˆ Dictionary d = new Dictionary(); List<String> list = new
 		 * ArrayList<String>(); for(int i = 65 ; i < 85 ; i++){ for(int j = 65 ;
 		 * j < 85 ; j++){ for(int k = 65 ; k < 85 ; k++){ for(int n = 65 ; n <
 		 * 85 ; n++){ list.add((char)i+"K"+(char)i+(char)j+(char)k+(char)n); } }
@@ -51,13 +51,13 @@ public class TimeDemo {
 		long f = t.TIME;
 		// start
 
-		// s.insertionSort(a); /*²åÈëÅÅĞò 100000¸öÔªËØ ×î»µÇé¿ö Ê±¼äÎª 36581ms */
-		// s.shellsort(a);/* Ï£¶ûÅÅĞò 10000000¸öÔªËØ °´×î»µÇé¿ö Ê±¼äÎª 3053ms */
-		// hs.heapSort(a); //¶ÑÅÅĞò 10000000¸öÔªËØ °´×î»µÇé¿ö Ê±¼äÎª 3784ms */
-		ms.mergeSort(a); // ¹é²¢ÅÅĞò 10000000¸öÔªËØ °´×î»µÇé¿ö Ê±¼äÎª 2499ms */
-		/* qs.quickSort(a); ¿ìËÙÅÅĞò 10000000¸öÔªËØ °´×î»µÇé¿ö Ê±¼äÎª 2181ms */
-		/* s.BooSort(a); Ã°ÅİÅÅĞò 100000¸öÔªËØ °´×î»µÇé¿ö Ê±¼äÎª 45180ms */
-		/* bs.bogoSort(a); ºï×ÓÅÅĞò 10¸öÔªËØ ×î»µÇé¿ö Ê±¼äÎªÓÀÔ¶ */
+		// s.insertionSort(a); /*æ’å…¥æ’åº 100000ä¸ªå…ƒç´  æœ€åæƒ…å†µ æ—¶é—´ä¸º 36581ms */
+		// s.shellsort(a);/* å¸Œå°”æ’åº 10000000ä¸ªå…ƒç´  æŒ‰æœ€åæƒ…å†µ æ—¶é—´ä¸º 3053ms */
+		// hs.heapSort(a); //å †æ’åº 10000000ä¸ªå…ƒç´  æŒ‰æœ€åæƒ…å†µ æ—¶é—´ä¸º 3784ms */
+		ms.mergeSort(a); // å½’å¹¶æ’åº 10000000ä¸ªå…ƒç´  æŒ‰æœ€åæƒ…å†µ æ—¶é—´ä¸º 2499ms */
+		/* qs.quickSort(a); å¿«é€Ÿæ’åº 10000000ä¸ªå…ƒç´  æŒ‰æœ€åæƒ…å†µ æ—¶é—´ä¸º 2181ms */
+		/* s.BooSort(a); å†’æ³¡æ’åº 100000ä¸ªå…ƒç´  æŒ‰æœ€åæƒ…å†µ æ—¶é—´ä¸º 45180ms */
+		/* bs.bogoSort(a); çŒ´å­æ’åº 10ä¸ªå…ƒç´  æœ€åæƒ…å†µ æ—¶é—´ä¸ºæ°¸è¿œ */
 		// end
 		t.run();
 		long e = t.TIME;

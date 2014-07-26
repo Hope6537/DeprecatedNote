@@ -3,9 +3,9 @@ package org.hope6537.tencent;
 import java.util.Scanner;
 
 /**
- * @Describe ×éºÏº¯Êı·¨dp
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-6-6ÉÏÎç09:45:35
+ * @Describe ç»„åˆå‡½æ•°æ³•dp
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-6-6ä¸Šåˆ09:45:35
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -16,17 +16,17 @@ public class HDOJ4504 {
 
 	public static void main(String[] args) {
 
-		// ËûÂèµÄÏŞÊ±300MS ÄãÊÇ²»ÊÇÔÚÕâºÍÎÒ³¶¶¿×ÓÄØ£¿ ¸Ï½ôÔ¤´¦Àí
+		// ä»–å¦ˆçš„é™æ—¶300MS ä½ æ˜¯ä¸æ˜¯åœ¨è¿™å’Œæˆ‘æ‰¯çŠŠå­å‘¢ï¼Ÿ èµ¶ç´§é¢„å¤„ç†
 		int[][] dp = new int[MAX + 1][(MAX * 3) + 1];
 		dp[0][0] = dp[1][1] = dp[1][2] = dp[1][3] = 1;
 		for (int i = 2; i <= MAX; i++) {
 			for (int j = 1; j <= MAX * 3; j++) {
-				dp[i][j] = dp[i - 1][j - 1]; // Ê¹ÓÃ·£Àº·¨Í¶½ø
+				dp[i][j] = dp[i - 1][j - 1]; // ä½¿ç”¨ç½šç¯®æ³•æŠ•è¿›
 				if (j >= 2) {
-					dp[i][j] += dp[i - 1][j - 2]; // Ê¹ÓÃÖĞ¾àÀëÍ¶Àº
+					dp[i][j] += dp[i - 1][j - 2]; // ä½¿ç”¨ä¸­è·ç¦»æŠ•ç¯®
 				}
 				if (j >= 3) {
-					dp[i][j] += dp[i - 1][j - 3]; // Ê¹ÓÃÈı·ÖÇòÍ¶Àº
+					dp[i][j] += dp[i - 1][j - 3]; // ä½¿ç”¨ä¸‰åˆ†çƒæŠ•ç¯®
 				}
 			}
 		}
@@ -38,8 +38,8 @@ public class HDOJ4504 {
 			int enemycount = (time / 15) / 2;
 			int ourcount = ((time / 15) % 2 != 0 ? 1 : 0);
 			int score = (b + enemycount - a + 1);
-			if (score < enemycount + ourcount) { // Íü¼Ç¼ÓÕâ¸öÅĞ¶ÏÁË
-				// Èç¹û³öÏÖ¸ºÊıµÄÃÖ²¹Çé¿ö
+			if (score < enemycount + ourcount) { // å¿˜è®°åŠ è¿™ä¸ªåˆ¤æ–­äº†
+				// å¦‚æœå‡ºç°è´Ÿæ•°çš„å¼¥è¡¥æƒ…å†µ
 				score = (enemycount + ourcount);
 
 			}

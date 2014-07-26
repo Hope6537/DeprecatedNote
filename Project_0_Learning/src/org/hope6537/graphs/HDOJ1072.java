@@ -54,7 +54,7 @@ public class HDOJ1072 {
 				next.x = tx;
 				next.y = ty;
 				boolean legal = tx > 0 && ty > 0 && tx <= N && ty <= M
-						&& map[tx][ty] != 0 && temp.lasttime > 1;// 即边界合法的同时，还能走别的路程
+						&& map[tx][ty] != 0 && temp.lasttime > 1;// 鍗宠竟鐣屽悎娉曠殑鍚屾椂锛岃繕鑳借蛋鍒殑璺▼
 				if (legal) {
 					if (map[tx][ty] == 3) {
 						return temp.time + 1;

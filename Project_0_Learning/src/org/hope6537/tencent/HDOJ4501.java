@@ -3,9 +3,9 @@ package org.hope6537.tencent;
 import java.util.Scanner;
 
 /**
- * @Describe ¶àÖØ×´Ì¬01±³°üÎÊÌâ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-6-5ÏÂÎç05:55:52
+ * @Describe å¤šé‡çŠ¶æ€01èƒŒåŒ…é—®é¢˜
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-6-5ä¸‹åˆ05:55:52
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -24,10 +24,10 @@ public class HDOJ4501 {
 				int c = s.nextInt();
 				ns[i] = new node(a, b, c);
 			}
-			//±¾Ìâ³öÏÖÁË¶àÖÖ×´Ì¬ ¼´¿ÉÒÔÓÃ°×ÄÃÃû¶î£¬»¹¿ÉÒÔÓÃÏÖ½ğÂò£¬ÓÃ»ı·Ö¶Ò»»¡£¼òÖ±×İµÄ·ÉÆğÀ´
+			//æœ¬é¢˜å‡ºç°äº†å¤šç§çŠ¶æ€ å³å¯ä»¥ç”¨ç™½æ‹¿åé¢ï¼Œè¿˜å¯ä»¥ç”¨ç°é‡‘ä¹°ï¼Œç”¨ç§¯åˆ†å…‘æ¢ã€‚ç®€ç›´çºµçš„é£èµ·æ¥
 			int dp[][][] = new int[k + 1][v1 + 1][v2 + 1];
 			for (int i = 1; i <= n; i++) {
-				//Ò»Î¬Êı×é01±³°ü·¨¡£
+				//ä¸€ç»´æ•°ç»„01èƒŒåŒ…æ³•ã€‚
 				for (int x = k; x >= 0; x--) {
 					for (int y = v1; y >= 0; y--) {
 						for (int z = v2; z >= 0; z--) {

@@ -1,9 +1,9 @@
 package org.hope6537.datastructs.Tree;
 
 /**
- * @Describe AVLÆ½ºâÊ÷µÄÒ»°ãÀı³Ì
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-3-27ÉÏÎç08:40:15
+ * @Describe AVLå¹³è¡¡æ ‘çš„ä¸€èˆ¬ä¾‹ç¨‹
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-3-27ä¸Šåˆ08:40:15
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <AnyType>
@@ -68,11 +68,11 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe Ë«Ğı×ªºÍÖ®Ç°µÄ¶Ô³Æ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe åŒæ—‹è½¬å’Œä¹‹å‰çš„å¯¹ç§°
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç08:39:57
+	 * @SignDate 2014-3-27ä¸Šåˆ08:39:57
 	 * @Version 0.9
 	 * @param t
 	 * @return
@@ -83,11 +83,11 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe µ¥Ğı×ª XÔÚ½ÚµãµÄÓÒ²à 
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å•æ—‹è½¬ Xåœ¨èŠ‚ç‚¹çš„å³ä¾§ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param k2
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç08:39:06
+	 * @SignDate 2014-3-27ä¸Šåˆ08:39:06
 	 * @Version 0.9
 	 * @param k2
 	 * @return
@@ -96,18 +96,18 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 		AvlNode<AnyType> k1 = k2.right;
 		k2.right = k1.left;
 		k1.left= k2;
-		//Çó³öĞÂµÄ¸ß¶È²¢·µ»Ø 
+		//æ±‚å‡ºæ–°çš„é«˜åº¦å¹¶è¿”å› 
 		k2.height = Math.max(height(k2.left), height(k2.right));
 		k1.height = Math.max(height(k1.left), height(k1.right));
 		return k1;
 	}
 
 	/**
-	 * @Descirbe Ö´ĞĞË«Ğı×ªµÄÀı³Ì
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ‰§è¡ŒåŒæ—‹è½¬çš„ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param t
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç08:32:40
+	 * @SignDate 2014-3-27ä¸Šåˆ08:32:40
 	 * @Version 0.9
 	 * @param t
 	 * @return
@@ -118,23 +118,23 @@ public class AvlTree<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Descirbe Ö´ĞĞµ¥Ğı×ªµÄÀı³Ì
-	 * @Author Hope6537(ÕÔÅô)
-	 * @Params @param k2 Ô­À´µÄ¸ù½Úµã
+	 * @Descirbe æ‰§è¡Œå•æ—‹è½¬çš„ä¾‹ç¨‹
+	 * @Author Hope6537(èµµé¹)
+	 * @Params @param k2 åŸæ¥çš„æ ¹èŠ‚ç‚¹
 	 * @Params @return
-	 * @SignDate 2014-3-27ÉÏÎç08:28:38
+	 * @SignDate 2014-3-27ä¸Šåˆ08:28:38
 	 * @Version 0.9
 	 * @param k2
 	 * @return
 	 */
 	private AvlNode<AnyType> rotateWithLeftChild(AvlNode<AnyType> k2) {
-		//½«k2µÄ×ó×ÓÊ÷¸³¸ø±äÁ¿k1 k1Îª¸Ã×ÓÊ÷µÄ¸ù½Úµã£¬Í¬Ê±Ò²×÷ÎªĞÂÊ÷µÄ¸ù½Úµã£¬¼´k1µÄ½ÚµãÉî¶È´óÓÚÓÒ²à
+		//å°†k2çš„å·¦å­æ ‘èµ‹ç»™å˜é‡k1 k1ä¸ºè¯¥å­æ ‘çš„æ ¹èŠ‚ç‚¹ï¼ŒåŒæ—¶ä¹Ÿä½œä¸ºæ–°æ ‘çš„æ ¹èŠ‚ç‚¹ï¼Œå³k1çš„èŠ‚ç‚¹æ·±åº¦å¤§äºå³ä¾§
 		AvlNode<AnyType> k1 = k2.left;
-		//½«k1µÄÓÒ½Úµã¸¶¸øk2£¬¼´½«k1µÄÓÒ²àµÄ²»Ó°ÏìÆ½ºâµÄY·ÅÔÚk2µÄ×ó²à£¬
+		//å°†k1çš„å³èŠ‚ç‚¹ä»˜ç»™k2ï¼Œå³å°†k1çš„å³ä¾§çš„ä¸å½±å“å¹³è¡¡çš„Yæ”¾åœ¨k2çš„å·¦ä¾§ï¼Œ
 		k2.left = k1.right;
-		//½«k2¸³¸øk1µÄÓÒ²à×÷ÎªÓÒ×ÓÊ÷ ´ËÊ±k1µÄ×óÓÒÁ½²àµÄ¸ß¶ÈÏàµÈ k1µÄ×ó×ÓÊé¸ß¶ÈÎª2  ¶øÓÒ×ÓÊ÷Îªk2+k1.right
+		//å°†k2èµ‹ç»™k1çš„å³ä¾§ä½œä¸ºå³å­æ ‘ æ­¤æ—¶k1çš„å·¦å³ä¸¤ä¾§çš„é«˜åº¦ç›¸ç­‰ k1çš„å·¦å­ä¹¦é«˜åº¦ä¸º2  è€Œå³å­æ ‘ä¸ºk2+k1.right
 		k1.right= k2;
-		//Çó³öĞÂµÄ¸ß¶È²¢·µ»Ø 
+		//æ±‚å‡ºæ–°çš„é«˜åº¦å¹¶è¿”å› 
 		k2.height = Math.max(height(k2.left), height(k2.right));
 		k1.height = Math.max(height(k1.left), height(k1.right));
 		return k1;

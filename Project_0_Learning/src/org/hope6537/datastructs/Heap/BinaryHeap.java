@@ -2,9 +2,9 @@ package org.hope6537.datastructs.Heap;
 
 
 /**
- * @Describe ¶ş·Ö¶Ñ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-5ÏÂÎç01:12:45
+ * @Describe äºŒåˆ†å †
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-5ä¸‹åˆ01:12:45
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <AnyType>
@@ -17,8 +17,8 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	private AnyType[] array;
 
 	/**
-	 * @Describe Ä¬ÈÏÎª¿ÕµÄ¹¹Ôìº¯Êı
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe é»˜è®¤ä¸ºç©ºçš„æ„é€ å‡½æ•°
+	 * @Author Hope6537(èµµé¹)
 	 * @param
 	 */
 	public BinaryHeap() {
@@ -26,8 +26,8 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 
 	/**
-	 * @Describe ´ø´óĞ¡µÄ¹¹Ôìº¯Êı Êı¾İÎª¿Õ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe å¸¦å¤§å°çš„æ„é€ å‡½æ•° æ•°æ®ä¸ºç©º
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param capacity
 	 */
 	@SuppressWarnings("unchecked")
@@ -38,32 +38,32 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	
 	
 	/**
-	 * @Descirbe ½«ÔªËØx²åÈë½ø¶ÑÖĞ ÉÏÂË²Ù×÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†å…ƒç´ xæ’å…¥è¿›å †ä¸­ ä¸Šæ»¤æ“ä½œ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param x
-	 * @SignDate 2014-4-5ÏÂÎç01:21:29
+	 * @SignDate 2014-4-5ä¸‹åˆ01:21:29
 	 * @Version 0.9
 	 * @param x
 	 */
 	public void insert(AnyType x){
 		if(currentSize == array.length-1){
-			enlargeArray(array.length * 2+1); // Èç¹ûÊı×éÒÑÂú ÄÇÃ´ÖØ¹¹
+			enlargeArray(array.length * 2+1); // å¦‚æœæ•°ç»„å·²æ»¡ é‚£ä¹ˆé‡æ„
 		}
-		int hole = ++currentSize;//Í¬Ê±½«currentSize+1À´È·±£ÊıÄ¿£¬Í¬Ê±½«holeÉèÖÃÎªÎ²Ë÷Òı£¬¼´µ±Ç°ÔªËØÊıÁ¿
+		int hole = ++currentSize;//åŒæ—¶å°†currentSize+1æ¥ç¡®ä¿æ•°ç›®ï¼ŒåŒæ—¶å°†holeè®¾ç½®ä¸ºå°¾ç´¢å¼•ï¼Œå³å½“å‰å…ƒç´ æ•°é‡
 		for(;hole>1&&x.compareTo(array[hole/2])<0;hole = hole/2){
-			 //½«xºÍarray[hole/2]½øĞĞ¶Ô±È ¼´°ÑxºÍÃ¿¸öÎ»ÓÚËûÉÏÃæµÄ¸¸½Úµã½øĞĞCompare±È½Ï
+			 //å°†xå’Œarray[hole/2]è¿›è¡Œå¯¹æ¯” å³æŠŠxå’Œæ¯ä¸ªä½äºä»–ä¸Šé¢çš„çˆ¶èŠ‚ç‚¹è¿›è¡ŒCompareæ¯”è¾ƒ
 			array[hole] = array[hole/2];
-			//Èç¹ûxĞ¡ÓÚ¸¸½Úµã£¬ÔòÉÏÍÆ 
+			//å¦‚æœxå°äºçˆ¶èŠ‚ç‚¹ï¼Œåˆ™ä¸Šæ¨ 
 		}
-		//ºÎÊ±Ñ­»·Ìø³ö ÔòËµÃ÷ÕÒµ½Î»ÖÃ ·ÅÖÃplay~ ÕâË×³ÆÉÏÂË
+		//ä½•æ—¶å¾ªç¯è·³å‡º åˆ™è¯´æ˜æ‰¾åˆ°ä½ç½® æ”¾ç½®play~ è¿™ä¿—ç§°ä¸Šæ»¤
 		array[hole] = x;
 	}
 
 	/**
-	 * @Descirbe ½«¶şÏî¶ÑÖØ¹¹
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†äºŒé¡¹å †é‡æ„
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param newSize
-	 * @SignDate 2014-4-5ÏÂÎç01:16:26
+	 * @SignDate 2014-4-5ä¸‹åˆ01:16:26
 	 * @Version 0.9
 	 * @param newSize
 	 */
@@ -76,30 +76,30 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe ÏÂÂË
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ä¸‹æ»¤
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param hole
-	 * @SignDate 2014-4-5ÏÂÎç03:27:46
+	 * @SignDate 2014-4-5ä¸‹åˆ03:27:46
 	 * @Version 0.9
 	 * @param hole
 	 */
 	private void percolateDown(int hole){
-		int child; // ÉùÃ÷child ¼´×ó¶ù×Ó½ÚµãµÄË÷Òı
-		AnyType tmp = array[hole]; //½«µ±Ç°hole½ÚµãµÄÊı¾İ±£´æÏÂÀ´ ¼´Ô­Ê¼µÄ×îlastÔªËØµÄÖµ
+		int child; // å£°æ˜child å³å·¦å„¿å­èŠ‚ç‚¹çš„ç´¢å¼•
+		AnyType tmp = array[hole]; //å°†å½“å‰holeèŠ‚ç‚¹çš„æ•°æ®ä¿å­˜ä¸‹æ¥ å³åŸå§‹çš„æœ€lastå…ƒç´ çš„å€¼
 		
-		for(;hole*2<=currentSize;hole = child){//Èç¹ûholeµÄ×Ó½Úµã´æÔÚ
-			child = hole * 2;//Ôò½øÈëÑ­»· Í¬Ê±¸øchild¸³Öµ
+		for(;hole*2<=currentSize;hole = child){//å¦‚æœholeçš„å­èŠ‚ç‚¹å­˜åœ¨
+			child = hole * 2;//åˆ™è¿›å…¥å¾ªç¯ åŒæ—¶ç»™childèµ‹å€¼
 			if(child!=currentSize && array[child+1].compareTo(array[child])<0){
-				//Èç¹ûchildÓĞÓÒ½ÚµãÍ¬Ê±ÓÒ½ÚµãĞ¡ÓÚ×ó½Úµã
+				//å¦‚æœchildæœ‰å³èŠ‚ç‚¹åŒæ—¶å³èŠ‚ç‚¹å°äºå·¦èŠ‚ç‚¹
 				child ++;
-				//ÄÇÃ´Ë÷ÒıÖµ±ä»¯ ±ä³ÉÓÒ¶ù×Ó½Úµã 
+				//é‚£ä¹ˆç´¢å¼•å€¼å˜åŒ– å˜æˆå³å„¿å­èŠ‚ç‚¹ 
 			}
 			if(array[child].compareTo(tmp)<0){
-				//Èç¹û¶ù×Ó½ÚµãĞ¡ÓÚ¸¸½Úµã ½«¸¸½Úµã»»ÏÂÀ´ ¶ù×Ó½Úµã×÷ÎªĞÂµÄ¸ù
+				//å¦‚æœå„¿å­èŠ‚ç‚¹å°äºçˆ¶èŠ‚ç‚¹ å°†çˆ¶èŠ‚ç‚¹æ¢ä¸‹æ¥ å„¿å­èŠ‚ç‚¹ä½œä¸ºæ–°çš„æ ¹
 				array[hole] = array[child];
 			}
 			else{
-				//·ñÔòÏàÍ¬»òÕß¸¸Ç×Ğ¡ÓÚ¶ù×ÓµÄ»°Ìø³ö 
+				//å¦åˆ™ç›¸åŒæˆ–è€…çˆ¶äº²å°äºå„¿å­çš„è¯è·³å‡º 
 				break;
 			}
 		}
@@ -107,10 +107,10 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe µ±Ç°¶şÏî¶ÑÊÇ·ñÎª¿Õ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å½“å‰äºŒé¡¹å †æ˜¯å¦ä¸ºç©º
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç03:37:58
+	 * @SignDate 2014-4-5ä¸‹åˆ03:37:58
 	 * @Version 0.9
 	 * @return
 	 */
@@ -119,33 +119,33 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe ½«¶ÑÄÚ×îĞ¡ÖµÈ¡³ö Í¬Ê±ÖØĞÂÅÅÁĞÕû¸ö¶ÑĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å°†å †å†…æœ€å°å€¼å–å‡º åŒæ—¶é‡æ–°æ’åˆ—æ•´ä¸ªå †åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç03:30:50
+	 * @SignDate 2014-4-5ä¸‹åˆ03:30:50
 	 * @Version 0.9
 	 * @return
 	 */
 	public AnyType deleteMin(){
 		if(isEmpty()){
-			//Èç¹ûÎª¿Õ Ö±½Ó·µ»Ønull
+			//å¦‚æœä¸ºç©º ç›´æ¥è¿”å›null
 			return null;
 		}
-		//·ñÔò ÕÒµ½µ±Ç°Ê÷¸ùµÄË÷Òı²¢±£´æ
+		//å¦åˆ™ æ‰¾åˆ°å½“å‰æ ‘æ ¹çš„ç´¢å¼•å¹¶ä¿å­˜
 		AnyType minItem = findMin();
-		//½«arrayµÄ×îºó½Úµã·ÅÔÚ¸ùÉÏ
+		//å°†arrayçš„æœ€åèŠ‚ç‚¹æ”¾åœ¨æ ¹ä¸Š
 		array[1] = array[currentSize--];
-		//È»ºó½øĞĞÏÂÂË²Ù×÷ Êµ¼ÊÉÏ¾ÍÊÇÒÑ¾­È¡³öÁË¸ù ½«Á½¸ö×ÓÊ÷½øĞĞºÏ²¢
+		//ç„¶åè¿›è¡Œä¸‹æ»¤æ“ä½œ å®é™…ä¸Šå°±æ˜¯å·²ç»å–å‡ºäº†æ ¹ å°†ä¸¤ä¸ªå­æ ‘è¿›è¡Œåˆå¹¶
 		percolateDown(1);
-		//·µ»Ø×îĞ¡½Úµã
+		//è¿”å›æœ€å°èŠ‚ç‚¹
 		return minItem;
 	}
 
 	/**
-	 * @Descirbe ·µ»Øµ±Ç°ÓÅÏÈ¶ÓÁĞ£¨¶Ñ£©µÄÊ÷¸ù »òÕßËµÊÇÊ×Ïî
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›å½“å‰ä¼˜å…ˆé˜Ÿåˆ—ï¼ˆå †ï¼‰çš„æ ‘æ ¹ æˆ–è€…è¯´æ˜¯é¦–é¡¹
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @return
-	 * @SignDate 2014-4-5ÏÂÎç03:30:30
+	 * @SignDate 2014-4-5ä¸‹åˆ03:30:30
 	 * @Version 0.9
 	 * @return
 	 */
@@ -157,10 +157,10 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Descirbe ¶ÔÓÚÃ¿¸öÓĞ×Ó½ÚµãµÄ½Úµã ½øĞĞ¶ÑĞòÅÅĞò
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe å¯¹äºæ¯ä¸ªæœ‰å­èŠ‚ç‚¹çš„èŠ‚ç‚¹ è¿›è¡Œå †åºæ’åº
+	 * @Author Hope6537(èµµé¹)
 	 * @Params 
-	 * @SignDate 2014-4-5ÏÂÎç04:00:35
+	 * @SignDate 2014-4-5ä¸‹åˆ04:00:35
 	 * @Version 0.9
 	 */
 	private void buildHeap(){
@@ -170,16 +170,16 @@ public class BinaryHeap<AnyType extends Comparable<? super AnyType>> {
 	}
 	
 	/**
-	 * @Describe ´øÓĞÔ­ÓĞÊı×éÊı¾İµÄxµÄ¹¹Ôì·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe å¸¦æœ‰åŸæœ‰æ•°ç»„æ•°æ®çš„xçš„æ„é€ æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param x
 	 */
 	@SuppressWarnings("unchecked")
 	public BinaryHeap(AnyType [] x){
 		currentSize += x.length;
 		array = (AnyType []) new Comparable[(currentSize+2)*11/10];
-		//ÉùÃ÷Êı×éºÍ³¤¶È
-		//ÒòÎª¸ÃÊı×éÊÇ´Ó1¿ªÊ¼µÄ 1×÷ÎªÕû¸ö¶ÑµÄ¸ù½Úµã
+		//å£°æ˜æ•°ç»„å’Œé•¿åº¦
+		//å› ä¸ºè¯¥æ•°ç»„æ˜¯ä»1å¼€å§‹çš„ 1ä½œä¸ºæ•´ä¸ªå †çš„æ ¹èŠ‚ç‚¹
 		int i = 1;
 		for(AnyType item : x){
 			array[i++] = item;

@@ -32,21 +32,21 @@ public class HDOJ1495_2 {
 				if (nT != n && s != 0) {
 					if (x[ls = s < (n - nT) ? 0 : s - (n - nT)][ln = n <= (s + nT) ? n
 							: nT + s][lm = mT] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // sµ¹n
+						q.add(new State(count + 1, ls, ln, lm)); // så€’n
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}
 				if (mT != m && s != 0) {
 					if (x[ls = s < (m - mT) ? 0 : s - (m - mT)][ln = nT][lm = (m - mT) < s ? m
 							: mT + s] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // sµ¹m
+						q.add(new State(count + 1, ls, ln, lm)); // så€’m
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}
 				if (nT != 0 && s < 100) {
 					if (x[ls = (nT + s) > 100 ? 100 : nT + s][ln = nT < (100 - s) ? 0
 							: nT - (100 - s)][lm = mT] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // nµ¹s
+						q.add(new State(count + 1, ls, ln, lm)); // nå€’s
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}
@@ -54,21 +54,21 @@ public class HDOJ1495_2 {
 					if (x[ls = s][ln = nT < (m - mT) ? 0 : nT - (m - mT)][lm = nT < (m - mT) ? mT
 							+ nT
 							: m] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // nµ¹m
+						q.add(new State(count + 1, ls, ln, lm)); // nå€’m
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}
 				if (mT != 0 && s < 100) {
 					if (x[ls = (mT + s) > 100 ? 100 : mT + s][ln = nT][lm = mT < (100 - s) ? 0
 							: mT - (100 - s)] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // mµ¹s
+						q.add(new State(count + 1, ls, ln, lm)); // må€’s
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}
 				if (mT != 0 && nT != n) {
 					if (x[ls = s][ln = mT < (n - nT) ? mT + nT : n][lm = mT < (n - nT) ? 0
 							: mT - (n - nT)] == 0) {
-						q.add(new State(count + 1, ls, ln, lm)); // mµ¹n
+						q.add(new State(count + 1, ls, ln, lm)); // må€’n
 						// System.out.print(ls+" "+ln+" "+lm+"\t");
 					}
 				}

@@ -22,7 +22,7 @@ public class HDOJ1398 {
 			for (int i = 2; i * i <= nNum; ++i) {
 
 				for (int j = 0; j <= nNum; ++j)
-					// ----- ¢Û
+					// ----- â‘¢
 					for (int k = 0; k + j <= nNum; k += i * i) {
 						c2[j + k] += c1[j];
 					}
