@@ -8,15 +8,15 @@ import java.io.PrintWriter;
 import java.io.StringReader;
 
 public class BasicFileOutput {
-	static String file = "C:\\Users\\Zhaopeng-Rabook\\Desktop\\Google Download\\¼Æ×éÔÓÎï\\BasicFileOutput.out";
+	static String file = "C:\\Users\\Zhaopeng-Rabook\\Desktop\\Google Download\\è®¡ç»„æ‚ç‰©\\BasicFileOutput.out";
 	static String path = "E:\\(WorkSpace04)GitHub\\Project_00_Learning\\Project_0_Learning\\src\\org\\hope6537\\thinking_in_java\\eighteen\\BasicFileOutput.java";
 
 	/**
-	 * @descirbe »ù±¾µÄÎÄ¼şÊä³ö
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe åŸºæœ¬çš„æ–‡ä»¶è¾“å‡º
+	 * @author Hope6537(èµµé¹)
 	 * @param args
 	 * @throws IOException
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç6:12:52
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ6:12:52
 	 * @version 0.9
 	 */
 	public static void main(String[] args) throws IOException {

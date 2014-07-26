@@ -32,9 +32,9 @@ class Widget {
 }
 
 /**
- * @Describe ²ÉÓÃÏÔÊ½¹¤³§µÄ·½·¨
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç12:49:41
+ * @Describe é‡‡ç”¨æ˜¾å¼å·¥å‚çš„æ–¹æ³•
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ12:49:41
  * @version 0.9
  * @company Changchun University&SHXT
  */

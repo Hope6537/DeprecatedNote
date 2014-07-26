@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.eighteen;
 import java.io.*;
 
 /**
- * @describe ĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯¾ßÌåÊ¹ÓÃ·½·¨
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç4:53:57
+ * @describe åºåˆ—åŒ–å’Œååºåˆ—åŒ–å…·ä½“ä½¿ç”¨æ–¹æ³•
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ4:53:57
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -32,7 +32,7 @@ public class Blip3 implements Externalizable {
 
 	public void writeExternal(ObjectOutput out) throws IOException {
 		System.out.println("Blip3.writeExternal");
-		// ±ØĞëÔÚÕâÀïÉùÃ÷Á½¸ö¶ÔÏóµÄ´¦Àí°ì·¨
+		// å¿…é¡»åœ¨è¿™é‡Œå£°æ˜ä¸¤ä¸ªå¯¹è±¡çš„å¤„ç†åŠæ³•
 		out.writeObject(s);
 		out.writeInt(i);
 	}
@@ -40,7 +40,7 @@ public class Blip3 implements Externalizable {
 	public void readExternal(ObjectInput in) throws IOException,
 			ClassNotFoundException {
 		System.out.println("Blip3.readExternal");
-		// ±ØĞëÔÚÕâÀïÉùÃ÷Á½¸ö¶ÔÏóµÄ´¦Àí°ì·¨
+		// å¿…é¡»åœ¨è¿™é‡Œå£°æ˜ä¸¤ä¸ªå¯¹è±¡çš„å¤„ç†åŠæ³•
 		s = (String) in.readObject();
 		i = in.readInt();
 	}

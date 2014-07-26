@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.fifteen;
 import java.util.Iterator;
 
 /**
- * @Describe Ê¹ÓÃÊÊÅäÆ÷Ä£Ê½µÄì³²¨ÄÇÆõÉú³ÉÆ÷
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:57:35
+ * @Describe ä½¿ç”¨é€‚é…å™¨æ¨¡å¼çš„æ–æ³¢é‚£å¥‘ç”Ÿæˆå™¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:57:35
  * @version 0.9
  * @company Changchun University&SHXT
  */

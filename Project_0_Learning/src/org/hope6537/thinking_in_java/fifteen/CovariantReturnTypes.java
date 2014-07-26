@@ -4,21 +4,21 @@ class Base{}
 class Derived extends Base{}
 
 interface OrdinaryGetter{
-	//¸¸Àà½Ó¿Ú
+	//çˆ¶ç±»æ¥å£
 	Base get();
 }
 
 interface DerivedGetter extends OrdinaryGetter{
-	//×ÓÀà½Ó¿Ú
-	//ÔÚ¼Ì³Ğ¸¸Àà½Ó¿Ú·½·¨µÄÍ¬Ê±,¸²¸ÇÁËGet·½·¨£¬Í¬Ê±·µ»ØÀàĞÍÒ²½øĞĞÁË¸²¸Ç£¬¶ø²»ÊÇÖØÔØ
-	//ÒòÎªBaseÊÇDerivedµÄ¸¸Àà£¿
+	//å­ç±»æ¥å£
+	//åœ¨ç»§æ‰¿çˆ¶ç±»æ¥å£æ–¹æ³•çš„åŒæ—¶,è¦†ç›–äº†Getæ–¹æ³•ï¼ŒåŒæ—¶è¿”å›ç±»å‹ä¹Ÿè¿›è¡Œäº†è¦†ç›–ï¼Œè€Œä¸æ˜¯é‡è½½
+	//å› ä¸ºBaseæ˜¯Derivedçš„çˆ¶ç±»ï¼Ÿ
 	Derived get();
 }
 
 /**
- * @Describe Ğ­±ä·µ»ØÀàĞÍ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-20ÏÂÎç12:26:34
+ * @Describe åå˜è¿”å›ç±»å‹
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-20ä¸‹åˆ12:26:34
  * @version 0.9
  * @company Changchun University&SHXT
  */

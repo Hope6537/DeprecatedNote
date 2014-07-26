@@ -55,9 +55,9 @@ class BasicImp implements Basic {
 }
 
 /**
- * @Describe Óë½Ó¿Ú»ìºÏ´Ó¶ø²úÉú»ìĞÍ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-20ÏÂÎç01:27:07
+ * @Describe ä¸æ¥å£æ··åˆä»è€Œäº§ç”Ÿæ··å‹
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-20ä¸‹åˆ01:27:07
  * @version 0.9
  * @company Changchun University&SHXT
  */

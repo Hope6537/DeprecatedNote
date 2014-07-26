@@ -17,20 +17,20 @@ public class Apply {
 	}
 
 	/**
-	 * @Descirbe ·ºÓÃ¸ÄĞòÁĞÏÂËùÓĞ¶ÔÏóµÄ·½·¨
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe æ³›ç”¨æ”¹åºåˆ—ä¸‹æ‰€æœ‰å¯¹è±¡çš„æ–¹æ³•
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <T>
 	 * @Params @param <S>
-	 * @Params @param seq ĞòÁĞ
-	 * @Params @param f ·½·¨Ãû
-	 * @Params @param args ¶ÔÏó¼¯ºÏ
-	 * @SignDate 2014-7-20ÏÂÎç03:03:57
+	 * @Params @param seq åºåˆ—
+	 * @Params @param f æ–¹æ³•å
+	 * @Params @param args å¯¹è±¡é›†åˆ
+	 * @SignDate 2014-7-20ä¸‹åˆ03:03:57
 	 * @Version 0.9
 	 */
 	public static <T, S extends Iterable<? extends T>> void apply(S seq,
 			Method f, Object... args) {
 		try {
-			//ÊµÏÖµü´úÆ÷±£Ö¤ÁËĞòÁĞµÄµ¼³öºÍ´«Èë¡£
+			//å®ç°è¿­ä»£å™¨ä¿è¯äº†åºåˆ—çš„å¯¼å‡ºå’Œä¼ å…¥ã€‚
 			for (T t : seq) {
 				f.invoke(t, args);
 			}

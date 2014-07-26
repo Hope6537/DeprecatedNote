@@ -17,13 +17,13 @@ public class HDOJ2037 {
 	private static void insertionSort(Show [] a){
 		int j = 0;
 		for(int p = 1 ; p < a.length ; p++ ){
-			//´ÓµÚ¶þ¸öÔªËØ¿ªÊ¼µ½Î²²¿
-			Show tmp = a[p]; //È»ºó»ñÈ¡µÚp¸öÔªËØ
+			//ä»Žç¬¬äºŒä¸ªå…ƒç´ å¼€å§‹åˆ°å°¾éƒ¨
+			Show tmp = a[p]; //ç„¶åŽèŽ·å–ç¬¬pä¸ªå…ƒç´ 
 			for(j = p ; j > 0 && (tmp.end)<(a[j-1].end) ; j--){
-				//½øÐÐÑ­»·  jµÄË÷Òý´Óp¿ªÊ¼ µ½j-1ÔªËØ´óÓÚjÔªËØÊ±  ½»»»
+				//è¿›è¡Œå¾ªçŽ¯  jçš„ç´¢å¼•ä»Žpå¼€å§‹ åˆ°j-1å…ƒç´ å¤§äºŽjå…ƒç´ æ—¶  äº¤æ¢
 				a[j] = a[j-1];
 			}
-			//×îºó±äÁ¿½»»»Íê±Ï
+			//æœ€åŽå˜é‡äº¤æ¢å®Œæ¯•
 			a[j] = tmp;
 		}
 	}
@@ -56,7 +56,7 @@ public class HDOJ2037 {
 				//int time = startShow.start;
 				for(int j = 0 ; j < n ; j++){
 					Show nextShow = shows[j];
-					if(nextShow.start < startShow.end){ //Èç¹ûÏÂÒ»¸ö½ÚÄ¿¿ªÊ¼µÄÊ±¼äÔçÓÚÖ®Ç°µÄ½ÚÄ¿
+					if(nextShow.start < startShow.end){ //å¦‚æžœä¸‹ä¸€ä¸ªèŠ‚ç›®å¼€å§‹çš„æ—¶é—´æ—©äºŽä¹‹å‰çš„èŠ‚ç›®
 						continue;
 					}else{
 						startShow = nextShow;

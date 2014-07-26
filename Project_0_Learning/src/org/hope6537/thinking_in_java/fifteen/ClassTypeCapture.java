@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe 类型查找
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-7-19下午03:20:54
+ * @Describe 绫诲瀷鏌ユ壘
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-7-19涓嬪崍03:20:54
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>

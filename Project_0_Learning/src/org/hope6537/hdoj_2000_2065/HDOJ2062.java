@@ -22,27 +22,27 @@ public class HDOJ2062 {
 			// input done
 
 			/*
-			 * Ë¼Â·£º¼ÆËã³ö¸ÃÅÅÁĞ×éºÏÖĞmµÄ×î´óÖµ ¼´×Ó¼¯ºÏµÄÊıÁ¿ ¸ù¾İ·ÖÎö ¶ÔÓÚ¾ßÓĞn¸öÔªËØµÄ¼¯ºÏ ¿ÉÒÔ°´ÕÕÊ×ÔªËØ½«Æä·ÖÎªn×é×Ó¼¯
-			 * ÕâĞ©×éµÄ×Ó¼¯ÖĞ£¬³ıÁË±¾ÉíÊ×ÔªËØÖ®Íâ£¬»¹ÓĞn-1¸öÔªËØ ¼´f(n-1) ÔÚ¼ÓÉÏ±¾Éíµ¥ÌåµÄ1¸ö×Ó¼¯ ¼ÈÓĞf(n-1) + 1
-			 * ¶ÔÓÚn¸öÔªËØµÄ×Ô¼ºÎªf(n) = n*(f(n-1)+1) ¿ÉµÃµ½×Ó¼¯ºÏµÄÒ»¶¨¹æÂÉ
+			 * æ€è·¯ï¼šè®¡ç®—å‡ºè¯¥æ’åˆ—ç»„åˆä¸­mçš„æœ€å¤§å€¼ å³å­é›†åˆçš„æ•°é‡ æ ¹æ®åˆ†æ å¯¹äºå…·æœ‰nä¸ªå…ƒç´ çš„é›†åˆ å¯ä»¥æŒ‰ç…§é¦–å…ƒç´ å°†å…¶åˆ†ä¸ºnç»„å­é›†
+			 * è¿™äº›ç»„çš„å­é›†ä¸­ï¼Œé™¤äº†æœ¬èº«é¦–å…ƒç´ ä¹‹å¤–ï¼Œè¿˜æœ‰n-1ä¸ªå…ƒç´  å³f(n-1) åœ¨åŠ ä¸Šæœ¬èº«å•ä½“çš„1ä¸ªå­é›† æ—¢æœ‰f(n-1) + 1
+			 * å¯¹äºnä¸ªå…ƒç´ çš„è‡ªå·±ä¸ºf(n) = n*(f(n-1)+1) å¯å¾—åˆ°å­é›†åˆçš„ä¸€å®šè§„å¾‹
 			 */
 			// System.out.println(caluM(m));
 			int flag = 0;
 			while (m > 0) {
 				int max_M = caluM(n);
-				int countofGroup = n;// ¹²ÓĞ¶àÉÙ×é£¿
-				int countofTarget = max_M / countofGroup;// Ã¿×é¶àÉÙ¸ö£¿
-				// È»ºó¼ÆËãµ±Ç°mµÄË÷Òı´ú±íµÚ¼¸×é£¿
+				int countofGroup = n;// å…±æœ‰å¤šå°‘ç»„ï¼Ÿ
+				int countofTarget = max_M / countofGroup;// æ¯ç»„å¤šå°‘ä¸ªï¼Ÿ
+				// ç„¶åè®¡ç®—å½“å‰mçš„ç´¢å¼•ä»£è¡¨ç¬¬å‡ ç»„ï¼Ÿ
 				int groupNum = (m % countofTarget) == 0 ? (m / countofTarget)
-						: (m / countofTarget) + 1;// ÕâÊÇµÚ¼¸×é
-				int targetNum = m - ((groupNum - 1) * countofTarget);// ÕâÊÇµÚ¼¸¸ö
+						: (m / countofTarget) + 1;// è¿™æ˜¯ç¬¬å‡ ç»„
+				int targetNum = m - ((groupNum - 1) * countofTarget);// è¿™æ˜¯ç¬¬å‡ ä¸ª
 				// Integer num = list.get(groupNum);
 				int num = father[groupNum];
 				if (flag == 1) {
 					System.out.print(" ");
 				}
 				if (targetNum > 0 && num != 0) {
-					System.out.print(num);// ÕÒµ½ÁËÊ×Êı×Ö£¬¿ÉÒÔÊä³ö
+					System.out.print(num);// æ‰¾åˆ°äº†é¦–æ•°å­—ï¼Œå¯ä»¥è¾“å‡º
 					flag = 1;
 				} else {
 					flag = 0;
@@ -57,8 +57,8 @@ public class HDOJ2062 {
 			System.out.print("\r\n");
 
 			/*
-			 * if(targetNum - 1 > 0){ //Èç¹ûÕâ²»ÊÇ¸ö¿Õ¼¯ºÏ£¬¼´»¹ÓĞÊä³ö targetNum--;//½«¿Õ¼¯ºÏÌŞ³ı
-			 * µÃµ½µ±Ç°n-1ÏîÖĞÔªËØµÄÎ»ÖÃ groupNum = caluM(m-1) / m-1;//ÕâÊÇµÚ¼¸×é
+			 * if(targetNum - 1 > 0){ //å¦‚æœè¿™ä¸æ˜¯ä¸ªç©ºé›†åˆï¼Œå³è¿˜æœ‰è¾“å‡º targetNum--;//å°†ç©ºé›†åˆå‰”é™¤
+			 * å¾—åˆ°å½“å‰n-1é¡¹ä¸­å…ƒç´ çš„ä½ç½® groupNum = caluM(m-1) / m-1;//è¿™æ˜¯ç¬¬å‡ ç»„
 			 * System.out.println(groupNum); }
 			 */
 

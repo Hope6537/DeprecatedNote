@@ -37,9 +37,9 @@ class E extends SelfBounded1 {
 }
 
 /**
- * @Describe Ç¿ÖÆ·ºĞÍµ±×ö×Ô¼ºµÄ±ß½ç²ÎÊıÀ´Ê¹ÓÃ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-20ÏÂÎç12:13:43
+ * @Describe å¼ºåˆ¶æ³›å‹å½“åšè‡ªå·±çš„è¾¹ç•Œå‚æ•°æ¥ä½¿ç”¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-20ä¸‹åˆ12:13:43
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -54,7 +54,7 @@ public class SelfBounding {
 	}
 }
 /*class E extends SelfBounded1<D>{
-	»á³öÏÖ±àÒë´íÎó
+	ä¼šå‡ºç°ç¼–è¯‘é”™è¯¯
 }*/
 
 

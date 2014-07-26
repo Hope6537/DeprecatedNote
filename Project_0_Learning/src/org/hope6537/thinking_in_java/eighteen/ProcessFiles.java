@@ -4,38 +4,38 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @describe ´©Í¸Ä¿Â¼½øĞĞÎÄ¼ş´¦Àí
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç3:26:40
+ * @describe ç©¿é€ç›®å½•è¿›è¡Œæ–‡ä»¶å¤„ç†
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:26:40
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class ProcessFiles {
 
 	/**
-	 * @describe ¶¨Òå½Ó¿Ú ´¦ÀíÎÄ¼şµÄ½Ó¿Ú
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç3:26:51
+	 * @describe å®šä¹‰æ¥å£ å¤„ç†æ–‡ä»¶çš„æ¥å£
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:26:51
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	public interface Strategy {
 		/**
-		 * @descirbe ´¦ÀíÎÄ¼şÊµÀı
-		 * @author Hope6537(ÕÔÅô)
+		 * @descirbe å¤„ç†æ–‡ä»¶å®ä¾‹
+		 * @author Hope6537(èµµé¹)
 		 * @param file
-		 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:27:11
+		 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:27:11
 		 * @version 0.9
 		 */
 		void process(File file);
 	}
 
 	/**
-	 * @describe Ò»¸öÊÇÊµÌå¶ÔÏó
+	 * @describe ä¸€ä¸ªæ˜¯å®ä½“å¯¹è±¡
 	 */
 	private Strategy strategy;
 	/**
-	 * @describe Ò»¸öÊÇÎÄ¼şºó×ºÃû
+	 * @describe ä¸€ä¸ªæ˜¯æ–‡ä»¶åç¼€å
 	 */
 	private String ext;
 
@@ -46,26 +46,26 @@ public class ProcessFiles {
 	}
 
 	/**
-	 * @descirbe ¹¤×÷¿ªÊ¼ÇøÓò 
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe å·¥ä½œå¼€å§‹åŒºåŸŸ 
+	 * @author Hope6537(èµµé¹)
 	 * @param args
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:27:47
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:27:47
 	 * @version 0.9
 	 */
 	public void start(String[] args) {
 		try {
-			//Èç¹û²ÎÊıÎª¿ÕµÄ»°£¬ÄÇÃ´½«´Ó¸Ãµã¿ªÊ¼±éÀú
+			//å¦‚æœå‚æ•°ä¸ºç©ºçš„è¯ï¼Œé‚£ä¹ˆå°†ä»è¯¥ç‚¹å¼€å§‹éå†
 			if (args.length == 0) {
 				processDirectoryTree(new File("."));
 			} else {
 				for (String arg : args) {
-					//Èç¹ûÓĞ¶àÖØ¿ªÊ¼µã,ÒÀ´Î½âÎö²¢Ñ°ÕÒ
+					//å¦‚æœæœ‰å¤šé‡å¼€å§‹ç‚¹,ä¾æ¬¡è§£æå¹¶å¯»æ‰¾
 					File fileArg = new File(arg);
 					if (fileArg.isDirectory()) {
-						//Èç¹ûÎªÄ¿Â¼£¬½Ó×Å¼ÌĞø
+						//å¦‚æœä¸ºç›®å½•ï¼Œæ¥ç€ç»§ç»­
 						processDirectoryTree(fileArg);
 					} else {
-						//Èç¹ûÎªÎÄ¼ş£¬´¦Àí£¬Èç¹û²»·ûºÏ¸ñÊ½£¬Ìí¼Óºó×ººó´¦Àí
+						//å¦‚æœä¸ºæ–‡ä»¶ï¼Œå¤„ç†ï¼Œå¦‚æœä¸ç¬¦åˆæ ¼å¼ï¼Œæ·»åŠ åç¼€åå¤„ç†
 						if (!arg.endsWith("." + ext)) {
 							arg += "." + ext;
 						}
@@ -79,20 +79,20 @@ public class ProcessFiles {
 	}
 
 	/**
-	 * @descirbe ±éÀúÄ¿Â¼Ê÷
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe éå†ç›®å½•æ ‘
+	 * @author Hope6537(èµµé¹)
 	 * @param root
 	 * @throws IOException
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:28:36
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:28:36
 	 * @version 0.9
 	 */
 	public void processDirectoryTree(File root) throws IOException {
-		//¸ø³öÒ»¸ö¸ù½Úµãroot 
-		//È»ºó»ñµÃÕâ¸ö¸ù½ÚµãµÄ¾ø¶ÔÂ·¾¶£¬²¢ÒÔ´Ë¿ªÊ¼ÏòÏÂ±éÀú TreeinfoÊÇÊµÏÖµü´úÆ÷µÄ ÊµÏÖµÄÊÇÊµÌåÎÄ¼şµÄµü´úÆ÷
-		//È»ºóÒÀ´Î¸øFile½øĞĞ´¦Àí
+		//ç»™å‡ºä¸€ä¸ªæ ¹èŠ‚ç‚¹root 
+		//ç„¶åè·å¾—è¿™ä¸ªæ ¹èŠ‚ç‚¹çš„ç»å¯¹è·¯å¾„ï¼Œå¹¶ä»¥æ­¤å¼€å§‹å‘ä¸‹éå† Treeinfoæ˜¯å®ç°è¿­ä»£å™¨çš„ å®ç°çš„æ˜¯å®ä½“æ–‡ä»¶çš„è¿­ä»£å™¨
+		//ç„¶åä¾æ¬¡ç»™Fileè¿›è¡Œå¤„ç†
 		for (File file : Directory.walk(root.getAbsolutePath(), ".*\\." + ext)) {
-			//´¦ÀíµÄ½á¹ûÊÇµ÷ÓÃ¶ÔÏóµÄprocess·½·¨
-			//ÔÚÕâ¸öÊµÀıÖĞprocess·½·¨½ö½öÊÇ½«Æä´òÓ¡³öÀ´
+			//å¤„ç†çš„ç»“æœæ˜¯è°ƒç”¨å¯¹è±¡çš„processæ–¹æ³•
+			//åœ¨è¿™ä¸ªå®ä¾‹ä¸­processæ–¹æ³•ä»…ä»…æ˜¯å°†å…¶æ‰“å°å‡ºæ¥
 			strategy.process(file.getCanonicalFile());
 
 		}

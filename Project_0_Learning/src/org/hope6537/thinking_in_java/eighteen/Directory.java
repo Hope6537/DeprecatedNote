@@ -8,34 +8,34 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * @describe ´òÓ¡ÎÄ¼şÄ¿Â¼Ê÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç2:28:20
+ * @describe æ‰“å°æ–‡ä»¶ç›®å½•æ ‘
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ2:28:20
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public final class Directory {
 	/**
-	 * @descirbe ·µ»Øµ±Ç°dirÏÂµÄµÚÒ»²ãÄ¿Â¼
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe è¿”å›å½“å‰dirä¸‹çš„ç¬¬ä¸€å±‚ç›®å½•
+	 * @author Hope6537(èµµé¹)
 	 * @param dir
 	 * @param regex
 	 * @return
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:08:39
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:08:39
 	 * @version 0.9
 	 */
 	public static File[] local(File dir, final String regex) {
 		return dir.listFiles(/**
 		 * @describe
-		 *           Éú³ÉµÄÊÇÒ»¸öÄÚ²¿FilenameFilterµÄÊµÏÖÀà£¬¸ÃÀà½«ÓÃÓÚlist()·½·¨»Øµ÷accept·½·¨À´½øĞĞÆ¥Åä
-		 * @author Hope6537(ÕÔÅô)
-		 * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç3:08:53
+		 *           ç”Ÿæˆçš„æ˜¯ä¸€ä¸ªå†…éƒ¨FilenameFilterçš„å®ç°ç±»ï¼Œè¯¥ç±»å°†ç”¨äºlist()æ–¹æ³•å›è°ƒacceptæ–¹æ³•æ¥è¿›è¡ŒåŒ¹é…
+		 * @author Hope6537(èµµé¹)
+		 * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:08:53
 		 * @version 0.9
 		 * @company Changchun University&SHXT
 		 */
 		new FilenameFilter() {
 			/**
-			 * @describe ÒòÎªÄÚ²¿ÀàÒªÊ¹ÓÃregex ËùÒÔ±ØĞëfinal
+			 * @describe å› ä¸ºå†…éƒ¨ç±»è¦ä½¿ç”¨regex æ‰€ä»¥å¿…é¡»final
 			 */
 			private Pattern pattern = Pattern.compile(regex);
 
@@ -47,12 +47,12 @@ public final class Directory {
 	}
 
 	/**
-	 * @descirbe local·½·¨µÄÇı¶¯
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe localæ–¹æ³•çš„é©±åŠ¨
+	 * @author Hope6537(èµµé¹)
 	 * @param path
 	 * @param regex
 	 * @return
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:09:57
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:09:57
 	 * @version 0.9
 	 */
 	public static File[] local(String path, final String regex) {
@@ -60,28 +60,28 @@ public final class Directory {
 	}
 
 	/**
-	 * @describe Ò»¸öÄ¿Â¼Ê÷µÄÊµÌå
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç3:10:39
+	 * @describe ä¸€ä¸ªç›®å½•æ ‘çš„å®ä½“
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:10:39
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	public static class TreeInfo implements Iterable<File> {
 		/**
-		 * @describe ¸ÃList±£´æÎÄ¼ş
+		 * @describe è¯¥Listä¿å­˜æ–‡ä»¶
 		 */
 		public List<File> files = new ArrayList<File>();
 		/**
-		 * @describe ¸ÃList±£´æÄ¿Â¼
+		 * @describe è¯¥Listä¿å­˜ç›®å½•
 		 */
 		public List<File> dirs = new ArrayList<File>();
 
 		/*
 		 * (non-Javadoc)
 		 * 
-		 * @see java.lang.Iterable#iterator() Éú³É¹ØÓÚÄ¿Â¼ÎÄ¼şµÄµü´úÆ÷
+		 * @see java.lang.Iterable#iterator() ç”Ÿæˆå…³äºç›®å½•æ–‡ä»¶çš„è¿­ä»£å™¨
 		 * 
-		 * @author:Hope6537(ÕÔÅô)
+		 * @author:Hope6537(èµµé¹)
 		 */
 		@Override
 		public Iterator<File> iterator() {
@@ -89,10 +89,10 @@ public final class Directory {
 		}
 
 		/**
-		 * @descirbe Èç¹ûÓĞÁíÒ»¸öÄ¿Â¼Ê÷£¬Ìí¼ÓµÄÀı³Ì
-		 * @author Hope6537(ÕÔÅô)
+		 * @descirbe å¦‚æœæœ‰å¦ä¸€ä¸ªç›®å½•æ ‘ï¼Œæ·»åŠ çš„ä¾‹ç¨‹
+		 * @author Hope6537(èµµé¹)
 		 * @param other
-		 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:11:33
+		 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:11:33
 		 * @version 0.9
 		 */
 		void addAll(TreeInfo other) {
@@ -103,9 +103,9 @@ public final class Directory {
 		/*
 		 * (non-Javadoc)
 		 * 
-		 * @see java.lang.Object#toString() ¸ñÊ½»¯Êä³ö
+		 * @see java.lang.Object#toString() æ ¼å¼åŒ–è¾“å‡º
 		 * 
-		 * @author:Hope6537(ÕÔÅô)
+		 * @author:Hope6537(èµµé¹)
 		 */
 		@Override
 		public String toString() {
@@ -116,31 +116,31 @@ public final class Directory {
 	}
 
 	/**
-	 * @descirbe µİ¹é±éÀú³öµ±Ç°startDirÏÂµÄËùÓĞFileÎÄ¼ş£¬²¢×îÖÕ·µ»ØÉú³ÉÄ¿Â¼Ê÷
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe é€’å½’éå†å‡ºå½“å‰startDirä¸‹çš„æ‰€æœ‰Fileæ–‡ä»¶ï¼Œå¹¶æœ€ç»ˆè¿”å›ç”Ÿæˆç›®å½•æ ‘
+	 * @author Hope6537(èµµé¹)
 	 * @param startDir
 	 * @param regex
 	 * @return
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:12:05
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:12:05
 	 * @version 0.9
 	 */
 	static TreeInfo recurseDirs(File startDir, String regex) {
 		TreeInfo result = new TreeInfo();
-		// ¶ÔstartDir³öµÄlist³öÀ´µÄÄ¿Â¼½øĞĞ±éÀú
+		// å¯¹startDirå‡ºçš„listå‡ºæ¥çš„ç›®å½•è¿›è¡Œéå†
 		for (File item : startDir.listFiles()) {
 			if (item.isDirectory()) {
-				// Èç¹ûÊÇÄ¿Â¼£¬ÄÇÃ´Ìí¼Ó½øÄ¿Â¼List
+				// å¦‚æœæ˜¯ç›®å½•ï¼Œé‚£ä¹ˆæ·»åŠ è¿›ç›®å½•List
 				result.dirs.add(item);
-				// Í¬Ê±½Ó×Å½«¸ÃÄ¿Â¼¿ªÊ¼µÄ±éÀúÖ®ºóµÄTreeInfoÔÙºÏ²¢
+				// åŒæ—¶æ¥ç€å°†è¯¥ç›®å½•å¼€å§‹çš„éå†ä¹‹åçš„TreeInfoå†åˆå¹¶
 				result.addAll(recurseDirs(item, regex));
 			} else {
-				// Èç¹ûÊÇÎÄ¼ş£¬Ö±½ÓÌí¼Ó½øÎÄ¼şList(Ç°Ìá£¬±ØĞë·ûºÏÕıÔò±í´ïÊ½)
+				// å¦‚æœæ˜¯æ–‡ä»¶ï¼Œç›´æ¥æ·»åŠ è¿›æ–‡ä»¶List(å‰æï¼Œå¿…é¡»ç¬¦åˆæ­£åˆ™è¡¨è¾¾å¼)
 				if (item.getName().matches(regex)) {
 					result.files.add(item);
 				}
 			}
 		}
-		// ×îÖÕ·µ»ØÄ¿Â¼Ê÷
+		// æœ€ç»ˆè¿”å›ç›®å½•æ ‘
 		return result;
 	}
 
@@ -161,10 +161,10 @@ public final class Directory {
 	}
 
 	/**
-	 * @descirbe Õû¸ö±éÀúµÄÇı¶¯Àı³Ì
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe æ•´ä¸ªéå†çš„é©±åŠ¨ä¾‹ç¨‹
+	 * @author Hope6537(èµµé¹)
 	 * @param args
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç3:15:59
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ3:15:59
 	 * @version 0.9
 	 */
 	public static void start(String[] args) {

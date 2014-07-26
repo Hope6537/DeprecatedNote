@@ -7,9 +7,9 @@ import java.io.*;
 import java.util.*;
 
 /**
- * @describe Ê¹ÓÃtransient¹Ø¼ü×Ö
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç4:55:45
+ * @describe ä½¿ç”¨transientå…³é”®å­—
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ4:55:45
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -36,14 +36,14 @@ public class Logon implements Serializable {
 				"G:\\Logon.out"));
 		o.writeObject(a);
 		o.close();
-		TimeUnit.SECONDS.sleep(1); // ÑÓ³Ù
-		// ´ÓÁ÷ÖĞ»ñÈ¡
+		TimeUnit.SECONDS.sleep(1); // å»¶è¿Ÿ
+		// ä»æµä¸­è·å–
 		@SuppressWarnings("resource")
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(
 				"G:\\Logon.out"));
 		System.out.println("Recovering object at " + new Date());
 		a = (Logon) in.readObject();
-		//»ØÀ´µÄÊ±ºòÎÒÃÇ·¢ÏÖtransient¹Ø¼ü×ÖÀïµÄĞÅÏ¢ÏûÊ§ÁË
+		//å›æ¥çš„æ—¶å€™æˆ‘ä»¬å‘ç°transientå…³é”®å­—é‡Œçš„ä¿¡æ¯æ¶ˆå¤±äº†
 		System.out.println("logon a = " + a);
 	}
 }

@@ -20,7 +20,7 @@ public class BufferToText {
 		fc = new FileInputStream(file).getChannel();
 
 		fc.read(buffer);
-		buffer.flip(); // 不好使
+		buffer.flip(); // 涓嶅ソ浣�
 		System.out.println(buffer.asCharBuffer());
 
 		buffer.rewind();
@@ -28,18 +28,18 @@ public class BufferToText {
 		String encoding = System.getProperty("file.encoding");
 		System.out.println("Decoding using " + encoding + " : "
 				+ Charset.forName(encoding).decode(buffer));
-		// 所以需要解码
+		// 鎵�互闇�瑙ｇ爜
 		fc = new FileOutputStream(file).getChannel();
-		// 只有UTF-16BE好使
+		// 鍙湁UTF-16BE濂戒娇
 		fc.write(ByteBuffer.wrap("Some Text".getBytes("UTF-16BE")));
 		fc.close();
-		// 接下来再读一次
+		// 鎺ヤ笅鏉ュ啀璇讳竴娆�
 		fc = new FileInputStream(file).getChannel();
-		// clear為read做準備
+		// clear鐐簉ead鍋氭簴鍌�
 		buffer.clear();
-		fc.read(buffer); // flip为write做准备
+		fc.read(buffer); // flip涓簑rite鍋氬噯澶�
 		buffer.flip();
-		System.out.println(buffer.asCharBuffer()); // 但还是不好使
+		System.out.println(buffer.asCharBuffer()); // 浣嗚繕鏄笉濂戒娇
 
 		fc = new FileOutputStream(file).getChannel();
 		buffer = ByteBuffer.allocate(24);

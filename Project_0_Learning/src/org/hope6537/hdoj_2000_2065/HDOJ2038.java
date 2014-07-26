@@ -1,9 +1,9 @@
 package org.hope6537.hdoj_2000_2065;
 
 /**
- * @Describe Ã»ÓĞÌâ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-15ÏÂÎç2:52:04
+ * @Describe æ²¡æœ‰é¢˜
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-15ä¸‹åˆ2:52:04
  * @version 0.9
  * @company Changchun University&SHXT
  */

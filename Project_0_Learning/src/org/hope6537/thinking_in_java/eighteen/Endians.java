@@ -5,9 +5,9 @@ import java.nio.ByteOrder;
 import java.util.Arrays;
 
 /**
- * @describe Í¨¹ı´æ·ÅÄ£Ê½¸Ä±ä×Ö·ûÖĞµÄ×Ö½Ú´ÎĞò
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç7:39:17
+ * @describe é€šè¿‡å­˜æ”¾æ¨¡å¼æ”¹å˜å­—ç¬¦ä¸­çš„å­—èŠ‚æ¬¡åº
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ7:39:17
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -18,11 +18,11 @@ public class Endians {
 		bb.asCharBuffer().put("abcdef");
 		display(bb);
 		bb.rewind();
-		bb.order(ByteOrder.BIG_ENDIAN);// Ä¬ÈÏÎª¸ßÎ»ÓÅÏÈ
+		bb.order(ByteOrder.BIG_ENDIAN);// é»˜è®¤ä¸ºé«˜ä½ä¼˜å…ˆ
 		bb.asCharBuffer().put("abcdef");
 		display(bb);
 		bb.rewind();
-		bb.order(ByteOrder.LITTLE_ENDIAN); //µÍÎ»ÓÅÏÈ´æ´¢
+		bb.order(ByteOrder.LITTLE_ENDIAN); //ä½ä½ä¼˜å…ˆå­˜å‚¨
 		bb.asCharBuffer().put("abcdef");
 		display(bb);
 	}

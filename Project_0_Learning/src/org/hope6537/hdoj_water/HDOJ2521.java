@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HDOJ2521 {
 
-	// Ô¤´¦ÀíÏÂ°É
+	// é¢„å¤„ç†ä¸‹å§
 	static int[] arr = new int[5005];
 
 	static void init() {

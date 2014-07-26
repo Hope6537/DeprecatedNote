@@ -5,9 +5,9 @@ class Other {
 }
 
 /**
- * @Describe ¿ÉÒÔÊ¹ÓÃÈÎºÎÀàĞÍ×÷ÎªÆä·ºĞÍ²ÎÊı
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç06:10:48
+ * @Describe å¯ä»¥ä½¿ç”¨ä»»ä½•ç±»å‹ä½œä¸ºå…¶æ³›å‹å‚æ•°
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ06:10:48
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -16,9 +16,9 @@ class BasicOther extends BasicHolder<Other> {
 }
 
 /**
- * @Describe ×ÔÏŞ¶¨ Ç¿ÖÆ·ºĞÍµ±×öÆä×Ô¼ºµÄ±ß½ç²ÎÊıÀ´Ê¹ÓÃ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç06:10:33
+ * @Describe è‡ªé™å®š å¼ºåˆ¶æ³›å‹å½“åšå…¶è‡ªå·±çš„è¾¹ç•Œå‚æ•°æ¥ä½¿ç”¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ06:10:33
  * @version 0.9
  * @company Changchun University&SHXT
  */

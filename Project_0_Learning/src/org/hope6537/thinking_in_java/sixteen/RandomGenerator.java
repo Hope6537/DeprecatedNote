@@ -7,9 +7,9 @@ import java.util.*;
 import org.hope6537.thinking_in_java.fifteen.Generator;
 
 /**
- * @describe ÖØİd°æ ëS™CÉú³ÉÆ÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-22ÏÂÎç02:56:06
+ * @describe é‡è¼‰ç‰ˆ éš¨æ©Ÿç”Ÿæˆå™¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-22ä¸‹åˆ02:56:06
  * @version 0.9
  * @company Changchun University&SHXT
  */

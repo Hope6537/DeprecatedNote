@@ -8,9 +8,9 @@ class ArrayOfGenericRefenerce {
 }
 
 /**
- * @Describe Êı×é·ºĞÍ Ê¹ÓÃ³ÖÓĞ¶ÔÏóµÄ·½Ê½
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç03:31:19
+ * @Describe æ•°ç»„æ³›å‹ ä½¿ç”¨æŒæœ‰å¯¹è±¡çš„æ–¹å¼
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ03:31:19
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -19,9 +19,9 @@ public class ArrayOfGeneric {
 	static Generic<Integer>[] gia;
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		// ÕâÑù²Å±àÒëÓĞĞ§£¿
+		// è¿™æ ·æ‰ç¼–è¯‘æœ‰æ•ˆï¼Ÿ
 		gia = (Generic<Integer>[]) new Generic[SIZE];
-		// ±ØĞëÕâÑù²åÈë¶ÔÏó
+		// å¿…é¡»è¿™æ ·æ’å…¥å¯¹è±¡
 		gia[0] = new Generic<Integer>();
 	}
 }

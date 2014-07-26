@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe ÎÒÔÚ´´½¨Ò»¸öĞÂÀà£¬Ëû¼Ì³Ğ×ÔÒ»¸ö·ºĞÍÀàĞÍ£¬Õâ¸ö·ºĞÍÀàĞÍ½ÓÊÜÎÒµÄÀÛµÄÃû×Ö×÷ÎªÆä²ÎÊı
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç06:07:24
+ * @Describe æˆ‘åœ¨åˆ›å»ºä¸€ä¸ªæ–°ç±»ï¼Œä»–ç»§æ‰¿è‡ªä¸€ä¸ªæ³›å‹ç±»å‹ï¼Œè¿™ä¸ªæ³›å‹ç±»å‹æ¥å—æˆ‘çš„ç´¯çš„åå­—ä½œä¸ºå…¶å‚æ•°
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ06:07:24
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -12,9 +12,9 @@ class Subtype extends BasicHolder<Subtype> {
 }
 
 /**
- * @Describe ÕâËûÂèÊÇÉ¶
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç06:09:29
+ * @Describe è¿™ä»–å¦ˆæ˜¯å•¥
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ06:09:29
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -24,9 +24,9 @@ class SelfBounded <T extends SelfBounded<T>>{
 }
 
 /**
- * @Describe ËùÎ½µÄÑ­»··ºĞÍ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç06:07:09
+ * @Describe æ‰€è°“çš„å¾ªç¯æ³›å‹
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ06:07:09
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -35,7 +35,7 @@ public class CRGWithBasicHolder {
 		Subtype st1 = new Subtype() , st2 = new Subtype();
 		st1.setElement(st2);
 		Subtype st3 = st1.getElement();
-		//¼´Ê¹ÎÒ½øĞĞÁËset·ºĞÍ¸³Öµ²Ù×÷£¬ÒÀ¾É»¹ÊÇSubtypeµÄÀàĞÍ
+		//å³ä½¿æˆ‘è¿›è¡Œäº†setæ³›å‹èµ‹å€¼æ“ä½œï¼Œä¾æ—§è¿˜æ˜¯Subtypeçš„ç±»å‹
 		st1.f();
 	}
 }

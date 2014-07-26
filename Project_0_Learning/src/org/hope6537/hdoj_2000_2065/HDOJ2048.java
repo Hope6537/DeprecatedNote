@@ -3,9 +3,9 @@ package org.hope6537.hdoj_2000_2065;
 import java.util.Scanner;
 
 /**
- * @Describe ´íÅÅ¹«Ê½µÄÔËÓÃ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-16ÏÂÎç7:17:37
+ * @Describe é”™æ’å…¬å¼çš„è¿ç”¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-16ä¸‹åˆ7:17:37
  * @version 0.9
  * @company Changchun University&SHXT
  */

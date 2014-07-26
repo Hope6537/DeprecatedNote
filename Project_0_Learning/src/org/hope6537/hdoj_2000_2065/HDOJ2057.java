@@ -116,7 +116,7 @@ public class HDOJ2057 {
 			an = a.charAt(0) == '-' ? -an:an;
 			bn = b.charAt(0) == '-' ? -bn:bn;
 			long res = an + bn;
-			//10½øÖÆµÄÊıÖµ´¦ÀíÍê±Ï
+			//10è¿›åˆ¶çš„æ•°å€¼å¤„ç†å®Œæ¯•
 			if(res==0){
 				System.out.println("0");
 			}else{

@@ -4,6 +4,6 @@ import java.util.ArrayList;
 
 public class TupleList<A, B, C, D> extends ArrayList<FourTuple<A, B, C, D>> {
 	public static void main(String[] args) {
-		//然后添加就可以了
+		//鐒跺悗娣诲姞灏卞彲浠ヤ簡
 	}
 }

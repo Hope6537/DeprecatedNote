@@ -27,9 +27,9 @@ class Data implements Serializable {
 }
 
 /**
- * @describe ĞòÁĞ»¯¶ÔÏóµÄ¶ÁĞ´ÊµÑé
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç4:04:43
+ * @describe åºåˆ—åŒ–å¯¹è±¡çš„è¯»å†™å®éªŒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ4:04:43
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -47,7 +47,7 @@ public class Worm implements Serializable {
 
 	public Worm(int i, char x) {
 
-		System.out.println("Worm ¹¹Ôì·½·¨" + i);
+		System.out.println("Worm æ„é€ æ–¹æ³•" + i);
 		c = x;
 		if (--i > 0) {
 			next = new Worm(i, (char) (x + 1));
@@ -74,7 +74,7 @@ public class Worm implements Serializable {
 	}
 
 	public static void main(String[] args) throws Exception {
-		// µÚÒ»ÖÖ·½·¨ ¶ÁĞ´ÎÄ¼ş
+		// ç¬¬ä¸€ç§æ–¹æ³• è¯»å†™æ–‡ä»¶
 		File file = new File("G:\\Worm.txt");
 		Worm w = new Worm(6, 'a');
 		System.out.println("w = " + w);
@@ -89,7 +89,7 @@ public class Worm implements Serializable {
 		String s = (String) in.readObject();
 		Worm w2 = (Worm) in.readObject();
 		System.out.println(s + "w2 = " + w2);
-		// µÚ¶şÖÖ·½·¨ ¶ÁĞ´×Ö·ûÊı×é
+		// ç¬¬äºŒç§æ–¹æ³• è¯»å†™å­—ç¬¦æ•°ç»„
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		ObjectOutputStream out2 = new ObjectOutputStream(bout);
 		out2.writeObject("Worm storage\n");

@@ -7,19 +7,19 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 /**
- * @describe Ê¹ÓÃCallable×÷ÎªÏß³ÌÔØÌå
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç7:32:26
+ * @describe ä½¿ç”¨Callableä½œä¸ºçº¿ç¨‹è½½ä½“
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ7:32:26
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class CallableDemo {
 
 	public static void main(String[] args) {
-		// ÉùÃ÷Ò»¸öÁ¬½Ó³Ø
+		// å£°æ˜ä¸€ä¸ªè¿æ¥æ± 
 		ExecutorService exec = Executors.newCachedThreadPool();
-		// FutureÓÃCallable·µ»Ø½á¹ûµÄÌØ¶¨ÀàĞÍ½øĞĞÁË²ÎÊı»¯
-		// ¿ÉÒÔÊ¹ÓÃisDone·½·¨²éÑ¯FutureÊÇ·ñÒÑ¾­Íê³É µ±ÈÎÎñÍê³Éºó »á²úÉúÒ»¸ö¿ÉÒÔÓÃget()½ÓÊÕµ½µÄÒ»¸ö½á¹û
+		// Futureç”¨Callableè¿”å›ç»“æœçš„ç‰¹å®šç±»å‹è¿›è¡Œäº†å‚æ•°åŒ–
+		// å¯ä»¥ä½¿ç”¨isDoneæ–¹æ³•æŸ¥è¯¢Futureæ˜¯å¦å·²ç»å®Œæˆ å½“ä»»åŠ¡å®Œæˆå ä¼šäº§ç”Ÿä¸€ä¸ªå¯ä»¥ç”¨get()æ¥æ”¶åˆ°çš„ä¸€ä¸ªç»“æœ
 		ArrayList<Future<String>> results = new ArrayList<Future<String>>();
 		for (int i = 0; i < 10; i++) {
 			results.add(exec.submit(new TaskResult(i)));
@@ -47,7 +47,7 @@ class TaskResult implements Callable<String> {
 		this.id = id;
 	}
 
-	// ´ÓÈÎÎñÖĞ²úÉú·µ»ØÖµ
+	// ä»ä»»åŠ¡ä¸­äº§ç”Ÿè¿”å›å€¼
 	@Override
 	public String call() throws Exception {
 		return "result of TaskWithResult" + id;

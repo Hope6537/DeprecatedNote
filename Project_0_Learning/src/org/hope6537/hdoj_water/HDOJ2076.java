@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @Describe
- * @Author Hope6537(’‘≈Ù)
+ * @Author Hope6537(ËµµÈπè)
  * @Signdate 2014-05-06 10:14:57
  * @version 0.9
  * @company Changchun University&SHXT

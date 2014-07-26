@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 /**
- * @Describe Ëæ»ú¶ÁÈ¡Ë³Ğò±í
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:17:31
+ * @Describe éšæœºè¯»å–é¡ºåºè¡¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:17:31
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>

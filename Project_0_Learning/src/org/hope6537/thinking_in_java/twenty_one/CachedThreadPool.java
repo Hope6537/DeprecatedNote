@@ -4,41 +4,41 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @describe ExecutorÖ´ĞĞÆ÷µÄÊ¹ÓÃ Ê×Ñ¡
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç6:54:36
+ * @describe Executoræ‰§è¡Œå™¨çš„ä½¿ç”¨ é¦–é€‰
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ6:54:36
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class CachedThreadPool {
 
 	public static void main(String[] args) {
-		// ¶¨ÒåÒ»¸öÖ´ĞĞÆ÷
+		// å®šä¹‰ä¸€ä¸ªæ‰§è¡Œå™¨
 		ExecutorService exec = Executors.newCachedThreadPool();
 		for (int i = 0; i < 5; i++) {
 			exec.execute(new LiftOff());
 		}
-		// ¶ÔshutdownµÄµ÷ÓÃÊÇÓÃÓÚ·ÀÖ¹ĞÂµÄÈÎÎñÌá½»¸øËû
+		// å¯¹shutdownçš„è°ƒç”¨æ˜¯ç”¨äºé˜²æ­¢æ–°çš„ä»»åŠ¡æäº¤ç»™ä»–
 		exec.shutdown();
 	}
 }
 
-// µ«ÊÇÒª×¢ÒâÔÚÏß³Ì³ØÖĞ ÏÖÓĞÏß³ÌÔÚÓĞ¿ÉÄÜµÄÇé¿öÏÂ£¬¶¼»á±»×Ô¶¯¸´ÓÃ
+// ä½†æ˜¯è¦æ³¨æ„åœ¨çº¿ç¨‹æ± ä¸­ ç°æœ‰çº¿ç¨‹åœ¨æœ‰å¯èƒ½çš„æƒ…å†µä¸‹ï¼Œéƒ½ä¼šè¢«è‡ªåŠ¨å¤ç”¨
 
 /**
- * @describe ÓĞÏŞ¸öÊıÏß³Ì³Ø ÉÏÃæµÄ³öÏÖÎÊÌâ²ÉÓÃËü
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç7:17:03
+ * @describe æœ‰é™ä¸ªæ•°çº¿ç¨‹æ±  ä¸Šé¢çš„å‡ºç°é—®é¢˜é‡‡ç”¨å®ƒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ7:17:03
  * @version 0.9
  * @company Changchun University&SHXT
  */
 class FixedThreadPool {
-	// Ê¹ÓÃÁËÓĞÏŞµÄÏß³Ì¼¯À´Ìá½»ÈÎÎñ
+	// ä½¿ç”¨äº†æœ‰é™çš„çº¿ç¨‹é›†æ¥æäº¤ä»»åŠ¡
 	public static void main(String[] args) {
-		// ¶¨Òå¸öÊı
+		// å®šä¹‰ä¸ªæ•°
 		ExecutorService exec = Executors.newFixedThreadPool(5);
 		for (int i = 0; i < 5; i++) {
-			// Í¨¹ı³ØÖĞ»ñÈ¡¹Ì¶¨Ïß³Ì
+			// é€šè¿‡æ± ä¸­è·å–å›ºå®šçº¿ç¨‹
 			exec.execute(new LiftOff());
 		}
 		exec.shutdown();
@@ -46,9 +46,9 @@ class FixedThreadPool {
 }
 
 /**
- * @describe µ¥Ò»Ïß³Ì³Ø ÓÃÓÚÖ´ĞĞÁ¬ĞøÔËĞĞµÄÊÂÎñ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç7:17:53
+ * @describe å•ä¸€çº¿ç¨‹æ±  ç”¨äºæ‰§è¡Œè¿ç»­è¿è¡Œçš„äº‹åŠ¡
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ7:17:53
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -56,7 +56,7 @@ class SingleThreadExecutor {
 	public static void main(String[] args) {
 		ExecutorService exec = Executors.newSingleThreadExecutor();
 		for (int i = 0; i < 5; i++) {
-			// Í¨¹ı³ØÖĞ»ñÈ¡¹Ì¶¨Ïß³Ì ËüÄÚ²¿ÓĞÒ»¸öĞü¹ÒµÄÈÎÎñ¶ÓÁĞ
+			// é€šè¿‡æ± ä¸­è·å–å›ºå®šçº¿ç¨‹ å®ƒå†…éƒ¨æœ‰ä¸€ä¸ªæ‚¬æŒ‚çš„ä»»åŠ¡é˜Ÿåˆ—
 			exec.execute(new LiftOff());
 		}
 		exec.shutdown();

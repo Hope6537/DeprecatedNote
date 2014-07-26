@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.twenty_one;
 import java.util.concurrent.*;
 
 /**
- * @describe µÚÒ»ÖÖ°ü×°·½·¨ Ö±½Ó¼Ì³ĞThreadÀà£¬µ«ÊÇÕâÑù»á´æÔÚ¾ÖÏŞĞÔ ÎŞ·¨¶àÖØ¼Ì³Ğ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:53:37
+ * @describe ç¬¬ä¸€ç§åŒ…è£…æ–¹æ³• ç›´æ¥ç»§æ‰¿Threadç±»ï¼Œä½†æ˜¯è¿™æ ·ä¼šå­˜åœ¨å±€é™æ€§ æ— æ³•å¤šé‡ç»§æ‰¿
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:53:37
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -16,7 +16,7 @@ class InnerThread1 {
 	private class Inner extends Thread {
 		Inner(String name) {
 			super(name);
-			start();//Ö±½Óµ÷ÓÃStart
+			start();//ç›´æ¥è°ƒç”¨Start
 		}
 
 		public void run() {
@@ -36,16 +36,16 @@ class InnerThread1 {
 			return getName() + ": " + countDown;
 		}
 	}
-//	ÔÚ¹¹Ôì·½·¨ÖĞÉùÃ÷innerÏß³ÌÀà ÔÚinnerÄÚÖ±½Ó¾Í»áÖ´ĞĞstart
+//	åœ¨æ„é€ æ–¹æ³•ä¸­å£°æ˜innerçº¿ç¨‹ç±» åœ¨innerå†…ç›´æ¥å°±ä¼šæ‰§è¡Œstart
 	public InnerThread1(String name) {
 		inner = new Inner(name);
 	}
 }
 
 /**
- * @describe ÉùÃ÷Ïß³Ì¶ÔÏót È»ºóÔÚÄÚ²¿½øĞĞ·½·¨ÊµÏÖ£¬ÊÖ¶¯µ÷ÓÃstartÆô¶¯Ïß³Ì
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:54:12
+ * @describe å£°æ˜çº¿ç¨‹å¯¹è±¡t ç„¶ååœ¨å†…éƒ¨è¿›è¡Œæ–¹æ³•å®ç°ï¼Œæ‰‹åŠ¨è°ƒç”¨startå¯åŠ¨çº¿ç¨‹
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:54:12
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -77,9 +77,9 @@ class InnerThread2 {
 }
 
 /**
- * @describe ÄÚ²¿ÀàÊµÏÖRunnable½Ó¿Ú È»ºó»¹ÊÇÔÚÀàÖĞÉú³ÉÏß³Ì¶ÔÏóÔÙµ÷ÓÃstartÆô¶¯
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:54:41
+ * @describe å†…éƒ¨ç±»å®ç°Runnableæ¥å£ ç„¶åè¿˜æ˜¯åœ¨ç±»ä¸­ç”Ÿæˆçº¿ç¨‹å¯¹è±¡å†è°ƒç”¨startå¯åŠ¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:54:41
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -119,9 +119,9 @@ class InnerRunnable1 {
 }
 
 /**
- * @describe tÖ±½ÓÉùÃ÷Thread RunnableÊµÏÖ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:55:18
+ * @describe tç›´æ¥å£°æ˜Thread Runnableå®ç°
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:55:18
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -153,9 +153,9 @@ class InnerRunnable2 {
 }
 
 /**
- * @describe ½«Ïß³Ì·â×°½ø·½·¨ÌåÄÚ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:55:36
+ * @describe å°†çº¿ç¨‹å°è£…è¿›æ–¹æ³•ä½“å†…
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:55:36
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -169,7 +169,7 @@ class ThreadMethod {
 	}
 
 	/**
-	 * @descirbe ¸Ã·½·¨Ïß³ÌÖ´ĞĞÖ®Ç°·µ»Ø
+	 * @descirbe è¯¥æ–¹æ³•çº¿ç¨‹æ‰§è¡Œä¹‹å‰è¿”å›
 	 */
 	public void runTask() {
 		if (t == null) {
@@ -197,9 +197,9 @@ class ThreadMethod {
 }
 
 /**
- * @describe Ïß³ÌµÄ¶àÖÖ°ü×°·½·¨
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÏÂÎç12:53:21
+ * @describe çº¿ç¨‹çš„å¤šç§åŒ…è£…æ–¹æ³•
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸‹åˆ12:53:21
  * @version 0.9
  * @company Changchun University&SHXT
  */

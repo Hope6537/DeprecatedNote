@@ -25,9 +25,9 @@ class Creator extends GenericWithCreate<X> {
 }
 
 /**
- * @Describe 模板方法设计模式
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-7-19下午03:25:31
+ * @Describe 妯℃澘鏂规硶璁捐妯″紡
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-7-19涓嬪崍03:25:31
  * @version 0.9
  * @company Changchun University&SHXT
  */

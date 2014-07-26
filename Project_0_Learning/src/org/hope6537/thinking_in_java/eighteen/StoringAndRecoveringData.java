@@ -15,7 +15,7 @@ public class StoringAndRecoveringData {
 				new FileOutputStream("D:\\Data.txt")));
 		out.writeDouble(3.1415926);
 		out.writeUTF("That was pi");
-		//必须关闭流，缓冲中的数据才能写入
+		//蹇呴』鍏抽棴娴侊紝缂撳啿涓殑鏁版嵁鎵嶈兘鍐欏叆
 		out.close();
 		@SuppressWarnings("resource")
 		DataInputStream in = new DataInputStream(new BufferedInputStream(

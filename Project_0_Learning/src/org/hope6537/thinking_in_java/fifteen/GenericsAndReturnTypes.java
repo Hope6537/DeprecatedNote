@@ -11,7 +11,7 @@ interface Getter extends GenericGetter<Getter> {
 public class GenericsAndReturnTypes {
 	void test(Getter g){
 		Getter rGetter = g.get();
-		//卧槽这他妈是啥意思？
+		//鍗фЫ杩欎粬濡堟槸鍟ユ剰鎬濓紵
 		GenericGetter gg = g.get();
 	}
 }

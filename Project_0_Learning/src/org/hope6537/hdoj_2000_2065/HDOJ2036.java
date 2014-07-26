@@ -15,10 +15,10 @@ public class HDOJ2036 {
 			y  = new int [bianshu];
 		}
 		/**
-		 * @Descirbe 采用将凹多边型分割三角的方法进行计算
-		 * @Author Hope6537(赵鹏)
+		 * @Descirbe 閲囩敤灏嗗嚬澶氳竟鍨嬪垎鍓蹭笁瑙掔殑鏂规硶杩涜璁＄畻
+		 * @Author Hope6537(璧甸箯)
 		 * @Params 
-		 * @SignDate 2014-4-15下午2:02:28
+		 * @SignDate 2014-4-15涓嬪崍2:02:28
 		 * @Version 0.9
 		 */
 		public void getMianji(){
@@ -31,7 +31,7 @@ public class HDOJ2036 {
 				int y0 = y[0];
 				int yi = y[i];
 				int yijia1 = y[i+1];
-				tri=((x0-xijia1)*(yi-yijia1)-(xi-xijia1)*(y0-yijia1))/2.0; //以横轴为界限 分别求两个三角形
+				tri=((x0-xijia1)*(yi-yijia1)-(xi-xijia1)*(y0-yijia1))/2.0; //浠ユí杞翠负鐣岄檺 鍒嗗埆姹備袱涓笁瑙掑舰
 				sum+=tri;
 			}
 			this.mianji = sum;

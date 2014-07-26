@@ -3,22 +3,22 @@ package org.hope6537.thinking_in_java.sixteen;
 import org.hope6537.thinking_in_java.fifteen.Generator;
 
 /**
- * @describe Éú³É»ù±¾ÀàĞÍÊı×é
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-22ÏÂÎç02:57:03
+ * @describe ç”ŸæˆåŸºæœ¬ç±»å‹æ•°ç»„
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-22ä¸‹åˆ02:57:03
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class Generated {
 
 	/**
-	 * @descirbe Í¨¹ıÒÑÓĞÊı×éÈ»ºóÉú³ÉÉú³ÉÆ÷Êı¾İÌî³ä£¬È»ºó·µ»Ø
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe é€šè¿‡å·²æœ‰æ•°ç»„ç„¶åç”Ÿæˆç”Ÿæˆå™¨æ•°æ®å¡«å……ï¼Œç„¶åè¿”å›
+	 * @author Hope6537(èµµé¹)
 	 * @param <T>
 	 * @param a
 	 * @param gen
 	 * @return
-	 * @signDate 2014-7-22ÏÂÎç02:59:52
+	 * @signDate 2014-7-22ä¸‹åˆ02:59:52
 	 * @version 0.9
 	 */
 	public static <T> T[] array(T[] a, Generator<T> gen) {
@@ -26,14 +26,14 @@ public class Generated {
 	}
 
 	/**
-	 * @descirbe ¸ø¶¨ÀàĞÍºÍ´óĞ¡£¬ÏÖÉú³ÉÊı×éÈ»ºóÌî³ä
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe ç»™å®šç±»å‹å’Œå¤§å°ï¼Œç°ç”Ÿæˆæ•°ç»„ç„¶åå¡«å……
+	 * @author Hope6537(èµµé¹)
 	 * @param <T>
 	 * @param type
 	 * @param gen
 	 * @param size
 	 * @return
-	 * @signDate 2014-7-22ÏÂÎç03:03:19
+	 * @signDate 2014-7-22ä¸‹åˆ03:03:19
 	 * @version 0.9
 	 */
 	public static <T> T[] array(Class<T> type, Generator<T> gen, int size) {

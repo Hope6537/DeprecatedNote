@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /**
  * @Describe
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-27ÏÂÎç4:12:54
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-27ä¸‹åˆ4:12:54
  * @version 0.9
  * @company Changchun University&SHXT
  */

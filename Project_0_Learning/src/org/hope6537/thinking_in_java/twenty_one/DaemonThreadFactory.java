@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.twenty_one;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * @describe ºóÌ¨Ïß³Ì¹¤³§ ¿ÉÒÔ´«µİ¸øÖ´ĞĞÆ÷À´Ö´ĞĞ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç10:58:45
+ * @describe åå°çº¿ç¨‹å·¥å‚ å¯ä»¥ä¼ é€’ç»™æ‰§è¡Œå™¨æ¥æ‰§è¡Œ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ10:58:45
  * @version 0.9
  * @company Changchun University&SHXT
  */

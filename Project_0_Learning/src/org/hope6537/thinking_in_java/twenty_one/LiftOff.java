@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.twenty_one;
 
 /**
- * @describe ¶¨Òå¶àÏß³ÌÈÎÎñ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç6:28:29
+ * @describe å®šä¹‰å¤šçº¿ç¨‹ä»»åŠ¡
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ6:28:29
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -29,7 +29,7 @@ public class LiftOff implements Runnable {
 	public void run() {
 		while (countDown-- > 0) {
 			System.out.println(status());
-			Thread.yield();//Ïß³Ìµ÷¶ÈÆ÷ ±íÊ¾ÎÒÒÑ¾­Ö´ĞĞÍê×îÖ÷ÒªµÄ²¿·ÖÁË£¬¿ÉÒÔ½«¿ØÖÆÈ¨ÒÆ½»¸ø±ğµÄÏß³Ì
+			Thread.yield();//çº¿ç¨‹è°ƒåº¦å™¨ è¡¨ç¤ºæˆ‘å·²ç»æ‰§è¡Œå®Œæœ€ä¸»è¦çš„éƒ¨åˆ†äº†ï¼Œå¯ä»¥å°†æ§åˆ¶æƒç§»äº¤ç»™åˆ«çš„çº¿ç¨‹
 		}
 	};
 

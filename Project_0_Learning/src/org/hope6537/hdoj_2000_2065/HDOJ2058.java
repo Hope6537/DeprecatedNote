@@ -38,8 +38,8 @@ public class HDOJ2058 {
 	public static void main(String[] args) {
 		while(s.hasNext()){
 			
-			double n = s.nextDouble();//¸öÊý
-			double m = s.nextDouble();//Ä¿±êÖµ
+			double n = s.nextDouble();//ä¸ªæ•°
+			double m = s.nextDouble();//ç›®æ ‡å€¼
 			jisuanLeihe(1, (long)n, m);
 			/*int index_forward = 1;
 			for(int i = 1 ; ;){

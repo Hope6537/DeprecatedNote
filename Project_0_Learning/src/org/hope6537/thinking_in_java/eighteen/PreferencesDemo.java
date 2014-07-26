@@ -5,9 +5,9 @@ import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 /**
- * @describe Ò»¸ö³Ö¾Ã»¯µÄ¼üÖµ¶Ô²âÑé
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç5:08:19
+ * @describe ä¸€ä¸ªæŒä¹…åŒ–çš„é”®å€¼å¯¹æµ‹éªŒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ5:08:19
  * @version 0.9
  * @company Changchun University&SHXT
  */

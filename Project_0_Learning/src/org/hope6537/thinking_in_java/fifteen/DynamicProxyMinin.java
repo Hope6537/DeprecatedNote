@@ -8,14 +8,14 @@ import java.util.Map;
 
 class MixinProxy implements InvocationHandler {
 	/**
-	 * @Describe ÒÅÊÀ¶ø¶ÀÁ¢ µï±¤µÄ ·½·¨<->¶ÔÏó¹ØÏµÓ³Éä
+	 * @Describe é—ä¸–è€Œç‹¬ç«‹ ç¢‰å ¡çš„ æ–¹æ³•<->å¯¹è±¡å…³ç³»æ˜ å°„
 	 */
 	Map<String, Object> delehatesByMethod;
 
 	/**
-	 * @Describe ¹¹Ôì·½·¨´´½¨¶¯Ì¬´úÀíµÄClassµÄ·½·¨Ìå ·ÅÈëÓ³ÉäÖĞ£¬ÒÔ´ı²éÕÒ
-	 *           Ò»¸ö·½·¨¶ÔÓ¦ÕâÒ»¸öÀà¶ÔÏó£¬Object¶ø²»ÊÇ×Ö·û´®£¬ÊÇ¿ÉÒÔÖ´ĞĞµÄ¶ÔÏó£¨Class£©
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe æ„é€ æ–¹æ³•åˆ›å»ºåŠ¨æ€ä»£ç†çš„Classçš„æ–¹æ³•ä½“ æ”¾å…¥æ˜ å°„ä¸­ï¼Œä»¥å¾…æŸ¥æ‰¾
+	 *           ä¸€ä¸ªæ–¹æ³•å¯¹åº”è¿™ä¸€ä¸ªç±»å¯¹è±¡ï¼ŒObjectè€Œä¸æ˜¯å­—ç¬¦ä¸²ï¼Œæ˜¯å¯ä»¥æ‰§è¡Œçš„å¯¹è±¡ï¼ˆClassï¼‰
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param pairs
 	 */
 	public MixinProxy(TwoTuple<Object, Class<?>>... pairs) {
@@ -36,7 +36,7 @@ class MixinProxy implements InvocationHandler {
 	 * @see java.lang.reflect.InvocationHandler#invoke(java.lang.Object,
 	 * java.lang.reflect.Method, java.lang.Object[])
 	 * 
-	 * @Author:Hope6537(ÕÔÅô) Ö´ĞĞ·´Éä·½·¨
+	 * @Author:Hope6537(èµµé¹) æ‰§è¡Œåå°„æ–¹æ³•
 	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
@@ -47,24 +47,24 @@ class MixinProxy implements InvocationHandler {
 	}
 
 	@SuppressWarnings("unchecked")
-	// Î´¶¨Òå·ºĞÍ£¬ËùÒÔ¿ñ³ö¾¯¸æ
+	// æœªå®šä¹‰æ³›å‹ï¼Œæ‰€ä»¥ç‹‚å‡ºè­¦å‘Š
 	public static Object newInstance(TwoTuple... pairs) {
 		Class[] interfaces = new Class[pairs.length];
 		for (int i = 0; i < pairs.length; i++) {
 			interfaces[i] = (Class) pairs[i].second;
 		}
-		// ÎÔ²ÛÕâ¾äÉ¶ÒâË¼,Àà×°ÔØÆ÷£¿
+		// å§æ§½è¿™å¥å•¥æ„æ€,ç±»è£…è½½å™¨ï¼Ÿ
 		ClassLoader c1 = pairs[0].first.getClass().getClassLoader();
-		// ·µ»ØµÄObjectÊÇÓÉÕâ¶«Î÷Éú³ÉµÄ£¿
+		// è¿”å›çš„Objectæ˜¯ç”±è¿™ä¸œè¥¿ç”Ÿæˆçš„ï¼Ÿ
 		return Proxy.newProxyInstance(c1, interfaces, new MixinProxy(pairs));
 	}
 
 }
 
 /**
- * @Describe ¶¯Ì¬´úÀí²úÉú»ìĞÍ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-20ÏÂÎç01:57:21
+ * @Describe åŠ¨æ€ä»£ç†äº§ç”Ÿæ··å‹
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-20ä¸‹åˆ01:57:21
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -85,12 +85,12 @@ public class DynamicProxyMinin {
 	}
 
 	/**
-	 * @Descirbe Éú³É¸ÃÀàĞÍµÄ³ÖÓĞ¶ÔÏó£¬·Ö±ğ×°ÔØObject¶ÔÏóºÍClass¶ÔÏó
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe ç”Ÿæˆè¯¥ç±»å‹çš„æŒæœ‰å¯¹è±¡ï¼Œåˆ†åˆ«è£…è½½Objectå¯¹è±¡å’ŒClasså¯¹è±¡
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param object
 	 * @Params @param class1
 	 * @Params @return
-	 * @SignDate 2014-7-20ÏÂÎç02:05:36
+	 * @SignDate 2014-7-20ä¸‹åˆ02:05:36
 	 * @Version 0.9
 	 */
 	@SuppressWarnings("unchecked")

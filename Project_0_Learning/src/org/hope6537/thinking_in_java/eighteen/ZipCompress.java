@@ -18,9 +18,9 @@ import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @describe Ê¹ÓÃZip½øĞĞÑ¹Ëõ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç1:57:52
+ * @describe ä½¿ç”¨Zipè¿›è¡Œå‹ç¼©
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ1:57:52
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -38,20 +38,20 @@ public class ZipCompress {
 	public static void Compress(String[] args) throws IOException {
 		File file = new File("G:\\ZipCompress.zip");
 		FileOutputStream f = new FileOutputStream(file);
-		// ¶¨ÒåÑ¹Ëõ¸ñÊ½ ¶¨ÒåÑ¹ËõÎÄ¼şÊä³öÁ÷ ¶¨Òå¾ĞnÊä³öÁ÷ ¶¨Òå×¢ÊÍ
+		// å®šä¹‰å‹ç¼©æ ¼å¼ å®šä¹‰å‹ç¼©æ–‡ä»¶è¾“å‡ºæµ å®šä¹‰ç·©è¡è¾“å‡ºæµ å®šä¹‰æ³¨é‡Š
 		CheckedOutputStream csum = new CheckedOutputStream(f, new Adler32());
 		ZipOutputStream zos = new ZipOutputStream(csum);
 		BufferedOutputStream out = new BufferedOutputStream(zos);
 		zos.setComment("Java Zipping : Powered By Hope6537");
-		// È»ºó¿ªÊ¼ÌáÈ¡³öÎÄ¼şÃû×Ö¶Î
+		// ç„¶åå¼€å§‹æå–å‡ºæ–‡ä»¶åå­—æ®µ
 		for (String arg : args) {
 			System.out.println("Writing texts :" + arg);
-			// »ñÈ¡ÊäÈëÁ÷
+			// è·å–è¾“å…¥æµ
 			BufferedReader in = new BufferedReader(new FileReader(arg));
-			// ‰º¿sÎÄ¼şİ”³öÁ÷Ìí¼ÓĞÂµÄZipEntry¶ÔÏó£¬Ô“¶ÔÏóŒ¢ÓÃì¶»ñÈ¡ºÍÉèÖÃ¸ÃÑ¹ËõÎÄ¼şÄÚËùÓĞ¿ÉÒÔÀûÓÃµÄÊı¾İ
+			// å£“ç¸®æ–‡ä»¶è¼¸å‡ºæµæ·»åŠ æ–°çš„ZipEntryå¯¹è±¡ï¼Œè©²å¯¹è±¡å°‡ç”¨æ–¼è·å–å’Œè®¾ç½®è¯¥å‹ç¼©æ–‡ä»¶å†…æ‰€æœ‰å¯ä»¥åˆ©ç”¨çš„æ•°æ®
 			zos.putNextEntry(new ZipEntry(arg));
 			int c;
-			// ½øĞĞ±ß¶Á±ßĞ´
+			// è¿›è¡Œè¾¹è¯»è¾¹å†™
 			while ((c = in.read()) != -1) {
 				out.write(c);
 			}
@@ -59,18 +59,18 @@ public class ZipCompress {
 			out.flush();
 		}
 		out.close();
-		// È»ºó¹Ø±ÕÁ÷ Ñ¹Ëõ½áÊø
+		// ç„¶åå…³é—­æµ å‹ç¼©ç»“æŸ
 
 		System.out.println("CheckedOutputStream "
 				+ csum.getChecksum().getValue());
 		System.out.println("====Reading Files====");
-		// ¶ÁÈ¡Ñ¹ËõÎÄ¼ş Í¬ÉÏ ¶¨ÒåÎÄ¼ş¶ÁÈ¡Á÷ Ñ¹ËõÎÄ¼ş¶ÁÈ¡Á÷ »º³å¶ÁÈ¡Á÷
+		// è¯»å–å‹ç¼©æ–‡ä»¶ åŒä¸Š å®šä¹‰æ–‡ä»¶è¯»å–æµ å‹ç¼©æ–‡ä»¶è¯»å–æµ ç¼“å†²è¯»å–æµ
 		FileInputStream fi2 = new FileInputStream(file);
 		CheckedInputStream cusmi = new CheckedInputStream(fi2, new Adler32());
 		ZipInputStream in = new ZipInputStream(cusmi);
 		BufferedInputStream bis = new BufferedInputStream(in);
 		ZipEntry ze;
-		// Èç¹û»¹ÓĞÑ¹Ëõ¶ÔÏó£¬ÌáÈ¡³öÀ´È»ºó¿ªÊ¼°´ÕÕ×Ö½Ú¶Á
+		// å¦‚æœè¿˜æœ‰å‹ç¼©å¯¹è±¡ï¼Œæå–å‡ºæ¥ç„¶åå¼€å§‹æŒ‰ç…§å­—èŠ‚è¯»
 		while ((ze = in.getNextEntry()) != null) {
 			System.out.println("Reading File :" + ze);
 			int x;
@@ -83,7 +83,7 @@ public class ZipCompress {
 			System.out.println("CheckSum :" + cusmi.getChecksum().getValue());
 		}
 		bis.close();
-		// ÁíÍâÒ»ÖÖ½âÑ¹Ëõ·½·¨
+		// å¦å¤–ä¸€ç§è§£å‹ç¼©æ–¹æ³•
 		ZipFile zf = new ZipFile(file);
 		@SuppressWarnings("rawtypes")
 		Enumeration e = zf.entries();

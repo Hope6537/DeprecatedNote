@@ -5,16 +5,16 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @describe Ã¿¸ö¾²Ì¬µÄExecutorService´´½¨·½·¨¶¼±»ÖØÔØÎª½ÓÊÜÒ»¸öFactory¶ÔÏó£¬¶øÕâ¸ö¶ÔÏó½«»á±»ÓÃÀ´´´½¨ĞÂµÄÏß³Ì
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç11:06:13
+ * @describe æ¯ä¸ªé™æ€çš„ExecutorServiceåˆ›å»ºæ–¹æ³•éƒ½è¢«é‡è½½ä¸ºæ¥å—ä¸€ä¸ªFactoryå¯¹è±¡ï¼Œè€Œè¿™ä¸ªå¯¹è±¡å°†ä¼šè¢«ç”¨æ¥åˆ›å»ºæ–°çš„çº¿ç¨‹
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ11:06:13
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class DaemonThreadPoolExecutor extends ThreadPoolExecutor {
 	public DaemonThreadPoolExecutor() {
-		// ÕâÃ´Ò»³¤´®×ÓµÄ¹¹Ôì·½·¨¶¼ÊÇÓÃÀ´¸ÉÉ¶µÎÄå£¿
-		// ÖØÔØÁËÖ´ĞĞÏß³Ì³ØµÄ·½·¨£¿È»ºóÄØ£¿¶¥Ò»¸öDaemonThreadFactory²úÉúµÄ¶ÔÏóÊÇÏß³Ì³ØµÄÎ¨Ò»¶ÔÏó?
+		// è¿™ä¹ˆä¸€é•¿ä¸²å­çš„æ„é€ æ–¹æ³•éƒ½æ˜¯ç”¨æ¥å¹²å•¥æ»´è…»ï¼Ÿ
+		// é‡è½½äº†æ‰§è¡Œçº¿ç¨‹æ± çš„æ–¹æ³•ï¼Ÿç„¶åå‘¢ï¼Ÿé¡¶ä¸€ä¸ªDaemonThreadFactoryäº§ç”Ÿçš„å¯¹è±¡æ˜¯çº¿ç¨‹æ± çš„å”¯ä¸€å¯¹è±¡?
 		super(0, Integer.MAX_VALUE, 60L, TimeUnit.SECONDS,
 				new SynchronousQueue<Runnable>(), new DaemonThreadFactory());
 

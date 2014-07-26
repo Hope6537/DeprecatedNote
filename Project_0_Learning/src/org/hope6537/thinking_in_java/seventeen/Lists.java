@@ -13,10 +13,10 @@ public class Lists {
 	private static ListIterator<String> lit;
 
 	/**
-	 * @descirbe ListµÄ¸÷¸ö»ù±¾²Ù×÷
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe Listçš„å„ä¸ªåŸºæœ¬æ“ä½œ
+	 * @author Hope6537(èµµé¹)
 	 * @param a
-	 * @signDate 2014Äê7ÔÂ23ÈÕÉÏÎç11:21:20
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸Šåˆ11:21:20
 	 * @version 0.9
 	 */
 	public static void basicTest(List<String> a) {
@@ -43,10 +43,10 @@ public class Lists {
 	}
 
 	/**
-	 * @descirbe »ù±¾µÄListµü´úÆ÷µÄ²Ù×÷
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe åŸºæœ¬çš„Listè¿­ä»£å™¨çš„æ“ä½œ
+	 * @author Hope6537(èµµé¹)
 	 * @param a
-	 * @signDate 2014Äê7ÔÂ23ÈÕÉÏÎç11:22:48
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸Šåˆ11:22:48
 	 * @version 0.9
 	 */
 	public static void iterMotion(List<String> a) {
@@ -60,10 +60,10 @@ public class Lists {
 	}
 
 	/**
-	 * @descirbe Ê¹ÓÃµü´úÆ÷½øĞĞĞŞ¸Ä²Ù×÷
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe ä½¿ç”¨è¿­ä»£å™¨è¿›è¡Œä¿®æ”¹æ“ä½œ
+	 * @author Hope6537(èµµé¹)
 	 * @param a
-	 * @signDate 2014Äê7ÔÂ23ÈÕÉÏÎç11:24:14
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸Šåˆ11:24:14
 	 * @version 0.9
 	 */
 	public static void iterManipulation(List<String> a) {

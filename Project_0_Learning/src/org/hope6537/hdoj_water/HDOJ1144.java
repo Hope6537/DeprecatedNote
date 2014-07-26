@@ -22,17 +22,17 @@ public class HDOJ1144 {
 		while (s.hasNext()) {
 
 			int isYes = 0;
-			int k = s.nextInt();// ¿Î³ÌÊý
+			int k = s.nextInt();// è¯¾ç¨‹æ•°
 			if (k == 0) {
 				break;
 			}
-			int m = s.nextInt();// Àà±ðÊý
+			int m = s.nextInt();// ç±»åˆ«æ•°
 
 			int[] k_num = new int[k];
 			for (int i = 0; i < k; i++) {
 				k_num[i] = s.nextInt();
-			}// ÕâÊÇËûÐÞµÄÁÐ±í
-			// ½ÓÏÂÀ´ÊÇÊäÈëÀà±ð
+			}// è¿™æ˜¯ä»–ä¿®çš„åˆ—è¡¨
+			// æŽ¥ä¸‹æ¥æ˜¯è¾“å…¥ç±»åˆ«
 			leibie[] l = new leibie[m];
 			for (int i = 0; i < m; i++) {
 				int num = s.nextInt();
@@ -43,11 +43,11 @@ public class HDOJ1144 {
 				}
 				l[i] = new leibie(num, min, classid);
 			}
-			// Àà±ðÊäÈëÍê³É ¿ªÊ¼¼ìË÷
+			// ç±»åˆ«è¾“å…¥å®Œæˆ å¼€å§‹æ£€ç´¢
 
-			for (int i = 0; i < l.length; i++) {// Àà±ðµü´ú
-				int count = 0;// ½øÐÐ¸ÃÀà±ð¿ÆÄ¿µÄ¼ÆÊý
-				int[] temp = l[i].classid;// Àà±ð¿ÆÄ¿
+			for (int i = 0; i < l.length; i++) {// ç±»åˆ«è¿­ä»£
+				int count = 0;// è¿›è¡Œè¯¥ç±»åˆ«ç§‘ç›®çš„è®¡æ•°
+				int[] temp = l[i].classid;// ç±»åˆ«ç§‘ç›®
 				// System.out.println(temp);
 				for (int j = 0; j < temp.length; j++) {
 					for (int t = 0; t < k_num.length; t++) {

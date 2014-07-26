@@ -3,18 +3,18 @@ package org.hope6537.thinking_in_java.sixteen;
 import org.hope6537.thinking_in_java.fifteen.Generator;
 
 /**
- * @describe ¼ÆÊıÉú³ÉÆ÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-22ÏÂÎç02:53:49
+ * @describe è®¡æ•°ç”Ÿæˆå™¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-22ä¸‹åˆ02:53:49
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class CountingGenerator {
 	
 	/**
-	 * @describe ÄÚ²¿BooleanÀàĞÍÉú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:53:57
+	 * @describe å†…éƒ¨Booleanç±»å‹ç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:53:57
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
@@ -28,9 +28,9 @@ public class CountingGenerator {
 	}
 
 	/**
-	 * @describe ÄÚ²¿ByteÀàĞÍÉú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:54:13
+	 * @describe å†…éƒ¨Byteç±»å‹ç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:54:13
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
@@ -46,9 +46,9 @@ public class CountingGenerator {
 			+ "ABCDEFGHIJKLMNOPQRSTUVWXYZ").toCharArray();
 
 	/**
-	 * @describe ×Ö·ûÉú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:54:21
+	 * @describe å­—ç¬¦ç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:54:21
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
@@ -62,16 +62,16 @@ public class CountingGenerator {
 	}
 
 	/**
-	 * @describe ×Ö·û´®Éú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:54:30
+	 * @describe å­—ç¬¦ä¸²ç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:54:30
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
 	public static class String implements Generator<java.lang.String> {
 		private int length = 7;
 		/**
-		 * @describe Ëæ»ú»¯×Ö·û
+		 * @describe éšæœºåŒ–å­—ç¬¦
 		 */
 		Generator<java.lang.Character> cg = new Character();
 
@@ -82,9 +82,9 @@ public class CountingGenerator {
 			this.length = length;
 		}
 
-		/* (non-Javadoc) Í¨¹ıÆ´½ÓµÄ·½Ê½Éú³ÉĞÂ×Ö·û´®
+		/* (non-Javadoc) é€šè¿‡æ‹¼æ¥çš„æ–¹å¼ç”Ÿæˆæ–°å­—ç¬¦ä¸²
 		 * @see org.hope6537.thinking_in_java.fifteen.Generator#next()
-		 * @author:Hope6537(ÕÔÅô)
+		 * @author:Hope6537(èµµé¹)
 		 */
 		public java.lang.String next() {
 			char[] buf = new char[length];
@@ -95,9 +95,9 @@ public class CountingGenerator {
 	}
 
 	/**
-	 * @describe ShortÉú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:54:39
+	 * @describe Shortç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:54:39
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */
@@ -110,9 +110,9 @@ public class CountingGenerator {
 	}
 
 	/**
-	 * @describe ÕûÊıÉú³ÉÆ÷
-	 * @author Hope6537(ÕÔÅô)
-	 * @signdate 2014-7-22ÏÂÎç02:55:13
+	 * @describe æ•´æ•°ç”Ÿæˆå™¨
+	 * @author Hope6537(èµµé¹)
+	 * @signdate 2014-7-22ä¸‹åˆ02:55:13
 	 * @version 0.9
 	 * @company Changchun University&SHXT
 	 */

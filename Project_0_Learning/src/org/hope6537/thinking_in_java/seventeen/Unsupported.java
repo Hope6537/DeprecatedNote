@@ -7,9 +7,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @describe Ê²Ã´ÊÇÈİÆ÷µÄÎ´»ñÖ§³Ö²Ù×÷£¿
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÉÏÎç10:54:05
+ * @describe ä»€ä¹ˆæ˜¯å®¹å™¨çš„æœªè·æ”¯æŒæ“ä½œï¼Ÿ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸Šåˆ10:54:05
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -30,7 +30,7 @@ public class Unsupported {
 		List<String> list = Arrays.asList("A B C D E F G H J K L M N O P Q"
 				.split(" "));
 		test("Copy", new ArrayList<String>(list));
-		test("Arrays.asList()",list);//ÒòÎªArrays.asList½ö½öÖ§³Ö²»»áÓ°ÏìÊı×é´óĞ¡µÄ²Ù×÷
-		test("unmodififableList()",Collections.unmodifiableList(new ArrayList<String>(list)));//²úÉúÒ»¸ö²»¿ÉĞŞ¸ÄµÄÁĞ±í
+		test("Arrays.asList()",list);//å› ä¸ºArrays.asListä»…ä»…æ”¯æŒä¸ä¼šå½±å“æ•°ç»„å¤§å°çš„æ“ä½œ
+		test("unmodififableList()",Collections.unmodifiableList(new ArrayList<String>(list)));//äº§ç”Ÿä¸€ä¸ªä¸å¯ä¿®æ”¹çš„åˆ—è¡¨
 	}
 }

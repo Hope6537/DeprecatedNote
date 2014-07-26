@@ -3,9 +3,9 @@ package org.hope6537.hdoj_2000_2065;
 import java.util.Scanner;
 
 /**
- * @Describe ¹ıÉ½³µÎÊÌâ ĞÙÑÀÀûËã·¨
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-3ÏÂÎç05:56:04
+ * @Describe è¿‡å±±è½¦é—®é¢˜ åŒˆç‰™åˆ©ç®—æ³•
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-3ä¸‹åˆ05:56:04
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -14,31 +14,31 @@ public class HDOJ2063{
     static Scanner s = new Scanner(System.in);
 
     /**
-     * @Describe ÓÃÓÚ¼ÇÂ¼Åä¶ÔÇé¿ö
+     * @Describe ç”¨äºè®°å½•é…å¯¹æƒ…å†µ
      */
     static int[][] map = new int[510][510];
     /**
-     * @Describe ÓÃÓÚ¼ÇÂ¼ÊÇ·ñ±»Õ¼Áì
+     * @Describe ç”¨äºè®°å½•æ˜¯å¦è¢«å é¢†
      */
     static int[] flag = new int[510];
     /**
-     * @Describe ÓÃÓÚ¼ÇÂ¼pre[i]¼´ÄĞÉúiµÄÅä¶ÔÅ®µÄË÷ÒıÊı
+     * @Describe ç”¨äºè®°å½•pre[i]å³ç”·ç”Ÿiçš„é…å¯¹å¥³çš„ç´¢å¼•æ•°
      */
     static int[] pre = new int[510];
 
     /**
-     * @Describe nÊÇÅ®ÉúÊı mÊÇÄĞÉúÊı numÊÇ×ÜÊı
+     * @Describe næ˜¯å¥³ç”Ÿæ•° mæ˜¯ç”·ç”Ÿæ•° numæ˜¯æ€»æ•°
      */
     static int n, m, num;
 
     static int find(int cur) {
-        // ´ÓµÚÒ»¸öÄĞÉú¿ªÊ¼ÒÀ´Î±éÀú
+        // ä»ç¬¬ä¸€ä¸ªç”·ç”Ÿå¼€å§‹ä¾æ¬¡éå†
         for (int i = 1; i <= m; i++) {
             if (map[cur][i] == 1 && flag[i] == 0) {
-                // Èç¹û¸ÃÄĞÉú¿ÉÒÔºÍ¸ÃÅ®Éú×øÔÚÒ»Æğ£¬Í¬Ê±¸ÃÄĞÉúÃ»ÓĞ±»ÆäËûÈËÕ¼Áì¹ı
-                flag[i] = 1;// ½«¸ÃÄĞÉúÕ¼Áì
+                // å¦‚æœè¯¥ç”·ç”Ÿå¯ä»¥å’Œè¯¥å¥³ç”Ÿååœ¨ä¸€èµ·ï¼ŒåŒæ—¶è¯¥ç”·ç”Ÿæ²¡æœ‰è¢«å…¶ä»–äººå é¢†è¿‡
+                flag[i] = 1;// å°†è¯¥ç”·ç”Ÿå é¢†
                 if (pre[i] == 0 || find(pre[i]) == 1) {
-                    // Èç¹û¸ÃÄĞÉúÃ»ÓĞÅ®ÉúÅä¶Ô£¬»òÕßÊÇËµºÍ¸ÃÄĞÉúÅã¶ÔµÄÅ®Éú»¹ÄÜÕÒµ½±ğÈË Ôò¸ÃÅ®Éú½«Õâ¸öÄĞÉúÕ¼Áì
+                    // å¦‚æœè¯¥ç”·ç”Ÿæ²¡æœ‰å¥³ç”Ÿé…å¯¹ï¼Œæˆ–è€…æ˜¯è¯´å’Œè¯¥ç”·ç”Ÿé™ªå¯¹çš„å¥³ç”Ÿè¿˜èƒ½æ‰¾åˆ°åˆ«äºº åˆ™è¯¥å¥³ç”Ÿå°†è¿™ä¸ªç”·ç”Ÿå é¢†
                     pre[i] = cur;
                     return 1;
 
@@ -57,7 +57,7 @@ public class HDOJ2063{
 
             sum = 0;
             for (int i = 0; i < map.length; i++) {
-                pre[i] = 0;// ÕâÊÇ³õÊ¼»¯ÄĞÉúÅä¶Ô¶Ñ
+                pre[i] = 0;// è¿™æ˜¯åˆå§‹åŒ–ç”·ç”Ÿé…å¯¹å †
                 for(int j = 0 ; j < map.length ; j++){
                     map[i][j] = 0;
                 }
@@ -66,16 +66,16 @@ public class HDOJ2063{
             if (num == 0) {
                 break;
             }
-            n = s.nextInt(); // ÊÇÅ®Éú
-            m = s.nextInt(); // ÊÇÄĞÉú
+            n = s.nextInt(); // æ˜¯å¥³ç”Ÿ
+            m = s.nextInt(); // æ˜¯ç”·ç”Ÿ
             
             for (int i = 0; i < num; i++) {
                 girl = s.nextInt();
                 boy = s.nextInt();
-                map[girl][boy] = 1;// ¿ÉÒÔÆ¥Åä
+                map[girl][boy] = 1;// å¯ä»¥åŒ¹é…
             }
             for (int i = 1; i <= n; i++) {
-                // Å®ÉúÈ¥Æ¥ÅäÄĞÉú
+                // å¥³ç”Ÿå»åŒ¹é…ç”·ç”Ÿ
                 for (int j = 0; j < flag.length; j++) {
                     flag[j] = 0;
                 }

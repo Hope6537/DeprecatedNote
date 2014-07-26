@@ -14,9 +14,9 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 
 /**
- * @describe 使用GZIP模式进行压缩
- * @author Hope6537(赵鹏)
- * @signdate 2014年7月25日下午12:48:24
+ * @describe 浣跨敤GZIP妯″紡杩涜鍘嬬缉
+ * @author Hope6537(璧甸箯)
+ * @signdate 2014骞�鏈�5鏃ヤ笅鍗�2:48:24
  * @version 0.9
  * @company Changchun University&SHXT
  */

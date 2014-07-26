@@ -66,7 +66,7 @@ public class HDOJ2054 {
 		if (isFloat(n) == -1) {
 			newNumber = clearZero(n, 1);
 		} else {
-			// 如果是浮点数
+			// 濡傛灉鏄诞鐐规暟
 			int index = isFloat(n);
 			String forward = "";
 			String back = "";

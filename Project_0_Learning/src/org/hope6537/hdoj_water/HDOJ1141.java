@@ -9,10 +9,10 @@ public class HDOJ1141 {
 	static int i = 0;
 	static int j = 0;
 	static int m = 0;
-	// 这是年份
-	static double weight = 0.0;// 这是该年份的位数
+	// 杩欐槸骞翠唤
+	static double weight = 0.0;// 杩欐槸璇ュ勾浠界殑浣嶆暟
 
-	static double fl = 0.0;// 这是累加年份
+	static double fl = 0.0;// 杩欐槸绱姞骞翠唤
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);

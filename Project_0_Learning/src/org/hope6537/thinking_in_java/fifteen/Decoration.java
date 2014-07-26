@@ -60,11 +60,11 @@ class SerialNumberImp1 extends Decoratior {
 }
 
 /**
- * @Describe Ê¹ÓÃ×°ÊÎÆ÷Ä£Ê½ ²úÉú×Ô·ºĞÍµÄÀà°üº¬ËùÓĞ·½·¨£¬µ«ÊÇÓÉÊ¹ÓÃ×°ÊÎÆ÷Ëù²úÉúµÄ¶ÔÏóÀàĞÍÊÇ×îºó±»×°ÊÎµÄÀàĞÍ£¬¼´±äÁ¿ÉùÃ÷µÄÀàĞÍ
- * ¼°×îºóÎÒÃÇÖ»ÄÜ²Ù×÷×îºóÒ»²ã±»°ü×°µÄÀàĞÍµÄ·½·¨
- * ÈçÍ¼s2ÎŞ·¨µ÷ÓÃgetStamp()·½·¨Ò»Ñù
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-20ÏÂÎç01:29:23
+ * @Describe ä½¿ç”¨è£…é¥°å™¨æ¨¡å¼ äº§ç”Ÿè‡ªæ³›å‹çš„ç±»åŒ…å«æ‰€æœ‰æ–¹æ³•ï¼Œä½†æ˜¯ç”±ä½¿ç”¨è£…é¥°å™¨æ‰€äº§ç”Ÿçš„å¯¹è±¡ç±»å‹æ˜¯æœ€åè¢«è£…é¥°çš„ç±»å‹ï¼Œå³å˜é‡å£°æ˜çš„ç±»å‹
+ * åŠæœ€åæˆ‘ä»¬åªèƒ½æ“ä½œæœ€åä¸€å±‚è¢«åŒ…è£…çš„ç±»å‹çš„æ–¹æ³•
+ * å¦‚å›¾s2æ— æ³•è°ƒç”¨getStamp()æ–¹æ³•ä¸€æ ·
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-20ä¸‹åˆ01:29:23
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -72,7 +72,7 @@ public class Decoration {
 	public static void main(String[] args) {
 		TimeStamped1 t = new TimeStamped1(new Basic1());
 		SerialNumberImp1 s = new SerialNumberImp1(new Basic1());
-		//¡ıÕâÁ½¸öÎªÉ¶ºÃÊ¹ÄØ£¿
+		//â†“è¿™ä¸¤ä¸ªä¸ºå•¥å¥½ä½¿å‘¢ï¼Ÿ
 		TimeStamped1 t2 = new TimeStamped1(new SerialNumberImp1(new Basic1()));	
 		SerialNumberImp1 s2 = new SerialNumberImp1(new TimeStamped1(new Basic1()));
 		

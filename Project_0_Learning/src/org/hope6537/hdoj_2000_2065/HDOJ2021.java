@@ -3,9 +3,9 @@ package org.hope6537.hdoj_2000_2065;
 import java.util.Scanner;
 
 /**
- * @Describe Ì°ĞÄËã·¨ÕÒÓ²±Ò
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-4-14ÏÂÎç5:10:54
+ * @Describe è´ªå¿ƒç®—æ³•æ‰¾ç¡¬å¸
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-4-14ä¸‹åˆ5:10:54
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -13,7 +13,7 @@ public class HDOJ2021 {
 	static Scanner s = new Scanner(System.in);
 	public static void main(String[] args) {
 		while(s.hasNext()){
-			int n = s.nextInt();//ÈËÊı
+			int n = s.nextInt();//äººæ•°
 			if(n==0){
 				break;
 			}

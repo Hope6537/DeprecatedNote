@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe Êı×é·ºĞÍÊµÑé
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç03:46:00
+ * @Describe æ•°ç»„æ³›å‹å®éªŒ
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ03:46:00
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -13,8 +13,8 @@ public class GenericArray<T> {
 	private T[] array;
 
 	public GenericArray(int sz) {
-		// Ê×ÏÈ¶¨ÒåÒ»¸ö×ÔÖ÷²Á³ıÊı×é£¬È»ºó×Ô¼º½«ÆäÇ¿ÖÆÀàĞÍ×ª»»
-		// µ«ÊÇÎŞĞ§£¬»¹ÊÇ»áÔÚ±àÒëÆÚ¼ä²Á³ı
+		// é¦–å…ˆå®šä¹‰ä¸€ä¸ªè‡ªä¸»æ“¦é™¤æ•°ç»„ï¼Œç„¶åè‡ªå·±å°†å…¶å¼ºåˆ¶ç±»å‹è½¬æ¢
+		// ä½†æ˜¯æ— æ•ˆï¼Œè¿˜æ˜¯ä¼šåœ¨ç¼–è¯‘æœŸé—´æ“¦é™¤
 		array = (T[]) new Object[sz];
 	}
 
@@ -32,9 +32,9 @@ public class GenericArray<T> {
 	
 	public static void main(String[] args) {
 		GenericArray<Integer> gai = new GenericArray<Integer>(10);
-		//»á³öÏÖ±àÒëÒì³£ ClassCastException:
+		//ä¼šå‡ºç°ç¼–è¯‘å¼‚å¸¸ ClassCastException:
 		Integer [] ia = gai.rep();
-		//²»»á³öÏÖ±àÒëÒì³£
+		//ä¸ä¼šå‡ºç°ç¼–è¯‘å¼‚å¸¸
 		Object [] oa = gai.rep();
 	}
 }

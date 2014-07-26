@@ -4,9 +4,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * @describe ¾€³ÌƒÏÈ¼‰Œò
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç9:51:30
+ * @describe ç·šç¨‹å„ªå…ˆç´šå¯¦é©—
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ9:51:30
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -27,7 +27,7 @@ public class SimplePriorities implements Runnable {
 
 	@Override
 	public void run() {
-		//ÓÅÏÈ¼¶ÔÚÏß³ÌÖ´ĞĞÊ±±»¼ÓÔØ ²»ÔÚ¹¹Ôì·½·¨
+		//ä¼˜å…ˆçº§åœ¨çº¿ç¨‹æ‰§è¡Œæ—¶è¢«åŠ è½½ ä¸åœ¨æ„é€ æ–¹æ³•
 		Thread.currentThread().setPriority(priority);
 		while (true) {
 			for (int i = 1; i < 100000; i++) {
@@ -48,7 +48,7 @@ public class SimplePriorities implements Runnable {
 		for (int i = 0; i < 5; i++) {
 			exec.execute(new SimplePriorities(Thread.MIN_PRIORITY));
 		}
-		//×îºÃÖ»Ê¹ÓÃÕâÁ½ÖÖ
+		//æœ€å¥½åªä½¿ç”¨è¿™ä¸¤ç§
 		exec.execute(new SimplePriorities(Thread.MAX_PRIORITY));
 		exec.shutdown();
 	}

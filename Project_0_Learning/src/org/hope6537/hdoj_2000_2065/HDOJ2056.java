@@ -3,9 +3,9 @@ package org.hope6537.hdoj_2000_2065;
 import java.util.Scanner;
 
 /**
- * @Describe WRONG ANSWER 还需研究边界问题
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-4-17下午9:14:28
+ * @Describe WRONG ANSWER 杩橀渶鐮旂┒杈圭晫闂
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-4-17涓嬪崍9:14:28
  * @version 0.9
  * @company Changchun University&SHXT
  */

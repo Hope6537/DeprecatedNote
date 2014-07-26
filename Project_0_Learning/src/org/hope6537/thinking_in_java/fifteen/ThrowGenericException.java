@@ -5,7 +5,7 @@ import java.util.List;
 
 interface Processor<T, E extends Exception> {
 	/**
-	 * @Descirbe 声明抛出异常的泛型方法？
+	 * @Descirbe 澹版槑鎶涘嚭寮傚父鐨勬硾鍨嬫柟娉曪紵
 	 */
 	void process(List<T> resultCollector) throws E;
 }

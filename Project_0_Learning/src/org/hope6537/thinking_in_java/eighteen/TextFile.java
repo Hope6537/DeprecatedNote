@@ -10,9 +10,9 @@ import java.util.Arrays;
 import java.util.TreeSet;
 
 /**
- * @describe ¶ÁĞ´ÎÄ¼şµÄ¹¤¾ßÀà
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÉÏÎç10:19:51
+ * @describe è¯»å†™æ–‡ä»¶çš„å·¥å…·ç±»
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸Šåˆ10:19:51
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -21,18 +21,18 @@ public class TextFile extends ArrayList<String> {
 	private static final long serialVersionUID = -7716867579398514830L;
 
 	/**
-	 * @descirbe »ñµÃÎÄ¼şµÄ×Ö·û´®
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe è·å¾—æ–‡ä»¶çš„å­—ç¬¦ä¸²
+	 * @author Hope6537(èµµé¹)
 	 * @param filename
 	 * @return
-	 * @signDate 2014Äê7ÔÂ24ÈÕÉÏÎç10:20:01
+	 * @signDate 2014å¹´7æœˆ24æ—¥ä¸Šåˆ10:20:01
 	 * @version 0.9
 	 */
 	public static String read(String filename) {
-		// ×é½¨×Ö·û´®
+		// ç»„å»ºå­—ç¬¦ä¸²
 		StringBuilder sBuilder = new StringBuilder();
 		try {
-			// »º³åÇø¶ÁÈë
+			// ç¼“å†²åŒºè¯»å…¥
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(
 					new File(filename).getAbsoluteFile()));
 			try {
@@ -42,58 +42,58 @@ public class TextFile extends ArrayList<String> {
 					sBuilder.append("\n");
 				}
 			} finally {
-				// Òª·ÀÖ¹ÒâÍâÕıÈ·¹Ø±Õ
+				// è¦é˜²æ­¢æ„å¤–æ­£ç¡®å…³é—­
 				bufferedReader.close();
 			}
 		} catch (IOException e) {
-			System.err.println("===¶ÁÈ¡ÎÄ¼şÒì³£===");
+			System.err.println("===è¯»å–æ–‡ä»¶å¼‚å¸¸===");
 			e.printStackTrace();
 		}
-		// ×îºó·µ»Ø×Ö·û´®
+		// æœ€åè¿”å›å­—ç¬¦ä¸²
 		return sBuilder.toString();
 	}
 
 	/**
-	 * @descirbe ½«×Ö·û´®Ğ´ÈëÎÄ¼ş
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe å°†å­—ç¬¦ä¸²å†™å…¥æ–‡ä»¶
+	 * @author Hope6537(èµµé¹)
 	 * @param filename
 	 * @param text
 	 * @return
-	 * @signDate 2014Äê7ÔÂ24ÈÕÉÏÎç10:20:46
+	 * @signDate 2014å¹´7æœˆ24æ—¥ä¸Šåˆ10:20:46
 	 * @version 0.9
 	 */
 	public static boolean write(String filename, String text) {
 		boolean status = true;
 		try {
-			// ±ê×¼Êä³öÁ÷
+			// æ ‡å‡†è¾“å‡ºæµ
 			PrintWriter out = new PrintWriter(
 					new File(filename).getAbsoluteFile());
 			try {
-				// Öğ¸ö×Ö·û´®Ğ´Èë
+				// é€ä¸ªå­—ç¬¦ä¸²å†™å…¥
 				out.write(text);
 			} finally {
 				out.close();
 			}
 		} catch (IOException e) {
 			status = false;
-			System.out.println("===Ğ´ÈëÎÄ¼şÊ§°Ü===");
+			System.out.println("===å†™å…¥æ–‡ä»¶å¤±è´¥===");
 			e.printStackTrace();
 		}
 		return status;
 	}
 
 	/**
-	 * @describe ¹¹Ôì·½·¨ÖØĞ´
-	 * @author Hope6537(ÕÔÅô)
+	 * @describe æ„é€ æ–¹æ³•é‡å†™
+	 * @author Hope6537(èµµé¹)
 	 * @param filename
-	 *            ¶¨ÒåÎÄ¼şÃû³Æ
+	 *            å®šä¹‰æ–‡ä»¶åç§°
 	 * @param splitter
-	 *            ¶¨Òå·Ö¸îºÅÃû³Æ
+	 *            å®šä¹‰åˆ†å‰²å·åç§°
 	 */
 	public TextFile(String filename, String splitter) {
 		super(Arrays.asList(read(filename).split(splitter)));
-		// ½ô½Ó×ÅÎÒÃÇµÃµ½ÁËÒ»¸ö°´ÕÕ·Ö¸î·ûÅÅÁĞµÄArrayList Í¨¹ıget(index)¼´¿Éµ÷ÓÃ
-		// Ïû³ıµÚÒ»¸ö¿Õ°×ĞĞ
+		// ç´§æ¥ç€æˆ‘ä»¬å¾—åˆ°äº†ä¸€ä¸ªæŒ‰ç…§åˆ†å‰²ç¬¦æ’åˆ—çš„ArrayList é€šè¿‡get(index)å³å¯è°ƒç”¨
+		// æ¶ˆé™¤ç¬¬ä¸€ä¸ªç©ºç™½è¡Œ
 		if (get(0).equals("")) {
 			remove(0);
 		}
@@ -105,10 +105,10 @@ public class TextFile extends ArrayList<String> {
 	}
 
 	/**
-	 * @descirbe ½«³ÖÓĞµÄArrayListĞ´Èëµ½ÎÄ¼şÖĞÈ¥ Ïàµ±ÓÚ¸´ÖÆÕ³Ìù
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe å°†æŒæœ‰çš„ArrayListå†™å…¥åˆ°æ–‡ä»¶ä¸­å» ç›¸å½“äºå¤åˆ¶ç²˜è´´
+	 * @author Hope6537(èµµé¹)
 	 * @param filename
-	 * @signDate 2014Äê7ÔÂ24ÈÕÉÏÎç10:23:09
+	 * @signDate 2014å¹´7æœˆ24æ—¥ä¸Šåˆ10:23:09
 	 * @version 0.9
 	 */
 	public void write(String filename) {
@@ -116,7 +116,7 @@ public class TextFile extends ArrayList<String> {
 			PrintWriter out = new PrintWriter(
 					new File(filename).getAbsoluteFile());
 			try {
-				// Õ{ÓÃ±¾ÉíArrayListµÄµü´úÆ÷
+				// èª¿ç”¨æœ¬èº«ArrayListçš„è¿­ä»£å™¨
 				for (String item : this) {
 					out.println(item);
 				}
@@ -125,7 +125,7 @@ public class TextFile extends ArrayList<String> {
 				out.close();
 			}
 		} catch (IOException e) {
-			System.out.println("===Ğ´ÈëÎÄ¼şÊ§°Ü===");
+			System.out.println("===å†™å…¥æ–‡ä»¶å¤±è´¥===");
 			e.printStackTrace();
 		}
 	}

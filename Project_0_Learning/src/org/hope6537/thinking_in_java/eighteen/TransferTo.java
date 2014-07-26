@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.nio.channels.FileChannel;
 
 /**
- * @describe Í¨µÀÏàÁ¬
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç5:15:51
+ * @describe é€šé“ç›¸è¿
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ5:15:51
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -24,9 +24,9 @@ public class TransferTo {
 				args[1]).getChannel();
 
 		in.transferTo(0, in.size(), out);
-		// ½Ó×ÅÊÇ
+		// æ¥ç€æ˜¯
 		out.transferFrom(in, 0, in.size());
-		// Á½Õß½Ô¿É
+		// ä¸¤è€…çš†å¯
 	}
 
 }

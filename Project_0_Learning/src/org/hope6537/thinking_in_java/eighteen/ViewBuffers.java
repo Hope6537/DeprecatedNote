@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.eighteen;
 import java.nio.*;
 
 /**
- * @describe Ò•ˆD¾ĞnÆ÷ŒÀı
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç7:37:39
+ * @describe è¦–åœ–ç·©è¡å™¨å¯¦ä¾‹
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ7:37:39
  * @version 0.9
  * @company Changchun University&SHXT
  */

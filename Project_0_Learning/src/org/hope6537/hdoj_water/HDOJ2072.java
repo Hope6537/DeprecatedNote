@@ -3,9 +3,9 @@ package org.hope6537.hdoj_water;
 import java.util.Scanner;
 
 /**
- * @Describe ÖÁ½ñWA
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-18ÏÂÎç10:14:16
+ * @Describe è‡³ä»ŠWA
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-18ä¸‹åˆ10:14:16
  * @version 0.9
  * @company Changchun University&SHXT
  */

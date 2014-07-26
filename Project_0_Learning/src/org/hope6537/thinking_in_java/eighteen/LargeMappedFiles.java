@@ -5,9 +5,9 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
- * @describe Ä£Äâ´óÎÄ¼ş¶ÁĞ´
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç8:15:42
+ * @describe æ¨¡æ‹Ÿå¤§æ–‡ä»¶è¯»å†™
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ8:15:42
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -17,8 +17,8 @@ public class LargeMappedFiles {
 
 	public static void main(String[] args) throws Exception {
 		String filename = "G:\\Data.dat";
-		// ÕâÊÇÔÚRandomAccessFile»ñµÃÎÄ¼şÉÏµÄÍ¨µÀ£¬È»ºóµ÷ÓÃmapµÄMappedByteBuffer,ÕâÊÇÒ»ÖÖÌØÊâÀàĞÍµÄÖ±½Ó»º³åÆ÷
-		// Ö¸¶¨Ó³ÉäÎÄ¼şµÄ³õÊ¼Î»ÖÃºÍ³¤¶È£¬ÔòÎÒÃÇ¿ÉÒÔ»ñµÃ¸ÃÎÄ¼şÖĞÎÒÃÇÏëÒªµÄ½ÏĞ¡µÄÒ»²¿·Ö
+		// è¿™æ˜¯åœ¨RandomAccessFileè·å¾—æ–‡ä»¶ä¸Šçš„é€šé“ï¼Œç„¶åè°ƒç”¨mapçš„MappedByteBuffer,è¿™æ˜¯ä¸€ç§ç‰¹æ®Šç±»å‹çš„ç›´æ¥ç¼“å†²å™¨
+		// æŒ‡å®šæ˜ å°„æ–‡ä»¶çš„åˆå§‹ä½ç½®å’Œé•¿åº¦ï¼Œåˆ™æˆ‘ä»¬å¯ä»¥è·å¾—è¯¥æ–‡ä»¶ä¸­æˆ‘ä»¬æƒ³è¦çš„è¾ƒå°çš„ä¸€éƒ¨åˆ†
 		MappedByteBuffer out = new RandomAccessFile(filename, "rw")
 				.getChannel().map(FileChannel.MapMode.READ_WRITE, 0, length);
 		for (int i = 0; i < length; i++) {

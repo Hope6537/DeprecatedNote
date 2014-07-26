@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @describe Ò»¸ö½Ó¿Ú£¬ÓÃÓÚµ±×ö»ùÀàÀ´²Ù×÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç01:59:41
+ * @describe ä¸€ä¸ªæ¥å£ï¼Œç”¨äºå½“åšåŸºç±»æ¥æ“ä½œ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ01:59:41
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -18,9 +18,9 @@ interface Interface {
 }
 
 /**
- * @describe ÊµÌåÀà£¬ÕæÕıÊµÏÖÒµÎñµÄÀà
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:00:08
+ * @describe å®ä½“ç±»ï¼ŒçœŸæ­£å®ç°ä¸šåŠ¡çš„ç±»
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:00:08
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -37,9 +37,9 @@ class RealObject implements Interface {
 }
 
 /**
- * @describe ¾²Ì¬´úÀíÀà£¬ÓÃÓÚÊµÏÖ¶îÍâµÄ²»Í¬µÄ²Ù×÷£¬ÀıÈç×·×Ù
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:00:23
+ * @describe é™æ€ä»£ç†ç±»ï¼Œç”¨äºå®ç°é¢å¤–çš„ä¸åŒçš„æ“ä½œï¼Œä¾‹å¦‚è¿½è¸ª
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:00:23
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -64,9 +64,9 @@ class SimpleProxy implements Interface {
 }
 
 /**
- * @describe Ö÷·½·¨Àà
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:01:23
+ * @describe ä¸»æ–¹æ³•ç±»
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:01:23
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -83,9 +83,9 @@ class ProxyDemo {
 }
 
 /**
- * @describe ¶¯Ì¬´úÀíÀà
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:01:31
+ * @describe åŠ¨æ€ä»£ç†ç±»
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:01:31
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -97,35 +97,35 @@ class DynamicProxyHander implements InvocationHandler {
 	}
 
 	/*
-	 * (non-Javadoc) ÊµÏÖ´úÀíµÄ·´Éä·½·¨
+	 * (non-Javadoc) å®ç°ä»£ç†çš„åå°„æ–¹æ³•
 	 * 
 	 * @see java.lang.reflect.InvocationHandler#invoke(java.lang.Object,
 	 * java.lang.reflect.Method, java.lang.Object[])
 	 * 
-	 * @author:Hope6537(ÕÔÅô)
+	 * @author:Hope6537(èµµé¹)
 	 */
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
-		// »ñÈ¡µ½Àà£¬·½·¨ºÍ²ÎÊı
+		// è·å–åˆ°ç±»ï¼Œæ–¹æ³•å’Œå‚æ•°
 		System.out.println("----Proxying : " + proxy.getClass() + " , Method: "
 				+ method + " ,args: " + args);
-		// Èç¹ûÓĞ²ÎÊı½øĞĞÊä³ö
+		// å¦‚æœæœ‰å‚æ•°è¿›è¡Œè¾“å‡º
 		if (args != null) {
 			for (Object arg : args) {
 				System.out.println("--:" + arg);
 			}
 		}
-		// ×îºó·µ»Ø·½·¨²¢µ÷ÓÃ
+		// æœ€åè¿”å›æ–¹æ³•å¹¶è°ƒç”¨
 		return method.invoke(proxyed, args);
 
 	}
 }
 
 /**
- * @describe ·½·¨Ñ¡ÔñÆ÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:17:52
+ * @describe æ–¹æ³•é€‰æ‹©å™¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:17:52
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -142,7 +142,7 @@ class MethodSelector implements InvocationHandler {
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
-		//Ñ¡ÔñºÍwonderÏàÍ¬µÄ·½·¨Ãû³ÆµÄ·½·¨£¬½øĞĞ²Ù×÷
+		//é€‰æ‹©å’Œwonderç›¸åŒçš„æ–¹æ³•åç§°çš„æ–¹æ³•ï¼Œè¿›è¡Œæ“ä½œ
 		if (method.getName().equals(wonder)) {
 			System.out.println("Confirm");
 		}
@@ -152,9 +152,9 @@ class MethodSelector implements InvocationHandler {
 }
 
 /**
- * @describe ÊµÏÖÀà£¬¶¯Ì¬´úÀí
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-17ÏÂÎç02:03:16
+ * @describe å®ç°ç±»ï¼ŒåŠ¨æ€ä»£ç†
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-17ä¸‹åˆ02:03:16
  * @version 0.9
  * @company Changchun University&SHXT
  */

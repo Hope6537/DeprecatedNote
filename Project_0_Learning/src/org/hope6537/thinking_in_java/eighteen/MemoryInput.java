@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.io.StringReader;
 
 /**
- * @describe ´ÓÄÚ´æÊäÈë
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç6:00:23
+ * @describe ä»å†…å­˜è¾“å…¥
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ6:00:23
  * @version 0.9
  * @company Changchun University&SHXT
  */

@@ -5,9 +5,9 @@ import java.util.Iterator;
 import java.util.SortedMap;
 
 /**
- * @describe ±àÂë¼¯
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç5:44:10
+ * @describe ç¼–ç é›†
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ5:44:10
  * @version 0.9
  * @company Changchun University&SHXT
  */

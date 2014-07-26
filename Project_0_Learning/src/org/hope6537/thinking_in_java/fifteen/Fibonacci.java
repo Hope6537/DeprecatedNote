@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe Ê¹ÓÃÉú³ÉÆ÷Éú³Éì³²¨ÄÇÆõÊıÁĞ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:55:10
+ * @Describe ä½¿ç”¨ç”Ÿæˆå™¨ç”Ÿæˆæ–æ³¢é‚£å¥‘æ•°åˆ—
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:55:10
  * @version 0.9
  * @company Changchun University&SHXT
  */

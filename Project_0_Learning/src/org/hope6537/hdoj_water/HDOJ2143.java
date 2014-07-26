@@ -16,7 +16,7 @@ public class HDOJ2143 {
 						continue;
 					int k = 3 - i - j;
 					/*
-					 * 加法和减法重复，加法会超Int范围 乘除同理 除法/表示整除
+					 * 鍔犳硶鍜屽噺娉曢噸澶嶏紝鍔犳硶浼氳秴Int鑼冨洿 涔橀櫎鍚岀悊 闄ゆ硶/琛ㄧず鏁撮櫎
 					 */
 					if (a[i] - a[j] == a[k]
 							|| (a[j] != 0 && a[i] / a[j] == a[k] && a[i] % a[j] == 0)

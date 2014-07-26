@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 /**
  * @Describe HDOJ2056
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-4-17下午9:14:28
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-4-17涓嬪崍9:14:28
  * @version 0.9
  * @company Changchun University
  */
@@ -26,8 +26,8 @@ public class HDOJ2056 {
 
 		@Override
 		public String toString() {
-			return "Rectangles [较小的x=" + x1 + ", 较大的x=" + x2 + ", 较小的y=" + y1
-					+ ", 较大的y=" + y2 + "]";
+			return "Rectangles [杈冨皬鐨剎=" + x1 + ", 杈冨ぇ鐨剎=" + x2 + ", 杈冨皬鐨剏=" + y1
+					+ ", 杈冨ぇ鐨剏=" + y2 + "]";
 		}
 		
 	}

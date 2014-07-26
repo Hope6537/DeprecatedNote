@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class HDOJ2568 {
 
 	/*
-	 * ½£ÕÐA£¬Ò»ÕÐÄÜÉ±ËÀÒ»°ëµÄòùòð¡£ µ«ÊÇÈç¹ûµ±Ç°µÄòùòðÊýÎªÆæÊý£¬ÄÇÃ´¾Í±ØÐëÏÈ³öÒ»ÕÐ½£ÕÐBÉ±ËÀÆäÖÐÈÎÒâÒ»¸ö£¬Ê¹òùòðÊýÎªÅ¼Êý£¬ÔÙ³ö½£ÕÐA¡£
+	 * å‰‘æ‹›Aï¼Œä¸€æ‹›èƒ½æ€æ­»ä¸€åŠçš„è™è ã€‚ ä½†æ˜¯å¦‚æžœå½“å‰çš„è™è æ•°ä¸ºå¥‡æ•°ï¼Œé‚£ä¹ˆå°±å¿…é¡»å…ˆå‡ºä¸€æ‹›å‰‘æ‹›Bæ€æ­»å…¶ä¸­ä»»æ„ä¸€ä¸ªï¼Œä½¿è™è æ•°ä¸ºå¶æ•°ï¼Œå†å‡ºå‰‘æ‹›Aã€‚
 	 */
 
 	static Scanner s = new Scanner(System.in);

@@ -11,13 +11,13 @@ public class SleepingTask extends LiftOff {
 		try {
 			while (countDown-- > 0) {
 				System.out.println(status());
-				// ÀÏ°æÐÝÃß
+				// è€ç‰ˆä¼‘çœ 
 				// Thread.sleep(100);
-				// ÕýÊÇÕâ¶ÎÐÝÃßµÄÊÂ¼þËùÒÔÊ¹µÃÊÂ¼þÄÜ¹»ÓÐÐòµÄ½øÐÐ
+				// æ­£æ˜¯è¿™æ®µä¼‘çœ çš„äº‹ä»¶æ‰€ä»¥ä½¿å¾—äº‹ä»¶èƒ½å¤Ÿæœ‰åºçš„è¿›è¡Œ
 				TimeUnit.MILLISECONDS.sleep(100);
 			}
 		} catch (Exception e) {
-			//Òì³£ÎÞ·¨¿çÏß³Ì´«µÝ ËùÒÔÐèÒª¸÷¸öµ¥Î»×Ô¼º½â¾ö
+			//å¼‚å¸¸æ— æ³•è·¨çº¿ç¨‹ä¼ é€’ æ‰€ä»¥éœ€è¦å„ä¸ªå•ä½è‡ªå·±è§£å†³
 			System.out.println("Crashed!");
 		}
 	}

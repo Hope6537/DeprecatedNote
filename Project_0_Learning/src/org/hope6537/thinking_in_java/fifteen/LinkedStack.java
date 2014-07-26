@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe Á´Ê½Õ»
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:10:59
+ * @Describe é“¾å¼æ ˆ
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:10:59
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -30,7 +30,7 @@ public class LinkedStack<T> {
 		}
 	}
 
-	private Node<T> top = new Node<T>();// Ä©¶ËÉÚ±ø
+	private Node<T> top = new Node<T>();// æœ«ç«¯å“¨å…µ
 
 	public void push(T item) {
 		top = new Node<T>(item, top);

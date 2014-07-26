@@ -5,9 +5,9 @@ import java.io.DataInputStream;
 import java.io.IOException;
 
 /**
- * @describe ¸ñÊ½»¯µÄÄÚ´æÊäÈë
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç6:01:11
+ * @describe æ ¼å¼åŒ–çš„å†…å­˜è¾“å…¥
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ6:01:11
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -18,7 +18,7 @@ public class FormattedMemoryInput {
 			String path = "E:\\(WorkSpace04)GitHub\\Project_00_Learning\\Project_0_Learning\\src\\org\\hope6537\\thinking_in_java\\eighteen\\FormattedMemoryInput.java";
 			DataInputStream in = new DataInputStream(new ByteArrayInputStream(
 					BufferedInputFile.read(path).getBytes()));
-			while (in.available() != 0/* true */) {//Á½ÖÖ·½·¨ÅĞ¶¨ÊÇ·ñ½áÊø£¬Ò»ÖÖÖ±½Óµ÷ÓÃ£¬ÁíÒ»ÖÖ¿¿Òì³£²¶»ñ
+			while (in.available() != 0/* true */) {//ä¸¤ç§æ–¹æ³•åˆ¤å®šæ˜¯å¦ç»“æŸï¼Œä¸€ç§ç›´æ¥è°ƒç”¨ï¼Œå¦ä¸€ç§é å¼‚å¸¸æ•è·
 				System.out.print((char) in.readByte());
 			}
 		} catch (Exception e) {

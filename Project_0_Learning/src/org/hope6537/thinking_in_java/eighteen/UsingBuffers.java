@@ -4,9 +4,9 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 
 /**
- * @describe Í¨¹ıByteBuffer»º³åÆ÷½øĞĞ×Ö·û½»»»
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç8:05:05
+ * @describe é€šè¿‡ByteBufferç¼“å†²å™¨è¿›è¡Œå­—ç¬¦äº¤æ¢
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ8:05:05
  * @version 0.9
  * @company Changchun University&SHXT
  */

@@ -22,13 +22,13 @@ public class GetData {
 			System.out.print(c + " ");
 		}
 		System.out.println();
-		// Ã¿Ò»´ÎµÄrewind¶¼ÊÇ·µ»Øµ½Êı¾İ¿ªÊ¼²¿·Ö
+		// æ¯ä¸€æ¬¡çš„rewindéƒ½æ˜¯è¿”å›åˆ°æ•°æ®å¼€å§‹éƒ¨åˆ†
 		buffer.rewind();
 		buffer.asShortBuffer().put((short) 1234);
 		System.out.println(buffer.getShort());
 		buffer.rewind();
-		// ÏÂÃæµÄ¾Í²»²âÊÔÁË asClassBuffer().put(Class value);
-		// È»ºó¾ÍÊÇ .getClass() ×îºórewind
+		// ä¸‹é¢çš„å°±ä¸æµ‹è¯•äº† asClassBuffer().put(Class value);
+		// ç„¶åå°±æ˜¯ .getClass() æœ€årewind
 		
 	}
 }

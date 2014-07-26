@@ -16,7 +16,7 @@ public class HDOJ1049 {
             }
             int min = 0;
             while(n>0){
-                if(min % 2 == 0){//童鞋 你该爬起来了
+                if(min % 2 == 0){//绔ラ瀷 浣犺鐖捣鏉ヤ簡
                     n = n - u;
                     min++;
                 }

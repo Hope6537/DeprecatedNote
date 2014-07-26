@@ -6,13 +6,13 @@ import java.util.Set;
 public class Sets {
 
 	/**
-	 * @Descirbe ¼¯ºÏµÄ²¢²Ù×÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é›†åˆçš„å¹¶æ“ä½œ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <T>
 	 * @Params @param a
 	 * @Params @param b
 	 * @Params @return
-	 * @SignDate 2014-7-19ÏÂÎç02:21:41
+	 * @SignDate 2014-7-19ä¸‹åˆ02:21:41
 	 * @Version 0.9
 	 */
 	public static <T> Set<T> union(Set<T> a, Set<T> b) {
@@ -21,13 +21,13 @@ public class Sets {
 		return result;
 	}
 	/**
-	 * @Descirbe ¼¯ºÏµÄ½»²Ù×÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é›†åˆçš„äº¤æ“ä½œ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <T>
 	 * @Params @param a
 	 * @Params @param b
 	 * @Params @return
-	 * @SignDate 2014-7-19ÏÂÎç02:22:25
+	 * @SignDate 2014-7-19ä¸‹åˆ02:22:25
 	 * @Version 0.9
 	 */
 	public static <T> Set<T> intersection(Set<T> a, Set<T> b) {
@@ -37,13 +37,13 @@ public class Sets {
 	} 
 	
 	/**
-	 * @Descirbe ¼¯ºÏµÄ²î²Ù×÷
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe é›†åˆçš„å·®æ“ä½œ
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <T>
 	 * @Params @param superset
 	 * @Params @param subset
 	 * @Params @return
-	 * @SignDate 2014-7-19ÏÂÎç02:23:08
+	 * @SignDate 2014-7-19ä¸‹åˆ02:23:08
 	 * @Version 0.9
 	 */
 	public static <T> Set<T> difference(Set<T> superset, Set<T> subset) {
@@ -53,13 +53,13 @@ public class Sets {
 	} 
 	
 	/**
-	 * @Descirbe ·µ»Ø³ıÁË½»¼¯Ö®ÍâµÄËùÓĞÔªËØ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Descirbe è¿”å›é™¤äº†äº¤é›†ä¹‹å¤–çš„æ‰€æœ‰å…ƒç´ 
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param <T>
 	 * @Params @param a
 	 * @Params @param b
 	 * @Params @return
-	 * @SignDate 2014-7-19ÏÂÎç02:23:53
+	 * @SignDate 2014-7-19ä¸‹åˆ02:23:53
 	 * @Version 0.9
 	 */
 	public static <T> Set<T> complement(Set<T> a, Set<T> b) {

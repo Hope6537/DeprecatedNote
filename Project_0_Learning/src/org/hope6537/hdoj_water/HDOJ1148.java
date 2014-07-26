@@ -54,30 +54,30 @@ public class HDOJ1148 {
 				System.out.println();
 			}
 			flag = 1;
-			int n = s.nextInt(); // nÎ»Ñ¡ÊÖ²Î¼Ók³¡
+			int n = s.nextInt(); // nä½é€‰æ‰‹å‚åŠ kåœº
 			if (n == 0) {
 				flag = 0;
 				break;
 
 			}
-			int k = s.nextInt(); // k³¡±ÈÈü
+			int k = s.nextInt(); // kåœºæ¯”èµ›
 			int matchs = (k * n * (n - 1)) / 2;
 			User user[] = new User[n + 1];
 			for (int i = 1; i <= n; i++) {
 				user[i] = new User(i, matchs);
 			}
 			for (int i = 0; i < matchs; i++) {
-				// Ã¿³¡±ÈÈü
+				// æ¯åœºæ¯”èµ›
 				int[] no = new int[2];
-				// Á½¸öÑ¡ÊÖµÄ±àºÅ
+				// ä¸¤ä¸ªé€‰æ‰‹çš„ç¼–å·
 				for (int k1 = 0; k1 < 2; k1++) {
-					// Êı¾İµÄÊäÈë
+					// æ•°æ®çš„è¾“å…¥
 					int number = s.nextInt();
 					String what = s.next();
 					no[k1] = number;
 					user[number].what = what;
 				}
-				// ¿ªÊ¼±È½Ï
+				// å¼€å§‹æ¯”è¾ƒ
 				String a = user[no[0]].what;
 				String b = user[no[1]].what;
 				char res = compare(a, b);
@@ -91,7 +91,7 @@ public class HDOJ1148 {
 					;
 				}
 			}
-			// ±ÈÈü½áÊø ¿ªÊ¼Í³¼ÆÊ¤ÂÊ
+			// æ¯”èµ›ç»“æŸ å¼€å§‹ç»Ÿè®¡èƒœç‡
 			for (int i = 1; i <= n; i++) {
 				User u = user[i];
 				if (u.wins + u.loses == 0) {
@@ -100,7 +100,7 @@ public class HDOJ1148 {
 					u.avg = (u.wins) / ((u.wins) * 1.0 + u.loses);
 				}
 			}
-			// Ê¤ÂÊÍ³¼ÆÍê±Ï
+			// èƒœç‡ç»Ÿè®¡å®Œæ¯•
 			for (int i = 1; i <= n; i++) {
 				User u = user[i];
 				if (u.avg == -1) {

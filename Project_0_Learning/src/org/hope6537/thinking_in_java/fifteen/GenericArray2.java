@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe 泛型数组实验2
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-7-19下午03:41:46
+ * @Describe 娉涘瀷鏁扮粍瀹為獙2
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-7-19涓嬪崍03:41:46
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -38,7 +38,7 @@ public class GenericArray2<T> {
 		}
 		System.out.println();
 		try{
-			//但是还是会在预期产生异常
+			//浣嗘槸杩樻槸浼氬湪棰勬湡浜х敓寮傚父
 			Integer [] ia = gai.rep();
 		}catch (Exception e) {
 			e.printStackTrace();

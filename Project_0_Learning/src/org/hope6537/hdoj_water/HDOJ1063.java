@@ -16,7 +16,7 @@ public class HDOJ1063 {
 			if (c.toPlainString().contains(".") == false) {
 				System.out.println(c);
 			} else {
-				// ¶ÔÓÚË÷ÒıxºÍy ´ÓÍ·²¿ºÍÎ²²¿¿ªÊ¼±éÀú
+				// å¯¹äºç´¢å¼•xå’Œy ä»å¤´éƒ¨å’Œå°¾éƒ¨å¼€å§‹éå†
 				int x = 0;
 				int y = str.length() - 1;
 				while (str.charAt(x) == '0') {

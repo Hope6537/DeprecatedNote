@@ -14,7 +14,7 @@ public class HDOJ2035 {
 			}
 			int i,s=n;
 			for(i=0;i<m-1;i++)
-	     		s=s*n%1000; // 10000时是四位
+	     		s=s*n%1000; // 10000鏃舵槸鍥涗綅
 			System.out.println(s);
 		}
 	}

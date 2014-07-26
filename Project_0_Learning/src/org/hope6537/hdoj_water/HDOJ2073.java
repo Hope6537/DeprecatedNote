@@ -4,9 +4,9 @@ package org.hope6537.hdoj_water;
 import java.util.Scanner;
 
 /**
- * @Describe ÎŞ¾¡µÄÂ· ´ò±í·¨AC
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-5-6ÏÂÎç11:43:51
+ * @Describe æ— å°½çš„è·¯ æ‰“è¡¨æ³•AC
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-5-6ä¸‹åˆ11:43:51
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -15,32 +15,32 @@ public class HDOJ2073 {
     static Scanner s = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //¸ÃÊı×éa[x][y]¼ÇÂ¼µÄÊÇÔ­µãµ½x,y½ÚµãµÄ³¤¶È
-        //i = 2 * x + y + 1 ; ¼´0,0ÎªµÚÒ»¸ö½Úµã È¨ÖµÎª0
+        //è¯¥æ•°ç»„a[x][y]è®°å½•çš„æ˜¯åŸç‚¹åˆ°x,yèŠ‚ç‚¹çš„é•¿åº¦
+        //i = 2 * x + y + 1 ; å³0,0ä¸ºç¬¬ä¸€ä¸ªèŠ‚ç‚¹ æƒå€¼ä¸º0
         double [][] map = new double [1005][1005];
-        //´ÓÔ­µãµ½i-1µãµÄÈ¨ÖµÖ®ºÍ
+        //ä»åŸç‚¹åˆ°i-1ç‚¹çš„æƒå€¼ä¹‹å’Œ
         double longs = 0;
-        //¶ÔÓÚµÚxĞĞÔªËØÀ´Ëµ
+        //å¯¹äºç¬¬xè¡Œå…ƒç´ æ¥è¯´
         for(int x = 0  ; x <= 1000 ; x++){
-        	//È»ºó¸ù¾İ¶Ô½ÇÏßÔ­Ôò½øĞĞ±éÀú
+        	//ç„¶åæ ¹æ®å¯¹è§’çº¿åŸåˆ™è¿›è¡Œéå†
             for(int i = 0 , j = x ; j>=0 ; i++ , j--){
-                //ÕâÊÇ´Ó1,i µ½ i,0 µÄ³¤¶È¼ÆËã
+                //è¿™æ˜¯ä»1,i åˆ° i,0 çš„é•¿åº¦è®¡ç®—
                 double res = 0;
                 if(i == 0 && j == 0){
                     res = 0;
                 }
-                //¼ÆËã³ö·ÇÍ¬ÁĞµãÖ®¼äµÄÎ»²î
+                //è®¡ç®—å‡ºéåŒåˆ—ç‚¹ä¹‹é—´çš„ä½å·®
                 else if(i == 0 && j!=0 ){
                     double cau = Math.hypot(x, (x-1)) ;
                     res = cau + longs ;
                 }
-                //¼ÆËã³öÍ¬ÁĞµãÖ®¼äµÄÎ»²î
+                //è®¡ç®—å‡ºåŒåˆ—ç‚¹ä¹‹é—´çš„ä½å·®
                 else{
                     double cau = Math.hypot(x, x);
                     double fenmu = ((x)<=0?1:(x)) * 1.0;
                     res = (cau/fenmu)  + longs ;
                 }
-                //¸³Öµ²¢¸üĞÂ
+                //èµ‹å€¼å¹¶æ›´æ–°
                 map[i][j] = res;
                 longs = map[i][j];
             }

@@ -8,8 +8,8 @@ public class HDOJ2015 {
 
 	public static void main(String[] args) {
 		while (s.hasNext()) {
-			int n = s.nextInt(); // 长度
-			int m = s.nextInt(); // 条约
+			int n = s.nextInt(); // 闀垮害
+			int m = s.nextInt(); // 鏉＄害
 			int[] a = new int[n];
 			for (int i = 0; i < n; i++) {
 				a[i] = (i + 1) * 2;

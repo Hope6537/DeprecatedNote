@@ -17,9 +17,9 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 /**
- * @describe 享元设计模式
- * @author Hope6537(赵鹏)
- * @signdate 2014-7-22下午04:21:32
+ * @describe 浜厓璁捐妯″紡
+ * @author Hope6537(璧甸箯)
+ * @signdate 2014-7-22涓嬪崍04:21:32
  * @version 0.9
  * @company Changchun University&SHXT
  */

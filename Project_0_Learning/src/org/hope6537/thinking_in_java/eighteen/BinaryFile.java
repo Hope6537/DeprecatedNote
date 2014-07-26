@@ -6,9 +6,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * @describe 读取二进制文件
- * @author Hope6537(赵鹏)
- * @signdate 2014年7月24日上午10:28:32
+ * @describe 璇诲彇浜岃繘鍒舵枃浠�
+ * @author Hope6537(璧甸箯)
+ * @signdate 2014骞�鏈�4鏃ヤ笂鍗�0:28:32
  * @version 0.9
  * @company Changchun University&SHXT
  */

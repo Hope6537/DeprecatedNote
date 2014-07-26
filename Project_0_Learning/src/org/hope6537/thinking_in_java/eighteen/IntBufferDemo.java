@@ -4,9 +4,9 @@ import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
 
 /**
- * @describe ÊÓÍ¼»º³åÆ÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç7:33:01
+ * @describe è§†å›¾ç¼“å†²å™¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ7:33:01
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -17,7 +17,7 @@ public class IntBufferDemo {
 	public static void main(String[] args) {
 
 		ByteBuffer bb = ByteBuffer.allocate(BSIZE);
-		IntBuffer ib = bb.asIntBuffer();//Ê¹ÓÃ»º³åµÄIntÊÓÍ¼À´È·¶¨intÊı¾İ
+		IntBuffer ib = bb.asIntBuffer();//ä½¿ç”¨ç¼“å†²çš„Intè§†å›¾æ¥ç¡®å®šintæ•°æ®
 		ib.put(new int[] { 11, 42, 33, 55, 77, 99, 97 });
 		System.out.println(ib.get(3));
 		ib.put(3, 1444);

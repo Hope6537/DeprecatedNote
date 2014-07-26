@@ -13,7 +13,7 @@ public class HDOJ2500{
             int n = s.nextInt();
             while(n-->0){
                 int l = s.nextInt();
-                for(int i = 0 ; i < 3*l ; i++){//ÕâÊÇÁÐ
+                for(int i = 0 ; i < 3*l ; i++){//è¿™æ˜¯åˆ—
                     for(int j = 0 ; j < l ; j++){
                         System.out.print(str);
                     }

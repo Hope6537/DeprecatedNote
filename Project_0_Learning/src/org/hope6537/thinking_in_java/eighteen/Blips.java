@@ -4,8 +4,8 @@ import java.io.*;
 
 class Blip1 implements Externalizable {
 	/**
-	 * @describe ×¢Òâ ËùÓĞµÄ[Ä¬ÈÏ]¹¹ÔìÆ÷¶¼»á±»µ÷ÓÃ
-	 * @author Hope6537(ÕÔÅô)
+	 * @describe æ³¨æ„ æ‰€æœ‰çš„[é»˜è®¤]æ„é€ å™¨éƒ½ä¼šè¢«è°ƒç”¨
+	 * @author Hope6537(èµµé¹)
 	 */
 	public Blip1() {
 		System.out.println("Blip1 Constructor");
@@ -41,15 +41,15 @@ class Blip2 implements Externalizable {
 }
 
 /**
- * @describe ĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯ÊµÑé
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç4:06:30
+ * @describe åºåˆ—åŒ–å’Œååºåˆ—åŒ–å®éªŒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ4:06:30
  * @version 0.9
  * @company Changchun University&SHXT
  */
-// ×îºóÔÚĞ´Èë¹ı³ÌÖĞ Ã»ÓĞÎÊÌâ ¶¼ÊÇµ÷ÓÃÁËĞòÁĞ»¯Ğ´·¨ ¶øÔÚ»¹Ô­¹ı³ÌÖĞ 1µ÷ÓÃÁË¹¹ÔìÆ÷È»ºóÔÙµ÷ÓÃĞòÁĞ»¯½øĞĞĞ´Èë µ«ÊÇ2¾Í³öÏÖÁËÒì³£
-// ÒòÎªb1µÄ¹¹ÔìÆ÷ÊÇ¹«¹²µÄ ¶øb2µÄ²»ÊÇ
-// ºÍSerializable²»Í¬ £¬Externalizable»áµ÷ÓÃ¹¹Ôì·½·¨Ö®ºó ÔÙĞ´ÈëÊı¾İ
+// æœ€ååœ¨å†™å…¥è¿‡ç¨‹ä¸­ æ²¡æœ‰é—®é¢˜ éƒ½æ˜¯è°ƒç”¨äº†åºåˆ—åŒ–å†™æ³• è€Œåœ¨è¿˜åŸè¿‡ç¨‹ä¸­ 1è°ƒç”¨äº†æ„é€ å™¨ç„¶åå†è°ƒç”¨åºåˆ—åŒ–è¿›è¡Œå†™å…¥ ä½†æ˜¯2å°±å‡ºç°äº†å¼‚å¸¸
+// å› ä¸ºb1çš„æ„é€ å™¨æ˜¯å…¬å…±çš„ è€Œb2çš„ä¸æ˜¯
+// å’ŒSerializableä¸åŒ ï¼ŒExternalizableä¼šè°ƒç”¨æ„é€ æ–¹æ³•ä¹‹å å†å†™å…¥æ•°æ®
 public class Blips {
 	public static void main(String[] args) throws IOException,
 			ClassNotFoundException {
@@ -68,7 +68,7 @@ public class Blips {
 				"Blips.out"));
 		System.out.println("Recovering b1:");
 		b1 = (Blip1) in.readObject();
-		// ³öÏÖÒì³£
+		// å‡ºç°å¼‚å¸¸
 		// ! System.out.println("Recovering b2:");
 		// ! b2 = (Blip2)in.readObject();
 	}

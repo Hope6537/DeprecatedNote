@@ -7,9 +7,9 @@ class Vehicle {
 }
 
 /**
- * @Describe Ôª×éµÄÊ¹ÓÃ
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:05:51
+ * @Describe å…ƒç»„çš„ä½¿ç”¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:05:51
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -45,9 +45,9 @@ public class TupleTest {
 }
 
 /**
- * @Describe ÕâÊÇ¶¨ÒåÔª×éµÄÒ»ÖÖ·½·¨
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç12:57:01
+ * @Describe è¿™æ˜¯å®šä¹‰å…ƒç»„çš„ä¸€ç§æ–¹æ³•
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ12:57:01
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <A>

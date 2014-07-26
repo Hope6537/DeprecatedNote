@@ -6,9 +6,9 @@ import java.nio.channels.FileLock;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @describe ÎÄ¼ş¼ÓËø»úÖÆ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÉÏÎç10:33:20
+ * @describe æ–‡ä»¶åŠ é”æœºåˆ¶
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸Šåˆ10:33:20
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -21,7 +21,7 @@ public class FileLocking {
 		if (fl != null) {
 			System.out.println("Locked File");
 			TimeUnit.MILLISECONDS.sleep(10000);
-			//Ëø¶¨Ê±ºòĞŞ¸ÄÎÄ¼ş»á³öÏÖ[ÁíÒ»¸ö³ÌĞòÕıÔÚÊ¹ÓÃ´ËÎÄ¼ş£¬½ø³ÌÎŞ·¨·ÃÎÊ×ÖÑù]
+			//é”å®šæ—¶å€™ä¿®æ”¹æ–‡ä»¶ä¼šå‡ºç°[å¦ä¸€ä¸ªç¨‹åºæ­£åœ¨ä½¿ç”¨æ­¤æ–‡ä»¶ï¼Œè¿›ç¨‹æ— æ³•è®¿é—®å­—æ ·]
 			fl.release();
 			System.out.println("Released Lock");
 		}

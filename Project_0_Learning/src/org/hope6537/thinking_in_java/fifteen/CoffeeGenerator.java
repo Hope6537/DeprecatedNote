@@ -4,9 +4,9 @@ import java.util.Iterator;
 import java.util.Random;
 
 /**
- * @Describe Éú³ÉÆ÷
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç01:42:02
+ * @Describe ç”Ÿæˆå™¨
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ01:42:02
  * @version 0.9
  * @company Changchun University&SHXT
  */

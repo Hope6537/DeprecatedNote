@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.twenty_one;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @describe ºóÌ¨Ïß³ÌÊµÑé
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç9:58:15
+ * @describe åå°çº¿ç¨‹å®éªŒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ9:58:15
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -30,6 +30,6 @@ public class SimpleDaemons implements Runnable {
 		}
 		System.out.println("All Daemons Started");
 		TimeUnit.MILLISECONDS.sleep(2000);
-		//Ò»µ©Ë¯ÃßÊ±¼ä½áÊø£¬Ö÷Ïß³ÌÖÕÖ¹£¬ÄÇÃ´ºóÌ¨Ïß³ÌÒ²½«±»ÆÈÖÕÖ¹
+		//ä¸€æ—¦ç¡çœ æ—¶é—´ç»“æŸï¼Œä¸»çº¿ç¨‹ç»ˆæ­¢ï¼Œé‚£ä¹ˆåå°çº¿ç¨‹ä¹Ÿå°†è¢«è¿«ç»ˆæ­¢
 	}
 }

@@ -5,8 +5,8 @@ import java.util.Scanner;
 /**
  * @deprecated
  * @Describe
- * @Author Hope6537(’‘≈Ù)
- * @Signdate 2014-5-17œ¬ŒÁ08:25:00
+ * @Author Hope6537(ËµµÈπè)
+ * @Signdate 2014-5-17‰∏ãÂçà08:25:00
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -15,12 +15,12 @@ public class HDOJ1202 {
 	static Scanner s = new Scanner(System.in);
 
 	/**
-	 * @Descirbe A90 - 100 4 µ„ B80 - 89 3 µ„ C70 - 79 2 µ„ D60 - 69 1 µ„ E0 - 59 0µ„
-	 * @Author Hope6537(’‘≈Ù)
+	 * @Descirbe A90 - 100 4 ÁÇπ B80 - 89 3 ÁÇπ C70 - 79 2 ÁÇπ D60 - 69 1 ÁÇπ E0 - 59 0ÁÇπ
+	 * @Author Hope6537(ËµµÈπè)
 	 * @Params @param s
 	 * @Params @param g
 	 * @Params @return
-	 * @SignDate 2014-5-17œ¬ŒÁ07:56:39
+	 * @SignDate 2014-5-17‰∏ãÂçà07:56:39
 	 * @Version 0.9
 	 */
 	public static double gpa(int s, double g) {

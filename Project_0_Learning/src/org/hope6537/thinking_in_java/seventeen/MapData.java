@@ -5,9 +5,9 @@ import java.util.LinkedHashMap;
 import org.hope6537.thinking_in_java.fifteen.Generator;
 
 /**
- * @describe MapÉú³ÉÆ÷
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-22ÏÂÎç03:35:16
+ * @describe Mapç”Ÿæˆå™¨
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-22ä¸‹åˆ03:35:16
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <K>

@@ -8,23 +8,23 @@ import java.nio.channels.FileChannel;
 import java.nio.channels.FileLock;
 
 /**
- * @describe Ó³ÉäÎÄ¼şµÄ²¿·Ö¼ÓËø
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÉÏÎç11:07:55
+ * @describe æ˜ å°„æ–‡ä»¶çš„éƒ¨åˆ†åŠ é”
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸Šåˆ11:07:55
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class LockingMappedFiles {
 
 	/**
-	 * @describe ¶¨Òå´óĞ¡£¬Í¨µÀ£¬ÎÄ¼ş
+	 * @describe å®šä¹‰å¤§å°ï¼Œé€šé“ï¼Œæ–‡ä»¶
 	 */
 	static final int LENGTH = 0x8FFFFFF;
 	static FileChannel fc;
 	static final File file = new File("G:\\LockingMappedFiles.dat");
 
 	public static void main(String[] args) throws Exception {
-		// ÉùÃ÷Í¨µÀÀàĞÍ£¬Ó³Éä·½Ê½£¬Í¬Ê±Ğ´ÈëÎÄ¼ş£¬²¢µ÷ÓÃ²¿·Ö¼ÓËø¹¹Ôì·½·¨
+		// å£°æ˜é€šé“ç±»å‹ï¼Œæ˜ å°„æ–¹å¼ï¼ŒåŒæ—¶å†™å…¥æ–‡ä»¶ï¼Œå¹¶è°ƒç”¨éƒ¨åˆ†åŠ é”æ„é€ æ–¹æ³•
 		fc = new RandomAccessFile(file, "rw").getChannel();
 		MappedByteBuffer out = fc
 				.map(FileChannel.MapMode.READ_WRITE, 0, LENGTH);
@@ -36,7 +36,7 @@ public class LockingMappedFiles {
 	}
 
 	public static class LockAndModify extends Thread {
-		// ÔÚÕâÀï¶¨ÒåÊÓÍ¼ºÍÊÓÍ¼¶ÁÈ¡µÄ¿ªÊ¼´¦ºÍ½áÊø´¦
+		// åœ¨è¿™é‡Œå®šä¹‰è§†å›¾å’Œè§†å›¾è¯»å–çš„å¼€å§‹å¤„å’Œç»“æŸå¤„
 		private ByteBuffer buff;
 		private int start, end;
 
@@ -45,16 +45,16 @@ public class LockingMappedFiles {
 			this.end = end;
 			buff.limit(end);
 			buff.position(start);
-			// buff.slice()ÊÇÊ²Ã´ÒâË¼£¿ ´ğ£ºÓÃÓÚĞŞ¸Ä»º³åÇø
+			// buff.slice()æ˜¯ä»€ä¹ˆæ„æ€ï¼Ÿ ç­”ï¼šç”¨äºä¿®æ”¹ç¼“å†²åŒº
 			this.buff = buff.slice();
-			// È»ºóÖ±½ÓÏß³ÌÆô¶¯
+			// ç„¶åç›´æ¥çº¿ç¨‹å¯åŠ¨
 			start();
 		}
 
 		@Override
 		public void run() {
 			try {
-				// ÉùÃ÷ÎÄ¼şËø£¬²¢¼ÓÔØ×Ö½ÚÍ¬Ê±ÔÙ+1Ğ´Èë»ØÈ¥
+				// å£°æ˜æ–‡ä»¶é”ï¼Œå¹¶åŠ è½½å­—èŠ‚åŒæ—¶å†+1å†™å…¥å›å»
 				FileLock fl = fc.lock(start, end, false);
 				System.out.println("Locked : " + start + " to " + end);
 				while (buff.position() < buff.limit() - 1) {

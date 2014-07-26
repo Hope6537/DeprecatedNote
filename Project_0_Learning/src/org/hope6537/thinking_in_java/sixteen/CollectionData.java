@@ -5,9 +5,9 @@ import java.util.*;
 import org.hope6537.thinking_in_java.fifteen.Generator;
 
 /**
- * @describe Éú³ÉÒ»¸öÍ¨¹ı»ù±¾ÀàĞÍÉú³ÉÆ÷Ìî³äºÃµÄCollection¼¯ºÏ À^³Ğ×ÔArrayList
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014-7-22ÏÂÎç03:03:43
+ * @describe ç”Ÿæˆä¸€ä¸ªé€šè¿‡åŸºæœ¬ç±»å‹ç”Ÿæˆå™¨å¡«å……å¥½çš„Collectioné›†åˆ ç¹¼æ‰¿è‡ªArrayList
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014-7-22ä¸‹åˆ03:03:43
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -24,13 +24,13 @@ public class CollectionData<T> extends ArrayList<T> {
 	}
 
 	/**
-	 * @descirbe ·µ»ØÒ»¸öCollectionData¶ÔÏó Ìî³äºÃÁËµÄ
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe è¿”å›ä¸€ä¸ªCollectionDataå¯¹è±¡ å¡«å……å¥½äº†çš„
+	 * @author Hope6537(èµµé¹)
 	 * @param <T>
 	 * @param gen
 	 * @param quantity
 	 * @return
-	 * @signDate 2014-7-22ÏÂÎç03:04:16
+	 * @signDate 2014-7-22ä¸‹åˆ03:04:16
 	 * @version 0.9
 	 */
 	public static <T> CollectionData<T> list(Generator<T> gen, int quantity) {

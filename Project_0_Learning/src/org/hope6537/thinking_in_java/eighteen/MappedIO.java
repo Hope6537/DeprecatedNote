@@ -5,9 +5,9 @@ import java.nio.channels.*;
 import java.io.*;
 
 /**
- * @describe Ó³ÉäÎÄ¼ş·ÃÎÊµÄËÙ¶ÈĞÔ±È½Ï
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ24ÈÕÏÂÎç8:20:51
+ * @describe æ˜ å°„æ–‡ä»¶è®¿é—®çš„é€Ÿåº¦æ€§æ¯”è¾ƒ
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ24æ—¥ä¸‹åˆ8:20:51
  * @version 0.9
  * @company Changchun University&SHXT
  */

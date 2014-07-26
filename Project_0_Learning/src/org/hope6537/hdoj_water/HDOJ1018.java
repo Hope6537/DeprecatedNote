@@ -3,10 +3,10 @@ package org.hope6537.hdoj_water;
 import java.util.Scanner;
 
 /**
- * @Describe 由斯特林[striling]公式可得：lnN!=NlnN－N+0.5ln(2N*pi)
- *           而N的阶乘的位数等于：log10(N!)取整后加1 log10(N!)=lnN!/ln(10) 所以len=lnN!/ln(10)+1
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-5-21下午07:06:19
+ * @Describe 鐢辨柉鐗规灄[striling]鍏紡鍙緱锛歭nN!=NlnN锛峃+0.5ln(2N*pi)
+ *           鑰孨鐨勯樁涔樼殑浣嶆暟绛変簬锛歭og10(N!)鍙栨暣鍚庡姞1 log10(N!)=lnN!/ln(10) 鎵�浠en=lnN!/ln(10)+1
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-5-21涓嬪崍07:06:19
  * @version 0.9
  * @company Changchun University&SHXT
  */

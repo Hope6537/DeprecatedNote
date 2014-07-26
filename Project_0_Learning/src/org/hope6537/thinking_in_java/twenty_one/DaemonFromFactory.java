@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @describe ºóÌ¨Ïß³Ì¹¤³§Çı¶¯ÊµÀı
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç11:03:27
+ * @describe åå°çº¿ç¨‹å·¥å‚é©±åŠ¨å®ä¾‹
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ11:03:27
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -25,7 +25,7 @@ public class DaemonFromFactory implements Runnable {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		// ÉùÃ÷ÓÉ¹¤³§Ä£Ê½¹¹½¨³öÀ´µÄÖ´ĞĞÆ÷
+		// å£°æ˜ç”±å·¥å‚æ¨¡å¼æ„å»ºå‡ºæ¥çš„æ‰§è¡Œå™¨
 		ExecutorService exec = Executors
 				.newCachedThreadPool(new DaemonThreadFactory());
 		for (int i = 0; i < 10; i++) {
@@ -33,6 +33,6 @@ public class DaemonFromFactory implements Runnable {
 		}
 		System.out.println("All Daemons are started");
 		TimeUnit.MILLISECONDS.sleep(2000);
-		// È»ºóÒÀ¾É×ñÑ­ºóÌ¨Ïß³Ì¶¨Àí
+		// ç„¶åä¾æ—§éµå¾ªåå°çº¿ç¨‹å®šç†
 	}
 }

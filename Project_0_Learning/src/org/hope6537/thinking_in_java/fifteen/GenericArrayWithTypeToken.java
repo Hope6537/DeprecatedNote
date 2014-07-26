@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.fifteen;
 import java.lang.reflect.Array;
 
 /**
- * @Describe Êı×é·ºĞÍÊµÑé3 ÖÕÓÚ³É¹¦¹¤×÷ÁË
- * @Author Hope6537(ÕÔÅô)
- * @Signdate 2014-7-19ÏÂÎç03:49:41
+ * @Describe æ•°ç»„æ³›å‹å®éªŒ3 ç»ˆäºæˆåŠŸå·¥ä½œäº†
+ * @Author Hope6537(èµµé¹)
+ * @Signdate 2014-7-19ä¸‹åˆ03:49:41
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>
@@ -15,8 +15,8 @@ public class GenericArrayWithTypeToken<T> {
 	private T[] array;
 
 	/**
-	 * @Describe ÎÒÃÇ½«ÀàĞÍĞÅÏ¢·ÅÈë¶ÔÏóÖĞ£¬ÒÔ±ãÊı×é±»²Á³ıºó»Ö¸´ÀàĞÍ
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Describe æˆ‘ä»¬å°†ç±»å‹ä¿¡æ¯æ”¾å…¥å¯¹è±¡ä¸­ï¼Œä»¥ä¾¿æ•°ç»„è¢«æ“¦é™¤åæ¢å¤ç±»å‹
+	 * @Author Hope6537(èµµé¹)
 	 * @param @param type
 	 * @param @param sz
 	 */

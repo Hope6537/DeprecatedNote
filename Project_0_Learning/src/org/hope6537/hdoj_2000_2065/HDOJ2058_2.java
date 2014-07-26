@@ -16,28 +16,28 @@ public class HDOJ2058_2 {
 	public static void main(String[] args) {
 		while(s.hasNext()){
 			
-			long n = s.nextLong();//¸öÊý
-			long m = s.nextLong();//Ä¿±êÖµ
+			long n = s.nextLong();//ä¸ªæ•°
+			long m = s.nextLong();//ç›®æ ‡å€¼
 			if(n==m&&n==0){
 				break;
 			}
 			/*
-			 * ¸ù¾ÝµÈ²îÊýÁÐÇóºÍ¹«Ê½
-			 * Ê×ÏîÊÇa Î²ÏîÊÇan ¹«²îÎªd=1 Í¬Ê±ÐèÒªµÄÏîÊýÎªn
-			 * ÄÇÃ´ a*n + n*(n-1)*d/2 = Sn
-			 * ÔòÊ×ÏîaµÄ¹«Ê½¿ÉµÃ
-			 * Í¬Ê±ÎÒÃÇÒªÇóµÃnµÄ´óÐ¡³¤¶È
-			 * ÓÖÓÐ (a1+an)*n/2 = m
-			 * ËùÒÔ = n*(a1+a1+(n-1)*d)/2 = m
-			 * ÔòÓÐ n*(2a1+n-1)=2m
+			 * æ ¹æ®ç­‰å·®æ•°åˆ—æ±‚å’Œå…¬å¼
+			 * é¦–é¡¹æ˜¯a å°¾é¡¹æ˜¯an å…¬å·®ä¸ºd=1 åŒæ—¶éœ€è¦çš„é¡¹æ•°ä¸ºn
+			 * é‚£ä¹ˆ a*n + n*(n-1)*d/2 = Sn
+			 * åˆ™é¦–é¡¹açš„å…¬å¼å¯å¾—
+			 * åŒæ—¶æˆ‘ä»¬è¦æ±‚å¾—nçš„å¤§å°é•¿åº¦
+			 * åˆæœ‰ (a1+an)*n/2 = m
+			 * æ‰€ä»¥ = n*(a1+a1+(n-1)*d)/2 = m
+			 * åˆ™æœ‰ n*(2a1+n-1)=2m
 			 * 
-			 * aÊÇ´óÓÚµÈÓÚ1µÄ
-			 * ËùÒÔ2a´óÓÚµÈÓÚ2
-			 * 2a-1´óÓÚµÈÓÚ1£¬2a-1+n´óÓÚµÈÓÚn
+			 * aæ˜¯å¤§äºŽç­‰äºŽ1çš„
+			 * æ‰€ä»¥2aå¤§äºŽç­‰äºŽ2
+			 * 2a-1å¤§äºŽç­‰äºŽ1ï¼Œ2a-1+nå¤§äºŽç­‰äºŽn
 			 * n*(2a-1+n) >= n^2
-			 * ÔòÓÐ2m´óÓÚµÈÓÚn^2
-			 * ÔòÓÐnÐ¡ÓÚµÈÓÚ¸ùºÅÏÂ2m
-			 * ËùÒÔnµÄ·¶Î§È·¶¨
+			 * åˆ™æœ‰2må¤§äºŽç­‰äºŽn^2
+			 * åˆ™æœ‰nå°äºŽç­‰äºŽæ ¹å·ä¸‹2m
+			 * æ‰€ä»¥nçš„èŒƒå›´ç¡®å®š
 			 */
 			
 			

@@ -5,21 +5,21 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * @describe ºÜÆÕÍ¨µÄ¶ÁÈëÎÄ¼ş
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ23ÈÕÏÂÎç5:52:59
+ * @describe å¾ˆæ™®é€šçš„è¯»å…¥æ–‡ä»¶
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ5:52:59
  * @version 0.9
  * @company Changchun University&SHXT
  */
 public class BufferedInputFile {
 
 	/**
-	 * @descirbe ¶ÁÈëÎÄ¼ş ²úÉú×Ö·û´®
-	 * @author Hope6537(ÕÔÅô)
+	 * @descirbe è¯»å…¥æ–‡ä»¶ äº§ç”Ÿå­—ç¬¦ä¸²
+	 * @author Hope6537(èµµé¹)
 	 * @param filename
 	 * @return
 	 * @throws IOException
-	 * @signDate 2014Äê7ÔÂ23ÈÕÏÂÎç5:53:09
+	 * @signDate 2014å¹´7æœˆ23æ—¥ä¸‹åˆ5:53:09
 	 * @version 0.9
 	 */
 	public static String read(String filename) throws IOException {
@@ -35,7 +35,7 @@ public class BufferedInputFile {
 
 	public static void main(String[] args) {
 		try {
-			String path2 = "C:\\Users\\Zhaopeng-Rabook\\Desktop\\Google Download\\¼Æ×éÔÓÎï\\mul.vhd";
+			String path2 = "C:\\Users\\Zhaopeng-Rabook\\Desktop\\Google Download\\è®¡ç»„æ‚ç‰©\\mul.vhd";
 			System.out.println(read(path2));
 					//.println(read("E:\\(WorkSpace04)GitHub\\Project_00_Learning\\Project_0_Learning\\src\\org\\hope6537\\thinking_in_java\\eighteen\\BufferedInputFile.java"));
 		} catch (IOException e) {

@@ -41,7 +41,7 @@ class ADaemon implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// ºóÌ¨½ø³Ì²»ÔÊĞíÔËĞĞFinally
+			// åå°è¿›ç¨‹ä¸å…è®¸è¿è¡ŒFinally
 			System.out.println("RUN?");
 		}
 	}
@@ -56,9 +56,9 @@ class DaemonDontRunFinally {
 }
 
 /**
- * @describe Èç¹ûÒ»¸öºóÌ¨Ïß³Ì´´½¨ĞÂÏß³Ì£¬ÄÇÃ´Ëü´´½¨µÄËùÓĞÏß³Ì¶¼ÊÇºóÌ¨Ïß³Ì
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ26ÈÕÉÏÎç11:24:15
+ * @describe å¦‚æœä¸€ä¸ªåå°çº¿ç¨‹åˆ›å»ºæ–°çº¿ç¨‹ï¼Œé‚£ä¹ˆå®ƒåˆ›å»ºçš„æ‰€æœ‰çº¿ç¨‹éƒ½æ˜¯åå°çº¿ç¨‹
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ26æ—¥ä¸Šåˆ11:24:15
  * @version 0.9
  * @company Changchun University&SHXT
  */

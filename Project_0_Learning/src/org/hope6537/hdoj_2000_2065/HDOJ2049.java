@@ -26,10 +26,10 @@ public class HDOJ2049 {
 	}
 	
 	/**
-	 * @Descirbe 连乘 A n,m n在下 m在上
-	 * @Author Hope6537(赵鹏)
+	 * @Descirbe 杩炰箻 A n,m n鍦ㄤ笅 m鍦ㄤ笂
+	 * @Author Hope6537(璧甸箯)
 	 * @Params @return
-	 * @SignDate 2014-4-16下午8:02:54
+	 * @SignDate 2014-4-16涓嬪崍8:02:54
 	 * @Version 0.9
 	 */
 	public static long A(long n, long m){
@@ -43,12 +43,12 @@ public class HDOJ2049 {
 	}
 	
 	/**
-	 * @Descirbe 俗称的C n,m排列组合运算 
-	 * @Author Hope6537(赵鹏)
+	 * @Descirbe 淇楃О鐨凜 n,m鎺掑垪缁勫悎杩愮畻 
+	 * @Author Hope6537(璧甸箯)
 	 * @Params @param n
 	 * @Params @param m
 	 * @Params @return
-	 * @SignDate 2014-4-16下午8:04:49
+	 * @SignDate 2014-4-16涓嬪崍8:04:49
 	 * @Version 0.9
 	 */
 	public static long C(long n , long m){

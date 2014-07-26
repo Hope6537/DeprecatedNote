@@ -28,12 +28,12 @@ public class HDOJ2504 {
 				int b = s.nextInt();
 				int c = b;
 				while ((c += b) != 0) {
-					//¶ÔÓÚcÀ´Ëµ ´Ób¿ªÊ¼µÝÔöÏà¼Ó£¬Ò»Ö±ÊÇbµÄ±¶Êý
+					//å¯¹äºŽcæ¥è¯´ ä»Žbå¼€å§‹é€’å¢žç›¸åŠ ï¼Œä¸€ç›´æ˜¯bçš„å€æ•°
 					if (gcd(b, c) == b && gcd(a, c) == b && c != b) {
-						//Èç¹ûb cµÄ×îÐ¡¹«±¶ÊýÊÇb
-						//a cµÄ×îÐ¡¹«±¶ÊýÊÇb
-						//ÄÇÃ´·ûºÏ×îÐ¡µÄcµÄÌõ¼þ Í¬Ê±cºÍb²»ÏàµÈ
-						//Ìø³ö²¢Êä³ö
+						//å¦‚æžœb cçš„æœ€å°å…¬å€æ•°æ˜¯b
+						//a cçš„æœ€å°å…¬å€æ•°æ˜¯b
+						//é‚£ä¹ˆç¬¦åˆæœ€å°çš„cçš„æ¡ä»¶ åŒæ—¶cå’Œbä¸ç›¸ç­‰
+						//è·³å‡ºå¹¶è¾“å‡º
 						break;
 					}
 				}

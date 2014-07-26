@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.fifteen;
 
 /**
- * @Describe 一个持有对象类
- * @Author Hope6537(赵鹏)
- * @Signdate 2014-7-19下午06:03:18
+ * @Describe 涓�涓寔鏈夊璞＄被
+ * @Author Hope6537(璧甸箯)
+ * @Signdate 2014-7-19涓嬪崍06:03:18
  * @version 0.9
  * @company Changchun University&SHXT
  * @param <T>

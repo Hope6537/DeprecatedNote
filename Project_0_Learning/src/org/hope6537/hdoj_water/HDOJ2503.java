@@ -37,7 +37,7 @@ public class HDOJ2503{
                     fenmu = (int) lcm(b, d);
                     fenzi = a * (fenmu/b) + c * (fenmu/d);
                 }
-                //算出了分数，开始化简
+                //绠楀嚭浜嗗垎鏁帮紝寮�濮嬪寲绠�
                 int gcd = (int) gcd(fenmu, fenzi);
                 int lcm = (int) lcm(fenzi, fenmu);
                 if(gcd!=1){

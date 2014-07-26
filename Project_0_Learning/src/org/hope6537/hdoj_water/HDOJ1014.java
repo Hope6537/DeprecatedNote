@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class HDOJ1014 {
     /**  
-     *@ÃèÊö£ºËæ»úÊıÖÖ×ÓºÍModÑ¡ÔñÎÊÌâ 
-     *@×÷Õß£ºÕÔÅô
-     *@°æ±¾£º
-     *@±äÁ¿£º @param args
-     *@·µ»ØÖµ£ºvoid
+     *@æè¿°ï¼šéšæœºæ•°ç§å­å’ŒModé€‰æ‹©é—®é¢˜ 
+     *@ä½œè€…ï¼šèµµé¹
+     *@ç‰ˆæœ¬ï¼š
+     *@å˜é‡ï¼š @param args
+     *@è¿”å›å€¼ï¼švoid
      */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

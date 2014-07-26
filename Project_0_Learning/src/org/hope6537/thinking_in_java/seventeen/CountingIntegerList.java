@@ -3,9 +3,9 @@ package org.hope6537.thinking_in_java.seventeen;
 import java.util.AbstractList;
 
 /**
- * @describe 计数List
- * @author Hope6537(赵鹏)
- * @signdate 2014-7-22下午05:04:32
+ * @describe 璁℃暟List
+ * @author Hope6537(璧甸箯)
+ * @signdate 2014-7-22涓嬪崍05:04:32
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -33,7 +33,7 @@ public class CountingIntegerList extends AbstractList<Integer> {
 	}
 	
 	public static void main(String[] args) {
-		//当我们寻找值时 get会产生他，这是享元模式的设计方法
+		//褰撴垜浠鎵惧�兼椂 get浼氫骇鐢熶粬锛岃繖鏄韩鍏冩ā寮忕殑璁捐鏂规硶
 		System.out.println(new CountingIntegerList(30));
 	}
 }

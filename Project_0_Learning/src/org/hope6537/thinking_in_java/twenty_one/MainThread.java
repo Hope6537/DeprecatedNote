@@ -1,9 +1,9 @@
 package org.hope6537.thinking_in_java.twenty_one;
 
 /**
- * @describe ÔËĞĞ¸Õ²ÅµÄ¶¨ÒåµÄÈÎÎñ
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç6:33:29
+ * @describe è¿è¡Œåˆšæ‰çš„å®šä¹‰çš„ä»»åŠ¡
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ6:33:29
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -15,9 +15,9 @@ public class MainThread {
 }
 
 /**
- * @describe Ïß³ÌµÄ±ê×¼Çı¶¯·½Ê½
- * @author Hope6537(ÕÔÅô)
- * @signdate 2014Äê7ÔÂ25ÈÕÏÂÎç6:35:55
+ * @describe çº¿ç¨‹çš„æ ‡å‡†é©±åŠ¨æ–¹å¼
+ * @author Hope6537(èµµé¹)
+ * @signdate 2014å¹´7æœˆ25æ—¥ä¸‹åˆ6:35:55
  * @version 0.9
  * @company Changchun University&SHXT
  */
@@ -25,14 +25,14 @@ class BasicThreads {
 	public static void main(String[] args) {
 		Thread t = new Thread(new LiftOff());
 		t.start();
-		// startÑ¸ËÙ¾Í·µ»ØÁË ËùÒÔÎÒÃÇ¿ÉÒÔ¿´µ½ÏÂÃæµÄÊä³öÓï¾äÏÈÓÚÏß³ÌÖ´ĞĞ
+		// startè¿…é€Ÿå°±è¿”å›äº† æ‰€ä»¥æˆ‘ä»¬å¯ä»¥çœ‹åˆ°ä¸‹é¢çš„è¾“å‡ºè¯­å¥å…ˆäºçº¿ç¨‹æ‰§è¡Œ
 		System.out.println("Waiting for LiftOff");
 	}
 }
 
 class MoreBasicThreads {
 	public static void main(String[] args) {
-		// ·Ö·¢Ïß³Ì ÒòÎªÏß³Ìµ÷¶È»úÖÆÊÇ²»È·¶¨µÄ ËùÒÔ¿ÉÄÜ»áµ¼ÖÂÊä³ö²»Í¬
+		// åˆ†å‘çº¿ç¨‹ å› ä¸ºçº¿ç¨‹è°ƒåº¦æœºåˆ¶æ˜¯ä¸ç¡®å®šçš„ æ‰€ä»¥å¯èƒ½ä¼šå¯¼è‡´è¾“å‡ºä¸åŒ
 		for (int i = 0; i < 5; i++) {
 			Thread t = new Thread(new LiftOff());
 			t.start();
