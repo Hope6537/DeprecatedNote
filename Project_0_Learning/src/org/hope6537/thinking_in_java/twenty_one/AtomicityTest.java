@@ -3,7 +3,7 @@ package org.hope6537.thinking_in_java.twenty_one;
 import java.util.concurrent.*;
 
 /**
- * @describe 测试事务的完整性
+ * @describe 测试事务的原子性
  * @author Hope6537(赵鹏)
  * @signdate 2014年7月26日下午8:34:11
  * @version 0.9
