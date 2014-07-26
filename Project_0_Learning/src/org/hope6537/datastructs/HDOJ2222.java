@@ -163,7 +163,7 @@ public class HDOJ2222 {
 	 */
 	static int query(Node root) {
 		//i循环下表，cnt是匹配字符串的子串个数，index代表字符索引，len代表字符串长度
-		int i = 0, cnt = 0, index = -1, len = str.length();
+		int i = 0, cnt = 0, index = -1;
 		//引出个指针
 		Node p = root;
 		//对字符串进行循环遍历

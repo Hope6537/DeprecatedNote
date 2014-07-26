@@ -15,6 +15,7 @@ public class TimeDemo {
 		return System.currentTimeMillis();
 	}
 
+	@SuppressWarnings({ "rawtypes", "unused" })
 	public static void main(String[] args) {
 
 		/*
