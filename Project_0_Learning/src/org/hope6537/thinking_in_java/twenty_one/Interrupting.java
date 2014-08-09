@@ -70,20 +70,37 @@ public class Interrupting {
 	private static ExecutorService exec = Executors.newCachedThreadPool();
 
 	static void test(Runnable r) throws InterruptedException {
-		// 执行exec中的单个线程
+		// 执行exec中的单个线程 同时获取到该线程的可操作的Future对象
 		Future<?> f = exec.submit(r);
 		TimeUnit.MILLISECONDS.sleep(100);
 		System.out.println("Interrupting " + r.getClass().getName());
+		// 通过这个持有对象进行单个线程的终止操作
 		f.cancel(true);
 		System.out.println("Interrupt sent to" + r.getClass().getName());
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		test(new SleepBlocked());
+		System.out.println("----------------");
 		test(new SynchronizedBlocked());
+		System.out.println("----------------");
 		test(new IOBlocked(System.in));
 		TimeUnit.SECONDS.sleep(3);
 		System.out.println("Aborting with System.exit(0)");
 		System.exit(0);
 	}
+
+	/* 根据输出我们可以看到 我们能够直接中断sleep的阻塞线程 但是没有办法中断I/O阻塞和死锁阻塞？那可咋办呢？
+	 * 对于这类问题 可以进行关闭任务再其上发生阻塞的底层资源
+	 * Interrupting org.hope6537.thinking_in_java.twenty_one.SleepBlocked
+	 * Interrupt sent toorg.hope6537.thinking_in_java.twenty_one.SleepBlocked
+	 * ---------------- Interrupting Exiting Sleep Trying to call f()
+	 * Interrupting org.hope6537.thinking_in_java.twenty_one.SynchronizedBlocked
+	 * Interrupt sent
+	 * toorg.hope6537.thinking_in_java.twenty_one.SynchronizedBlocked
+	 * ---------------- Waiting for Read Interrupting
+	 * org.hope6537.thinking_in_java.twenty_one.IOBlocked Interrupt sent
+	 * toorg.hope6537.thinking_in_java.twenty_one.IOBlocked Aborting with
+	 * System.exit(0)
+	 */
 }
