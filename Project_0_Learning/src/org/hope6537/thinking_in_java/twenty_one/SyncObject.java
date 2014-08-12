@@ -38,3 +38,7 @@ class DualSynch {
 		}
 	}
 }
+
+/*
+ * g() f() g() f() g() f() g() f() g() f()
+ */

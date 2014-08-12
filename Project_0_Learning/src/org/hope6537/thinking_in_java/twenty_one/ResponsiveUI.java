@@ -26,7 +26,7 @@ public class ResponsiveUI extends Thread {
 	}
 
 	public static void main(String[] args) throws IOException {
-		//敲下回车发现的确是在后台运行
+		// 敲下回车发现的确是在后台运行
 		new ResponsiveUI();
 		System.in.read();
 		System.out.println(d);
