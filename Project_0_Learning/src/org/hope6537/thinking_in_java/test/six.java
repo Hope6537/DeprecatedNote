@@ -1,4 +1,4 @@
-package org.hope6537.thinking_in_java.eleven;
+package org.hope6537.thinking_in_java.test;
 
 import java.util.HashMap;
 import java.util.Map;
