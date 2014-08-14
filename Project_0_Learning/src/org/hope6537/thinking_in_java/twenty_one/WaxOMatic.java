@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @describe
+ * @describe 驱动程序
  * @author Hope6537(赵鹏)
  * @signdate 2014年8月9日上午11:39:34
  * @version 0.9

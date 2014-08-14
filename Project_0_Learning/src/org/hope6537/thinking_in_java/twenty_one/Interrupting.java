@@ -6,6 +6,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @describe 睡眠阻塞
+ * @author Hope6537(赵鹏)
+ * @signdate 2014年8月13日下午12:47:28
+ * @version 0.9
+ * @company Changchun University&SHXT
+ */
 class SleepBlocked implements Runnable {
 	@Override
 	public void run() {
@@ -19,6 +26,13 @@ class SleepBlocked implements Runnable {
 
 }
 
+/**
+ * @describe IO阻塞
+ * @author Hope6537(赵鹏)
+ * @signdate 2014年8月13日下午12:47:36
+ * @version 0.9
+ * @company Changchun University&SHXT
+ */
 class IOBlocked implements Runnable {
 	private InputStream in;
 
@@ -43,6 +57,13 @@ class IOBlocked implements Runnable {
 	}
 }
 
+/**
+ * @describe 死锁阻塞
+ * @author Hope6537(赵鹏)
+ * @signdate 2014年8月13日下午12:47:42
+ * @version 0.9
+ * @company Changchun University&SHXT
+ */
 class SynchronizedBlocked implements Runnable {
 	// 这个方法永远不会放掉锁
 	public synchronized void f() {
