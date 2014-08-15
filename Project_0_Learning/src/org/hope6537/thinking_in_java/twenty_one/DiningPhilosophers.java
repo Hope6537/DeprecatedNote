@@ -53,7 +53,7 @@ public class DiningPhilosophers {
 				exec.execute(new Philosopher(sticks[0], sticks[i], i, ponder));
 		}
 		if (args.length == 3 && args[2].equals("timeout"))
-			TimeUnit.SECONDS.sleep(5);
+			TimeUnit.SECONDS.sleep(2);
 		else {
 			System.out.println("Press 'Enter' to quit");
 			System.in.read();
@@ -63,7 +63,11 @@ public class DiningPhilosophers {
 
 	public static void main(String[] args) throws Exception {
 		// 0思考时间
-		// deadLockingRun(new String[] { "0", "5", "timeout" });
-		fixedLockingRun(new String[] { "0", "5", "timeout" });
+		 deadLockingRun(new String[] { "0", "5", "timeout" });
+		//fixedLockingRun(new String[] { "0", "5", "timeout" });
 	}
+	
+	/*
+	 * 
+	 */
 }

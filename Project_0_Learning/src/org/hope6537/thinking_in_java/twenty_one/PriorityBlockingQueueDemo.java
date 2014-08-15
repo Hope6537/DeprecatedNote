@@ -10,7 +10,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 class PrioritizedTask implements Runnable, Comparable<PrioritizedTask> {
-	
+
 	private Random rand = new Random(47);
 	private static int counter = 0;
 	private final int id = counter++;

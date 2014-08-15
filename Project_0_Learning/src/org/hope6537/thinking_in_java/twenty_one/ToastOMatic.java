@@ -85,7 +85,7 @@ class Toaster implements Runnable {
 		try {
 			while (!Thread.interrupted()) {
 				TimeUnit.MILLISECONDS.sleep(100 + rand.nextInt(500));
-				// 做土司
+				// 做土司 向队列中添加基础对象
 				Toast t = new Toast(count++);
 				System.out.println(t);
 				toastQueue.put(t);
@@ -98,6 +98,7 @@ class Toaster implements Runnable {
 }
 
 class Butterer implements Runnable {
+//	从队列中获取基础对象
 	private ToastQueue dryQueue, butteredQueue;
 
 	public Butterer(ToastQueue dryQueue, ToastQueue butteredQueue) {
