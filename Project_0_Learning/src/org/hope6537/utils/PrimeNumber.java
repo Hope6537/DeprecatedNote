@@ -34,7 +34,7 @@ public class PrimeNumber {
 				prm[k++] = i;
 			}
 		}
-		return k;// 返回素数的个数
+		return k;
 	}
 
 	public static void main(String[] args) {

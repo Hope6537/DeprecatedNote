@@ -67,11 +67,11 @@ public class HDOJ1051 {
 							for (int i1 = i; i1 < n; i1++) {
 								Node temp = nodes[i1];
 
-								// 注意这个表达式
+								
 								boolean isOk = (temp.l > node.l || temp.l == node.l)
 										&& (temp.w > node.w || temp.w == node.w);
 								if (isOk && temp.visit == false) {
-									// 如果符合条件
+									
 									counts++;
 									temp.visit = true;
 									node = temp;

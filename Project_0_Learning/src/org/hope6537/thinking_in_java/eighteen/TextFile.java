@@ -101,7 +101,9 @@ public class TextFile extends ArrayList<String> {
 
 	public TextFile(String filename) {
 		this(filename, "\n");
-
+	}
+	
+	public TextFile() {
 	}
 
 	/**

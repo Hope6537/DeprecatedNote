@@ -22,7 +22,7 @@ public class HDOJ4824 {
 		while (s.hasNext()) {
 			int T = s.nextInt();
 			while (T-- != 0) {
-				int n = s.nextInt();// 数据的个数
+				int n = s.nextInt();
 				int[] t = new int[n + 1];
 				int[] s1 = new int[n + 1];
 				int[][] dp = new int[n + 1][n + 1];
