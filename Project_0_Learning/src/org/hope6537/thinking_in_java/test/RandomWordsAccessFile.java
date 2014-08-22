@@ -1,8 +1,11 @@
 package org.hope6537.thinking_in_java.test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
@@ -29,28 +32,10 @@ class Counting implements Runnable {
 
 class Exec implements Runnable {
 	private volatile File file;
-	private volatile static ArrayList<String> list;
-
-	public synchronized void write() {
-		try {
-			PrintWriter out = new PrintWriter(file.getAbsoluteFile());
-			try {
-				// 調用本身ArrayList的迭代器
-				for (String item : list) {
-					out.println(item);
-				}
-			} finally {
-				out.close();
-			}
-		} catch (IOException e) {
-			System.out.println("===写入文件失败===");
-			e.printStackTrace();
-		}
-	}
+	private static final int BSIZE = 52428800;
 
 	public Exec(File file, ArrayList<String> list) {
 		super();
-		Exec.list = list;
 		this.file = file;
 		if (!file.exists()) {
 			try {
@@ -62,43 +47,105 @@ class Exec implements Runnable {
 		}
 	}
 
-	private static final String[] objects = { "0", "1", "2", "3", "4", "5",
-			"6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
-			"J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-			"W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i",
-			"j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v",
-			"w", "x", "y", "z", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-			" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
-			" ", " ", " ", " ", "\r\n", "\r\n", "\r\n", "\r\n", "\r\n", "\r\n",
-			"\r\n", "\r\n", "\r\n", "\r\n", };
+	private static final String[] words = "All rights reserved. No part of this book may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, without the prior written permission of the publisher, except in the case of brief quotations embedded in critical articles or reviews. Every effort has been made in the preparation of this book to ensure the accuracy of the information presented. However, the information contained in this book is sold without warranty, either express or implied. Neither the authors, nor Packt Publishing, and its dealers and distributors will be held liable for any damages caused or alleged to be caused directly or indirectly by this book. Packt Publishing has endeavored to provide trademark information about all of the companies and products mentioned in this book by the appropriate use of capitals. However, Packt Publishing cannot guarantee the accuracy of this information."
+			.split(" ");
 
 	@Override
 	public void run() {
-		while (!Thread.interrupted()) {
+
+		try {
+			FileChannel in = new FileInputStream(file).getChannel();
+			FileChannel out = new FileOutputStream(file).getChannel();
+			ByteBuffer buffer = ByteBuffer.allocate(BSIZE);
 			synchronized (file) {
-				Random rand = new Random(47);
+				Random rand = new Random(System.nanoTime());
 				StringBuilder sb = new StringBuilder();
-				for (int i = 0; i < 10000; i++) {
-					sb.append(objects[rand.nextInt(97)]);
+				for (int i = 0; i < 100000; i++) {
+					sb.append("[INFO] ");
+					sb.append(DateFormat_Jisuan.createNowTime());
+					sb.append("+");
+					sb.append(System.currentTimeMillis());
+					sb.append("+");
+					sb.append(System.nanoTime());
+					sb.append(" Log: START[");
+					for (int j = 0; j < 52; j++) {
+						sb.append(words[rand.nextInt(88)] + " ");
+					}
+					sb.append("]END");
+					sb.append("\r\n");
 				}
-				list.add(sb.toString());
+				buffer.flip();
+				out.write(buffer);
+				out.write(ByteBuffer.wrap(sb.toString().getBytes()));
 			}
+			System.out.println("Write Finished");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		write();
-		System.out.println("Write Finished");
 	}
 }
 
 public class RandomWordsAccessFile {
+	private static final int BSIZE = 52428800;
+	private static final String[] words = "All rights reserved. No part of this book may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, without the prior written permission of the publisher, except in the case of brief quotations embedded in critical articles or reviews. Every effort has been made in the preparation of this book to ensure the accuracy of the information presented. However, the information contained in this book is sold without warranty, either express or implied. Neither the authors, nor Packt Publishing, and its dealers and distributors will be held liable for any damages caused or alleged to be caused directly or indirectly by this book. Packt Publishing has endeavored to provide trademark information about all of the companies and products mentioned in this book by the appropriate use of capitals. However, Packt Publishing cannot guarantee the accuracy of this information. In a typical installation, Hadoop is the heart of a complex flow of data. Data is often collected from many disparate systems. This data is then imported into the Hadoop Distributed File System (HDFS). Next, some form of processing takes place using MapReduce or one of the several languages built on top of MapReduce (Hive, Pig, Cascading, and so on). Finally, the filtered, transformed, and aggregated results are exported to one or more external systems. For a more concrete example, a large website may want to produce basic analytical data about its hits. Weblog data from several servers is collected and pushed into HDFS. A MapReduce job is started, which runs using the weblogs as its input. The weblog data is parsed, summarized, and combined with the IP address geolocation data. The output produced shows the URL, page views, and location data by each cookie. This report is exported into a relational database. Ad hoc queries can now be run against this data. Analysts can quickly produce reports of total unique cookies present, pages with the most views, breakdowns of visitors by region, or any other rollup of this data. The recipes in this chapter will focus on the process of importing and exporting data to and from HDFS. The sources and destinations include the local filesystem, relational databases, NoSQL databases, distributed databases, and other Hadoop clusters"
+			.split(" ");
 
 	public static void main(String[] args) throws InterruptedException {
-		ExecutorService exec = Executors.newCachedThreadPool();
-		ArrayList<String> list = new ArrayList<String>();
-		for (int i = 0; i < 5; i++) {
-			exec.execute(new Exec(new File("G:\\Test" + i + ".txt"), list));
+		/*
+		 * ExecutorService exec = Executors . newCachedThreadPool (); ArrayList
+		 * < String > list = new ArrayList < String >(); for (int i = 0; i < 10;
+		 * i++) { exec .execute (new Exec (new File( "G:\\FuckData\\Test" + i +
+		 * ".txt" ), list )); } exec .execute (new Counting ()); TimeUnit .
+		 * SECONDS . sleep ( 200); System .out. println ( "ShutDownNow!" );
+		 * 
+		 * 
+		 * exec. shutdownNow ();
+		 */
+
+		for (int u = 0; u < 100; u++) {
+			File file = new File("G:\\FuckData\\Test" + u + ".log4hope6537");
+			if (!file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			try {
+				FileChannel in = new FileInputStream(file).getChannel();
+				FileChannel out = new FileOutputStream(file).getChannel();
+				ByteBuffer buffer = ByteBuffer.allocate(BSIZE);
+				synchronized (file) {
+					Random rand = new Random(System.nanoTime());
+					StringBuilder sb = new StringBuilder();
+					for (int i = 0; i < 200000; i++) {
+						sb.append("[INFO] ");
+						sb.append(DateFormat_Jisuan.createNowTime());
+						sb.append("+");
+						sb.append(System.currentTimeMillis());
+						sb.append("+");
+						sb.append(System.nanoTime());
+						sb.append(" Log: START[");
+						for (int j = 0; j < 52; j++) {
+							sb.append(words[rand.nextInt(370)] + " ");
+						}
+						sb.append("]END");
+						sb.append("\r\n");
+					}
+					buffer.flip();
+					out.write(buffer);
+					out.write(ByteBuffer.wrap(sb.toString().getBytes()));
+					in.close();
+					out.close();
+				}
+				System.out.println("File "+u+" has Write Finished");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		exec.execute(new Counting());
-		TimeUnit.SECONDS.sleep(7);
-		exec.shutdownNow();
+
 	}
 }
