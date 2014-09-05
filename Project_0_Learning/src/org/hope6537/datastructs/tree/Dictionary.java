@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Tree;
+package org.hope6537.datastructs.tree;
 
 import java.util.*;
 

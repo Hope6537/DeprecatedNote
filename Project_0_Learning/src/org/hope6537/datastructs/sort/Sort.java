@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Sort;
+package org.hope6537.datastructs.sort;
 
 public class Sort {
 	

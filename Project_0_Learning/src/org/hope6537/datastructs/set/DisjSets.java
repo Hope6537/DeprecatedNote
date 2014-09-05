@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Set;
+package org.hope6537.datastructs.set;
 
 /**
  * @Describe 不相交集合类

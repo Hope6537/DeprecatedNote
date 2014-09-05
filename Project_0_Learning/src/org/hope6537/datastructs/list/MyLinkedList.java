@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.List;
+package org.hope6537.datastructs.list;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;

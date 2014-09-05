@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Hash;
+package org.hope6537.datastructs.hash;
 
 /**
  * @Describe 平方探测散列表

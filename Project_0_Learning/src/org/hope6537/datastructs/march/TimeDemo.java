@@ -2,11 +2,11 @@ package org.hope6537.datastructs.march;
 
 import java.util.Arrays;
 
-import org.hope6537.datastructs.Sort.BogoSort;
-import org.hope6537.datastructs.Sort.HeapSort;
-import org.hope6537.datastructs.Sort.MergeSort;
-import org.hope6537.datastructs.Sort.QuickSort;
-import org.hope6537.datastructs.Sort.Sort;
+import org.hope6537.datastructs.sort.BogoSort;
+import org.hope6537.datastructs.sort.HeapSort;
+import org.hope6537.datastructs.sort.MergeSort;
+import org.hope6537.datastructs.sort.QuickSort;
+import org.hope6537.datastructs.sort.Sort;
 
 
 public class TimeDemo {

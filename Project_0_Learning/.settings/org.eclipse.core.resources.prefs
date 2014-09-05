@@ -1,9 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/org/hope6537/baidu=UTF-8
 encoding//src/org/hope6537/datastructs=UTF-8
-encoding//src/org/hope6537/datastructs/Heap=UTF-8
-encoding//src/org/hope6537/datastructs/List=UTF-8
-encoding//src/org/hope6537/datastructs/Tree=UTF-8
+encoding//src/org/hope6537/datastructs/heap=UTF-8
+encoding//src/org/hope6537/datastructs/list=UTF-8
+encoding//src/org/hope6537/datastructs/tree=UTF-8
 encoding//src/org/hope6537/dpfunction=UTF-8
 encoding//src/org/hope6537/dpfunction/HDOJ1058.java=UTF-8
 encoding//src/org/hope6537/dpfunction/HDOJ1074_2.java=UTF-8

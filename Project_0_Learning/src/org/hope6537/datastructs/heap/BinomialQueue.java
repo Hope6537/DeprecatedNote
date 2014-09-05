@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Heap;
+package org.hope6537.datastructs.heap;
 
 /**
  * @Describe 二项队列

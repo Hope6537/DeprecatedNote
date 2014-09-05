@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Tree;
+package org.hope6537.datastructs.tree;
 
 /**
  * @Describe AVL平衡树的一般例程

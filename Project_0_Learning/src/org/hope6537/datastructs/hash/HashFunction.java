@@ -1,4 +1,4 @@
-package org.hope6537.datastructs.Hash;
+package org.hope6537.datastructs.hash;
 
 public class HashFunction {
 

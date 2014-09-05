@@ -3,7 +3,6 @@ package org.hope6537.design.singleton;
 import java.util.ArrayList;
 import java.util.Random;
 
-
 /** 
  * <p>Describe: 产生固定数量的皇帝类</p>
  * <p>Using: 作为对象池来出现</p>
@@ -58,6 +57,10 @@ public class Emperor {
 
 	public static void doSomething() {
 		System.out.println(nameList.get(countNumOfEmperor));
+	}
+	
+	public static void main(String[] args) {
+		Minister.main(args);
 	}
 }
 
