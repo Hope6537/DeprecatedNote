@@ -1,4 +1,4 @@
-package org.hope6537.design.classicfactory;
+package org.hope6537.design.factory.human;
 
 /** 
  * <p>Describe: 作为人类的共同实体类</p>

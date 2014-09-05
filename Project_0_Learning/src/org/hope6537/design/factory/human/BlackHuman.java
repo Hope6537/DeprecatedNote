@@ -1,4 +1,4 @@
-package org.hope6537.design.classicfactory;
+package org.hope6537.design.factory.human;
 
 /** 
  * <p>Describe: 黑人的实现类</p>
@@ -13,23 +13,19 @@ public class BlackHuman implements Human {
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.hope6537.design.factory.Human#getColor()
-	 * 
 	 * @Change:Hope6537
 	 */
 	@Override
 	public void getColor() {
 
-		System.out.println("Black People always Black");
+		System.out.println("黑色的皮肤");
 
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.hope6537.design.factory.Human#talk()
-	 * 
 	 * @Change:Hope6537
 	 */
 	@Override
