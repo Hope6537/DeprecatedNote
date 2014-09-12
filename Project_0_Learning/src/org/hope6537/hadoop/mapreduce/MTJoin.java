@@ -12,9 +12,19 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
-import org.hope6537.hadoop.mapreduce.STJoin.Map;
-import org.hope6537.hadoop.mapreduce.STJoin.Reduce;
 
+/** 
+ *<pre>
+ 多表级联关系的实例
+ *</pre>
+ * <p>Describe: </p>
+ * <p>Using: </p>
+ * <p>DevelopedTime: 2014年9月12日下午3:46:35</p>
+ * <p>Company: ChangChun Unviersity JiChuang Team</p>
+ * @author Hope6537
+ * @version 1.0
+ * @see
+ */
 public class MTJoin {
 
 	public static int time = 0;
