@@ -1,4 +1,4 @@
-package org.hope6537.design.model.hummer;
+package org.hope6537.design.modelfunction.hummer;
 
 /** 
  * <p>Describe: H1型号的模型</p>
@@ -9,7 +9,7 @@ package org.hope6537.design.model.hummer;
  * @version 1.0
  * @see
  */
-public class HummerH1Model_G extends HummerModel_G {
+public class HummerH1Model extends AbstractHummerModel {
 
 	@Override
 	public void alarm() {
@@ -36,6 +36,5 @@ public class HummerH1Model_G extends HummerModel_G {
 	public void start() {
 		System.out.println("h1 start");
 	}
-	
 
 }

@@ -1,4 +1,4 @@
-package org.hope6537.design.model.hummer;
+package org.hope6537.design.modelfunction.hummer;
 
 public class HummerH2Model extends AbstractHummerModel {
 
