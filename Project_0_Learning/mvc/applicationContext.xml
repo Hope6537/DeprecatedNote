@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="personAction" class="org.hope6537.action.PersonAction">
+		<property name="personService">
+			<ref bean="personService" />
+		</property>
+	</bean>
+
+	<bean id="personDao" class="org.hope6537.dao.PersonDaoImpl_Txt">
+		<property name="file">
+			<ref bean="file" />
+		</property>
+	</bean>
+
+	<bean id="personService" class="org.hope6537.service.PersonServiceImp">
+		<property name="dao">
+			<ref bean="personDao" />
+		</property>
+	</bean>
+
+	<bean id="file" class="java.io.File">
+		<constructor-arg index="0" type="java.lang.String"
+			value="e://1.txt"></constructor-arg>
+	</bean>
+
+</beans>
