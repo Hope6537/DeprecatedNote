@@ -42,6 +42,7 @@ public class EncodingUtil {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
+	@SuppressWarnings("resource")
 	public static String GBKtoUTF(String source) throws IOException,
 			InterruptedException {
 		File folder = new File("G:\\Java");
@@ -51,6 +52,7 @@ public class EncodingUtil {
 		File sourceFile = new File(source).getAbsoluteFile();
 		File targetFile = new File(folder.getAbsoluteFile() + "\\"
 				+ sourceFile.getName()).getAbsoluteFile();
+		@SuppressWarnings("unused")
 		ByteBuffer buffer = ByteBuffer.allocate(BSIZE);
 		FileChannel fc = new FileOutputStream(targetFile).getChannel();
 		// 只有UTF-16BE好使
@@ -102,6 +104,7 @@ public class EncodingUtil {
 		return sBuilder.toString();
 	}
 
+	@SuppressWarnings("unused")
 	private static boolean write(String filename, String text) {
 		boolean status = true;
 		try {
