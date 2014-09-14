@@ -22,13 +22,13 @@ public class FileUpdateUtils {
 
 	/**
 	 * @Descirbe
-	 * @Author Hope6537(ÕÔÅô)
+	 * @Author Hope6537(èµµé¹)
 	 * @Params @param request
 	 * @Params @param response
 	 * @Params @param folder
 	 * @Params @param nextStep
 	 * @Params @return
-	 * @SignDate 2014-5-2ÏÂÎç01:59:09
+	 * @SignDate 2014-5-2ä¸‹åˆ01:59:09
 	 * @Version 0.9
 	 */
 	@SuppressWarnings("unchecked")
@@ -42,42 +42,42 @@ public class FileUpdateUtils {
 			request.setCharacterEncoding("UTF-8");
 			response.setCharacterEncoding("UTF-8");
 
-			// »ñµÃ´ÅÅÌÎÄ¼şÌõÄ¿¹¤³§¡£
+			// è·å¾—ç£ç›˜æ–‡ä»¶æ¡ç›®å·¥å‚ã€‚
 			DiskFileItemFactory factory = new DiskFileItemFactory();
-			// »ñÈ¡ÎÄ¼şÉÏ´«ĞèÒª±£´æµÄÂ·¾¶£¬uploadÎÄ¼ş¼ĞĞè´æÔÚ¡£
-			String path = request.getSession().getServletContext().getRealPath(
-					"/" + folder);
+			// è·å–æ–‡ä»¶ä¸Šä¼ éœ€è¦ä¿å­˜çš„è·¯å¾„ï¼Œuploadæ–‡ä»¶å¤¹éœ€å­˜åœ¨ã€‚
+			String path = request.getSession().getServletContext()
+					.getRealPath("/" + folder);
 			String lesspath = "//" + folder;
-			// ÉèÖÃÔİÊ±´æ·ÅÎÄ¼şµÄ´æ´¢ÊÒ£¬Õâ¸ö´æ´¢ÊÒ¿ÉÒÔºÍ×îÖÕ´æ´¢ÎÄ¼şµÄÎÄ¼ş¼Ğ²»Í¬¡£ÒòÎªµ±ÎÄ¼şºÜ´óµÄ»°»áÕ¼ÓÃ¹ı¶àÄÚ´æËùÒÔÉèÖÃ´æ´¢ÊÒ¡£
+			// è®¾ç½®æš‚æ—¶å­˜æ”¾æ–‡ä»¶çš„å­˜å‚¨å®¤ï¼Œè¿™ä¸ªå­˜å‚¨å®¤å¯ä»¥å’Œæœ€ç»ˆå­˜å‚¨æ–‡ä»¶çš„æ–‡ä»¶å¤¹ä¸åŒã€‚å› ä¸ºå½“æ–‡ä»¶å¾ˆå¤§çš„è¯ä¼šå ç”¨è¿‡å¤šå†…å­˜æ‰€ä»¥è®¾ç½®å­˜å‚¨å®¤ã€‚
 			factory.setRepository(new File(path));
-			// ÉèÖÃ»º´æµÄ´óĞ¡£¬µ±ÉÏ´«ÎÄ¼şµÄÈİÁ¿³¬¹ı»º´æÊ±£¬¾Í·Åµ½ÔİÊ±´æ´¢ÊÒ¡£
+			// è®¾ç½®ç¼“å­˜çš„å¤§å°ï¼Œå½“ä¸Šä¼ æ–‡ä»¶çš„å®¹é‡è¶…è¿‡ç¼“å­˜æ—¶ï¼Œå°±æ”¾åˆ°æš‚æ—¶å­˜å‚¨å®¤ã€‚
 			factory.setSizeThreshold(1024 * 1024);
-			// ÉÏ´«´¦Àí¹¤¾ßÀà£¨¸ßË®Æ½APIÉÏ´«´¦Àí£¿£©
+			// ä¸Šä¼ å¤„ç†å·¥å…·ç±»ï¼ˆé«˜æ°´å¹³APIä¸Šä¼ å¤„ç†ï¼Ÿï¼‰
 			ServletFileUpload upload = new ServletFileUpload(factory);
 
-			// µ÷ÓÃ parseRequest£¨request£©·½·¨ »ñµÃÉÏ´«ÎÄ¼ş FileItem µÄ¼¯ºÏlist ¿ÉÊµÏÖ¶àÎÄ¼şÉÏ´«¡£
+			// è°ƒç”¨ parseRequestï¼ˆrequestï¼‰æ–¹æ³• è·å¾—ä¸Šä¼ æ–‡ä»¶ FileItem çš„é›†åˆlist å¯å®ç°å¤šæ–‡ä»¶ä¸Šä¼ ã€‚
 			List<FileItem> list = (List<FileItem>) upload.parseRequest(request);
 			for (FileItem item : list) {
-				// »ñÈ¡±íµ¥ÊôĞÔÃû×Ö¡£
+				// è·å–è¡¨å•å±æ€§åå­—ã€‚
 				String name = item.getFieldName();
-				// Èç¹û»ñÈ¡µÄ±íµ¥ĞÅÏ¢ÊÇÆÕÍ¨µÄÎÄ±¾ĞÅÏ¢¡£¼´Í¨¹ıÒ³Ãæ±íµ¥ĞÎÊ½´«µİÀ´µÄ×Ö·û´®¡£
+				// å¦‚æœè·å–çš„è¡¨å•ä¿¡æ¯æ˜¯æ™®é€šçš„æ–‡æœ¬ä¿¡æ¯ã€‚å³é€šè¿‡é¡µé¢è¡¨å•å½¢å¼ä¼ é€’æ¥çš„å­—ç¬¦ä¸²ã€‚
 				if (item.isFormField()) {
-					// »ñÈ¡ÓÃ»§¾ßÌåÊäÈëµÄ×Ö·û´®£¬
+					// è·å–ç”¨æˆ·å…·ä½“è¾“å…¥çš„å­—ç¬¦ä¸²ï¼Œ
 					String value = item.getString();
 					arrayList2.add(new NameValuePair(name, value));
 				}
-				// Èç¹û´«ÈëµÄÊÇ·Ç¼òµ¥×Ö·û´®£¬¶øÊÇÍ¼Æ¬£¬ÒôÆµ£¬ÊÓÆµµÈ¶ş½øÖÆÎÄ¼ş¡£
+				// å¦‚æœä¼ å…¥çš„æ˜¯éç®€å•å­—ç¬¦ä¸²ï¼Œè€Œæ˜¯å›¾ç‰‡ï¼ŒéŸ³é¢‘ï¼Œè§†é¢‘ç­‰äºŒè¿›åˆ¶æ–‡ä»¶ã€‚
 				else {
-					// »ñÈ¡Â·¾¶Ãû
+					// è·å–è·¯å¾„å
 					String value = item.getName();
-					// È¡µ½×îºóÒ»¸ö·´Ğ±¸Ü¡£
+					// å–åˆ°æœ€åä¸€ä¸ªåæ–œæ ã€‚
 					int start = value.lastIndexOf("\\");
-					// ½ØÈ¡ÉÏ´«ÎÄ¼şµÄ ×Ö·û´®Ãû×Ö¡£+1ÊÇÈ¥µô·´Ğ±¸Ü¡£
+					// æˆªå–ä¸Šä¼ æ–‡ä»¶çš„ å­—ç¬¦ä¸²åå­—ã€‚+1æ˜¯å»æ‰åæ–œæ ã€‚
 					String filename = value.substring(start + 1);
 					/*
-					 * µÚÈı·½Ìá¹©µÄ·½·¨Ö±½ÓĞ´µ½ÎÄ¼şÖĞ¡£ item.write(new File(path,filename));
+					 * ç¬¬ä¸‰æ–¹æä¾›çš„æ–¹æ³•ç›´æ¥å†™åˆ°æ–‡ä»¶ä¸­ã€‚ item.write(new File(path,filename));
 					 */
-					// ÊÕµ½Ğ´µ½½ÓÊÕµÄÎÄ¼şÖĞ¡£
+					// æ”¶åˆ°å†™åˆ°æ¥æ”¶çš„æ–‡ä»¶ä¸­ã€‚
 					OutputStream out = new FileOutputStream(new File(path,
 							filename));
 					InputStream in = item.getInputStream();
@@ -85,7 +85,7 @@ public class FileUpdateUtils {
 					arrayList.add(lesspath + "//" + filename);
 					int length = 0;
 					byte[] buf = new byte[1024];
-					System.out.println("»ñÈ¡ÎÄ¼ş×ÜÁ¿µÄÈİÁ¿:" + item.getSize());
+					System.out.println("è·å–æ–‡ä»¶æ€»é‡çš„å®¹é‡:" + item.getSize());
 
 					while ((length = in.read(buf)) != -1) {
 						out.write(buf, 0, length);
