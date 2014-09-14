@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="person" class="org.hope6537.springtest.di.xml.constructs.Person">
+		<!-- 构造函数参数 index 第几个参数下标从0开始 type 参数类型 ref类型为应用类型赋值 value 基本类型赋值 -->
+		<constructor-arg index="0" type="java.lang.Long"
+			value="77777"></constructor-arg>
+		<constructor-arg index="1" type="java.lang.String"
+			value="狗蛋"></constructor-arg>
+		<constructor-arg index="2"
+			type="org.hope6537.springtest.di.xml.constructs.Student" ref="student">
+			</constructor-arg>
+	</bean>
+	<bean id="student" class="org.hope6537.springtest.di.xml.constructs.Student"></bean>
+</beans>

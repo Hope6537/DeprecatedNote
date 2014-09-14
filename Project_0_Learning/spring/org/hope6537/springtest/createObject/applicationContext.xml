@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	<!-- 把一个类放入到spring容器中，该对象就成(称)为bean -->
+	<!-- id为唯一标示符,id有命名规范，类的首字母小写其他照常 class为所指向的类 -->
+	<!-- 采用默认构造器模式 --><!-- <bean class="org.hope6537.createObject.HelloWorld" id="helloWorld"></bean> -->
+	<!-- 采用静态工厂方法创建 -->
+	<!-- <bean id="helloWorld" factory-method="getInstance" class="org.hope6537.createObject.HelloWorldFactory"></bean> -->
+
+	<!-- 采用实例工厂方法进行创建 -->
+	<!-- 声明工厂bean -->
+	<bean id="helloWorldFactory" class="org.hope6537.createObject.HelloWorldFactory1"></bean>
+	<!-- 对象的工厂和对象之间的联系bean -->
+	<bean id="helloWorld" factory-method="getInstance" factory-bean="helloWorldFactory"
+		class="org.hope6537.createObject.HelloWorldFactory"></bean>
+</beans>

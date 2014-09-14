@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+	<bean id="helloWorld" class="org.hope6537.springtest.createObject.when.HelloWorld"></bean>
+	<bean id="helloWorld2"
+		class="org.hope6537.springtest.createObject.when.HelloWorldFactory"
+		factory-method="getInstance"></bean>
+	<!-- 在启动Spring容器中时，Spring容器中的类已经创建完成对象了 -->
+	<!-- 但是有的对象非常重，加载的开销是在是太大了,这时候就会有个延迟加载机制 -->
+	<!-- lazy-init: default 在启动时创建 == false; true getBean时创建; false 启动容器的时候创建; -->
+	<bean id="helloWorld3" class="org.hope6537.springtest.createObject.when.HelloWorld"
+		lazy-init="default">
+	</bean>
+
+</beans>

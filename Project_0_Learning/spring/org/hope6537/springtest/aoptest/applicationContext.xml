@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	">
+
+
+	<!-- 1、引入aop的命名空间 xmlns:aop="http://www.springframework.org/schema/aop" -->
+	<!-- 2、引入目标类 -->
+	<bean id="personDao" class="org.hope6537.springtest.aoptest.PersonDaoImpl"></bean>
+	<!-- 3、引入切面 -->
+	<bean id="transaction" class="org.hope6537.springtest.aoptest.Transaction"></bean>
+	<!-- 4、引入拦截器 Spring内部实现 -->
+	<!-- 5、引入aop配置 -->
+	<aop:config>
+		<!-- 切入点表达式 及确定哪个类可以生成代理对象 -->
+		<aop:pointcut
+			expression="execution(* org.hope6537.springtest.aoptest.PersonDaoImpl.*(..))"
+			id="cud" />
+		<!-- 配置切面 -->
+		<aop:aspect ref="transaction">
+			<aop:before method="beginTransaction" pointcut-ref="cud" />
+			<aop:after method="commit" pointcut-ref="cud" />
+		</aop:aspect>
+	</aop:config>
+</beans>
