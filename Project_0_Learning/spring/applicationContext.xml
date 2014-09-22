@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<context:annotation-config />
+	<!-- 会在base-package的值所在的包及子包下，扫描所有的类 -->
+	<context:component-scan base-package="org.hope6537.springtest.extend" />
+	<bean abstract="true" id="person" class="org.hope6537.springtest.extend.Person">
+		<property name="name" value="王二麻子">
+		</property>
+	</bean>
+	<!-- 让子类拥有父类的值 -->
+	<bean id="student" class="org.hope6537.springtest.extend.Student"
+		parent="person"></bean>
+
+</beans>

@@ -1,7 +1,11 @@
-package org.hope6537.springtest.aoptest;
+package org.hope6537.springtest.aop.annotation;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
 
 /** 
  * <p>Describe: Dao层的实现类</p>
@@ -12,13 +16,8 @@ import java.util.List;
  * @version 1.0
  * @see
  */
+@Component("personDao")
 public class PersonDaoImpl implements PersonDao {
-
-	private Transaction transaction;
-
-	public PersonDaoImpl() {
-
-	}
 
 	@Override
 	public void savePerson(Person person) {
@@ -40,7 +39,7 @@ public class PersonDaoImpl implements PersonDao {
 
 	@Override
 	public List<Person> queryPerson(String HQL) {
-//		int a = 1 / 0; 用于捕捉异常
+		// int a = 1 / 0; 用于捕捉异常
 		ArrayList<Person> list = new ArrayList<Person>();
 		list.add(new Person(1, "pname"));
 		System.out.println(list.toString());

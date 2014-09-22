@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+
+	<bean id="loggerService" class="org.hope6537.springtest.aoptest.salary.LoggerService"></bean>
+	<bean class="org.hope6537.springtest.aoptest.salary.Security" id="security"></bean>
+	<bean class="org.hope6537.springtest.aoptest.salary.PrivilegeService"
+		id="privilegeService"></bean>
+	<bean class="org.hope6537.springtest.aoptest.salary.SalaryMananger"
+		id="salaryMananger"></bean>
+
+
+	<aop:config>
+	<!-- 一个切入点表达式可以配置很多个切面 -->
+		<aop:pointcut
+			expression="execution( * org.hope6537.springtest.aoptest.salary.SalaryMananger.*(..))"
+			id="cud" />
+		<!-- 运行顺序和配置顺序有关 -->
+		<aop:aspect ref="loggerService">
+			<aop:before method="getLogger" pointcut-ref="cud" />
+		</aop:aspect>
+
+		<aop:aspect ref="security">
+			<aop:before method="validSecurity" pointcut-ref="cud" />
+		</aop:aspect>
+
+		<aop:aspect ref="privilegeService">
+			<aop:before method="getAccess" pointcut-ref="cud" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>

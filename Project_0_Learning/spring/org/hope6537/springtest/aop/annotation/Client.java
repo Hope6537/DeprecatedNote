@@ -1,4 +1,4 @@
-package org.hope6537.springtest.aoptest;
+package org.hope6537.springtest.aop.annotation;
 
 import org.hope6537.utils.SpringHelper;
 import org.junit.Test;
@@ -9,6 +9,6 @@ public class Client extends SpringHelper {
 	public void test() {
 		
 		PersonDao personDao = (PersonDao) context.getBean("personDao");
-		personDao.queryPerson("");
+		personDao.savePerson(new Person());
 	}
 }

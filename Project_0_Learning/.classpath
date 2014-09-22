@@ -35,11 +35,11 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="spring"/>
 	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
 		<attributes>
 			<attribute name="owner.project.facets" value="me.spring"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="spring"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
