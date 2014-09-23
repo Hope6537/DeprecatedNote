@@ -41,5 +41,11 @@
 			<attribute name="owner.project.facets" value="me.spring"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="spring_hibernate"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.hibernate_4.1">
+		<attributes>
+			<attribute name="owner.project.facets" value="me.hibernate"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
