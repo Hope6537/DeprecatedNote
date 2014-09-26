@@ -30,6 +30,10 @@
 	<classpathentry kind="lib" path="lib/ojdbc14.jar"/>
 	<classpathentry kind="lib" path="lib/org.springframework.flex-1.0.3.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-analyzers-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-highlighter-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-memory-3.0.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>

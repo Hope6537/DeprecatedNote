@@ -1,5 +1,6 @@
 package org.hope6537.datastructs.march;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 
 import org.hope6537.datastructs.sort.BogoSort;
@@ -7,7 +8,6 @@ import org.hope6537.datastructs.sort.HeapSort;
 import org.hope6537.datastructs.sort.MergeSort;
 import org.hope6537.datastructs.sort.QuickSort;
 import org.hope6537.datastructs.sort.Sort;
-
 
 public class TimeDemo {
 
@@ -36,7 +36,7 @@ public class TimeDemo {
 		 * 
 		 * }
 		 */
-		Integer a[] = new Integer[10000000];
+		/*Integer a[] = new Integer[10000000];
 		for (int i = 9999999; i >= 0; i--) {
 			a[i] = Integer.valueOf(i);
 		}
@@ -44,22 +44,24 @@ public class TimeDemo {
 		HeapSort hs = new HeapSort();
 		BogoSort bs = new BogoSort();
 		MergeSort ms = new MergeSort();
-		QuickSort qs = new QuickSort();
+		QuickSort qs = new QuickSort();*/
 		ThreadDemo t = new ThreadDemo();
 
 		t.run();
-		Arrays.sort(a);
+		// Arrays.sort(a);
 		long f = t.TIME;
 		// start
-
+		BigInteger a1 = BigInteger.ONE.shiftLeft(200000);
+		System.out.println(a1.toString());
 		// s.insertionSort(a); /*插入排序 100000个元素 最坏情况 时间为 36581ms */
 		// s.shellsort(a);/* 希尔排序 10000000个元素 按最坏情况 时间为 3053ms */
 		// hs.heapSort(a); //堆排序 10000000个元素 按最坏情况 时间为 3784ms */
-		ms.mergeSort(a); // 归并排序 10000000个元素 按最坏情况 时间为 2499ms */
+		// ms.mergeSort(a); // 归并排序 10000000个元素 按最坏情况 时间为 2499ms */
 		/* qs.quickSort(a); 快速排序 10000000个元素 按最坏情况 时间为 2181ms */
 		/* s.BooSort(a); 冒泡排序 100000个元素 按最坏情况 时间为 45180ms */
 		/* bs.bogoSort(a); 猴子排序 10个元素 最坏情况 时间为永远 */
 		// end
+		
 		t.run();
 		long e = t.TIME;
 		System.out.println("---------------");
