@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="thinking_in_java"/>
+	<classpathentry kind="src" path="acm"/>
+	<classpathentry kind="src" path="datastruct"/>
+	<classpathentry kind="src" path="design_pattern"/>
+	<classpathentry kind="src" path="lucene"/>
+	<classpathentry kind="src" path="hadoop"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hadoop-1.2.1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="mvc"/>
