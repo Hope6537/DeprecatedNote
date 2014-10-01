@@ -74,7 +74,6 @@ public class StudentCount extends Configured implements Tool {
 		}
 	}
 
-	@Override
 	public int run(String[] args) throws Exception {
 		Job job = new Job(getConf());
 		job.setJarByClass(StudentCount.class);
