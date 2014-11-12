@@ -74,8 +74,8 @@ public class WordCount extends Configured implements Tool {
 
 		job.waitForCompletion(true);
 
-		System.out.println("任務名稱 " + job.getJobName());
-		System.out.println("任務成功 " + job.isSuccessful());
+		System.out.println("Mission Name" + job.getJobName());
+		System.out.println("Mission Status" + job.isSuccessful());
 
 		return job.isSuccessful() ? 0 : 1;
 	}

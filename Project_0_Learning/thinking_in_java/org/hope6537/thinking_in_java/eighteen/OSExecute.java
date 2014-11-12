@@ -31,12 +31,12 @@ public class OSExecute {
 
 		}
 		if (err) {
-			throw new OSExecuteException("浜х敓杩愯閿欒 " + command);
+			throw new OSExecuteException("产生运行错误 " + command);
 		}
 	}
 
 	public static void main(String[] args) throws OSExecuteException {
-		OSExecute.command("cd D:");
+		OSExecute.command("ping www.baidu.com -t");
 	}
 }
 
