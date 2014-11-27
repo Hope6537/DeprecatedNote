@@ -24,18 +24,19 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.LockObtainFailedException;
 import org.apache.lucene.util.Version;
+import org.hope6537.bean.Article;
 
-public class LuceneUtil {
+public class LuceneOperation {
 
 	private Directory directory;
 	private Analyzer analyzer;
 
-	public LuceneUtil(Directory directory, Analyzer analyzer) {
+	public LuceneOperation(Directory directory, Analyzer analyzer) {
 		this.directory = directory;
 		this.analyzer = analyzer;
 	}
 
-	public LuceneUtil(String path) {
+	public LuceneOperation(String path) {
 		try {
 			this.directory = FSDirectory.open(new File(path));
 			this.analyzer = new StandardAnalyzer(Version.LUCENE_30);
@@ -44,7 +45,7 @@ public class LuceneUtil {
 		}
 	}
 
-	public LuceneUtil() {
+	public LuceneOperation() {
 		this("classpath:./indexDir");
 	}
 
@@ -53,7 +54,7 @@ public class LuceneUtil {
 			InvocationTargetException, IOException, IntrospectionException {
 		IndexWriter indexWriter = new IndexWriter(directory, analyzer,
 				MaxFieldLength.LIMITED);
-		indexWriter.addDocument(DocumentUtil.object2Document(object));
+		indexWriter.addDocument(Document2ObjectUtils.object2Document(object));
 		indexWriter.close();
 	}
 
@@ -74,13 +75,13 @@ public class LuceneUtil {
 		IndexWriter indexWriter = new IndexWriter(directory, analyzer,
 				MaxFieldLength.LIMITED);
 		Term term = new Term("title", "lucene");// 关键词对象
-		indexWriter.updateDocument(term, DocumentUtil.object2Document(replace));// 修改以该关键字对象为主的所有索引
+		indexWriter.updateDocument(term, Document2ObjectUtils.object2Document(replace));// 修改以该关键字对象为主的所有索引
 		indexWriter.close();
 	}
 
-	/*public List<Object> searchIndex(String[] keys, String pattern,
-			Class<? extends T> clz) throws CorruptIndexException, IOException,
-			ParseException, InstantiationException, IllegalAccessException,
+	public ScoreDoc[] searchIndex(String[] keys, String pattern)
+			throws CorruptIndexException, IOException, ParseException,
+			InstantiationException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException,
 			IntrospectionException {
 		IndexSearcher indexSearcher = new IndexSearcher(directory);
@@ -89,19 +90,32 @@ public class LuceneUtil {
 		Query query = queryParser.parse(pattern);
 		TopDocs topDocs = indexSearcher.search(query, 10);
 		ScoreDoc[] scoreDocs = topDocs.scoreDocs;
-		List<Article> articleList = new ArrayList<Article>();
-		for (ScoreDoc doc : scoreDocs) {
-			int index = doc.doc;
-			Article temp = new Article();
-			temp = (Article) DocumentUtil.document2Object(temp,
-					indexSearcher.doc(index));
-			articleList.add(temp);
-		}
-		for (Article article : articleList) {
-			System.out.println(article);
-		}
+		/*
+		 * List<> articleList = new ArrayList<clz>(); for (ScoreDoc doc :
+		 * scoreDocs) { int index = doc.doc; Object temp = new Object(); temp =
+		 * DocumentUtil.document2Object(temp, indexSearcher.doc(index));
+		 * articleList.add(temp); }
+		 */
 		indexSearcher.close();
+		return scoreDocs;
+	}
 
-	}*/
+	/**
+	 * <p>Describe: 优化索引</p>
+	 * <p>Using: </p>
+	 * <p>How To Work: </p>
+	 * <p>DevelopedTime: 2014年9月27日下午5:15:57 </p>
+	 * <p>Author:Hope6537</p>
+	 * @throws IOException 
+	 * @throws CorruptIndexException 
+	 * @see
+	 */
+	public void optimizeIndex(IndexWriter indexWriter, boolean isClose)
+			throws CorruptIndexException, IOException {
+		indexWriter.optimize();
+		if (isClose) {
+			indexWriter.close();
+		}
+	}
 
 }

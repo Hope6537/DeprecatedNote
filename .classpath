@@ -40,6 +40,7 @@
 	<classpathentry kind="lib" path="lib/lucene-core-3.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-highlighter-3.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-memory-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/IKAnalyzer3.2.0Stable.jar"/>
 	<classpathentry kind="src" path="spring"/>
 	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
 		<attributes>

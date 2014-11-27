@@ -10,7 +10,7 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field.Index;
 import org.apache.lucene.document.Field.Store;
 
-public class DocumentUtil {
+public class Document2ObjectUtils {
 
 	/**
 	 * <p>Describe: 将Document对象反射成Object对象</p>
