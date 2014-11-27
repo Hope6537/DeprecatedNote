@@ -15,7 +15,6 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.WildcardQuery;
-import org.apache.lucene.util.NumericUtils;
 import org.hope6537.bean.Article;
 import org.hope6537.lucene.utils.Document2ObjectUtils;
 import org.hope6537.lucene.utils.LuceneUtils;
@@ -167,7 +166,7 @@ public class QueryTest {
 	@Test
 	public void rangeQuery() {
 		Query query = NumericRangeQuery.newLongRange("id", 5L, 10L, true, true);
-		
+
 		try {
 			this.showData(query);
 		} catch (Exception e) {

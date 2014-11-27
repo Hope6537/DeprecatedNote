@@ -24,8 +24,7 @@ public class HighLightUtils {
 	private static Scorer scorer = null;
 
 	static {
-		formatter = new SimpleHTMLFormatter("<font color = 'red'><b>",
-				"</b></font>");
+		formatter = new SimpleHTMLFormatter("<b>", "</b>");
 	}
 
 	public static String setLightData(Query query, String value, int size) {

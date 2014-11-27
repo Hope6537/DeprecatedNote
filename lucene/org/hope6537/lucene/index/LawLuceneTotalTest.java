@@ -17,7 +17,6 @@ import org.apache.lucene.util.Version;
 import org.hope6537.bean.Article;
 import org.hope6537.bean.Law;
 import org.hope6537.lucene.highlight.HighLightUtils;
-import org.hope6537.lucene.utils.Document2ObjectUtils;
 import org.hope6537.lucene.utils.DocumentUtils;
 import org.hope6537.lucene.utils.LuceneUtils;
 import org.junit.Test;
@@ -43,7 +42,7 @@ public class LawLuceneTotalTest {
 
 		Law law = new Law();
 		law.setTitle("道路法律顾问");
-		law.setContent("设置道路建设时的法律问题如下");
+		law.setContent("设置道路建设时的法律问题如下，我们思考下这个问题");
 		IndexWriter indexWriter = new IndexWriter(LuceneUtils.directory,
 				LuceneUtils.analyzer, MaxFieldLength.LIMITED);
 		Document document = DocumentUtils.law2Document(law);
@@ -94,7 +93,7 @@ public class LawLuceneTotalTest {
 		IndexSearcher indexSearcher = new IndexSearcher(LuceneUtils.directory);
 		QueryParser queryParser = new MultiFieldQueryParser(Version.LUCENE_30,
 				new String[] { "title", "content" }, LuceneUtils.analyzer);
-		Query query = queryParser.parse("道路");// 关键字
+		Query query = queryParser.parse("设置");// 关键字
 		TopDocs topDocs = indexSearcher.search(query, 100);
 		ScoreDoc[] scoreDocs = topDocs.scoreDocs;
 		List<Law> laws = new ArrayList<Law>();
@@ -103,9 +102,12 @@ public class LawLuceneTotalTest {
 			int index = doc.doc;
 			Document document = indexSearcher.doc(index);
 			String title = HighLightUtils.setLightData(query,
-					document.get("title"), 20);
+					document.get("title"), 40);
+			String content = HighLightUtils.setLightData(query,
+					document.get("content"), 2500);
 			Law temp = (Law) DocumentUtils.document2Law(document);
 			temp.setTitle(title);
+			temp.setContent(content);
 			laws.add(temp);
 		}
 		for (Law law : laws) {
@@ -141,8 +143,11 @@ public class LawLuceneTotalTest {
 			Document document = indexSearcher.doc(index);
 			String title = HighLightUtils.setLightData(query,
 					document.get("title"), 20);
+			String content = HighLightUtils.setLightData(query,
+					document.get("content"), 2500);
 			Law temp = (Law) DocumentUtils.document2Law(document);
 			temp.setTitle(title);
+			temp.setContent(content);
 			laws.add(temp);
 		}
 		for (Law law : laws) {
