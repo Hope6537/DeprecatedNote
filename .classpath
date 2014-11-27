@@ -7,6 +7,7 @@
 	<classpathentry kind="src" path="design_pattern"/>
 	<classpathentry kind="src" path="lucene"/>
 	<classpathentry kind="src" path="hadoop"/>
+	<classpathentry kind="src" path="compass"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hadoop-1.2.1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="mvc"/>
@@ -41,6 +42,14 @@
 	<classpathentry kind="lib" path="lib/lucene-highlighter-3.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/lucene-memory-3.0.1.jar"/>
 	<classpathentry kind="lib" path="lib/IKAnalyzer3.2.0Stable.jar"/>
+	<classpathentry kind="lib" path="compass/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="compass/lib/compass-2.2.0.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-analyzers.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-core.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-highlighter.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-queries.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-snowball.jar"/>
+	<classpathentry kind="lib" path="compass/lib/lucene-spellchecker.jar"/>
 	<classpathentry kind="src" path="spring"/>
 	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
 		<attributes>
